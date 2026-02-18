@@ -7,7 +7,7 @@ import { DataContext } from '../contexts/DataContext';
 
 const WritingPractice = () => {
     const { vocabulary } = useContext(DataContext);
-    const [selectedCategory, setSelectedCategory] = useState('All');
+    const [selectedCategories, setSelectedCategories] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [userInput, setUserInput] = useState('');
     const [feedback, setFeedback] = useState(null); // 'correct', 'incorrect', or null
@@ -20,12 +20,12 @@ const WritingPractice = () => {
     // Filter cards based on selection and shuffle initially
     const cards = useMemo(() => {
         let filtered = vocabulary;
-        if (selectedCategory !== 'All') {
-            filtered = vocabulary.filter(item => item.category === selectedCategory);
+        if (selectedCategories.length > 0) {
+            filtered = vocabulary.filter(item => selectedCategories.includes(item.category));
         }
         // Always randomize for practice mode to make it challenging
         return [...filtered].sort(() => Math.random() - 0.5);
-    }, [selectedCategory, vocabulary]);
+    }, [selectedCategories, vocabulary]);
 
     useEffect(() => {
         setCurrentIndex(0);
@@ -34,7 +34,7 @@ const WritingPractice = () => {
         setFeedback(null);
         setUserInput('');
         if (timerRef.current) clearTimeout(timerRef.current);
-    }, [selectedCategory]);
+    }, [selectedCategories]);
 
     const currentCard = cards[currentIndex];
 
@@ -98,6 +98,20 @@ const WritingPractice = () => {
         }
     };
 
+    const handleCategoryToggle = (category) => {
+        if (category === 'All') {
+            setSelectedCategories([]);
+            return;
+        }
+        setSelectedCategories(prev => {
+            if (prev.includes(category)) {
+                return prev.filter(c => c !== category);
+            } else {
+                return [...prev, category];
+            }
+        });
+    };
+
     useEffect(() => {
         return () => {
             if (timerRef.current) clearTimeout(timerRef.current);
@@ -105,7 +119,7 @@ const WritingPractice = () => {
     }, []);
 
     if (cards.length === 0) {
-        return <div className="text-center text-gray-500 mt-10">No cards found for this category.</div>;
+        return <div className="text-center text-gray-500 mt-10">No cards found for these categories.</div>;
     }
 
     if (!currentCard) return null;
@@ -138,8 +152,8 @@ const WritingPractice = () => {
 
             <CategoryFilter
                 categories={[...new Set(vocabulary.map(item => item.category))].sort()}
-                selectedCategory={selectedCategory}
-                onSelectCategory={setSelectedCategory}
+                selectedCategories={selectedCategories}
+                onToggleCategory={handleCategoryToggle}
             />
 
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden mt-6 border border-gray-100">

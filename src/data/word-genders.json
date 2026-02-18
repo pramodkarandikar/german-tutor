@@ -1,0 +1,566 @@
+[
+  {
+    "word": "Datei",
+    "gender": "Die",
+    "rule": "-ei",
+    "translation": ""
+  },
+  {
+    "word": "Bäckerei",
+    "gender": "Die",
+    "rule": "-ei",
+    "translation": ""
+  },
+  {
+    "word": "Polizei",
+    "gender": "Die",
+    "rule": "-ei",
+    "translation": ""
+  },
+  {
+    "word": "Distanz",
+    "gender": "Die",
+    "rule": "-anz, -enz",
+    "translation": ""
+  },
+  {
+    "word": "Toleranz",
+    "gender": "Die",
+    "rule": "-anz, -enz",
+    "translation": ""
+  },
+  {
+    "word": "Konferenz",
+    "gender": "Die",
+    "rule": "-anz, -enz",
+    "translation": ""
+  },
+  {
+    "word": "Existenz",
+    "gender": "Die",
+    "rule": "-anz, -enz",
+    "translation": ""
+  },
+  {
+    "word": "Freiheit",
+    "gender": "Die",
+    "rule": "-heit, -keit",
+    "translation": ""
+  },
+  {
+    "word": "Krankheit",
+    "gender": "Die",
+    "rule": "-heit, -keit",
+    "translation": ""
+  },
+  {
+    "word": "Schwierigkeit",
+    "gender": "Die",
+    "rule": "-heit, -keit",
+    "translation": ""
+  },
+  {
+    "word": "Geschwindigkeit",
+    "gender": "Die",
+    "rule": "-heit, -keit",
+    "translation": ""
+  },
+  {
+    "word": "Demokratie",
+    "gender": "Die",
+    "rule": "-ie",
+    "translation": ""
+  },
+  {
+    "word": "Studie",
+    "gender": "Die",
+    "rule": "-ie",
+    "translation": ""
+  },
+  {
+    "word": "Energie",
+    "gender": "Die",
+    "rule": "-ie",
+    "translation": ""
+  },
+  {
+    "word": "Fabrik",
+    "gender": "Die",
+    "rule": "-ik",
+    "translation": ""
+  },
+  {
+    "word": "Politik",
+    "gender": "Die",
+    "rule": "-ik",
+    "translation": ""
+  },
+  {
+    "word": "Statistik",
+    "gender": "Die",
+    "rule": "-ik",
+    "translation": ""
+  },
+  {
+    "word": "Technik",
+    "gender": "Die",
+    "rule": "-ik",
+    "translation": ""
+  },
+  {
+    "word": "Aktion",
+    "gender": "Die",
+    "rule": "-tion",
+    "translation": ""
+  },
+  {
+    "word": "Diskussion",
+    "gender": "Die",
+    "rule": "-tion",
+    "translation": ""
+  },
+  {
+    "word": "Information",
+    "gender": "Die",
+    "rule": "-tion",
+    "translation": ""
+  },
+  {
+    "word": "Religion",
+    "gender": "Die",
+    "rule": "-tion",
+    "translation": ""
+  },
+  {
+    "word": "Identität",
+    "gender": "Die",
+    "rule": "-tät",
+    "translation": ""
+  },
+  {
+    "word": "Stabilität",
+    "gender": "Die",
+    "rule": "-tät",
+    "translation": ""
+  },
+  {
+    "word": "Aktivität",
+    "gender": "Die",
+    "rule": "-tät",
+    "translation": ""
+  },
+  {
+    "word": "Freundschaft",
+    "gender": "Die",
+    "rule": "-schaft",
+    "translation": ""
+  },
+  {
+    "word": "Gesellschaft",
+    "gender": "Die",
+    "rule": "-schaft",
+    "translation": ""
+  },
+  {
+    "word": "Mannschaft",
+    "gender": "Die",
+    "rule": "-schaft",
+    "translation": ""
+  },
+  {
+    "word": "Bewegung",
+    "gender": "Die",
+    "rule": "-ung",
+    "translation": ""
+  },
+  {
+    "word": "Endung",
+    "gender": "Die",
+    "rule": "-ung",
+    "translation": ""
+  },
+  {
+    "word": "Entfernung",
+    "gender": "Die",
+    "rule": "-ung",
+    "translation": ""
+  },
+  {
+    "word": "Agentur",
+    "gender": "Die",
+    "rule": "-ur",
+    "translation": ""
+  },
+  {
+    "word": "Natur",
+    "gender": "Die",
+    "rule": "-ur",
+    "translation": ""
+  },
+  {
+    "word": "Tastatur",
+    "gender": "Die",
+    "rule": "-ur",
+    "translation": ""
+  },
+  {
+    "word": "Ärztin",
+    "gender": "Die",
+    "rule": "-in (For female persons/professions)",
+    "translation": ""
+  },
+  {
+    "word": "Studentin",
+    "gender": "Die",
+    "rule": "-in (For female persons/professions)",
+    "translation": ""
+  },
+  {
+    "word": "Türkin",
+    "gender": "Die",
+    "rule": "-in (For female persons/professions)",
+    "translation": ""
+  },
+  {
+    "word": "Lieferant",
+    "gender": "Der",
+    "rule": "-ant",
+    "translation": ""
+  },
+  {
+    "word": "Mandant",
+    "gender": "Der",
+    "rule": "-ant",
+    "translation": ""
+  },
+  {
+    "word": "Migrant",
+    "gender": "Der",
+    "rule": "-ant",
+    "translation": ""
+  },
+  {
+    "word": "Patient",
+    "gender": "Der",
+    "rule": "-ent",
+    "translation": ""
+  },
+  {
+    "word": "Student",
+    "gender": "Der",
+    "rule": "-ent",
+    "translation": ""
+  },
+  {
+    "word": "Präsident",
+    "gender": "Der",
+    "rule": "-ent",
+    "translation": ""
+  },
+  {
+    "word": "Teppich",
+    "gender": "Der",
+    "rule": "-ich",
+    "translation": ""
+  },
+  {
+    "word": "Pfirsich",
+    "gender": "Der",
+    "rule": "-ich",
+    "translation": ""
+  },
+  {
+    "word": "Zwilling",
+    "gender": "Der",
+    "rule": "-ling",
+    "translation": ""
+  },
+  {
+    "word": "Schmetterling",
+    "gender": "Der",
+    "rule": "-ling",
+    "translation": ""
+  },
+  {
+    "word": "Feigling",
+    "gender": "Der",
+    "rule": "-ling",
+    "translation": ""
+  },
+  {
+    "word": "Lehrer",
+    "gender": "Der",
+    "rule": "-er (Most words)",
+    "translation": ""
+  },
+  {
+    "word": "Fahrer (Exception: die Butter)",
+    "gender": "Der",
+    "rule": "-er (Most words)",
+    "translation": ""
+  },
+  {
+    "word": "Alkoholismus",
+    "gender": "Der",
+    "rule": "-ismus",
+    "translation": ""
+  },
+  {
+    "word": "Atheismus",
+    "gender": "Der",
+    "rule": "-ismus",
+    "translation": ""
+  },
+  {
+    "word": "Tourismus",
+    "gender": "Der",
+    "rule": "-ismus",
+    "translation": ""
+  },
+  {
+    "word": "Rassismus",
+    "gender": "Der",
+    "rule": "-ismus",
+    "translation": ""
+  },
+  {
+    "word": "Journalist",
+    "gender": "Der",
+    "rule": "-ist",
+    "translation": ""
+  },
+  {
+    "word": "Polizist",
+    "gender": "Der",
+    "rule": "-ist",
+    "translation": ""
+  },
+  {
+    "word": "Autor",
+    "gender": "Der",
+    "rule": "-or",
+    "translation": ""
+  },
+  {
+    "word": "Direktor",
+    "gender": "Der",
+    "rule": "-or",
+    "translation": ""
+  },
+  {
+    "word": "Motor",
+    "gender": "Der",
+    "rule": "-or",
+    "translation": ""
+  },
+  {
+    "word": "Montag",
+    "gender": "Der",
+    "rule": "Days & Months",
+    "translation": ""
+  },
+  {
+    "word": "April",
+    "gender": "Der",
+    "rule": "Days & Months",
+    "translation": ""
+  },
+  {
+    "word": "Dezember",
+    "gender": "Der",
+    "rule": "Days & Months",
+    "translation": ""
+  },
+  {
+    "word": "Regen",
+    "gender": "Der",
+    "rule": "Weather Elements (Most)",
+    "translation": ""
+  },
+  {
+    "word": "Schnee",
+    "gender": "Der",
+    "rule": "Weather Elements (Most)",
+    "translation": ""
+  },
+  {
+    "word": "Norden",
+    "gender": "Der",
+    "rule": "Cardinal Directions",
+    "translation": ""
+  },
+  {
+    "word": "Süden",
+    "gender": "Der",
+    "rule": "Cardinal Directions",
+    "translation": ""
+  },
+  {
+    "word": "Sekt",
+    "gender": "Der",
+    "rule": "Alcoholic Drinks (Almost all)",
+    "translation": ""
+  },
+  {
+    "word": "Wein",
+    "gender": "Der",
+    "rule": "Alcoholic Drinks (Almost all)",
+    "translation": ""
+  },
+  {
+    "word": "Wodka",
+    "gender": "Der",
+    "rule": "Alcoholic Drinks (Almost all)",
+    "translation": ""
+  },
+  {
+    "word": "Bäumchen",
+    "gender": "Das",
+    "rule": "-chen, -lein (Diminutives)",
+    "translation": ""
+  },
+  {
+    "word": "Häuschen",
+    "gender": "Das",
+    "rule": "-chen, -lein (Diminutives)",
+    "translation": ""
+  },
+  {
+    "word": "Mädchen",
+    "gender": "Das",
+    "rule": "-chen, -lein (Diminutives)",
+    "translation": ""
+  },
+  {
+    "word": "Tischlein",
+    "gender": "Das",
+    "rule": "-chen, -lein (Diminutives)",
+    "translation": ""
+  },
+  {
+    "word": "Argument",
+    "gender": "Das",
+    "rule": "-ment",
+    "translation": ""
+  },
+  {
+    "word": "Dokument",
+    "gender": "Das",
+    "rule": "-ment",
+    "translation": ""
+  },
+  {
+    "word": "Element",
+    "gender": "Das",
+    "rule": "-ment",
+    "translation": ""
+  },
+  {
+    "word": "Instrument",
+    "gender": "Das",
+    "rule": "-ment",
+    "translation": ""
+  },
+  {
+    "word": "Statement",
+    "gender": "Das",
+    "rule": "-ment",
+    "translation": ""
+  },
+  {
+    "word": "Datum",
+    "gender": "Das",
+    "rule": "-um",
+    "translation": ""
+  },
+  {
+    "word": "Publikum",
+    "gender": "Das",
+    "rule": "-um",
+    "translation": ""
+  },
+  {
+    "word": "Universum",
+    "gender": "Das",
+    "rule": "-um",
+    "translation": ""
+  },
+  {
+    "word": "Christentum",
+    "gender": "Das",
+    "rule": "-tum (Most words)",
+    "translation": ""
+  },
+  {
+    "word": "Eigentum",
+    "gender": "Das",
+    "rule": "-tum (Most words)",
+    "translation": ""
+  },
+  {
+    "word": "Komma",
+    "gender": "Das",
+    "rule": "-ma (Most words)",
+    "translation": ""
+  },
+  {
+    "word": "Aroma",
+    "gender": "Das",
+    "rule": "-ma (Most words)",
+    "translation": ""
+  },
+  {
+    "word": "Thema",
+    "gender": "Das",
+    "rule": "-ma (Most words)",
+    "translation": ""
+  },
+  {
+    "word": "Leben",
+    "gender": "Das",
+    "rule": "Substantivized Verbs",
+    "translation": ""
+  },
+  {
+    "word": "Lesen",
+    "gender": "Das",
+    "rule": "Substantivized Verbs",
+    "translation": ""
+  },
+  {
+    "word": "Schwimmen",
+    "gender": "Das",
+    "rule": "Substantivized Verbs",
+    "translation": ""
+  },
+  {
+    "word": "Silber",
+    "gender": "Das",
+    "rule": "Metals (Most)",
+    "translation": ""
+  },
+  {
+    "word": "Gold",
+    "gender": "Das",
+    "rule": "Metals (Most)",
+    "translation": ""
+  },
+  {
+    "word": "Gebäude",
+    "gender": "Das",
+    "rule": "Nouns starting with ge- (Most)",
+    "translation": ""
+  },
+  {
+    "word": "Gebirge",
+    "gender": "Das",
+    "rule": "Nouns starting with ge- (Most)",
+    "translation": ""
+  },
+  {
+    "word": "Geschrei",
+    "gender": "Das",
+    "rule": "Nouns starting with ge- (Most)",
+    "translation": ""
+  }
+]

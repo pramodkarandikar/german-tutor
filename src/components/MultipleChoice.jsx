@@ -7,7 +7,7 @@ import { DataContext } from '../contexts/DataContext';
 
 const MultipleChoice = () => {
     const { vocabulary } = useContext(DataContext);
-    const [selectedCategory, setSelectedCategory] = useState('All');
+    const [selectedCategories, setSelectedCategories] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [options, setOptions] = useState([]);
     const [selectedOption, setSelectedOption] = useState(null);
@@ -18,11 +18,11 @@ const MultipleChoice = () => {
     // Filter cards based on selection and shuffle initially
     const cards = useMemo(() => {
         let filtered = vocabulary;
-        if (selectedCategory !== 'All') {
-            filtered = vocabulary.filter(item => item.category === selectedCategory);
+        if (selectedCategories.length > 0) {
+            filtered = vocabulary.filter(item => selectedCategories.includes(item.category));
         }
         return [...filtered].sort(() => Math.random() - 0.5);
-    }, [selectedCategory, vocabulary]);
+    }, [selectedCategories, vocabulary]);
 
     useEffect(() => {
         // Reset state when category changes or data updates
@@ -31,7 +31,7 @@ const MultipleChoice = () => {
         setStreak(0);
         setSelectedOption(null);
         setIsCorrect(null);
-    }, [selectedCategory, vocabulary]); // Depend on vocabulary to reset if file uploads
+    }, [selectedCategories, vocabulary]); // Depend on vocabulary to reset if file uploads
 
     const currentCard = cards[currentIndex];
 
@@ -73,8 +73,22 @@ const MultipleChoice = () => {
         setCurrentIndex((prev) => (prev + 1) % cards.length);
     };
 
+    const handleCategoryToggle = (category) => {
+        if (category === 'All') {
+            setSelectedCategories([]);
+            return;
+        }
+        setSelectedCategories(prev => {
+            if (prev.includes(category)) {
+                return prev.filter(c => c !== category);
+            } else {
+                return [...prev, category];
+            }
+        });
+    };
+
     if (cards.length === 0) {
-        return <div className="text-center text-gray-500 mt-10">No cards found for this category.</div>;
+        return <div className="text-center text-gray-500 mt-10">No cards found for these categories.</div>;
     }
 
     if (!currentCard) return null;
@@ -107,8 +121,8 @@ const MultipleChoice = () => {
 
             <CategoryFilter
                 categories={[...new Set(vocabulary.map(item => item.category))].sort()}
-                selectedCategory={selectedCategory}
-                onSelectCategory={setSelectedCategory}
+                selectedCategories={selectedCategories}
+                onToggleCategory={handleCategoryToggle}
             />
 
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden mt-6 border border-gray-100">

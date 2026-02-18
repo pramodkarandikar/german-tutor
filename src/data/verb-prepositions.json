@@ -1,0 +1,261 @@
+[
+  {
+    "verb": "achten",
+    "preposition": "auf",
+    "case": "Akkusativ",
+    "translation": "to pay attention to",
+    "example": "Als Autofahrer sollte man auf Fußgänger achten."
+  },
+  {
+    "verb": "anfangen",
+    "preposition": "mit",
+    "case": "Dativ",
+    "translation": "to start with",
+    "example": "Wann fängst du mit der Arbeit an?"
+  },
+  {
+    "verb": "anrufen",
+    "preposition": "bei",
+    "case": "Dativ",
+    "translation": "to call (a place/office)",
+    "example": "Ich rufe beim Arzt an."
+  },
+  {
+    "verb": "antworten",
+    "preposition": "auf",
+    "case": "Akkusativ",
+    "translation": "to answer (a question)",
+    "example": "Frau Merkel antwortet auf die Frage."
+  },
+  {
+    "verb": "arbeiten",
+    "preposition": "an",
+    "case": "Dativ",
+    "translation": "to work on",
+    "example": "Er arbeitet an neuen Videoideen."
+  },
+  {
+    "verb": "bitten",
+    "preposition": "um",
+    "case": "Akkusativ",
+    "translation": "to ask for / request",
+    "example": "Er bittet seine Schwester um Hilfe."
+  },
+  {
+    "verb": "danken",
+    "preposition": "für",
+    "case": "Akkusativ",
+    "translation": "to thank for",
+    "example": "Sie dankt ihrer Schwester für das Geschenk."
+  },
+  {
+    "verb": "denken",
+    "preposition": "an",
+    "case": "Akkusativ",
+    "translation": "to think of / about",
+    "example": "Er denkt oft an seine Familie."
+  },
+  {
+    "verb": "einladen",
+    "preposition": "zu",
+    "case": "Dativ",
+    "translation": "to invite to",
+    "example": "Sie haben mich zu ihrer Hochzeit eingeladen."
+  },
+  {
+    "verb": "sich entscheiden",
+    "preposition": "für",
+    "case": "Akkusativ",
+    "translation": "to decide on / for",
+    "example": "Ich habe mich für das blaue Auto entschieden."
+  },
+  {
+    "verb": "sich erinnern",
+    "preposition": "an",
+    "case": "Akkusativ",
+    "translation": "to remember",
+    "example": "Kannst du dich an das Spiel erinnern?"
+  },
+  {
+    "verb": "sich freuen",
+    "preposition": "auf",
+    "case": "Akkusativ",
+    "translation": "to look forward to",
+    "example": "Sie freut sich auf ihren Urlaub."
+  },
+  {
+    "verb": "sich freuen",
+    "preposition": "über",
+    "case": "Akkusativ",
+    "translation": "to be happy about",
+    "example": "Wir freuen uns über jede neue Abonnentin."
+  },
+  {
+    "verb": "fragen",
+    "preposition": "nach",
+    "case": "Dativ",
+    "translation": "to ask about",
+    "example": "Ein Tourist fragt nach dem Weg."
+  },
+  {
+    "verb": "glauben",
+    "preposition": "an",
+    "case": "Akkusativ",
+    "translation": "to believe in",
+    "example": "Glaubst du an Wunder?"
+  },
+  {
+    "verb": "gratulieren",
+    "preposition": "zu",
+    "case": "Dativ",
+    "translation": "to congratulate on",
+    "example": "Max gratuliert ihr zum Geburtstag."
+  },
+  {
+    "verb": "helfen",
+    "preposition": "bei",
+    "case": "Dativ",
+    "translation": "to help with",
+    "example": "Wir helfen dir beim Deutschlernen."
+  },
+  {
+    "verb": "hoffen",
+    "preposition": "auf",
+    "case": "Akkusativ",
+    "translation": "to hope for",
+    "example": "Wir hoffen auf besseres Wetter."
+  },
+  {
+    "verb": "sich interessieren",
+    "preposition": "für",
+    "case": "Akkusativ",
+    "translation": "to be interested in",
+    "example": "Ich interessiere mich für Fußball."
+  },
+  {
+    "verb": "sich kümmern",
+    "preposition": "um",
+    "case": "Akkusativ",
+    "translation": "to take care of",
+    "example": "Sie kümmert sich um ihren Garten."
+  },
+  {
+    "verb": "lachen",
+    "preposition": "über",
+    "case": "Akkusativ",
+    "translation": "to laugh about",
+    "example": "Alle lachen über seinen Witz."
+  },
+  {
+    "verb": "Lust haben",
+    "preposition": "auf",
+    "case": "Akkusativ",
+    "translation": "to feel like / want",
+    "example": "Ich habe Lust auf ein Bier."
+  },
+  {
+    "verb": "nachdenken",
+    "preposition": "über",
+    "case": "Akkusativ",
+    "translation": "to reflect / think on",
+    "example": "Ich muss über das Problem nachdenken."
+  },
+  {
+    "verb": "passen",
+    "preposition": "zu",
+    "case": "Dativ",
+    "translation": "to match / suit",
+    "example": "Welche Schuhe passen gut zu einer Jeans?"
+  },
+  {
+    "verb": "riechen",
+    "preposition": "nach",
+    "case": "Dativ",
+    "translation": "to smell like",
+    "example": "Es riecht hier nach frischem Kaffee."
+  },
+  {
+    "verb": "schmecken",
+    "preposition": "nach",
+    "case": "Dativ",
+    "translation": "to taste like",
+    "example": "Das Brötchen schmeckt nach Pappe."
+  },
+  {
+    "verb": "sich beschweren",
+    "preposition": "bei",
+    "case": "Dativ",
+    "translation": "to complain to",
+    "example": "Er beschwert sich bei seinem Chef."
+  },
+  {
+    "verb": "sich beschweren",
+    "preposition": "über",
+    "case": "Akkusativ",
+    "translation": "to complain about",
+    "example": "Er beschwert sich über seinen Kollegen."
+  },
+  {
+    "verb": "sich entschuldigen",
+    "preposition": "bei",
+    "case": "Dativ",
+    "translation": "to apologize to",
+    "example": "Ich entschuldige mich bei dir."
+  },
+  {
+    "verb": "sich entschuldigen",
+    "preposition": "für",
+    "case": "Akkusativ",
+    "translation": "to apologize for",
+    "example": "Ich entschuldige mich für mein Zuspätkommen."
+  },
+  {
+    "verb": "sich erholen",
+    "preposition": "von",
+    "case": "Dativ",
+    "translation": "to recover from",
+    "example": "Ich erhole mich von der Erkältung."
+  },
+  {
+    "verb": "sich treffen",
+    "preposition": "mit",
+    "case": "Dativ",
+    "translation": "to meet with",
+    "example": "Ich treffe mich mit einem Freund."
+  },
+  {
+    "verb": "teilnehmen",
+    "preposition": "an",
+    "case": "Dativ",
+    "translation": "to participate in",
+    "example": "Sie nimmt an einem Computerkurs teil."
+  },
+  {
+    "verb": "telefonieren",
+    "preposition": "mit",
+    "case": "Dativ",
+    "translation": "to talk on phone with",
+    "example": "Sie telefoniert mit ihrer Mutter."
+  },
+  {
+    "verb": "träumen",
+    "preposition": "von",
+    "case": "Dativ",
+    "translation": "to dream of",
+    "example": "Sie träumt von einem Haus am Meer."
+  },
+  {
+    "verb": "warten",
+    "preposition": "auf",
+    "case": "Akkusativ",
+    "translation": "to wait for",
+    "example": "Er wartet auf den Zug nach Hamburg."
+  },
+  {
+    "verb": "zeigen",
+    "preposition": "auf",
+    "case": "Akkusativ",
+    "translation": "to point at",
+    "example": "Man zeigt nicht mit dem Finger auf Leute."
+  }
+]

@@ -8,7 +8,7 @@ import { DataContext } from '../contexts/DataContext';
 
 const Quiz = () => {
     const { vocabulary } = useContext(DataContext);
-    const [selectedCategory, setSelectedCategory] = useState('All');
+    const [selectedCategories, setSelectedCategories] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState(0);
     const [isRandom, setIsRandom] = useState(false);
@@ -21,16 +21,16 @@ const Quiz = () => {
     // Filter cards based on selection
     const cards = useMemo(() => {
         let filtered = vocabulary;
-        if (selectedCategory !== 'All') {
-            filtered = vocabulary.filter(item => item.category === selectedCategory);
+        if (selectedCategories.length > 0) {
+            filtered = vocabulary.filter(item => selectedCategories.includes(item.category));
         }
         return isRandom ? [...filtered].sort(() => Math.random() - 0.5) : filtered;
-    }, [selectedCategory, isRandom, vocabulary]);
+    }, [selectedCategories, isRandom, vocabulary]);
 
     // Reset index when category changes
     useEffect(() => {
         setCurrentIndex(0);
-    }, [selectedCategory, isRandom]);
+    }, [selectedCategories, isRandom]);
 
     const handleNext = () => {
         setDirection(1);
@@ -46,19 +46,33 @@ const Quiz = () => {
         setIsRandom(!isRandom);
     };
 
+    const handleCategoryToggle = (category) => {
+        if (category === 'All') {
+            setSelectedCategories([]);
+            return;
+        }
+        setSelectedCategories(prev => {
+            if (prev.includes(category)) {
+                return prev.filter(c => c !== category);
+            } else {
+                return [...prev, category];
+            }
+        });
+    };
+
     if (cards.length === 0) {
-        return <div className="text-center text-gray-500 mt-10">No cards found for this category.</div>;
+        return <div className="text-center text-gray-500 mt-10">No cards found for these categories.</div>;
     }
 
     return (
         <div className="max-w-4xl mx-auto p-4">
-            <h1 className="text-3xl font-extrabold text-center text-gray-800 mb-2">German Tutor</h1>
-            <p className="text-center text-gray-500 mb-8">Master your vocabulary with interactive flashcards</p>
+            <h1 className="text-3xl font-extrabold text-center text-gray-800 mb-2">Wise Umlaut</h1>
+            <p className="text-center text-gray-500 mb-8">Master your German skills with interactive flashcards</p>
 
             <CategoryFilter
                 categories={categories}
-                selectedCategory={selectedCategory}
-                onSelectCategory={setSelectedCategory}
+                selectedCategories={selectedCategories}
+                onToggleCategory={handleCategoryToggle}
             />
 
             <div className="flex justify-end mb-4">

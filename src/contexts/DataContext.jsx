@@ -2,6 +2,8 @@
 import React, { createContext, useState, useEffect } from 'react';
 import * as XLSX from 'xlsx';
 import defaultVocabulary from '../data/vocabulary.json';
+import wordGendersData from '../data/word-genders.json';
+import verbPrepositionsData from '../data/verb-prepositions.json';
 
 export const DataContext = createContext();
 
@@ -88,7 +90,16 @@ export const DataProvider = ({ children }) => {
     };
 
     return (
-        <DataContext.Provider value={{ vocabulary, isCustom, loading, error, uploadData, resetData }}>
+        <DataContext.Provider value={{
+            vocabulary,
+            isCustom,
+            loading,
+            error,
+            uploadData,
+            resetData,
+            wordGenders: wordGendersData,
+            verbPrepositions: verbPrepositionsData
+        }}>
             {children}
         </DataContext.Provider>
     );

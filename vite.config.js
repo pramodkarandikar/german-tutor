@@ -10,8 +10,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
       manifest: {
-        name: 'German Tutor',
-        short_name: 'GermanTutor',
+        name: 'Wise Umlaut',
+        short_name: 'WiseUmlaut',
         description: 'Learn German vocabulary with flashcards and quizzes',
         theme_color: '#ffffff',
         icons: [

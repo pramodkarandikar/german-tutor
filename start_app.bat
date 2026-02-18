@@ -1,5 +1,5 @@
 @echo off
-echo Starting German Tutor App...
+echo Starting Wise Umlaut App...
 echo.
 echo Please wait while the local server starts.
 echo The app should open in your default browser shortly.

@@ -7,7 +7,7 @@ import { DataContext } from '../contexts/DataContext';
 
 const MatchPairs = () => {
     const { vocabulary } = useContext(DataContext);
-    const [selectedCategory, setSelectedCategory] = useState('All');
+    const [selectedCategories, setSelectedCategories] = useState([]);
     const [cards, setCards] = useState([]);
     const [selectedCards, setSelectedCards] = useState([]);
     const [matchedPairs, setMatchedPairs] = useState([]);
@@ -18,11 +18,11 @@ const MatchPairs = () => {
     // Filter vocabulary based on category
     const filteredVocabulary = useMemo(() => {
         let filtered = vocabulary;
-        if (selectedCategory !== 'All') {
-            filtered = vocabulary.filter(item => item.category === selectedCategory);
+        if (selectedCategories.length > 0) {
+            filtered = vocabulary.filter(item => selectedCategories.includes(item.category));
         }
         return filtered;
-    }, [selectedCategory, vocabulary]);
+    }, [selectedCategories, vocabulary]);
 
     // Initialize game
     const initializeGame = () => {
@@ -51,7 +51,7 @@ const MatchPairs = () => {
 
     useEffect(() => {
         initializeGame();
-    }, [selectedCategory, vocabulary]); // Re-init if category or data changes
+    }, [selectedCategories, vocabulary]); // Re-init if category or data changes
 
     const handleCardClick = (card) => {
         // Ignore if already matched or selected or 2 cards already selected
@@ -88,6 +88,20 @@ const MatchPairs = () => {
         }
     };
 
+    const handleCategoryToggle = (category) => {
+        if (category === 'All') {
+            setSelectedCategories([]);
+            return;
+        }
+        setSelectedCategories(prev => {
+            if (prev.includes(category)) {
+                return prev.filter(c => c !== category);
+            } else {
+                return [...prev, category];
+            }
+        });
+    };
+
     if (filteredVocabulary.length < 2) {
         return <div className="text-center text-gray-500 mt-10">Not enough words in this category to play Match Pairs (Need at least 2).</div>;
     }
@@ -115,8 +129,8 @@ const MatchPairs = () => {
 
             <CategoryFilter
                 categories={[...new Set(vocabulary.map(item => item.category))].sort()}
-                selectedCategory={selectedCategory}
-                onSelectCategory={setSelectedCategory}
+                selectedCategories={selectedCategories}
+                onToggleCategory={handleCategoryToggle}
             />
 
             {gameWon ? (
