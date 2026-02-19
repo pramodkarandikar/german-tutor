@@ -128,8 +128,8 @@ const WritingPractice = () => {
         <div className="max-w-2xl mx-auto">
             <div className="flex justify-between items-end mb-8 px-4">
                 <div>
-                    <h2 className="text-2xl font-bold text-gray-800">Writing Practice</h2>
-                    <p className="text-sm text-gray-500">Translate the words to German</p>
+                    <h2 className="text-2xl font-bold text-text">Writing Practice</h2>
+                    <p className="text-sm text-text-muted">Translate the words to German</p>
                 </div>
 
                 <div className="flex gap-6">
@@ -141,8 +141,8 @@ const WritingPractice = () => {
                     </div>
 
                     <div className="text-center">
-                        <div className="text-xs text-gray-400 uppercase font-bold tracking-wider">Streak</div>
-                        <div className={`font-bold text-xl flex items-center justify-center gap-1 ${streak > 2 ? 'text-orange-500' : 'text-gray-400'}`}>
+                        <div className="text-xs text-text-muted uppercase font-bold tracking-wider">Streak</div>
+                        <div className={`font-bold text-xl flex items-center justify-center gap-1 ${streak > 2 ? 'text-orange-500' : 'text-text-muted'}`}>
                             <Flame size={20} fill={streak > 2 ? "currentColor" : "none"} />
                             {streak}
                         </div>
@@ -156,22 +156,22 @@ const WritingPractice = () => {
                 onToggleCategory={handleCategoryToggle}
             />
 
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden mt-6 border border-gray-100">
+            <div className="bg-surface rounded-2xl shadow-xl overflow-hidden mt-6 border border-border">
                 <div className="p-8 text-center relative">
-                    <span className="inline-block px-3 py-1 bg-purple-100 text-purple-600 text-xs font-semibold rounded-full mb-4">
+                    <span className="inline-block px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-300 text-xs font-semibold rounded-full mb-4">
                         English
                     </span>
-                    <h3 className="text-3xl font-bold text-gray-800 mb-2">{currentCard.english}</h3>
+                    <h3 className="text-3xl font-bold text-text mb-2">{currentCard.english}</h3>
 
                     {/* Hint area */}
                     {currentCard.usage && feedback === 'incorrect' && (
-                        <div className="mt-4 p-3 bg-yellow-50 text-yellow-700 text-sm rounded-lg animate-fade-in">
+                        <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-700 dark:text-yellow-300 text-sm rounded-lg animate-fade-in">
                             <span className="font-bold">Hint/Usage:</span> "{currentCard.usage}"
                         </div>
                     )}
                 </div>
 
-                <div className="p-8 bg-gray-50 border-t border-gray-100">
+                <div className="p-8 bg-background border-t border-border">
                     {!feedback ? (
                         <div className="relative">
                             <input
@@ -181,7 +181,7 @@ const WritingPractice = () => {
                                 onChange={(e) => setUserInput(e.target.value)}
                                 onKeyDown={handleKeyDown}
                                 placeholder="Type the German word..."
-                                className="w-full px-5 py-4 text-lg border-2 border-gray-300 rounded-xl focus:border-purple-500 focus:ring focus:ring-purple-200 outline-none transition-all"
+                                className="w-full px-5 py-4 text-lg bg-surface border-2 border-border text-text rounded-xl focus:border-purple-500 focus:ring focus:ring-purple-200 dark:focus:ring-purple-900/50 outline-none transition-all"
                                 autoFocus
                             />
                             <button
@@ -196,22 +196,22 @@ const WritingPractice = () => {
                         <div className="text-center animate-fade-in">
                             {feedback === 'correct' ? (
                                 <div className="mb-6 flex flex-col items-center">
-                                    <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-3">
+                                    <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center mb-3">
                                         <CheckCircle size={32} />
                                     </div>
-                                    <h4 className="text-xl font-bold text-green-700">Richtig! (Correct)</h4>
-                                    <p className="text-gray-600 mt-1 text-lg">{currentCard.german}</p>
-                                    <p className="text-sm text-gray-400 mt-2">Next card in 1.5s...</p>
+                                    <h4 className="text-xl font-bold text-green-700 dark:text-green-400">Richtig! (Correct)</h4>
+                                    <p className="text-text-muted mt-1 text-lg">{currentCard.german}</p>
+                                    <p className="text-sm text-text-muted mt-2">Next card in 1.5s...</p>
                                 </div>
                             ) : (
                                 <div className="mb-6 flex flex-col items-center">
-                                    <div className="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mb-3">
+                                    <div className="w-16 h-16 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 rounded-full flex items-center justify-center mb-3">
                                         <XCircle size={32} />
                                     </div>
-                                    <h4 className="text-xl font-bold text-red-700">Falsch (Incorrect)</h4>
+                                    <h4 className="text-xl font-bold text-red-700 dark:text-red-400">Falsch (Incorrect)</h4>
                                     <div className="mt-2 text-lg">
-                                        <span className="text-gray-400 line-through mr-2">{userInput}</span>
-                                        <span className="text-green-600 font-bold">{currentCard.german}</span>
+                                        <span className="text-text-muted line-through mr-2">{userInput}</span>
+                                        <span className="text-green-600 dark:text-green-400 font-bold">{currentCard.german}</span>
                                     </div>
                                 </div>
                             )}
@@ -231,7 +231,7 @@ const WritingPractice = () => {
                     <div className="mt-4 text-center">
                         <button
                             onClick={handleGiveUp}
-                            className={`text-sm text-gray-400 hover:text-gray-600 flex items-center gap-1 mx-auto ${feedback ? 'hidden' : ''}`}
+                            className={`text-sm text-text-muted hover:text-text flex items-center gap-1 mx-auto ${feedback ? 'hidden' : ''}`}
                         >
                             <HelpCircle size={14} />
                             I don't know

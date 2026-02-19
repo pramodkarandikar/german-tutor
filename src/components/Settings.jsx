@@ -37,19 +37,19 @@ const Settings = () => {
     return (
         <div className="max-w-2xl mx-auto">
             <div className="mb-8 text-center">
-                <h2 className="text-2xl font-bold text-gray-800">Settings</h2>
-                <p className="text-sm text-gray-500">Manage your vocabulary data</p>
+                <h2 className="text-2xl font-bold text-text">Settings</h2>
+                <p className="text-sm text-text-muted">Manage your vocabulary data</p>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+            <div className="bg-surface rounded-2xl shadow-xl overflow-hidden border border-border">
                 <div className="p-8">
                     <div className="flex items-center gap-4 mb-6">
-                        <div className={`w-12 h-12 rounded-full flex items-center justify-center ${isCustom ? 'bg-orange-100 text-orange-600' : 'bg-blue-100 text-blue-600'}`}>
+                        <div className={`w-12 h-12 rounded-full flex items-center justify-center ${isCustom ? 'bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400' : 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'}`}>
                             <FileSpreadsheet size={24} />
                         </div>
                         <div>
-                            <h3 className="text-lg font-bold text-gray-800">Current Data Source</h3>
-                            <p className="text-gray-500 text-sm">
+                            <h3 className="text-lg font-bold text-text">Current Data Source</h3>
+                            <p className="text-text-muted text-sm">
                                 {isCustom ? 'Custom File (LocalStorage)' : 'Default App Data'}
                                 <span className="mx-2">•</span>
                                 {vocabulary.length} words
@@ -57,9 +57,9 @@ const Settings = () => {
                         </div>
                     </div>
 
-                    <div className="border-t border-gray-100 py-6">
-                        <h4 className="font-semibold text-gray-700 mb-4">Upload New Data</h4>
-                        <p className="text-sm text-gray-500 mb-4">
+                    <div className="border-t border-border py-6">
+                        <h4 className="font-semibold text-text mb-4">Upload New Data</h4>
+                        <p className="text-sm text-text-muted mb-4">
                             Upload an Excel (.xlsx) file with columns: <strong>German</strong>, <strong>English</strong>, <strong>Category</strong>, <strong>Usage</strong>.
                         </p>
 
@@ -71,24 +71,24 @@ const Settings = () => {
                                     onChange={handleFileChange}
                                     ref={fileInputRef}
                                     disabled={uploading}
-                                    className="block w-full text-sm text-gray-500
+                                    className="block w-full text-sm text-text-muted
                                       file:mr-4 file:py-2.5 file:px-4
                                       file:rounded-full file:border-0
                                       file:text-sm file:font-semibold
-                                      file:bg-blue-50 file:text-blue-700
-                                      hover:file:bg-blue-100
+                                      file:bg-blue-50 dark:file:bg-blue-900/30 file:text-blue-700 dark:file:text-blue-300
+                                      hover:file:bg-blue-100 dark:hover:file:bg-blue-800/30
                                       cursor-pointer disabled:opacity-50"
                                 />
                             </label>
-                            {uploading && <span className="text-sm text-gray-400">Processing...</span>}
+                            {uploading && <span className="text-sm text-text-muted">Processing...</span>}
                         </div>
                     </div>
 
                     {isCustom && (
-                        <div className="border-t border-gray-100 pt-6 mt-2">
+                        <div className="border-t border-border pt-6 mt-2">
                             <button
                                 onClick={handleReset}
-                                className="flex items-center gap-2 text-red-600 hover:text-red-700 text-sm font-medium transition-colors"
+                                className="flex items-center gap-2 text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 text-sm font-medium transition-colors"
                             >
                                 <Trash2 size={16} />
                                 Reset to Default Data
@@ -97,7 +97,7 @@ const Settings = () => {
                     )}
 
                     {message && (
-                        <div className={`mt-6 p-4 rounded-xl flex items-start gap-3 ${message.type === 'success' ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`}>
+                        <div className={`mt-6 p-4 rounded-xl flex items-start gap-3 ${message.type === 'success' ? 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400' : 'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400'}`}>
                             {message.type === 'success' ? <CheckCircle size={20} className="mt-0.5" /> : <AlertCircle size={20} className="mt-0.5" />}
                             <div>
                                 <p className="font-semibold">{message.type === 'success' ? 'Success' : 'Error'}</p>
@@ -108,7 +108,7 @@ const Settings = () => {
                 </div>
             </div>
 
-            <div className="mt-8 bg-blue-50 p-6 rounded-xl text-sm text-blue-800 border border-blue-100">
+            <div className="mt-8 bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl text-sm text-blue-800 dark:text-blue-300 border border-blue-100 dark:border-blue-900/50">
                 <h5 className="font-bold flex items-center gap-2 mb-2">
                     <AlertCircle size={16} /> Note on Privacy
                 </h5>

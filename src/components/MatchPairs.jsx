@@ -110,8 +110,8 @@ const MatchPairs = () => {
         <div className="max-w-4xl mx-auto">
             <div className="flex justify-between items-end mb-8 px-4">
                 <div>
-                    <h2 className="text-2xl font-bold text-gray-800">Match Pairs</h2>
-                    <p className="text-sm text-gray-500">Find the matching German and English pairs</p>
+                    <h2 className="text-2xl font-bold text-text">Match Pairs</h2>
+                    <p className="text-sm text-text-muted">Find the matching German and English pairs</p>
                 </div>
 
                 <div className="flex gap-6">
@@ -121,8 +121,8 @@ const MatchPairs = () => {
                     </div>
 
                     <div className="text-center">
-                        <div className="text-xs text-gray-400 uppercase font-bold tracking-wider">Attempts</div>
-                        <div className="font-bold text-xl text-gray-700">{attempts}</div>
+                        <div className="text-xs text-text-muted uppercase font-bold tracking-wider">Attempts</div>
+                        <div className="font-bold text-xl text-text">{attempts}</div>
                     </div>
                 </div>
             </div>
@@ -134,12 +134,12 @@ const MatchPairs = () => {
             />
 
             {gameWon ? (
-                <div className="bg-white rounded-2xl shadow-xl p-12 text-center mt-6 animate-fade-in">
-                    <div className="w-24 h-24 bg-yellow-100 text-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="bg-surface rounded-2xl shadow-xl p-12 text-center mt-6 animate-fade-in">
+                    <div className="w-24 h-24 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
                         <Trophy size={48} />
                     </div>
-                    <h3 className="text-3xl font-bold text-gray-800 mb-2">Excellent!</h3>
-                    <p className="text-gray-500 mb-8">You cleared the board in {attempts} attempts.</p>
+                    <h3 className="text-3xl font-bold text-text mb-2">Excellent!</h3>
+                    <p className="text-text-muted mb-8">You cleared the board in {attempts} attempts.</p>
                     <button
                         onClick={initializeGame}
                         className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2 mx-auto"
@@ -166,7 +166,7 @@ const MatchPairs = () => {
                                 className={`h-32 rounded-xl flex items-center justify-center p-4 text-center cursor-pointer transition-all duration-200 shadow-sm border-2
                   ${isSelected
                                         ? 'bg-blue-600 text-white border-blue-600 scale-105 shadow-xl z-10'
-                                        : 'bg-white text-gray-700 border-gray-100 hover:border-blue-200 hover:bg-blue-50'}`}
+                                        : 'bg-surface text-text border-border hover:border-blue-200 dark:hover:border-blue-700 hover:bg-blue-50 dark:hover:bg-blue-900/20'}`}
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.95 }}
                             >
@@ -183,7 +183,7 @@ const MatchPairs = () => {
                 <div className="text-center mt-8">
                     <button
                         onClick={initializeGame}
-                        className="text-gray-400 hover:text-gray-600 flex items-center gap-1 mx-auto text-sm"
+                        className="text-text-muted hover:text-text flex items-center gap-1 mx-auto text-sm"
                     >
                         <RefreshCw size={14} />
                         Reset Board

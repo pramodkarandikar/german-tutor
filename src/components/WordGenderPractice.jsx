@@ -41,20 +41,20 @@ const WordGenderPractice = () => {
     return (
         <div className="max-w-2xl mx-auto p-4 space-y-6">
             <div className="text-center space-y-2">
-                <h2 className="text-3xl font-bold text-gray-800">Word Gender Practice</h2>
-                <p className="text-gray-600">Choose the correct article for the noun.</p>
+                <h2 className="text-3xl font-bold text-text">Word Gender Practice</h2>
+                <p className="text-text-muted">Choose the correct article for the noun.</p>
                 <div className="flex justify-center items-center gap-2">
                     <span className="text-sm font-medium text-amber-600">Streak: {streak}</span>
                 </div>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-xl p-8 text-center space-y-8 transition-all duration-300 hover:shadow-2xl">
+            <div className="bg-surface rounded-2xl shadow-xl p-8 text-center space-y-8 transition-all duration-300 hover:shadow-2xl">
                 <div className="space-y-4">
-                    <h3 className="text-5xl font-bold text-gray-800 tracking-tight">
+                    <h3 className="text-5xl font-bold text-text tracking-tight">
                         {currentWord.word}
                     </h3>
                     {showHint && currentWord.translation && (
-                        <p className="text-gray-500 italic">{currentWord.translation}</p>
+                        <p className="text-text-muted italic">{currentWord.translation}</p>
                     )}
                 </div>
 
@@ -67,10 +67,10 @@ const WordGenderPractice = () => {
                             className={`
                                 py-4 px-6 rounded-xl text-xl font-bold transition-all transform active:scale-95
                                 ${feedback === 'correct' && gender.toLowerCase() === currentWord.gender.toLowerCase()
-                                    ? 'bg-green-100 text-green-700 border-2 border-green-500'
+                                    ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border-2 border-green-500'
                                     : feedback === 'incorrect'
-                                        ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                                        : 'bg-white border-2 border-gray-200 text-gray-700 hover:border-blue-500 hover:bg-blue-50'
+                                        ? 'bg-gray-100 dark:bg-gray-800 text-gray-400 cursor-not-allowed'
+                                        : 'bg-background border-2 border-border text-text hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20'
                                 }
                             `}
                         >
@@ -94,8 +94,8 @@ const WordGenderPractice = () => {
                                 <span className="text-lg font-medium">Falsch! Try again.</span>
                             </div>
                             {currentWord.rule && (
-                                <div className="text-sm text-gray-600 bg-gray-50 p-3 rounded-lg border border-gray-200">
-                                    <p className="font-semibold text-gray-700">Rule Hint:</p>
+                                <div className="text-sm text-text-muted bg-background p-3 rounded-lg border border-border">
+                                    <p className="font-semibold text-text">Rule Hint:</p>
                                     <p>{currentWord.rule}</p>
                                 </div>
                             )}
@@ -107,7 +107,7 @@ const WordGenderPractice = () => {
             <div className="flex justify-center">
                 <button
                     onClick={nextWord}
-                    className="flex items-center gap-2 text-gray-500 hover:text-gray-700 transition-colors"
+                    className="flex items-center gap-2 text-text-muted hover:text-text transition-colors"
                 >
                     <RefreshCw size={16} />
                     Skip Word

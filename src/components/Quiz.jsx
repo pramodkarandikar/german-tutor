@@ -11,7 +11,7 @@ const Quiz = () => {
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState(0);
-    const [isRandom, setIsRandom] = useState(false);
+    const [isRandom, setIsRandom] = useState(true);
 
     // Extract unique categories
     const categories = useMemo(() => {
@@ -60,14 +60,17 @@ const Quiz = () => {
         });
     };
 
+
+
+
     if (cards.length === 0) {
-        return <div className="text-center text-gray-500 mt-10">No cards found for these categories.</div>;
+        return <div className="text-center text-text-muted mt-10">No cards found for these categories.</div>;
     }
 
     return (
         <div className="max-w-4xl mx-auto p-4">
-            <h1 className="text-3xl font-extrabold text-center text-gray-800 mb-2">Flashcards</h1>
-            <p className="text-center text-gray-500 mb-8">Master your German skills with interactive flashcards</p>
+            <h1 className="text-3xl font-extrabold text-center text-text mb-2">Flashcards</h1>
+            <p className="text-center text-text-muted mb-8">Master your German skills with interactive flashcards</p>
 
             <CategoryFilter
                 categories={categories}
@@ -79,7 +82,7 @@ const Quiz = () => {
                 <button
                     onClick={toggleRandom}
                     className={`flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold transition-colors
-             ${isRandom ? 'bg-purple-100 text-purple-600' : 'bg-gray-100 text-gray-500 hover:bg-gray-200'}`}
+             ${isRandom ? 'bg-purple-100 text-purple-600' : 'bg-background text-text-muted hover:bg-surface border border-border'}`}
                 >
                     <Shuffle size={14} />
                     {isRandom ? 'Randomized' : 'Sequential'}
@@ -104,17 +107,17 @@ const Quiz = () => {
             <div className="flex justify-center items-center gap-8 mt-8">
                 <button
                     onClick={handlePrev}
-                    className="p-3 rounded-full bg-white shadow-md hover:bg-gray-50 hover:shadow-lg transition-all text-gray-600 border border-gray-100"
+                    className="p-3 rounded-full bg-surface shadow-md hover:bg-background hover:shadow-lg transition-all text-text border border-border"
                     aria-label="Previous card"
                 >
                     <ChevronLeft size={24} />
                 </button>
-                <span className="text-sm font-medium text-gray-400">
+                <span className="text-sm font-medium text-text-muted">
                     {currentIndex + 1} / {cards.length}
                 </span>
                 <button
                     onClick={handleNext}
-                    className="p-3 rounded-full bg-white shadow-md hover:bg-gray-50 hover:shadow-lg transition-all text-gray-600 border border-gray-100"
+                    className="p-3 rounded-full bg-surface shadow-md hover:bg-background hover:shadow-lg transition-all text-text border border-border"
                     aria-label="Next card"
                 >
                     <ChevronRight size={24} />

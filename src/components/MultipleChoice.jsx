@@ -97,8 +97,8 @@ const MultipleChoice = () => {
         <div className="max-w-2xl mx-auto">
             <div className="flex justify-between items-end mb-8 px-4">
                 <div>
-                    <h2 className="text-2xl font-bold text-gray-800">Multiple Choice</h2>
-                    <p className="text-sm text-gray-500">Select the correct German translation</p>
+                    <h2 className="text-2xl font-bold text-text">Multiple Choice</h2>
+                    <p className="text-sm text-text-muted">Select the correct German translation</p>
                 </div>
 
                 <div className="flex gap-6">
@@ -110,8 +110,8 @@ const MultipleChoice = () => {
                     </div>
 
                     <div className="text-center">
-                        <div className="text-xs text-gray-400 uppercase font-bold tracking-wider">Streak</div>
-                        <div className={`font-bold text-xl flex items-center justify-center gap-1 ${streak > 2 ? 'text-orange-500' : 'text-gray-400'}`}>
+                        <div className="text-xs text-text-muted uppercase font-bold tracking-wider">Streak</div>
+                        <div className={`font-bold text-xl flex items-center justify-center gap-1 ${streak > 2 ? 'text-orange-500' : 'text-text-muted'}`}>
                             <Flame size={20} fill={streak > 2 ? "currentColor" : "none"} />
                             {streak}
                         </div>
@@ -125,12 +125,12 @@ const MultipleChoice = () => {
                 onToggleCategory={handleCategoryToggle}
             />
 
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden mt-6 border border-gray-100">
-                <div className="p-10 text-center bg-gray-50 border-b border-gray-100">
-                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-xs font-semibold rounded-full mb-4">
+            <div className="bg-surface rounded-2xl shadow-xl overflow-hidden mt-6 border border-border">
+                <div className="p-10 text-center bg-background border-b border-border">
+                    <span className="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full mb-4">
                         Translate this
                     </span>
-                    <h3 className="text-3xl font-bold text-gray-800">{currentCard.english}</h3>
+                    <h3 className="text-3xl font-bold text-text">{currentCard.english}</h3>
                 </div>
 
                 <div className="p-8 grid grid-cols-1 gap-3">
@@ -139,14 +139,14 @@ const MultipleChoice = () => {
 
                         if (selectedOption) {
                             if (option === currentCard.german) {
-                                btnClass += "bg-green-50 border-green-500 text-green-700"; // Correct answer (always show)
+                                btnClass += "bg-green-50 dark:bg-green-900/20 border-green-500 text-green-700 dark:text-green-400"; // Correct answer (always show)
                             } else if (option === selectedOption) {
-                                btnClass += "bg-red-50 border-red-500 text-red-700"; // Wrong selection
+                                btnClass += "bg-red-50 dark:bg-red-900/20 border-red-500 text-red-700 dark:text-red-400"; // Wrong selection
                             } else {
-                                btnClass += "border-gray-100 text-gray-400 opacity-50"; // Other options
+                                btnClass += "border-border text-text-muted opacity-50"; // Other options
                             }
                         } else {
-                            btnClass += "border-gray-200 hover:border-blue-400 hover:bg-blue-50 text-gray-700 cursor-pointer hover:shadow-md";
+                            btnClass += "border-border hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 text-text cursor-pointer hover:shadow-md";
                         }
 
                         return (
@@ -165,7 +165,7 @@ const MultipleChoice = () => {
                 </div>
 
                 {selectedOption && !isCorrect && (
-                    <div className="p-4 bg-gray-50 border-t border-gray-100 flex justify-center">
+                    <div className="p-4 bg-background border-t border-border flex justify-center">
                         <button
                             onClick={handleNext}
                             className="px-6 py-2 bg-gray-900 text-white rounded-lg font-semibold hover:bg-black transition-colors flex items-center gap-2"

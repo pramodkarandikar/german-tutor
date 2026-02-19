@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { DataContext } from '../contexts/DataContext';
-import { Check, X, RefreshCw, ArrowRight } from 'lucide-react';
+import { Check, X, RefreshCw, ArrowRight, ChevronDown } from 'lucide-react';
 
 const VerbPrepositionPractice = () => {
     const { verbPrepositions } = useContext(DataContext);
@@ -44,49 +44,52 @@ const VerbPrepositionPractice = () => {
     return (
         <div className="max-w-2xl mx-auto p-4 space-y-6">
             <div className="text-center space-y-2">
-                <h2 className="text-3xl font-bold text-gray-800">Verb Prepositions</h2>
-                <p className="text-gray-600">Enter the correct preposition and case.</p>
+                <h2 className="text-3xl font-bold text-text">Verb Prepositions</h2>
+                <p className="text-text-muted">Enter the correct preposition and case.</p>
                 <div className="flex justify-center items-center gap-2">
                     <span className="text-sm font-medium text-amber-600">Streak: {streak}</span>
                 </div>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-xl p-8 space-y-8 transition-all duration-300 hover:shadow-2xl">
+            <div className="bg-surface rounded-2xl shadow-xl p-8 space-y-8 transition-all duration-300 hover:shadow-2xl">
                 <div className="text-center space-y-4">
-                    <h3 className="text-4xl font-bold text-gray-800 tracking-tight">
+                    <h3 className="text-4xl font-bold text-text tracking-tight">
                         {currentVerb.verb}
                     </h3>
-                    <p className="text-xl text-gray-500 italic">
+                    <p className="text-xl text-text-muted italic">
                         {currentVerb.translation}
                     </p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                        <label className="block text-sm font-medium text-gray-700">Preposition</label>
+                        <label className="block text-sm font-medium text-text-muted">Preposition</label>
                         <input
                             type="text"
                             value={prepositionInput}
                             onChange={(e) => setPrepositionInput(e.target.value)}
                             placeholder="e.g. auf"
                             disabled={feedback === 'correct'}
-                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none"
+                            className="w-full p-3 bg-background border border-border text-text rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none"
                         />
                     </div>
                     <div className="space-y-2">
-                        <label className="block text-sm font-medium text-gray-700">Case</label>
-                        <select
-                            value={caseInput}
-                            onChange={(e) => setCaseInput(e.target.value)}
-                            disabled={feedback === 'correct'}
-                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none bg-white"
-                        >
-                            <option value="">Select Case</option>
-                            <option value="Akkusativ">Akkusativ</option>
-                            <option value="Dativ">Dativ</option>
-                            <option value="Genitiv">Genitiv</option>
-                            <option value="Nominativ">Nominativ</option>
-                        </select>
+                        <label className="block text-sm font-medium text-text-muted">Case</label>
+                        <div className="relative">
+                            <select
+                                value={caseInput}
+                                onChange={(e) => setCaseInput(e.target.value)}
+                                disabled={feedback === 'correct'}
+                                className="w-full p-3 bg-background border border-border text-text rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none appearance-none"
+                            >
+                                <option value="">Select Case</option>
+                                <option value="Akkusativ">Akkusativ</option>
+                                <option value="Dativ">Dativ</option>
+                                <option value="Genitiv">Genitiv</option>
+                                <option value="Nominativ">Nominativ</option>
+                            </select>
+                            <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted pointer-events-none" size={20} />
+                        </div>
                     </div>
                 </div>
 
@@ -132,14 +135,14 @@ const VerbPrepositionPractice = () => {
                                 <X size={28} />
                                 <span className="text-xl font-bold">Leider Falsch.</span>
                             </div>
-                            <div className="bg-red-50 p-4 rounded-xl border border-red-200 text-red-800 space-y-2">
+                            <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-200 dark:border-red-800 text-red-800 dark:text-red-300 space-y-2">
                                 <p>Correct Answer:</p>
                                 <p className="font-bold text-lg">{currentVerb.preposition} + {currentVerb.case}</p>
-                                <p className="italic text-sm text-gray-600">"{currentVerb.example}"</p>
+                                <p className="italic text-sm text-text-muted">"{currentVerb.example}"</p>
                             </div>
                             <button
                                 onClick={nextVerb} // Or retry? Let's next for flow
-                                className="w-full py-3 px-6 rounded-xl text-lg font-bold text-gray-700 bg-gray-200 hover:bg-gray-300 transition-all transform active:scale-95"
+                                className="w-full py-3 px-6 rounded-xl text-lg font-bold text-text-muted bg-background hover:bg-surface border border-border transition-all transform active:scale-95"
                             >
                                 Next Verb
                             </button>
@@ -151,7 +154,7 @@ const VerbPrepositionPractice = () => {
             <div className="flex justify-center">
                 <button
                     onClick={nextVerb}
-                    className="flex items-center gap-2 text-gray-500 hover:text-gray-700 transition-colors"
+                    className="flex items-center gap-2 text-text-muted hover:text-text transition-colors"
                 >
                     <RefreshCw size={16} />
                     Skip
