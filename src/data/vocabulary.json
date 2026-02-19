@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "german": "trotzdem",
+    "german": "Trotzdem",
     "english": "despite it",
     "category": "Misc vocab",
     "usage": ""
@@ -15,42 +15,42 @@
   },
   {
     "id": 2,
-    "german": "escalator",
-    "english": "Rolltreppe",
+    "german": "Rolltreppe",
+    "english": "escalator",
     "category": "Misc vocab",
     "usage": ""
   },
   {
     "id": 3,
-    "german": "allgemeine geschäftsbedingungen",
+    "german": "Allgemeine Geschäftsbedingungen",
     "english": "General terms and conditions of business",
     "category": "Misc vocab",
     "usage": ""
   },
   {
     "id": 4,
-    "german": "allgemeine geschäftsbedingungen",
-    "english": "allgemeine geschäftsbedingungen",
+    "german": "Allgemeine Geschäftsbedingungen",
+    "english": "General terms and conditions",
     "category": "Misc vocab",
     "usage": ""
   },
   {
     "id": 5,
-    "german": "öffentliche Ankündigung",
+    "german": "Öffentliche Ankündigung",
     "english": "public announce",
     "category": "Misc vocab",
     "usage": ""
   },
   {
     "id": 6,
-    "german": "Gute besserung",
+    "german": "Gute Besserung",
     "english": "Get well soon",
     "category": "Misc vocab",
     "usage": ""
   },
   {
     "id": 7,
-    "german": "führerschein",
+    "german": "Führerschein",
     "english": "driver's license",
     "category": "Misc vocab",
     "usage": ""
@@ -64,7 +64,7 @@
   },
   {
     "id": 9,
-    "german": "klarkommen",
+    "german": "Klarkommen",
     "english": "to cope",
     "category": "Misc vocab",
     "usage": ""
@@ -113,7 +113,7 @@
   },
   {
     "id": 16,
-    "german": "links überholverbot",
+    "german": "Linksüberholverbot",
     "english": "no overtaking on the left",
     "category": "Misc vocab",
     "usage": ""
@@ -148,21 +148,21 @@
   },
   {
     "id": 21,
-    "german": "berechnung",
+    "german": "Berechnung",
     "english": "calculation",
     "category": "Misc vocab",
     "usage": ""
   },
   {
     "id": 22,
-    "german": "unterricht",
+    "german": "Unterricht",
     "english": "instruction",
     "category": "Misc vocab",
     "usage": ""
   },
   {
     "id": 23,
-    "german": "beratung",
+    "german": "Beratung",
     "english": "advice",
     "category": "Misc vocab",
     "usage": ""
@@ -183,14 +183,14 @@
   },
   {
     "id": 26,
-    "german": "schwarzfahrer",
+    "german": "Schwarzfahrer",
     "english": "fare dodger",
     "category": "Misc vocab",
     "usage": ""
   },
   {
     "id": 27,
-    "german": "reihenfolge",
+    "german": "Reihenfolge",
     "english": "sequence",
     "category": "Misc vocab",
     "usage": ""
@@ -274,35 +274,35 @@
   },
   {
     "id": 39,
-    "german": "entspannen",
+    "german": "Entspannen",
     "english": "relax",
     "category": "Misc vocab",
     "usage": ""
   },
   {
     "id": 40,
-    "german": "pflegen",
+    "german": "Pflegen",
     "english": "maintain",
     "category": "Misc vocab",
     "usage": ""
   },
   {
     "id": 41,
-    "german": "vorschläge",
+    "german": "Vorschläge",
     "english": "suggestions",
     "category": "Misc vocab",
     "usage": ""
   },
   {
     "id": 42,
-    "german": "redewendung",
+    "german": "Redewendung",
     "english": "idiom",
     "category": "Misc vocab",
     "usage": ""
   },
   {
     "id": 43,
-    "german": "vertrautheiten",
+    "german": "Vertrautheiten",
     "english": "familiarities",
     "category": "Misc vocab",
     "usage": ""
@@ -337,28 +337,28 @@
   },
   {
     "id": 48,
-    "german": "stattfindet",
+    "german": "Stattfindet",
     "english": "takes place",
     "category": "Misc vocab",
     "usage": ""
   },
   {
     "id": 49,
-    "german": "gehirn",
+    "german": "Gehirn",
     "english": "brain",
     "category": "Misc vocab",
     "usage": ""
   },
   {
     "id": 50,
-    "german": "haltbarkeitsdatum",
+    "german": "Haltbarkeitsdatum",
     "english": "best before date",
     "category": "Misc vocab",
     "usage": ""
   },
   {
     "id": 51,
-    "german": "begriff",
+    "german": "Begriff",
     "english": "expression",
     "category": "Misc vocab",
     "usage": ""
@@ -372,7 +372,7 @@
   },
   {
     "id": 53,
-    "german": "angebot",
+    "german": "Angebot",
     "english": "offer",
     "category": "Misc vocab",
     "usage": ""
@@ -393,14 +393,14 @@
   },
   {
     "id": 56,
-    "german": "Guten nacht",
+    "german": "Gute Nacht",
     "english": "good night",
     "category": "Expressions",
     "usage": ""
   },
   {
     "id": 57,
-    "german": "ich heisse Pramod",
+    "german": "Ich heiße Pramod",
     "english": "my name is Pramod",
     "category": "Expressions",
     "usage": ""
@@ -463,7 +463,7 @@
   },
   {
     "id": 66,
-    "german": "Guten appetit",
+    "german": "Guten Appetit",
     "english": "saavkash houde' types/enjoy your meal",
     "category": "Expressions",
     "usage": ""
@@ -603,7 +603,7 @@
   },
   {
     "id": 86,
-    "german": "Ich habe beste Lehrerin",
+    "german": "Ich habe die beste Lehrerin",
     "english": "I have the best teacher",
     "category": "Expressions",
     "usage": ""
@@ -659,7 +659,7 @@
   },
   {
     "id": 94,
-    "german": "Waschmitte",
+    "german": "Waschmittel",
     "english": "washing material",
     "category": "Expressions",
     "usage": ""
@@ -680,7 +680,7 @@
   },
   {
     "id": 97,
-    "german": "Zieg mal",
+    "german": "Zeig mal",
     "english": "Show me!",
     "category": "Expressions",
     "usage": ""
@@ -757,7 +757,7 @@
   },
   {
     "id": 108,
-    "german": "Kan Sie mir helfen?",
+    "german": "Können Sie mir helfen?",
     "english": "Can you help me?",
     "category": "Expressions",
     "usage": ""
@@ -778,7 +778,7 @@
   },
   {
     "id": 111,
-    "german": "Wissen sie woh das ist?",
+    "german": "Wissen Sie, wo das ist?",
     "english": "Do you know where is …",
     "category": "Expressions",
     "usage": ""
@@ -799,7 +799,7 @@
   },
   {
     "id": 114,
-    "german": "übrigens",
+    "german": "Übrigens",
     "english": "By the way..",
     "category": "Expressions",
     "usage": ""
@@ -807,7 +807,7 @@
   {
     "id": 115,
     "german": "Ich gehe nach links",
-    "english": "I go lefr",
+    "english": "I go left",
     "category": "Expressions",
     "usage": ""
   },
@@ -925,8 +925,8 @@
   },
   {
     "id": 132,
-    "german": "Geburtstag/jahr",
-    "english": "Birhtday/year",
+    "german": "Geburtstag/Jahr",
+    "english": "Birthday/year",
     "category": "Seasons",
     "usage": ""
   },
@@ -939,7 +939,7 @@
   },
   {
     "id": 134,
-    "german": "motorrad",
+    "german": "Motorrad",
     "english": "Bike",
     "category": "Misc vocab",
     "usage": ""
@@ -1065,7 +1065,7 @@
   },
   {
     "id": 152,
-    "german": "weiß",
+    "german": "Weiß",
     "english": "White",
     "category": "Colours",
     "usage": ""
@@ -1079,70 +1079,70 @@
   },
   {
     "id": 154,
-    "german": "rot",
+    "german": "Rot",
     "english": "Red",
     "category": "Colours",
     "usage": ""
   },
   {
     "id": 155,
-    "german": "gelb",
+    "german": "Gelb",
     "english": "Yellow",
     "category": "Colours",
     "usage": ""
   },
   {
     "id": 156,
-    "german": "grün",
+    "german": "Grün",
     "english": "Green",
     "category": "Colours",
     "usage": ""
   },
   {
     "id": 157,
-    "german": "rosa",
+    "german": "Rosa",
     "english": "Pink",
     "category": "Colours",
     "usage": ""
   },
   {
     "id": 158,
-    "german": "lila",
+    "german": "Lila",
     "english": "Purple",
     "category": "Colours",
     "usage": ""
   },
   {
     "id": 159,
-    "german": "orange",
+    "german": "Orange",
     "english": "Orange",
     "category": "Colours",
     "usage": ""
   },
   {
     "id": 160,
-    "german": "braun",
+    "german": "Braun",
     "english": "Brown",
     "category": "Colours",
     "usage": ""
   },
   {
     "id": 161,
-    "german": "grau",
+    "german": "Grau",
     "english": "Grey",
     "category": "Colours",
     "usage": ""
   },
   {
     "id": 162,
-    "german": "silber",
+    "german": "Silber",
     "english": "Silver",
     "category": "Colours",
     "usage": ""
   },
   {
     "id": 163,
-    "german": "golden",
+    "german": "Golden",
     "english": "Golden",
     "category": "Colours",
     "usage": ""
@@ -1282,7 +1282,7 @@
   },
   {
     "id": 183,
-    "german": "sich kämen",
+    "german": "sich kämmen",
     "english": "to comb yourself (reflexive verb)",
     "category": "Verbs",
     "usage": ""
@@ -1310,7 +1310,7 @@
   },
   {
     "id": 187,
-    "german": "Baden / duschen",
+    "german": "Baden / Duschen",
     "english": "to bathe / take a shower (shower or bath-tub)",
     "category": "Verbs",
     "usage": ""
@@ -1584,7 +1584,7 @@
   {
     "id": 226,
     "german": "Giraffe",
-    "english": "Girafe",
+    "english": "Giraffe",
     "category": "Animals",
     "usage": ""
   },
@@ -1681,350 +1681,350 @@
   },
   {
     "id": 240,
-    "german": "schon einmal / schon mal",
+    "german": "Schon einmal / Schon mal",
     "english": "ever before.",
     "category": "Word Combination",
     "usage": " Warst du schon einmal in Berlin? translates to Have you ever been to Berlin?"
   },
   {
     "id": 241,
-    "german": "noch nie",
+    "german": "Noch nie",
     "english": "never before.",
     "category": "Word Combination",
     "usage": " Ich war noch nie in Berlin translates to I have never been to Berlin."
   },
   {
     "id": 242,
-    "german": "noch nicht",
+    "german": "Noch nicht",
     "english": "not yet",
     "category": "Word Combination",
     "usage": " Er hat die A2 Prüfung noch nicht bestanden translates to He has not yet passed the A2 exam."
   },
   {
     "id": 243,
-    "german": "noch einmal",
+    "german": "Noch einmal",
     "english": "once again or once more.",
     "category": "Word Combination",
     "usage": " Er möchte den Test noch einmal schreiben translates to He wants to write the test again."
   },
   {
     "id": 244,
-    "german": "immer noch",
+    "german": "Immer noch",
     "english": "still.",
     "category": "Word Combination",
     "usage": " Wo ist Tom? Ist er immer noch im Büro? translates to Where is Tom? Is he still at the office?"
   },
   {
     "id": 245,
-    "german": "immer noch nicht",
+    "german": "Immer noch nicht",
     "english": "still not or not yet.",
     "category": "Word Combination",
     "usage": " Es ist schon 23 Uhr, aber Tom ist immer noch nicht zu Hause translates to It's already 11 PM, but Tom is still not home."
   },
   {
     "id": 246,
-    "german": "immer wieder",
+    "german": "Immer wieder",
     "english": "again and again or over and over.",
     "category": "Word Combination",
     "usage": " Machst du den Fehler auch immer wieder? translates to Do you make the mistake again and again?"
   },
   {
     "id": 247,
-    "german": "nie wieder",
+    "german": "Nie wieder",
     "english": "never again.",
     "category": "Word Combination",
     "usage": " Ich hoffe, dass du den Fehler nie wieder machst translates to I hope that you never make the mistake again."
   },
   {
     "id": 248,
-    "german": "schon wieder",
+    "german": "Schon wieder",
     "english": "yet again.",
     "category": "Word Combination",
     "usage": " Streiten Lea und Rick schon wieder? translates to Are Lea and Rick fighting again?"
   },
   {
     "id": 249,
-    "german": "nicht mehr",
+    "german": "Nicht mehr",
     "english": "no longer or not anymore.",
     "category": "Word Combination",
     "usage": " Seit gestern sind sie nicht mehr zusammen translates to Since yesterday, they are no longer together."
   },
   {
     "id": 250,
-    "german": "immer + Komparativ",
+    "german": "Immer + Komparativ",
     "english": "Gets better and better",
     "category": "Word Combination",
     "usage": "If you watch the videos regularly, your German will get better and better"
   },
   {
     "id": 251,
-    "german": "noch + Komparativ",
+    "german": "Noch + Komparativ",
     "english": "even more than another",
     "category": "Word Combination",
     "usage": "Used to compare two things, like saying one thing is even more than another"
   },
   {
     "id": 252,
-    "german": "abholen",
+    "german": "Abholen",
     "english": "to pick someone up",
     "category": "Prefix (ab-)",
     "usage": "Ich hole dich ab. (I'll pick you up.)"
   },
   {
     "id": 253,
-    "german": "abfahren",
+    "german": "Abfahren",
     "english": "to leave/depart",
     "category": "Prefix (ab-)",
     "usage": "Ich fahre ab. (I'm leaving.)"
   },
   {
     "id": 254,
-    "german": "anziehen",
+    "german": "Anziehen",
     "english": "to put on",
     "category": "Prefix (an-)",
     "usage": "Ich ziehe mich an. (I'm getting dressed.)"
   },
   {
     "id": 255,
-    "german": "anmachen",
+    "german": "Anmachen",
     "english": "to turn on",
     "category": "Prefix (an-)",
     "usage": "Ich mache das Licht an. (I'm turning on the light.)"
   },
   {
     "id": 256,
-    "german": "anfassen",
+    "german": "Anfassen",
     "english": "to touch",
     "category": "Prefix (an-)",
     "usage": "Fass das nicht an! (Don't touch that!)"
   },
   {
     "id": 257,
-    "german": "angreifen",
+    "german": "Angreifen",
     "english": "to attack",
     "category": "Prefix (an-)",
     "usage": "Der Hund greift an. (The dog is attacking.)"
   },
   {
     "id": 258,
-    "german": "aufmachen",
+    "german": "Aufmachen",
     "english": "to open something",
     "category": "Prefix (auf-)",
     "usage": "Ich mache die Tür auf. (I'm opening the door.)"
   },
   {
     "id": 259,
-    "german": "auflassen",
+    "german": "Auflassen",
     "english": "to leave something open",
     "category": "Prefix (auf-)",
     "usage": "Ich lasse das Fenster auf. (I'm leaving the window open.)"
   },
   {
     "id": 260,
-    "german": "aufstehen",
+    "german": "Aufstehen",
     "english": "to get up",
     "category": "Prefix (auf-)",
     "usage": "Ich stehe auf. (I'm getting up.)"
   },
   {
     "id": 261,
-    "german": "aufgeben",
+    "german": "Aufgeben",
     "english": "to give up",
     "category": "Prefix (auf-)",
     "usage": "Ich gebe auf. (I give up)"
   },
   {
     "id": 262,
-    "german": "aussteigen",
+    "german": "Aussteigen",
     "english": "to get off",
     "category": "Prefix (aus-)",
     "usage": "Ich steige aus. (I'm getting off.)"
   },
   {
     "id": 263,
-    "german": "ausziehen",
+    "german": "Ausziehen",
     "english": "to take something off",
     "category": "Prefix (aus-)",
     "usage": "Ich ziehe mich aus. (I'm taking my clothes off.)"
   },
   {
     "id": 264,
-    "german": "beibringen",
+    "german": "Beibringen",
     "english": "to teach",
     "category": "Prefix (bei-)",
     "usage": "Ich bringe dir etwas bei. (I'll teach you something.)"
   },
   {
     "id": 265,
-    "german": "einsteigen",
+    "german": "Einsteigen",
     "english": "to get on",
     "category": "Prefix (ein-)",
     "usage": "Ich steige ein. (I'm getting on.)"
   },
   {
     "id": 266,
-    "german": "einatmen",
+    "german": "Einatmen",
     "english": "to breathe in",
     "category": "Prefix (ein-)",
     "usage": "Ich atme ein. (I'm breathing in.)"
   },
   {
     "id": 267,
-    "german": "einladen",
+    "german": "Einladen",
     "english": "to invite",
     "category": "Prefix (ein-)",
     "usage": "Ich lade dich ein. (I'm inviting you.)"
   },
   {
     "id": 268,
-    "german": "einpacken",
+    "german": "Einpacken",
     "english": "to pack",
     "category": "Prefix (ein-)",
     "usage": "Ich packe ein. (I'm packing.)"
   },
   {
     "id": 269,
-    "german": "herkommen",
+    "german": "Herkommen",
     "english": "to come here",
     "category": "Prefix (her-)",
     "usage": "Ich komme her. (I'm coming here.)"
   },
   {
     "id": 270,
-    "german": "hergeben",
+    "german": "Hergeben",
     "english": "to give here",
     "category": "Prefix (her-)",
     "usage": "Gib mir das her. (Give that to me.)"
   },
   {
     "id": 271,
-    "german": "hinfahren",
+    "german": "Hinfahren",
     "english": "going there",
     "category": "Prefix (hin-)",
     "usage": "Ich fahre hin. (I'm going there.)"
   },
   {
     "id": 272,
-    "german": "hinstellen",
+    "german": "Hinstellen",
     "english": "leave something there",
     "category": "Prefix (hin-)",
     "usage": "Ich stelle das hin. (I'm putting that there.)"
   },
   {
     "id": 273,
-    "german": "hineingehen",
+    "german": "Hineingehen",
     "english": "to go inside",
     "category": "Prefix (hinein-)",
     "usage": "Ich gehe hinein. (I'm going inside.)"
   },
   {
     "id": 274,
-    "german": "hineinfallen",
+    "german": "Hineinfallen",
     "english": "to fall inside",
     "category": "Prefix (hinein-)",
     "usage": "Ich falle hinein. (I'm falling inside.)"
   },
   {
     "id": 275,
-    "german": "losfahren",
+    "german": "Losfahren",
     "english": "to start driving",
     "category": "Prefix (los-)",
     "usage": "Ich fahre los. (I'm starting to drive.)"
   },
   {
     "id": 276,
-    "german": "losgehen",
+    "german": "Losgehen",
     "english": "to start going",
     "category": "Prefix (los-)",
     "usage": "Ich gehe los. (I'm starting to go.)"
   },
   {
     "id": 277,
-    "german": "mitkommen",
+    "german": "Mitkommen",
     "english": "come with",
     "category": "Prefix (mit-)",
     "usage": "Ich komme mit. (I'm coming with.)"
   },
   {
     "id": 278,
-    "german": "mitmachen",
+    "german": "Mitmachen",
     "english": "join in",
     "category": "Prefix (mit-)",
     "usage": "Ich mache mit. (I'm joining in.)"
   },
   {
     "id": 279,
-    "german": "nachdenken",
+    "german": "Nachdenken",
     "english": "to think about",
     "category": "Prefix (nach-)",
     "usage": "Ich denke nach. (I'm thinking about it.)"
   },
   {
     "id": 280,
-    "german": "nachkommen",
+    "german": "Nachkommen",
     "english": "to come later",
     "category": "Prefix (nach-)",
     "usage": "Ich komme nach. (I'll come later.)"
   },
   {
     "id": 281,
-    "german": "vorbereiten",
+    "german": "Vorbereiten",
     "english": "to prepare",
     "category": "Prefix (vor-)",
     "usage": "Ich bereite vor. (I'm preparing.)"
   },
   {
     "id": 282,
-    "german": "vorbestellen",
+    "german": "Vorbestellen",
     "english": "to preorder",
     "category": "Prefix (vor-)",
     "usage": "Ich bestelle vor. (I'm preordering.)"
   },
   {
     "id": 283,
-    "german": "vorstellen",
+    "german": "Vorstellen",
     "english": "to introduce",
     "category": "Prefix (vor-)",
     "usage": "Ich stelle mich vor. (I'm introducing myself.)"
   },
   {
     "id": 284,
-    "german": "vorzeigen",
+    "german": "Vorzeigen",
     "english": "to show",
     "category": "Prefix (vor-)",
     "usage": "Ich zeige das vor. (I'm showing that.)"
   },
   {
     "id": 285,
-    "german": "wegwerfen",
+    "german": "Wegwerfen",
     "english": "to throw away",
     "category": "Prefix (weg-)",
     "usage": "Ich werfe das weg. (I'm throwing that away.)"
   },
   {
     "id": 286,
-    "german": "wegfahren",
+    "german": "Wegfahren",
     "english": "to drive off",
     "category": "Prefix (weg-)",
     "usage": "Ich fahre weg. (I'm driving off.)"
   },
   {
     "id": 287,
-    "german": "zumachen",
+    "german": "Zumachen",
     "english": "to close",
     "category": "Prefix (zu-)",
     "usage": "Ich mache zu. (I'm closing.)"
   },
   {
     "id": 288,
-    "german": "zudrehen",
+    "german": "Zudrehen",
     "english": "to turn off",
     "category": "Prefix (zu-)",
     "usage": "Ich drehe zu. (I'm turning it off.)"
   },
   {
     "id": 289,
-    "german": "zusenden",
+    "german": "Zusenden",
     "english": "to send to",
     "category": "Prefix (zu-)",
     "usage": ""
@@ -2094,280 +2094,280 @@
   },
   {
     "id": 301,
-    "german": "morgens",
+    "german": "Morgens",
     "english": "in the mornings",
     "category": "Adverb of Daytime",
     "usage": "German Ich trinke morgens Kaffee. English I drink coffee in the mornings."
   },
   {
     "id": 302,
-    "german": "vormittags",
+    "german": "Vormittags",
     "english": "in the late mornings",
     "category": "Adverb of Daytime",
     "usage": "German Vormittags lese ich ein Buch. English In the late mornings I read a book."
   },
   {
     "id": 303,
-    "german": "mittags",
+    "german": "Mittags",
     "english": "at noon/at lunch",
     "category": "Adverb of Daytime",
     "usage": "Listed as an adverb of daytime. No specific example provided."
   },
   {
     "id": 304,
-    "german": "nachmittags",
+    "german": "Nachmittags",
     "english": "in the afternoons",
     "category": "Adverb of Daytime",
     "usage": "Listed as an adverb of daytime. No specific example provided."
   },
   {
     "id": 305,
-    "german": "abends",
+    "german": "Abends",
     "english": "in the evenings",
     "category": "Adverb of Daytime",
     "usage": "Listed as an adverb of daytime. No specific example provided."
   },
   {
     "id": 306,
-    "german": "nachts",
+    "german": "Nachts",
     "english": "at nights",
     "category": "Adverb of Daytime",
     "usage": "German Ich schlafe tief und fest nachts. English I sleep deeply at night."
   },
   {
     "id": 308,
-    "german": "täglich",
+    "german": "Täglich",
     "english": "daily",
     "category": "Adverb of Frequency",
     "usage": "German Das passiert täglich. English This happens daily."
   },
   {
     "id": 309,
-    "german": "wöchentlich",
+    "german": "Wöchentlich",
     "english": "weekly",
     "category": "Adverb of Frequency",
     "usage": "Listed in a sequence of frequency. No specific example provided."
   },
   {
     "id": 310,
-    "german": "monatlich",
+    "german": "Monatlich",
     "english": "monthly",
     "category": "Adverb of Frequency",
     "usage": "Listed in a sequence of frequency. No specific example provided."
   },
   {
     "id": 311,
-    "german": "jährlich",
+    "german": "Jährlich",
     "english": "yearly",
     "category": "Adverb of Frequency",
     "usage": "Listed in a sequence of frequency. No specific example provided."
   },
   {
     "id": 312,
-    "german": "nie",
+    "german": "Nie",
     "english": "never",
     "category": "Adverb of Frequency",
     "usage": "German Ich war nie in Berlin. English I was never in Berlin."
   },
   {
     "id": 313,
-    "german": "selten",
+    "german": "Selten",
     "english": "seldom/rarely",
     "category": "Adverb of Frequency",
     "usage": "Listed in the group for How often. No specific example provided."
   },
   {
     "id": 314,
-    "german": "oft / häufig",
+    "german": "Oft / Häufig",
     "english": "often",
     "category": "Adverb of Frequency",
     "usage": "Listed as synonyms for frequency. No specific example provided."
   },
   {
     "id": 315,
-    "german": "immer / stets",
+    "german": "Immer / Stets",
     "english": "always",
     "category": "Adverb of Frequency",
     "usage": "Listed as synonyms for frequency. No specific example provided."
   },
   {
     "id": 316,
-    "german": "manchmal",
+    "german": "Manchmal",
     "english": "sometimes",
     "category": "Adverb of Frequency",
     "usage": "German Manchmal kocht er das Mittagessen. English Sometimes he cooks the lunch."
   },
   {
     "id": 317,
-    "german": "dauernd",
+    "german": "Dauernd",
     "english": "constantly",
     "category": "Adverb of Frequency",
     "usage": "German Er redet dauernd. English He is constantly talking."
   },
   {
     "id": 319,
-    "german": "heute",
+    "german": "Heute",
     "english": "today",
     "category": "Adverb of Time (Present)",
     "usage": "German Heute habe ich viel zu tun. English Today I have a lot to do."
   },
   {
     "id": 320,
-    "german": "jetzt",
+    "german": "Jetzt",
     "english": "now",
     "category": "Adverb of Time (Present)",
     "usage": "German Jetzt möchte ich nach Berlin. English Now I want to go to Berlin."
   },
   {
     "id": 321,
-    "german": "heutzutage",
+    "german": "Heutzutage",
     "english": "nowadays",
     "category": "Adverb of Time (Present)",
     "usage": "German Heutzutage kümmern sich die Menschen um die Umwelt. English Nowadays people care about the environment."
   },
   {
     "id": 322,
-    "german": "gerade",
+    "german": "Gerade",
     "english": "right now/just (present)",
     "category": "Adverb of Time (Present)",
     "usage": "German Max telefoniert gerade. English Max is on the phone right now."
   },
   {
     "id": 323,
-    "german": "momentan",
+    "german": "Momentan",
     "english": "at the moment",
     "category": "Adverb of Time (Present)",
     "usage": "German Max telefoniert momentan. English Max is on the phone right now or at the moment."
   },
   {
     "id": 324,
-    "german": "zurzeit",
+    "german": "Zurzeit",
     "english": "currently/at this time",
     "category": "Adverb of Time (Present)",
     "usage": "German Zur Zeit arbeitet er bei Porsche. English Currently he works at Porsche."
   },
   {
     "id": 326,
-    "german": "gestern",
+    "german": "Gestern",
     "english": "yesterday",
     "category": "Adverb of Time (Past)",
     "usage": "Listed as an adverb of the past. No specific example provided."
   },
   {
     "id": 327,
-    "german": "vorgestern",
+    "german": "Vorgestern",
     "english": "two days ago",
     "category": "Adverb of Time (Past)",
     "usage": "German Vorgestern war ich in Berlin. English Two days ago I was in Berlin."
   },
   {
     "id": 328,
-    "german": "gerade / eben",
+    "german": "Gerade / Eben",
     "english": "just (past)",
     "category": "Adverb of Time (Past)",
     "usage": "German Er war eben hier. English He was just here."
   },
   {
     "id": 329,
-    "german": "kürzlich / unlängst",
+    "german": "Kürzlich / Unlängst",
     "english": "recently",
     "category": "Adverb of Time (Past)",
     "usage": "German Es regnet kürzlich oft. English It's raining often recently."
   },
   {
     "id": 330,
-    "german": "neulich",
+    "german": "Neulich",
     "english": "recently",
     "category": "Adverb of Time (Past)",
     "usage": "German Neulich war Tim bei uns. English Recently Tim was at our house."
   },
   {
     "id": 332,
-    "german": "morgen",
+    "german": "Morgen",
     "english": "tomorrow",
     "category": "Adverb of Time (Future)",
     "usage": "Listed as an adverb of the future. No specific example provided."
   },
   {
     "id": 333,
-    "german": "übermorgen",
+    "german": "Übermorgen",
     "english": "the day after tomorrow",
     "category": "Adverb of Time (Future)",
     "usage": "German Übermorgen wäscht er das Geschirr. English The day after tomorrow he's doing the dishes."
   },
   {
     "id": 334,
-    "german": "bald / demnächst",
+    "german": "Bald / Demnächst",
     "english": "soon/shortly",
     "category": "Adverb of Time (Future)",
     "usage": "German Demnächst gehe ich schlafen. English Soon I will go sleep."
   },
   {
     "id": 336,
-    "german": "mehrmals",
+    "german": "Mehrmals",
     "english": "several times",
     "category": "General Time/Frequency",
     "usage": "German Hast du es mehrmals versucht? English Did you try it several times?"
   },
   {
     "id": 337,
-    "german": "einmal",
+    "german": "Einmal",
     "english": "once",
     "category": "General Time/Frequency",
     "usage": "German Wir waren einmal in diesem Museum. English Once we were in this museum."
   },
   {
     "id": 338,
-    "german": "schon",
+    "german": "Schon",
     "english": "already",
     "category": "General Time/Frequency",
     "usage": "German Es ist schon spät. English It is already late."
   },
   {
     "id": 339,
-    "german": "endlich",
+    "german": "Endlich",
     "english": "finally",
     "category": "General Time/Frequency",
     "usage": "German Wann kommst du endlich? English When are you finally coming?"
   },
   {
     "id": 340,
-    "german": "lange",
+    "german": "Lange",
     "english": "for a long time",
     "category": "General Time/Frequency",
     "usage": "German Lisa musste lange warten. English Lisa had to wait for a long time."
   },
   {
     "id": 341,
-    "german": "bisher / seitdem",
+    "german": "Bisher / Seitdem",
     "english": "until now",
     "category": "General Time/Frequency",
     "usage": "German Bisher war das nicht möglich. English Until now this was not possible."
   },
   {
     "id": 342,
-    "german": "nachher",
+    "german": "Nachher",
     "english": "afterwards",
     "category": "General Time/Frequency",
     "usage": "German Nachher war ich allein. English Afterwards I was alone."
   },
   {
     "id": 343,
-    "german": "jemals",
+    "german": "Jemals",
     "english": "ever",
     "category": "General Time/Frequency",
     "usage": "German Warst du jemals in Basel? English Have you ever been to Basel?"
   },
   {
     "id": 344,
-    "german": "damals",
+    "german": "Damals",
     "english": "back then",
     "category": "General Time/Frequency",
     "usage": "German Damals war er noch Single. English Back then he was still single."
   },
   {
     "id": 345,
-    "german": "zuvor",
+    "german": "Zuvor",
     "english": "before",
     "category": "General Time/Frequency",
     "usage": "German Wir haben zuvor darüber gesprochen. English We talked about this before."
@@ -2493,14 +2493,14 @@
   },
   {
     "id": 365,
-    "german": "Morgan lasse ich mir die Haare schneiden",
+    "german": "Morgen lasse ich mir die Haare schneiden",
     "english": "I will get my hair cut tomorrow.",
     "category": "Lassen",
     "usage": "To let somebody do something for you"
   },
   {
     "id": 366,
-    "german": "Morgan lässt Max sein Auto reparieren",
+    "german": "Morgen lässt Max sein Auto reparieren",
     "english": "Max is having his car repaired tomorrow.",
     "category": "Lassen",
     "usage": "To let somebody do something for you"
@@ -2598,35 +2598,35 @@
   },
   {
     "id": 380,
-    "german": "um",
+    "german": "Um",
     "english": "at",
     "category": "Time Preposition",
     "usage": "Der Unterricht beginnt um 8 Uhr. (The lesson starts at 8 o'clock.)"
   },
   {
     "id": 381,
-    "german": "im",
+    "german": "Im",
     "english": "in",
     "category": "Time Preposition",
     "usage": "Im Winter ist es in Deutschland kalt. (It is cold in Germany in winter.)"
   },
   {
     "id": 382,
-    "german": "am",
+    "german": "Am",
     "english": "on",
     "category": "Time Preposition",
     "usage": "Am Dienstag arbeite ich von zu Hause. (I work from home on Tuesday.)"
   },
   {
     "id": 383,
-    "german": "von...bis",
+    "german": "Von...bis",
     "english": "from...to",
     "category": "Time Preposition",
     "usage": "Er joggt jeden Morgen von 8 bis 9 Uhr 30. (He jogs every morning from 8 to 9:30.)"
   },
   {
     "id": 384,
-    "german": "ab",
+    "german": "Ab",
     "english": "from (starting from a certain time, ongoing)",
     "category": "Time Preposition",
     "usage": "Normalerweise schlafe ich ab 12 Uhr. (I usually sleep from 12 o'clock.)"
