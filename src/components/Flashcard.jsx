@@ -13,10 +13,10 @@ const Flashcard = ({ card, onNext }) => {
     return (
         <div className="perspective-1000 w-full max-w-md mx-auto h-64 cursor-pointer" onClick={handleFlip}>
             <motion.div
-                className="relative w-full h-full text-center transition-all duration-500 transform-style-3d"
+                className="relative w-full h-full text-center transform-style-3d"
                 initial={false}
                 animate={{ rotateY: isFlipped ? 180 : 0 }}
-                transition={{ duration: 0.15, type: "spring", stiffness: 260, damping: 20 }}
+                transition={{ duration: 0.2, type: "tween", ease: "easeInOut" }}
             >
                 {/* Front */}
                 <div className="absolute w-full h-full backface-hidden bg-surface border-2 border-border rounded-xl shadow-xl flex flex-col items-center justify-center p-6">
