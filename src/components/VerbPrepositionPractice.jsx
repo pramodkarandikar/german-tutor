@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { DataContext } from '../contexts/DataContext';
-import { Check, X, RefreshCw, ArrowRight, ChevronDown } from 'lucide-react';
+import { Check, X, RefreshCw, ArrowRight, ChevronDown, Flame } from 'lucide-react';
 
 const VerbPrepositionPractice = () => {
     const { verbPrepositions } = useContext(DataContext);
@@ -43,17 +43,25 @@ const VerbPrepositionPractice = () => {
 
     return (
         <div className="max-w-2xl mx-auto p-4 space-y-6">
-            <div className="text-center space-y-2">
-                <h2 className="text-3xl font-bold text-text">Verb Prepositions</h2>
-                <p className="text-text-muted">Enter the correct preposition and case.</p>
-                <div className="flex justify-center items-center gap-2">
-                    <span className="text-sm font-medium text-amber-600">Streak: {streak}</span>
+            <div className="flex justify-between items-end mb-8 px-4">
+                <div>
+                    <h1 className="text-3xl font-extrabold text-text mb-2">Verb Prepositions</h1>
+                    <p className="text-text-muted">Enter the correct preposition and case.</p>
+                </div>
+                <div className="flex gap-6">
+                    <div className="text-center">
+                        <div className="text-xs text-text-muted uppercase font-bold tracking-wider">Streak</div>
+                        <div className={`font-bold text-xl flex items-center justify-center gap-1 ${streak > 2 ? 'text-orange-500' : 'text-text-muted'}`}>
+                            <Flame size={20} fill={streak > 2 ? "currentColor" : "none"} />
+                            {streak}
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div className="bg-surface rounded-2xl shadow-xl p-8 space-y-8 transition-all duration-300 hover:shadow-2xl">
                 <div className="text-center space-y-4">
-                    <h3 className="text-4xl font-bold text-text tracking-tight">
+                    <h3 className="text-2xl font-bold text-text tracking-tight">
                         {currentVerb.verb}
                     </h3>
                     <p className="text-xl text-text-muted italic">

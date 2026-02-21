@@ -10,6 +10,7 @@ export default {
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],
                 logo: ['"Playwrite NZ Guides"', 'cursive'],
+                heading: ['Bitter', 'serif'],
             },
             colors: {
                 background: 'var(--background)',

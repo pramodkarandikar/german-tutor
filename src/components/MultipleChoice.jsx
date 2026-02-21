@@ -97,8 +97,8 @@ const MultipleChoice = () => {
         <div className="max-w-2xl mx-auto">
             <div className="flex justify-between items-end mb-8 px-4">
                 <div>
-                    <h2 className="text-2xl font-bold text-text">Multiple Choice</h2>
-                    <p className="text-sm text-text-muted">Select the correct German translation</p>
+                    <h1 className="text-3xl font-extrabold text-text mb-2">Multiple Choice</h1>
+                    <p className="text-text-muted">Select the correct German translation</p>
                 </div>
 
                 <div className="flex gap-6">
@@ -130,7 +130,7 @@ const MultipleChoice = () => {
                     <span className="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full mb-4">
                         Translate this
                     </span>
-                    <h3 className="text-3xl font-bold text-text">{currentCard.english}</h3>
+                    <h3 className="text-2xl font-bold text-text">{currentCard.english}</h3>
                 </div>
 
                 <div className="p-8 grid grid-cols-1 gap-3">

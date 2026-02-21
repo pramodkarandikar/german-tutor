@@ -69,8 +69,12 @@ const Quiz = () => {
 
     return (
         <div className="max-w-4xl mx-auto p-4">
-            <h1 className="text-3xl font-extrabold text-center text-text mb-2">Flashcards</h1>
-            <p className="text-center text-text-muted mb-8">Master your German skills with interactive flashcards</p>
+            <div className="flex justify-between items-end mb-8 px-4">
+                <div>
+                    <h1 className="text-3xl font-extrabold text-text mb-2">Flashcards</h1>
+                    <p className="text-text-muted">Master your German skills with interactive flashcards</p>
+                </div>
+            </div>
 
             <CategoryFilter
                 categories={categories}

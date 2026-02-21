@@ -128,8 +128,8 @@ const WritingPractice = () => {
         <div className="max-w-2xl mx-auto">
             <div className="flex justify-between items-end mb-8 px-4">
                 <div>
-                    <h2 className="text-2xl font-bold text-text">Writing Practice</h2>
-                    <p className="text-sm text-text-muted">Translate the words to German</p>
+                    <h1 className="text-3xl font-extrabold text-text mb-2">Writing Practice</h1>
+                    <p className="text-text-muted">Translate the words to German</p>
                 </div>
 
                 <div className="flex gap-6">
@@ -161,7 +161,7 @@ const WritingPractice = () => {
                     <span className="inline-block px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-300 text-xs font-semibold rounded-full mb-4">
                         English
                     </span>
-                    <h3 className="text-3xl font-bold text-text mb-2">{currentCard.english}</h3>
+                    <h3 className="text-2xl font-bold text-text mb-2">{currentCard.english}</h3>
 
                     {/* Hint area */}
                     {currentCard.usage && feedback === 'incorrect' && (

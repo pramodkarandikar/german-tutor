@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { DataContext } from '../contexts/DataContext';
-import { Check, X, RefreshCw, HelpCircle } from 'lucide-react';
+import { Check, X, RefreshCw, HelpCircle, Flame } from 'lucide-react';
 
 const WordGenderPractice = () => {
     const { wordGenders } = useContext(DataContext);
@@ -40,17 +40,25 @@ const WordGenderPractice = () => {
 
     return (
         <div className="max-w-2xl mx-auto p-4 space-y-6">
-            <div className="text-center space-y-2">
-                <h2 className="text-3xl font-bold text-text">Word Gender Practice</h2>
-                <p className="text-text-muted">Choose the correct article for the noun.</p>
-                <div className="flex justify-center items-center gap-2">
-                    <span className="text-sm font-medium text-amber-600">Streak: {streak}</span>
+            <div className="flex justify-between items-end mb-8 px-4">
+                <div>
+                    <h1 className="text-3xl font-extrabold text-text mb-2">Word Gender Practice</h1>
+                    <p className="text-text-muted">Choose the correct article for the noun.</p>
+                </div>
+                <div className="flex gap-6">
+                    <div className="text-center">
+                        <div className="text-xs text-text-muted uppercase font-bold tracking-wider">Streak</div>
+                        <div className={`font-bold text-xl flex items-center justify-center gap-1 ${streak > 2 ? 'text-orange-500' : 'text-text-muted'}`}>
+                            <Flame size={20} fill={streak > 2 ? "currentColor" : "none"} />
+                            {streak}
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div className="bg-surface rounded-2xl shadow-xl p-8 text-center space-y-8 transition-all duration-300 hover:shadow-2xl">
                 <div className="space-y-4">
-                    <h3 className="text-5xl font-bold text-text tracking-tight">
+                    <h3 className="text-2xl font-bold text-text tracking-tight">
                         {currentWord.word}
                     </h3>
                     {showHint && currentWord.translation && (

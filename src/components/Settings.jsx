@@ -36,9 +36,11 @@ const Settings = () => {
 
     return (
         <div className="max-w-2xl mx-auto">
-            <div className="mb-8 text-center">
-                <h2 className="text-2xl font-bold text-text">Settings</h2>
-                <p className="text-sm text-text-muted">Manage your vocabulary data</p>
+            <div className="flex justify-between items-end mb-8 px-4">
+                <div>
+                    <h1 className="text-3xl font-extrabold text-text mb-2">Settings</h1>
+                    <p className="text-text-muted">Manage your vocabulary data</p>
+                </div>
             </div>
 
             <div className="bg-surface rounded-2xl shadow-xl overflow-hidden border border-border">

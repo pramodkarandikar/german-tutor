@@ -110,8 +110,8 @@ const MatchPairs = () => {
         <div className="max-w-4xl mx-auto">
             <div className="flex justify-between items-end mb-8 px-4">
                 <div>
-                    <h2 className="text-2xl font-bold text-text">Match Pairs</h2>
-                    <p className="text-sm text-text-muted">Find the matching German and English pairs</p>
+                    <h1 className="text-3xl font-extrabold text-text mb-2">Match Pairs</h1>
+                    <p className="text-text-muted">Find the matching German and English pairs</p>
                 </div>
 
                 <div className="flex gap-6">
