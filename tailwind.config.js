@@ -9,7 +9,7 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],
-                logo: ['"Alfa Slab One"', 'serif'],
+                logo: ['"Raleway"', 'sans-serif'],
             },
             colors: {
                 background: 'var(--background)',
