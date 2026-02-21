@@ -128,22 +128,22 @@ const WritingPractice = () => {
         <div className="max-w-2xl mx-auto">
             <div className="flex justify-between items-end mb-8 px-4">
                 <div>
-                    <h1 className="text-3xl font-extrabold text-text mb-2">Writing Practice</h1>
+                    <h1 className="text-4xl font-extrabold text-text mb-2">Writing Practice</h1>
                     <p className="text-text-muted">Translate the words to German</p>
                 </div>
 
                 <div className="flex gap-6">
-                    <div className="text-center">
-                        <div className="text-xs text-gray-400 uppercase font-bold tracking-wider">Score</div>
-                        <div className="font-bold text-xl text-gray-700">
-                            <span className="text-blue-600">{score.correct}</span><span className="text-gray-300">/</span>{score.total}
+                    <div className="text-center bg-surface border border-border px-4 py-2 rounded-xl shadow-sm">
+                        <div className="text-[10px] text-text-muted uppercase font-bold tracking-wider mb-1">Score</div>
+                        <div className="font-bold text-lg text-text">
+                            <span className="text-blue-600">{score.correct}</span><span className="text-text-muted mx-1">/</span>{score.total}
                         </div>
                     </div>
 
-                    <div className="text-center">
-                        <div className="text-xs text-text-muted uppercase font-bold tracking-wider">Streak</div>
-                        <div className={`font-bold text-xl flex items-center justify-center gap-1 ${streak > 2 ? 'text-orange-500' : 'text-text-muted'}`}>
-                            <Flame size={20} fill={streak > 2 ? "currentColor" : "none"} />
+                    <div className="text-center bg-surface border border-border px-4 py-2 rounded-xl shadow-sm">
+                        <div className="text-[10px] text-text-muted uppercase font-bold tracking-wider mb-1">Streak</div>
+                        <div className={`font-bold text-lg flex items-center justify-center gap-1 ${streak > 2 ? 'text-orange-500' : 'text-text-muted'}`}>
+                            <Flame size={16} fill={streak > 2 ? "currentColor" : "none"} />
                             {streak}
                         </div>
                     </div>
@@ -193,7 +193,7 @@ const WritingPractice = () => {
                             </button>
                         </div>
                     ) : (
-                        <div className="text-center animate-fade-in">
+                        <div className="text-center animate-fade-in-up">
                             {feedback === 'correct' ? (
                                 <div className="mb-6 flex flex-col items-center">
                                     <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center mb-3">
@@ -220,7 +220,7 @@ const WritingPractice = () => {
                                 ref={nextButtonRef}
                                 onClick={handleNext}
                                 onKeyDown={(e) => e.key === 'Enter' && handleNext()}
-                                className="px-8 py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-black transition-colors flex items-center gap-2 mx-auto"
+                                className="px-8 py-3 bg-purple-600 text-white rounded-xl font-semibold hover:bg-purple-700 transition-colors flex items-center gap-2 mx-auto"
                             >
                                 <RefreshCw size={18} />
                                 Next Card <span className="text-xs opacity-50 font-normal ml-1">(Enter)</span>

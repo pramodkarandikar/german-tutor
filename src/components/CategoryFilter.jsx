@@ -12,7 +12,7 @@ const CategoryFilter = ({ categories, selectedCategories, onToggleCategory }) =>
     };
 
     return (
-        <div className="mb-8">
+        <div>
             <div className="flex justify-center">
                 <button
                     onClick={() => setIsExpanded(!isExpanded)}

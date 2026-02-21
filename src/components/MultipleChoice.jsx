@@ -97,22 +97,22 @@ const MultipleChoice = () => {
         <div className="max-w-2xl mx-auto">
             <div className="flex justify-between items-end mb-8 px-4">
                 <div>
-                    <h1 className="text-3xl font-extrabold text-text mb-2">Multiple Choice</h1>
+                    <h1 className="text-4xl font-extrabold text-text mb-2">Multiple Choice</h1>
                     <p className="text-text-muted">Select the correct German translation</p>
                 </div>
 
                 <div className="flex gap-6">
-                    <div className="text-center">
-                        <div className="text-xs text-gray-400 uppercase font-bold tracking-wider">Score</div>
-                        <div className="font-bold text-xl text-gray-700">
-                            <span className="text-blue-600">{score.correct}</span><span className="text-gray-300">/</span>{score.total}
+                    <div className="text-center bg-surface border border-border px-4 py-2 rounded-xl shadow-sm">
+                        <div className="text-[10px] text-text-muted uppercase font-bold tracking-wider mb-1">Score</div>
+                        <div className="font-bold text-lg text-text">
+                            <span className="text-blue-600">{score.correct}</span><span className="text-text-muted mx-1">/</span>{score.total}
                         </div>
                     </div>
 
-                    <div className="text-center">
-                        <div className="text-xs text-text-muted uppercase font-bold tracking-wider">Streak</div>
-                        <div className={`font-bold text-xl flex items-center justify-center gap-1 ${streak > 2 ? 'text-orange-500' : 'text-text-muted'}`}>
-                            <Flame size={20} fill={streak > 2 ? "currentColor" : "none"} />
+                    <div className="text-center bg-surface border border-border px-4 py-2 rounded-xl shadow-sm">
+                        <div className="text-[10px] text-text-muted uppercase font-bold tracking-wider mb-1">Streak</div>
+                        <div className={`font-bold text-lg flex items-center justify-center gap-1 ${streak > 2 ? 'text-orange-500' : 'text-text-muted'}`}>
+                            <Flame size={16} fill={streak > 2 ? "currentColor" : "none"} />
                             {streak}
                         </div>
                     </div>
@@ -165,10 +165,10 @@ const MultipleChoice = () => {
                 </div>
 
                 {selectedOption && !isCorrect && (
-                    <div className="p-4 bg-background border-t border-border flex justify-center">
+                    <div className="p-4 bg-background border-t border-border flex justify-center animate-fade-in-up">
                         <button
                             onClick={handleNext}
-                            className="px-6 py-2 bg-gray-900 text-white rounded-lg font-semibold hover:bg-black transition-colors flex items-center gap-2"
+                            className="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2"
                         >
                             <RefreshCw size={18} />
                             Next Question

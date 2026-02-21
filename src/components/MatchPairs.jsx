@@ -110,7 +110,7 @@ const MatchPairs = () => {
         <div className="max-w-4xl mx-auto">
             <div className="flex justify-between items-end mb-8 px-4">
                 <div>
-                    <h1 className="text-3xl font-extrabold text-text mb-2">Match Pairs</h1>
+                    <h1 className="text-4xl font-extrabold text-text mb-2">Match Pairs</h1>
                     <p className="text-text-muted">Find the matching German and English pairs</p>
                 </div>
 
@@ -127,11 +127,13 @@ const MatchPairs = () => {
                 </div>
             </div>
 
-            <CategoryFilter
-                categories={[...new Set(vocabulary.map(item => item.category))].sort()}
-                selectedCategories={selectedCategories}
-                onToggleCategory={handleCategoryToggle}
-            />
+            <div className="mb-8">
+                <CategoryFilter
+                    categories={[...new Set(vocabulary.map(item => item.category))].sort()}
+                    selectedCategories={selectedCategories}
+                    onToggleCategory={handleCategoryToggle}
+                />
+            </div>
 
             {gameWon ? (
                 <div className="bg-surface rounded-2xl shadow-xl p-12 text-center mt-6 animate-fade-in">
@@ -155,7 +157,7 @@ const MatchPairs = () => {
                         const isMatched = matchedPairs.includes(card.pairId);
 
                         if (isMatched) {
-                            return <div key={card.id} className="h-32"></div>; // Placeholder to keep grid layout
+                            return <div key={card.id} className="h-24"></div>; // Placeholder to keep grid layout
                         }
 
                         return (
@@ -163,14 +165,14 @@ const MatchPairs = () => {
                                 key={card.id}
                                 layoutId={card.id}
                                 onClick={() => handleCardClick(card)}
-                                className={`h-32 rounded-xl flex items-center justify-center p-4 text-center cursor-pointer transition-all duration-200 shadow-sm border-2
+                                className={`h-24 rounded-xl flex items-center justify-center p-4 text-center cursor-pointer transition-all duration-200 shadow-sm border-2
                   ${isSelected
                                         ? 'bg-blue-600 text-white border-blue-600 scale-105 shadow-xl z-10'
                                         : 'bg-surface text-text border-border hover:border-blue-200 dark:hover:border-blue-700 hover:bg-blue-50 dark:hover:bg-blue-900/20'}`}
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                <span className="font-medium text-lg leading-tight select-none">
+                                <span className="font-medium text-base leading-tight select-none">
                                     {card.content}
                                 </span>
                             </motion.div>

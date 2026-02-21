@@ -42,7 +42,7 @@ const Navigation = ({ currentView, setCurrentView, children }) => {
             {/* Desktop Sidebar */}
             <aside className="hidden md:flex flex-col w-64 bg-surface border-r border-border fixed h-full z-20">
                 <div className="p-6 border-b border-border">
-                    <h1 className="text-2xl font-logo tracking-wide font-normal bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+                    <h1 className="text-2xl font-heading tracking-wide font-normal bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
                         Wise Umlaut
                     </h1>
                     <p className="text-xs text-text-muted mt-1">Master your German skills</p>
@@ -70,7 +70,7 @@ const Navigation = ({ currentView, setCurrentView, children }) => {
 
             {/* Mobile Header */}
             <div className="md:hidden fixed top-0 left-0 right-0 bg-surface border-b border-border z-30 px-4 h-16 flex items-center justify-between">
-                <span className="text-lg font-logo tracking-wide font-normal bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+                <span className="text-lg font-heading tracking-wide font-normal bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
                     Wise Umlaut
                 </span>
                 <div className="flex items-center gap-2">

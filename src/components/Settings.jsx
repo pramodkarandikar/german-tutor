@@ -38,7 +38,7 @@ const Settings = () => {
         <div className="max-w-2xl mx-auto">
             <div className="flex justify-between items-end mb-8 px-4">
                 <div>
-                    <h1 className="text-3xl font-extrabold text-text mb-2">Settings</h1>
+                    <h1 className="text-4xl font-extrabold text-text mb-2">Settings</h1>
                     <p className="text-text-muted">Manage your vocabulary data</p>
                 </div>
             </div>

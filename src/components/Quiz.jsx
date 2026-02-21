@@ -71,24 +71,23 @@ const Quiz = () => {
         <div className="max-w-4xl mx-auto p-4">
             <div className="flex justify-between items-end mb-8 px-4">
                 <div>
-                    <h1 className="text-3xl font-extrabold text-text mb-2">Flashcards</h1>
+                    <h1 className="text-4xl font-extrabold text-text mb-2">Flashcards</h1>
                     <p className="text-text-muted">Master your German skills with interactive flashcards</p>
                 </div>
             </div>
 
-            <CategoryFilter
-                categories={categories}
-                selectedCategories={selectedCategories}
-                onToggleCategory={handleCategoryToggle}
-            />
-
-            <div className="flex justify-end mb-4">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-10">
+                <CategoryFilter
+                    categories={categories}
+                    selectedCategories={selectedCategories}
+                    onToggleCategory={handleCategoryToggle}
+                />
                 <button
                     onClick={toggleRandom}
-                    className={`flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold transition-colors
-             ${isRandom ? 'bg-purple-100 text-purple-600' : 'bg-background text-text-muted hover:bg-surface border border-border'}`}
+                    className={`flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all duration-200 shadow-sm border
+             ${isRandom ? 'bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800' : 'bg-surface text-text hover:bg-background border-border drop-shadow-sm'}`}
                 >
-                    <Shuffle size={14} />
+                    <Shuffle size={18} />
                     {isRandom ? 'Randomized' : 'Sequential'}
                 </button>
             </div>
