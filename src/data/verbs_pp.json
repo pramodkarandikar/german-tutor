@@ -1,0 +1,502 @@
+[
+  {
+    "German": "sein",
+    "English": "to be",
+    "Past Participle": "gewesen"
+  },
+  {
+    "German": "haben",
+    "English": "to have",
+    "Past Participle": "gehabt"
+  },
+  {
+    "German": "werden",
+    "English": "to become / will",
+    "Past Participle": "geworden"
+  },
+  {
+    "German": "können",
+    "English": "to be able to",
+    "Past Participle": "gekonnt"
+  },
+  {
+    "German": "machen",
+    "English": "to do / make",
+    "Past Participle": "gemacht"
+  },
+  {
+    "German": "müssen",
+    "English": "to have to",
+    "Past Participle": "gemusst"
+  },
+  {
+    "German": "sagen",
+    "English": "to say",
+    "Past Participle": "gesagt"
+  },
+  {
+    "German": "gehen",
+    "English": "to go",
+    "Past Participle": "gegangen"
+  },
+  {
+    "German": "geben",
+    "English": "to give",
+    "Past Participle": "gegeben"
+  },
+  {
+    "German": "wollen",
+    "English": "to want",
+    "Past Participle": "gewollt"
+  },
+  {
+    "German": "kommen",
+    "English": "to come",
+    "Past Participle": "gekommen"
+  },
+  {
+    "German": "sollen",
+    "English": "to be supposed to",
+    "Past Participle": "gesollt"
+  },
+  {
+    "German": "sehen",
+    "English": "to see",
+    "Past Participle": "gesehen"
+  },
+  {
+    "German": "mögen",
+    "English": "to like",
+    "Past Participle": "gemocht"
+  },
+  {
+    "German": "finden",
+    "English": "to find",
+    "Past Participle": "gefunden"
+  },
+  {
+    "German": "wissen",
+    "English": "to know (fact)",
+    "Past Participle": "gewusst"
+  },
+  {
+    "German": "glauben",
+    "English": "to believe",
+    "Past Participle": "geglaubt"
+  },
+  {
+    "German": "lernen",
+    "English": "to learn",
+    "Past Participle": "gelernt"
+  },
+  {
+    "German": "dürfen",
+    "English": "to be allowed to",
+    "Past Participle": "gedurft"
+  },
+  {
+    "German": "denken",
+    "English": "to think",
+    "Past Participle": "gedacht"
+  },
+  {
+    "German": "heißen",
+    "English": "to be called",
+    "Past Participle": "geheißen"
+  },
+  {
+    "German": "sprechen",
+    "English": "to talk / speak",
+    "Past Participle": "gesprochen"
+  },
+  {
+    "German": "tun",
+    "English": "to do",
+    "Past Participle": "getan"
+  },
+  {
+    "German": "fahren",
+    "English": "to drive / travel",
+    "Past Participle": "gefahren"
+  },
+  {
+    "German": "schreiben",
+    "English": "to write",
+    "Past Participle": "geschrieben"
+  },
+  {
+    "German": "lassen",
+    "English": "to let / leave",
+    "Past Participle": "gelassen"
+  },
+  {
+    "German": "fragen",
+    "English": "to ask",
+    "Past Participle": "gefragt"
+  },
+  {
+    "German": "bekommen",
+    "English": "to get / receive",
+    "Past Participle": "bekommen"
+  },
+  {
+    "German": "nehmen",
+    "English": "to take",
+    "Past Participle": "genommen"
+  },
+  {
+    "German": "sich freuen",
+    "English": "to be happy",
+    "Past Participle": "gefreut"
+  },
+  {
+    "German": "zeigen",
+    "English": "to show",
+    "Past Participle": "gezeigt"
+  },
+  {
+    "German": "essen",
+    "English": "to eat",
+    "Past Participle": "gegessen"
+  },
+  {
+    "German": "arbeiten",
+    "English": "to work",
+    "Past Participle": "gearbeitet"
+  },
+  {
+    "German": "stehen",
+    "English": "to stand",
+    "Past Participle": "gestanden"
+  },
+  {
+    "German": "bringen",
+    "English": "to bring",
+    "Past Participle": "gebracht"
+  },
+  {
+    "German": "kennen",
+    "English": "to know (person)",
+    "Past Participle": "gekannt"
+  },
+  {
+    "German": "benutzen",
+    "English": "to use",
+    "Past Participle": "benutzt"
+  },
+  {
+    "German": "bleiben",
+    "English": "to stay",
+    "Past Participle": "geblieben"
+  },
+  {
+    "German": "leben",
+    "English": "to live",
+    "Past Participle": "gelebt"
+  },
+  {
+    "German": "gucken",
+    "English": "to look / watch",
+    "Past Participle": "geguckt"
+  },
+  {
+    "German": "stellen",
+    "English": "to place / put",
+    "Past Participle": "gestellt"
+  },
+  {
+    "German": "hören",
+    "English": "to hear / listen",
+    "Past Participle": "gehört"
+  },
+  {
+    "German": "spielen",
+    "English": "to play",
+    "Past Participle": "gespielt"
+  },
+  {
+    "German": "kaufen",
+    "English": "to buy",
+    "Past Participle": "gekauft"
+  },
+  {
+    "German": "passieren",
+    "English": "to happen",
+    "Past Participle": "passiert"
+  },
+  {
+    "German": "verstehen",
+    "English": "to understand",
+    "Past Participle": "verstanden"
+  },
+  {
+    "German": "reden",
+    "English": "to talk / speak",
+    "Past Participle": "geredet"
+  },
+  {
+    "German": "schaffen",
+    "English": "to manage",
+    "Past Participle": "geschafft"
+  },
+  {
+    "German": "halten",
+    "English": "to hold / stop",
+    "Past Participle": "gehalten"
+  },
+  {
+    "German": "trinken",
+    "English": "to drink",
+    "Past Participle": "getrunken"
+  },
+  {
+    "German": "treffen",
+    "English": "to meet",
+    "Past Participle": "getroffen"
+  },
+  {
+    "German": "lesen",
+    "English": "to read",
+    "Past Participle": "gelesen"
+  },
+  {
+    "German": "nennen",
+    "English": "to name / call",
+    "Past Participle": "genannt"
+  },
+  {
+    "German": "führen",
+    "English": "to lead",
+    "Past Participle": "geführt"
+  },
+  {
+    "German": "brauchen",
+    "English": "to need",
+    "Past Participle": "gebraucht"
+  },
+  {
+    "German": "stimmen",
+    "English": "to be correct",
+    "Past Participle": "gestimmt"
+  },
+  {
+    "German": "wohnen",
+    "English": "to live / reside",
+    "Past Participle": "gewohnt"
+  },
+  {
+    "German": "helfen",
+    "English": "to help",
+    "Past Participle": "geholfen"
+  },
+  {
+    "German": "erzählen",
+    "English": "to tell",
+    "Past Participle": "erzählt"
+  },
+  {
+    "German": "erreichen",
+    "English": "to reach",
+    "Past Participle": "erreicht"
+  },
+  {
+    "German": "vorstellen",
+    "English": "to introduce",
+    "Past Participle": "vorgestellt"
+  },
+  {
+    "German": "ziehen",
+    "English": "to pull / draw",
+    "Past Participle": "gezogen"
+  },
+  {
+    "German": "versuchen",
+    "English": "to try",
+    "Past Participle": "versucht"
+  },
+  {
+    "German": "laufen",
+    "English": "to run / go well",
+    "Past Participle": "gelaufen"
+  },
+  {
+    "German": "gewinnen",
+    "English": "to win",
+    "Past Participle": "gewonnen"
+  },
+  {
+    "German": "suchen",
+    "English": "to search",
+    "Past Participle": "gesucht"
+  },
+  {
+    "German": "erklären",
+    "English": "to explain",
+    "Past Participle": "erklärt"
+  },
+  {
+    "German": "entscheiden",
+    "English": "to decide",
+    "Past Participle": "entschieden"
+  },
+  {
+    "German": "wählen",
+    "English": "to choose",
+    "Past Participle": "gewählt"
+  },
+  {
+    "German": "liegen",
+    "English": "to lie (down)",
+    "Past Participle": "gelegen"
+  },
+  {
+    "German": "meinen",
+    "English": "to mean / think",
+    "Past Participle": "gemeint"
+  },
+  {
+    "German": "verlieren",
+    "English": "to lose",
+    "Past Participle": "verloren"
+  },
+  {
+    "German": "studieren",
+    "English": "to study",
+    "Past Participle": "studiert"
+  },
+  {
+    "German": "setzen",
+    "English": "to sit down",
+    "Past Participle": "gesetzt"
+  },
+  {
+    "German": "hoffen",
+    "English": "to hope",
+    "Past Participle": "geholfen"
+  },
+  {
+    "German": "vergessen",
+    "English": "to forget",
+    "Past Participle": "vergessen"
+  },
+  {
+    "German": "sitzen",
+    "English": "to sit",
+    "Past Participle": "gesessen"
+  },
+  {
+    "German": "einladen",
+    "English": "to invite",
+    "Past Participle": "eingeladen"
+  },
+  {
+    "German": "beschreiben",
+    "English": "to describe",
+    "Past Participle": "beschrieben"
+  },
+  {
+    "German": "anschauen",
+    "English": "to watch",
+    "Past Participle": "angeschaut"
+  },
+  {
+    "German": "ändern",
+    "English": "to change",
+    "Past Participle": "geändert"
+  },
+  {
+    "German": "besuchen",
+    "English": "to visit",
+    "Past Participle": "besucht"
+  },
+  {
+    "German": "nutzen",
+    "English": "to use",
+    "Past Participle": "genutzt"
+  },
+  {
+    "German": "kochen",
+    "English": "to cook",
+    "Past Participle": "gekocht"
+  },
+  {
+    "German": "feiern",
+    "English": "to celebrate",
+    "Past Participle": "gefeiert"
+  },
+  {
+    "German": "fallen",
+    "English": "to fall",
+    "Past Participle": "gefallen"
+  },
+  {
+    "German": "bauen",
+    "English": "to build",
+    "Past Participle": "gebaut"
+  },
+  {
+    "German": "entwickeln",
+    "English": "to develop",
+    "Past Participle": "entwickelt"
+  },
+  {
+    "German": "erwarten",
+    "English": "to expect",
+    "Past Participle": "erwartet"
+  },
+  {
+    "German": "bezahlen",
+    "English": "to pay",
+    "Past Participle": "bezahlt"
+  },
+  {
+    "German": "verkaufen",
+    "English": "to sell",
+    "Past Participle": "verkauft"
+  },
+  {
+    "German": "tragen",
+    "English": "to carry / wear",
+    "Past Participle": "getragen"
+  },
+  {
+    "German": "planen",
+    "English": "to plan",
+    "Past Participle": "geplant"
+  },
+  {
+    "German": "danken",
+    "English": "to thank",
+    "Past Participle": "gedankt"
+  },
+  {
+    "German": "fühlen",
+    "English": "to feel",
+    "Past Participle": "gefühlt"
+  },
+  {
+    "German": "übernehmen",
+    "English": "to take over",
+    "Past Participle": "übernommen"
+  },
+  {
+    "German": "erinnern",
+    "English": "to remember",
+    "Past Participle": "erinnert"
+  },
+  {
+    "German": "merkenn",
+    "English": "to notice",
+    "Past Participle": "gemerkt"
+  },
+  {
+    "German": "lieben",
+    "English": "to love",
+    "Past Participle": "geliebt"
+  },
+  {
+    "German": "erkennen",
+    "English": "to recognize",
+    "Past Participle": "erkannt"
+  }
+]

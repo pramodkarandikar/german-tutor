@@ -5,10 +5,12 @@ import { ThemeProvider } from './context/ThemeContext';
 import Quiz from './components/Quiz';
 import WritingPractice from './components/WritingPractice';
 import MultipleChoice from './components/MultipleChoice';
-import MatchPairs from './components/MatchPairs';
 import Settings from './components/Settings';
 import WordGenderPractice from './components/WordGenderPractice';
 import VerbPrepositionPractice from './components/VerbPrepositionPractice';
+import VerbPractice from './components/VerbPractice';
+import AdjectivePractice from './components/AdjectivePractice';
+import OppositePractice from './components/OppositePractice';
 import Navigation from './components/Navigation';
 
 function App() {
@@ -21,9 +23,11 @@ function App() {
           {currentView === 'flashcards' && <Quiz />}
           {currentView === 'writing' && <WritingPractice />}
           {currentView === 'mcq' && <MultipleChoice />}
-          {currentView === 'match' && <MatchPairs />}
           {currentView === 'gender' && <WordGenderPractice />}
           {currentView === 'prepositions' && <VerbPrepositionPractice />}
+          {currentView === 'verb_practice' && <VerbPractice />}
+          {currentView === 'adjective_practice' && <AdjectivePractice />}
+          {currentView === 'opposite_practice' && <OppositePractice />}
           {currentView === 'settings' && <Settings />}
         </Navigation>
       </ThemeProvider>

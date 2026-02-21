@@ -1,0 +1,527 @@
+[
+  {
+    "German": "groß",
+    "English": "big / tall",
+    "Example": "Janosch ist groß. (Janosch is tall.)"
+  },
+  {
+    "German": "klein",
+    "English": "small / short",
+    "Example": "Erik ist klein. (Erik is short.)"
+  },
+  {
+    "German": "weit",
+    "English": "far / wide",
+    "Example": "Es ist noch weit. (It is still far.)"
+  },
+  {
+    "German": "lang",
+    "English": "long",
+    "Example": "Der Weg ist noch sehr lang. (The path is still very long.)"
+  },
+  {
+    "German": "hoch",
+    "English": "high",
+    "Example": "- (-)"
+  },
+  {
+    "German": "tief",
+    "English": "deep",
+    "Example": "- (-)"
+  },
+  {
+    "German": "kurz",
+    "English": "short",
+    "Example": "Der Anruf war kurz. (The call was short.)"
+  },
+  {
+    "German": "breit",
+    "English": "wide / broad",
+    "Example": "- (-)"
+  },
+  {
+    "German": "schmal",
+    "English": "narrow",
+    "Example": "- (-)"
+  },
+  {
+    "German": "neu",
+    "English": "new",
+    "Example": "Das Auto ist neu. (The car is new.)"
+  },
+  {
+    "German": "alt",
+    "English": "old",
+    "Example": "Das Auto ist alt. (The car is old.)"
+  },
+  {
+    "German": "gut",
+    "English": "good",
+    "Example": "Der Wein schmeckt gut. (The wine tastes good.)"
+  },
+  {
+    "German": "schlecht",
+    "English": "bad",
+    "Example": "Der Wein schmeckt schlecht. (The wine tastes bad.)"
+  },
+  {
+    "German": "fertig",
+    "English": "finished / ready",
+    "Example": "Dein Essen ist fertig. (Your food is ready.)"
+  },
+  {
+    "German": "kalt",
+    "English": "cold",
+    "Example": "- (-)"
+  },
+  {
+    "German": "warm",
+    "English": "warm",
+    "Example": "- (-)"
+  },
+  {
+    "German": "heiß",
+    "English": "hot",
+    "Example": "Der Kaffee ist zu heiß. (The coffee is too hot.)"
+  },
+  {
+    "German": "frei",
+    "English": "free",
+    "Example": "- (-)"
+  },
+  {
+    "German": "kaputt",
+    "English": "broken",
+    "Example": "- (-)"
+  },
+  {
+    "German": "hart",
+    "English": "hard",
+    "Example": "Die Matratze ist zu hart. (The mattress is too hard.)"
+  },
+  {
+    "German": "weich",
+    "English": "soft",
+    "Example": "Das Kissen ist zu weich. (The pillow is too soft.)"
+  },
+  {
+    "German": "sicher",
+    "English": "safe / sure",
+    "Example": "- (-)"
+  },
+  {
+    "German": "einzig",
+    "English": "unique / only",
+    "Example": "- (-)"
+  },
+  {
+    "German": "unterschiedlich",
+    "English": "different",
+    "Example": "Diese drei Weine schmecken unterschiedlich. (These three wines taste different.)"
+  },
+  {
+    "German": "voll",
+    "English": "full",
+    "Example": "- (-)"
+  },
+  {
+    "German": "leer",
+    "English": "empty",
+    "Example": "Der Wein ist leer. (The wine is empty.)"
+  },
+  {
+    "German": "jung",
+    "English": "young",
+    "Example": "Erik ist jung. (Erik is young.)"
+  },
+  {
+    "German": "schön",
+    "English": "beautiful / nice",
+    "Example": "Erik ist schön. (Erik is beautiful.)"
+  },
+  {
+    "German": "hässlich",
+    "English": "ugly",
+    "Example": "- (-)"
+  },
+  {
+    "German": "hübsch",
+    "English": "pretty",
+    "Example": "Ich habe mir einen hübschen Schal gekauft. (I bought myself a pretty scarf.)"
+  },
+  {
+    "German": "dünn",
+    "English": "thin",
+    "Example": "Erik ist dünn. (Erik is thin.)"
+  },
+  {
+    "German": "dick",
+    "English": "fat / thick",
+    "Example": "Janosch ist dick. (Janosch is fat.)"
+  },
+  {
+    "German": "stark",
+    "English": "strong",
+    "Example": "Janosch ist stark. (Janosch is strong.)"
+  },
+  {
+    "German": "schwach",
+    "English": "weak",
+    "Example": "Erik ist schwach. (Erik is weak.)"
+  },
+  {
+    "German": "komisch",
+    "English": "strange / funny",
+    "Example": "Dieser Wein schmeckt komisch. (This wine tastes strange.)"
+  },
+  {
+    "German": "deutsch",
+    "English": "German",
+    "Example": "Die deutsche Sprache ist super einfach. (The German language is super easy.)"
+  },
+  {
+    "German": "lustig",
+    "English": "funny",
+    "Example": "Janosch zeigt ein lustiges Video. (Janosch shows a funny video.)"
+  },
+  {
+    "German": "stolz",
+    "English": "proud",
+    "Example": "- (-)"
+  },
+  {
+    "German": "ruhig",
+    "English": "quiet / calm",
+    "Example": "Janosch ist so ruhig. (Janosch is so quiet.)"
+  },
+  {
+    "German": "freundlich",
+    "English": "friendly",
+    "Example": "- (-)"
+  },
+  {
+    "German": "offen",
+    "English": "open / outgoing",
+    "Example": "- (-)"
+  },
+  {
+    "German": "hilfsbereit",
+    "English": "helpful",
+    "Example": "Janosch ist immer hilfsbereit. (Janosch is always helpful.)"
+  },
+  {
+    "German": "ehrlich",
+    "English": "honest",
+    "Example": "- (-)"
+  },
+  {
+    "German": "geduldig",
+    "English": "patient",
+    "Example": "- (-)"
+  },
+  {
+    "German": "zuverlässig",
+    "English": "reliable",
+    "Example": "- (-)"
+  },
+  {
+    "German": "neugierig",
+    "English": "curious",
+    "Example": "Janosch ist sehr neugierig. (Janosch is very curious.)"
+  },
+  {
+    "German": "nicht schlecht",
+    "English": "not bad",
+    "Example": "- (-)"
+  },
+  {
+    "German": "selbstbewusst",
+    "English": "self-confident",
+    "Example": "- (-)"
+  },
+  {
+    "German": "schüchtern",
+    "English": "shy",
+    "Example": "- (-)"
+  },
+  {
+    "German": "sozial",
+    "English": "social",
+    "Example": "Janosch ist sehr sozial. (Janosch is very social.)"
+  },
+  {
+    "German": "cool",
+    "English": "cool",
+    "Example": "- (-)"
+  },
+  {
+    "German": "lieblich",
+    "English": "sweet (wine)",
+    "Example": "- (-)"
+  },
+  {
+    "German": "sympathisch",
+    "English": "likeable",
+    "Example": "- (-)"
+  },
+  {
+    "German": "nett",
+    "English": "nice",
+    "Example": "- (-)"
+  },
+  {
+    "German": "erfolgreich",
+    "English": "successful",
+    "Example": "- (-)"
+  },
+  {
+    "German": "glücklich",
+    "English": "happy",
+    "Example": "Janosch ist glücklich. (Janosch is happy.)"
+  },
+  {
+    "German": "müde",
+    "English": "tired",
+    "Example": "Erik ist müde. (Erik is tired.)"
+  },
+  {
+    "German": "gestresst",
+    "English": "stressed",
+    "Example": "Erik ist gestresst. (Erik is stressed.)"
+  },
+  {
+    "German": "entspannt",
+    "English": "relaxed",
+    "Example": "Janosch ist entspannt. (Janosch is relaxed.)"
+  },
+  {
+    "German": "wütend",
+    "English": "angry",
+    "Example": "- (-)"
+  },
+  {
+    "German": "nervös",
+    "English": "nervous",
+    "Example": "- (-)"
+  },
+  {
+    "German": "traurig",
+    "English": "sad",
+    "Example": "Er spielt viele traurige Lieder. (He plays many sad songs.)"
+  },
+  {
+    "German": "gelangweilt",
+    "English": "bored",
+    "Example": "- (-)"
+  },
+  {
+    "German": "aufgeregt",
+    "English": "excited",
+    "Example": "- (-)"
+  },
+  {
+    "German": "überrascht",
+    "English": "surprised",
+    "Example": "Janosch ist überrascht. (Janosch is surprised.)"
+  },
+  {
+    "German": "besorgt",
+    "English": "worried",
+    "Example": "Du guckst so besorgt. (You look so worried.)"
+  },
+  {
+    "German": "verwirrt",
+    "English": "confused",
+    "Example": "- (-)"
+  },
+  {
+    "German": "enttäuscht",
+    "English": "disappointed",
+    "Example": "- (-)"
+  },
+  {
+    "German": "zufrieden",
+    "English": "satisfied",
+    "Example": "- (-)"
+  },
+  {
+    "German": "leicht",
+    "English": "easy / light",
+    "Example": "Die Kiste ist leicht. (The box is light.)"
+  },
+  {
+    "German": "schwer",
+    "English": "heavy / difficult",
+    "Example": "Die Kiste ist schwer. (The box is heavy.)"
+  },
+  {
+    "German": "einfach",
+    "English": "simple / easy",
+    "Example": "Die Aufgabe war einfach. (The task was easy.)"
+  },
+  {
+    "German": "schwierig",
+    "English": "difficult",
+    "Example": "- (-)"
+  },
+  {
+    "German": "klar",
+    "English": "clear",
+    "Example": "Geht das klar? (Is that clear/okay?)"
+  },
+  {
+    "German": "wichtig",
+    "English": "important",
+    "Example": "Es ist total wichtig. (It is totally important.)"
+  },
+  {
+    "German": "unwichtig",
+    "English": "unimportant",
+    "Example": "- (-)"
+  },
+  {
+    "German": "bekannt",
+    "English": "known / famous",
+    "Example": "- (-)"
+  },
+  {
+    "German": "richtig",
+    "English": "right / correct",
+    "Example": "- (-)"
+  },
+  {
+    "German": "falsch",
+    "English": "wrong / false",
+    "Example": "- (-)"
+  },
+  {
+    "German": "wunderbar",
+    "English": "wonderful",
+    "Example": "- (-)"
+  },
+  {
+    "German": "teuer",
+    "English": "expensive",
+    "Example": "- (-)"
+  },
+  {
+    "German": "billig",
+    "English": "cheap",
+    "Example": "- (-)"
+  },
+  {
+    "German": "gleich",
+    "English": "same / equal",
+    "Example": "- (-)"
+  },
+  {
+    "German": "perfekt",
+    "English": "perfect",
+    "Example": "- (-)"
+  },
+  {
+    "German": "schlimm",
+    "English": "bad / serious",
+    "Example": "Ist das schlimm? (Is that bad?)"
+  },
+  {
+    "German": "speziell",
+    "English": "special",
+    "Example": "- (-)"
+  },
+  {
+    "German": "ähnlich",
+    "English": "similar",
+    "Example": "- (-)"
+  },
+  {
+    "German": "lecker",
+    "English": "delicious",
+    "Example": "- (-)"
+  },
+  {
+    "German": "interessant",
+    "English": "interesting",
+    "Example": "- (-)"
+  },
+  {
+    "German": "eigen",
+    "English": "own",
+    "Example": "Ich kann meine eigenen Songs aufnehmen. (I can record my own songs.)"
+  },
+  {
+    "German": "toll",
+    "English": "great",
+    "Example": "- (-)"
+  },
+  {
+    "German": "spannend",
+    "English": "exciting",
+    "Example": "- (-)"
+  },
+  {
+    "German": "komplett",
+    "English": "complete",
+    "Example": "- (-)"
+  },
+  {
+    "German": "möglich",
+    "English": "possible",
+    "Example": "Das ist möglich. (That is possible.)"
+  },
+  {
+    "German": "typisch",
+    "English": "typical",
+    "Example": "- (-)"
+  },
+  {
+    "German": "schnell",
+    "English": "fast",
+    "Example": "Mach schneller! (Do it faster!)"
+  },
+  {
+    "German": "langsam",
+    "English": "slow",
+    "Example": "Du bist zu langsam. (You are too slow.)"
+  },
+  {
+    "German": "früh",
+    "English": "early",
+    "Example": "- (-)"
+  },
+  {
+    "German": "spät",
+    "English": "late",
+    "Example": "- (-)"
+  },
+  {
+    "German": "täglich",
+    "English": "daily",
+    "Example": "Janosch hat ein tägliches Ritual. (Janosch has a daily ritual.)"
+  },
+  {
+    "German": "monatlich",
+    "English": "monthly",
+    "Example": "- (-)"
+  },
+  {
+    "German": "jährlich",
+    "English": "yearly",
+    "Example": "- (-)"
+  },
+  {
+    "German": "regelmäßig",
+    "English": "regular",
+    "Example": "- (-)"
+  },
+  {
+    "German": "erste",
+    "English": "first",
+    "Example": "- (-)"
+  },
+  {
+    "German": "letzte",
+    "English": "last",
+    "Example": "War das die letzte Szene? (Was that the last scene?)"
+  }
+]

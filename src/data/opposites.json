@@ -1,0 +1,368 @@
+[
+  {
+    "German": "kalt",
+    "English": "cold",
+    "Opposite (German)": "warm",
+    "Example ": "Mir ist kalt; ich brauche eine Decke. (I am cold; I need a blanket.)"
+  },
+  {
+    "German": "warm",
+    "English": "warm",
+    "Opposite (German)": "kalt",
+    "Example ": "Das frische Brot ist noch warm. (The fresh bread is still warm.)"
+  },
+  {
+    "German": "gesund",
+    "English": "healthy",
+    "Opposite (German)": "krank",
+    "Example ": "Ich fühle mich gesund und munter. (I feel healthy and cheerful.)"
+  },
+  {
+    "German": "krank",
+    "English": "sick",
+    "Opposite (German)": "gesund",
+    "Example ": "Mein Sohn war gestern krank. (My son was sick yesterday.)"
+  },
+  {
+    "German": "dumm",
+    "English": "stupid",
+    "Opposite (German)": "klug",
+    "Example ": "Du bist nicht dumm. (You are not stupid.)"
+  },
+  {
+    "German": "klug",
+    "English": "smart",
+    "Opposite (German)": "dumm",
+    "Example ": "Unsere neue Nachbarin ist sehr klug. (Our new neighbor is very smart.)"
+  },
+  {
+    "German": "dunkel",
+    "English": "dark",
+    "Opposite (German)": "hell",
+    "Example ": "Das Zimmer ist dunkel, weil es keine Fenster hat. (The room is dark because it has no windows.)"
+  },
+  {
+    "German": "hell",
+    "English": "bright",
+    "Opposite (German)": "dunkel",
+    "Example ": "Die Wohnung ist hell erleuchtet. (The apartment is brightly lit.)"
+  },
+  {
+    "German": "bekannt",
+    "English": "known / famous",
+    "Opposite (German)": "unbekannt",
+    "Example ": "Bilder von bekannten Autoren verkaufen sich gut. (Pictures by well-known authors sell well.)"
+  },
+  {
+    "German": "unbekannt",
+    "English": "unknown",
+    "Opposite (German)": "bekannt",
+    "Example ": "Der Erbauer dieser Kirche ist unbekannt. (The builder of this church is unknown.)"
+  },
+  {
+    "German": "einfach",
+    "English": "easy / simple",
+    "Opposite (German)": "schwer",
+    "Example ": "Die Prüfung war relativ einfach. (The exam was relatively easy.)"
+  },
+  {
+    "German": "schwer",
+    "English": "difficult / heavy",
+    "Opposite (German)": "einfach / leicht",
+    "Example ": "Diese Übungen sind schwer. (These exercises are difficult.)"
+  },
+  {
+    "German": "faul",
+    "English": "lazy",
+    "Opposite (German)": "fleißig",
+    "Example ": "Mein Sohn ist schlau, aber schrecklich faul. (My son is smart but terribly lazy.)"
+  },
+  {
+    "German": "fleißig",
+    "English": "hardworking",
+    "Opposite (German)": "faul",
+    "Example ": "Peter ist sehr fleißig und ehrgeizig. (Peter is very hardworking and ambitious.)"
+  },
+  {
+    "German": "ärgerlich",
+    "English": "annoying",
+    "Opposite (German)": "erfreulich",
+    "Example ": "Wir haben kein Wasser; das ist sehr ärgerlich. (We have no water; that is very annoying.)"
+  },
+  {
+    "German": "erfreulich",
+    "English": "pleasing",
+    "Opposite (German)": "ärgerlich",
+    "Example ": "Die Reise war eine erfreuliche Erfahrung. (The trip was a pleasing experience.)"
+  },
+  {
+    "German": "laut",
+    "English": "loud",
+    "Opposite (German)": "leise",
+    "Example ": "Die Party ist so laut, ich will hier weg. (The party is so loud, I want to leave.)"
+  },
+  {
+    "German": "leise",
+    "English": "quiet",
+    "Opposite (German)": "laut",
+    "Example ": "Warum sprichst du so leise? (Why are you speaking so quietly?)"
+  },
+  {
+    "German": "leer",
+    "English": "empty",
+    "Opposite (German)": "voll",
+    "Example ": "Dieses Regal ist leer. (This shelf is empty.)"
+  },
+  {
+    "German": "voll",
+    "English": "full",
+    "Opposite (German)": "leer",
+    "Example ": "Ich nehme die nächste U-Bahn, denn diese ist voll. (I’ll take the next subway because this one is full.)"
+  },
+  {
+    "German": "langsam",
+    "English": "slow",
+    "Opposite (German)": "schnell",
+    "Example ": "Meine Internetgeschwindigkeit ist heute sehr langsam. (My internet speed is very slow today.)"
+  },
+  {
+    "German": "schnell",
+    "English": "fast",
+    "Opposite (German)": "langsam",
+    "Example ": "Wir garantieren eine schnelle Lieferung. (We guarantee a fast delivery.)"
+  },
+  {
+    "German": "klein",
+    "English": "small",
+    "Opposite (German)": "groß",
+    "Example ": "Dieser kleine Hund ist niedlich. (This small dog is cute.)"
+  },
+  {
+    "German": "groß",
+    "English": "big",
+    "Opposite (German)": "klein",
+    "Example ": "Wir wohnen in einem großen Haus. (We live in a big house.)"
+  },
+  {
+    "German": "weich",
+    "English": "soft",
+    "Opposite (German)": "hart",
+    "Example ": "Mein Kissen ist weich und flauschig. (My pillow is soft and fluffy.)"
+  },
+  {
+    "German": "hart",
+    "English": "hard",
+    "Opposite (German)": "weich",
+    "Example ": "Ebenholz ist hart wie Stein. (Ebony is hard as stone.)"
+  },
+  {
+    "German": "glatt",
+    "English": "smooth / straight",
+    "Opposite (German)": "rau",
+    "Example ": "Sie hat lange glatte Haare. (She has long straight hair.)"
+  },
+  {
+    "German": "rau",
+    "English": "rough",
+    "Opposite (German)": "glatt",
+    "Example ": "Der Stoff fühlt sich rau an. (The fabric feels rough.)"
+  },
+  {
+    "German": "feucht",
+    "English": "damp / moist",
+    "Opposite (German)": "trocken",
+    "Example ": "Morgens ist das Gras oft feucht. (In the morning the grass is often damp.)"
+  },
+  {
+    "German": "trocken",
+    "English": "dry",
+    "Opposite (German)": "feucht",
+    "Example ": "Sind deine Haare schon trocken? (Is your hair dry yet?)"
+  },
+  {
+    "German": "richtig",
+    "English": "right / correct",
+    "Opposite (German)": "falsch",
+    "Example ": "Meine Vermutung war richtig. (My assumption was correct.)"
+  },
+  {
+    "German": "falsch",
+    "English": "wrong",
+    "Opposite (German)": "richtig",
+    "Example ": "Von einer falschen Antwort kann man viel lernen. (You can learn a lot from a wrong answer.)"
+  },
+  {
+    "German": "alt",
+    "English": "old",
+    "Opposite (German)": "neu / jung",
+    "Example ": "Meine alten Möbel sind auf dem Dachboden. (My old furniture is in the attic.)"
+  },
+  {
+    "German": "neu",
+    "English": "new",
+    "Opposite (German)": "alt",
+    "Example ": "Mein Auto hat neue Reifen. (My car has new tires.)"
+  },
+  {
+    "German": "jung",
+    "English": "young",
+    "Opposite (German)": "alt",
+    "Example ": "Er ist alt, aber sie ist jung. (He is old, but she is young.)"
+  },
+  {
+    "German": "arm",
+    "English": "poor",
+    "Opposite (German)": "reich",
+    "Example ": "Im Stadtzentrum findet man viele arme Menschen. (In the city center you find many poor people.)"
+  },
+  {
+    "German": "reich",
+    "English": "rich",
+    "Opposite (German)": "arm",
+    "Example ": "Milch ist reich an Kalzium. (Milk is rich in calcium.)"
+  },
+  {
+    "German": "breit",
+    "English": "wide",
+    "Opposite (German)": "schmal",
+    "Example ": "Der Schrank ist so breit. (The cabinet is so wide.)"
+  },
+  {
+    "German": "schmal",
+    "English": "narrow",
+    "Opposite (German)": "breit",
+    "Example ": "Das Bett war ein bisschen schmal. (The bed was a bit narrow.)"
+  },
+  {
+    "German": "billig",
+    "English": "cheap",
+    "Opposite (German)": "teuer",
+    "Example ": "Ich suche billige alte Sachen. (I am looking for cheap old things.)"
+  },
+  {
+    "German": "teuer",
+    "English": "expensive",
+    "Opposite (German)": "billig",
+    "Example ": "Meine Mutter hat einen sehr teuren Ring gekauft. (My mother bought a very expensive ring.)"
+  },
+  {
+    "German": "dick",
+    "English": "fat / thick",
+    "Opposite (German)": "dünn",
+    "Example ": "Meine dicke Katze muss abnehmen. (My fat cat needs to lose weight.)"
+  },
+  {
+    "German": "dünn",
+    "English": "thin",
+    "Opposite (German)": "dick",
+    "Example ": "Mein neues Handy ist eher dünn. (My new cell phone is rather thin.)"
+  },
+  {
+    "German": "eckig",
+    "English": "angular / square",
+    "Opposite (German)": "rund",
+    "Example ": "Sie hat den Kuchen in einer eckigen Form gebacken. (She baked the cake in a square pan.)"
+  },
+  {
+    "German": "rund",
+    "English": "round",
+    "Opposite (German)": "eckig",
+    "Example ": "Äpfel sind rund. (Apples are round.)"
+  },
+  {
+    "German": "weit",
+    "English": "wide / far",
+    "Opposite (German)": "eng / nah",
+    "Example ": "Diese Hose ist mir leider zu weit. (These pants are unfortunately too wide for me.)"
+  },
+  {
+    "German": "eng",
+    "English": "tight",
+    "Opposite (German)": "weit",
+    "Example ": "- (-)"
+  },
+  {
+    "German": "nah",
+    "English": "near",
+    "Opposite (German)": "fern",
+    "Example ": "Der Laden ist nah. (The shop is near.)"
+  },
+  {
+    "German": "fern",
+    "English": "far",
+    "Opposite (German)": "nah",
+    "Example ": "Sie wohnen fern von uns. (They live far from us.)"
+  },
+  {
+    "German": "locker",
+    "English": "loose / relaxed",
+    "Opposite (German)": "fest",
+    "Example ": "Ich mag die lockere Atmosphäre. (I like the relaxed atmosphere.)"
+  },
+  {
+    "German": "fest",
+    "English": "firm / tight",
+    "Opposite (German)": "locker",
+    "Example ": "Das Material ist hart und fest. (The material is hard and firm.)"
+  },
+  {
+    "German": "flach",
+    "English": "flat / shallow",
+    "Opposite (German)": "tief",
+    "Example ": "Ich muss den Teig auf einer flachen Oberfläche kneten. (I have to knead the dough on a flat surface.)"
+  },
+  {
+    "German": "tief",
+    "English": "deep",
+    "Opposite (German)": "flach",
+    "Example ": "Der Schacht ist 40 Meter tief. (The shaft is 40 meters deep.)"
+  },
+  {
+    "German": "gut",
+    "English": "good",
+    "Opposite (German)": "schlecht",
+    "Example ": "Jede Stadt sollte ein gutes Restaurant haben. (Every city should have a good restaurant.)"
+  },
+  {
+    "German": "schlecht",
+    "English": "bad",
+    "Opposite (German)": "gut",
+    "Example ": "Das Essen ist schlecht geworden. (The food has gone bad.)"
+  },
+  {
+    "German": "hässlich",
+    "English": "ugly",
+    "Opposite (German)": "schön",
+    "Example ": "Ich finde das Gebäude hässlich. (I find the building ugly.)"
+  },
+  {
+    "German": "schön",
+    "English": "beautiful",
+    "Opposite (German)": "hässlich",
+    "Example ": "Ich habe eine schöne Aussicht. (I have a beautiful view.)"
+  },
+  {
+    "German": "kurz",
+    "English": "short",
+    "Opposite (German)": "lang",
+    "Example ": "Meine Freundin hat kurze Haare. (My girlfriend has short hair.)"
+  },
+  {
+    "German": "lang",
+    "English": "long",
+    "Opposite (German)": "kurz",
+    "Example ": "Damals waren lange Röcke in Mode. (Back then, long skirts were in fashion.)"
+  },
+  {
+    "German": "geduldig",
+    "English": "patient",
+    "Opposite (German)": "ungeduldig",
+    "Example ": "Die Lehrerin ist sehr freundlich und geduldig. (The teacher is very friendly and patient.)"
+  },
+  {
+    "German": "ungeduldig",
+    "English": "impatient",
+    "Opposite (German)": "geduldig",
+    "Example ": "Ich bin ungeduldig. (I am impatient.)"
+  }
+]
