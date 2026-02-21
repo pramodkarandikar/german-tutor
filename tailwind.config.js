@@ -9,7 +9,7 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],
-                logo: ['"Raleway"', 'sans-serif'],
+                logo: ['"Playwrite NZ Guides"', 'cursive'],
             },
             colors: {
                 background: 'var(--background)',
