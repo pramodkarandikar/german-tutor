@@ -130,7 +130,7 @@ const MultipleChoice = () => {
                     <span className="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full mb-4">
                         Translate this
                     </span>
-                    <h3 className="text-2xl font-bold text-text">{currentCard.english}</h3>
+                    <h3 className="text-2xl font-bold text-text font-sans">{currentCard.english}</h3>
                 </div>
 
                 <div className="p-8 grid grid-cols-1 gap-3">

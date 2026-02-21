@@ -58,7 +58,7 @@ const WordGenderPractice = () => {
 
             <div className="bg-surface rounded-2xl shadow-xl p-8 text-center space-y-8 transition-all duration-300 hover:shadow-2xl">
                 <div className="space-y-4">
-                    <h3 className="text-2xl font-bold text-text tracking-tight">
+                    <h3 className="text-2xl font-bold text-text tracking-tight font-sans">
                         {currentWord.word}
                     </h3>
                     {showHint && currentWord.translation && (

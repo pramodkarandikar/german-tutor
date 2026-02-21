@@ -61,7 +61,7 @@ const VerbPrepositionPractice = () => {
 
             <div className="bg-surface rounded-2xl shadow-xl p-8 space-y-8 transition-all duration-300 hover:shadow-2xl">
                 <div className="text-center space-y-4">
-                    <h3 className="text-2xl font-bold text-text tracking-tight">
+                    <h3 className="text-2xl font-bold text-text font-sans tracking-tight">
                         {currentVerb.verb}
                     </h3>
                     <p className="text-xl text-text-muted italic">
