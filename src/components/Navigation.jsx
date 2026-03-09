@@ -6,18 +6,18 @@ const Navigation = ({ currentView, setCurrentView, children }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const navItems = [
-        { id: 'flashcards', label: 'Flashcards', icon: BookOpen, color: 'text-blue-600', bg: 'bg-blue-50' },
-        { id: 'mcq', label: 'Multiple Choice', icon: LayoutGrid, color: 'text-indigo-600', bg: 'bg-indigo-50' },
-        { id: 'writing', label: 'Writing Practice', icon: PenTool, color: 'text-purple-600', bg: 'bg-purple-50' },
-        { id: 'gender', label: 'Word Gender', icon: Type, color: 'text-pink-600', bg: 'bg-pink-50' },
-        { id: 'prepositions', label: 'Prepositions', icon: Link2, color: 'text-teal-600', bg: 'bg-teal-50' },
-        { id: 'verb_practice', label: 'Verbs Practice', icon: Edit3, color: 'text-red-600', bg: 'bg-red-50' },
-        { id: 'adjective_practice', label: 'Adjectives Quiz', icon: List, color: 'text-yellow-600', bg: 'bg-yellow-50' },
-        { id: 'opposite_practice', label: 'Opposites Match', icon: Repeat, color: 'text-green-600', bg: 'bg-green-50' },
+        { id: 'flashcards', label: 'Flashcards', icon: BookOpen, color: 'text-blue-600', bg: 'bg-blue-100' },
+        { id: 'mcq', label: 'Multiple Choice', icon: LayoutGrid, color: 'text-indigo-600', bg: 'bg-indigo-100' },
+        { id: 'writing', label: 'Writing Practice', icon: PenTool, color: 'text-purple-600', bg: 'bg-purple-100' },
+        { id: 'gender', label: 'Word Gender', icon: Type, color: 'text-pink-600', bg: 'bg-pink-100' },
+        { id: 'prepositions', label: 'Prepositions', icon: Link2, color: 'text-teal-600', bg: 'bg-teal-100' },
+        { id: 'verb_practice', label: 'Verbs Practice', icon: Edit3, color: 'text-red-600', bg: 'bg-red-100' },
+        { id: 'adjective_practice', label: 'Adjectives Quiz', icon: List, color: 'text-yellow-600', bg: 'bg-yellow-100' },
+        { id: 'opposite_practice', label: 'Opposites Match', icon: Repeat, color: 'text-green-600', bg: 'bg-green-100' },
     ];
 
     const bottomItems = [
-        { id: 'settings', label: 'Settings', icon: Settings, color: 'text-gray-600', bg: 'bg-gray-100' },
+        // { id: 'settings', label: 'Settings', icon: Settings, color: 'text-gray-600', bg: 'bg-gray-100' },
     ];
 
     const handleNavClick = (viewId) => {

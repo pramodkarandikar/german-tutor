@@ -19,6 +19,9 @@ vi.mock('lucide-react', () => ({
     Link2: () => <div>Icon</div>,
     Menu: () => <div>Icon</div>,
     X: () => <div>Icon</div>,
+    Edit3: () => <div>Icon</div>,
+    List: () => <div>Icon</div>,
+    Repeat: () => <div>Icon</div>,
 }));
 
 describe('Navigation', () => {

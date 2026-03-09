@@ -28,18 +28,18 @@ describe('ThemeSelector', () => {
 
         const button = screen.getByRole('button');
 
-        // Initial state should be light (Moon icon visible)
-        expect(screen.getByTestId('moon-icon')).toBeInTheDocument();
-        expect(document.documentElement.classList.contains('light')).toBe(true);
-
-        // Click to toggle to dark
-        fireEvent.click(button);
+        // Initial state should be dark (Sun icon visible)
         expect(screen.getByTestId('sun-icon')).toBeInTheDocument();
         expect(document.documentElement.classList.contains('dark')).toBe(true);
 
-        // Click to toggle back to light
+        // Click to toggle to light
         fireEvent.click(button);
         expect(screen.getByTestId('moon-icon')).toBeInTheDocument();
         expect(document.documentElement.classList.contains('light')).toBe(true);
+
+        // Click to toggle back to dark
+        fireEvent.click(button);
+        expect(screen.getByTestId('sun-icon')).toBeInTheDocument();
+        expect(document.documentElement.classList.contains('dark')).toBe(true);
     });
 });
