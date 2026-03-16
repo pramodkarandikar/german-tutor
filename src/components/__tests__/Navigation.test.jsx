@@ -22,6 +22,8 @@ vi.mock('lucide-react', () => ({
     Edit3: () => <div>Icon</div>,
     List: () => <div>Icon</div>,
     Repeat: () => <div>Icon</div>,
+    Languages: () => <div>Icon</div>,
+    MessageCircle: () => <div>Icon</div>,
 }));
 
 describe('Navigation', () => {

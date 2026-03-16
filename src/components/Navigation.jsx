@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { BookOpen, PenTool, LayoutGrid, Type, Link2, Menu, X, Edit3, List, Repeat, Settings } from 'lucide-react';
+import { BookOpen, PenTool, LayoutGrid, Type, Link2, Menu, X, Edit3, List, Repeat, Settings, Languages, MessageCircle } from 'lucide-react';
 import ThemeSelector from './ThemeSelector';
 
 const Navigation = ({ currentView, setCurrentView, children }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const navItems = [
+        { id: 'alphabet', label: 'German Alphabet', icon: Languages, color: 'text-orange-600', bg: 'bg-orange-100' },
+        { id: 'pronunciation', label: 'Pronunciation Rules', icon: MessageCircle, color: 'text-cyan-600', bg: 'bg-cyan-100' },
         { id: 'flashcards', label: 'Flashcards', icon: BookOpen, color: 'text-blue-600', bg: 'bg-blue-100' },
         { id: 'mcq', label: 'Multiple Choice', icon: LayoutGrid, color: 'text-indigo-600', bg: 'bg-indigo-100' },
         { id: 'writing', label: 'Writing Practice', icon: PenTool, color: 'text-purple-600', bg: 'bg-purple-100' },

@@ -1,0 +1,100 @@
+[
+  {
+    "rule": "ie",
+    "phonetic": "[iː]",
+    "explanation": "Pronounced like a long 'ee' in English 'see'.",
+    "example_word": "Liebe",
+    "example_translation": "Love"
+  },
+  {
+    "rule": "ei",
+    "phonetic": "[aɪ]",
+    "explanation": "Pronounced like 'eye' or 'I' in English.",
+    "example_word": "Nein",
+    "example_translation": "No"
+  },
+  {
+    "rule": "eu / äu",
+    "phonetic": "[ɔʏ]",
+    "explanation": "Pronounced like 'oy' in English 'boy'.",
+    "example_word": "Euro",
+    "example_translation": "Euro"
+  },
+  {
+    "rule": "sch",
+    "phonetic": "[ʃ]",
+    "explanation": "Pronounced like 'sh' in English 'shoe'.",
+    "example_word": "Schule",
+    "example_translation": "School"
+  },
+  {
+    "rule": "ch (after a, o, u, au)",
+    "phonetic": "[x]",
+    "explanation": "A harsh, throaty sound, similar to a cat hissing or clearing your throat (like in Scottish 'loch').",
+    "example_word": "Buch",
+    "example_translation": "Book"
+  },
+  {
+    "rule": "ch (after e, i, ä, ö, ü, eu, äu, ai, ei)",
+    "phonetic": "[ç]",
+    "explanation": "A softer, hissing sound produced further forward in the mouth, like the 'h' in English 'huge' or 'human'.",
+    "example_word": "Ich",
+    "example_translation": "I"
+  },
+  {
+    "rule": "sp / st (at the start of a syllable)",
+    "phonetic": "[ʃp] / [ʃt]",
+    "explanation": "Pronounced like 'shp' or 'sht'.",
+    "example_word": "Stadt",
+    "example_translation": "City"
+  },
+  {
+    "rule": "v",
+    "phonetic": "[f]",
+    "explanation": "Usually pronounced like an English 'f', except in some foreign words where it sounds like an English 'v'.",
+    "example_word": "Vater",
+    "example_translation": "Father"
+  },
+  {
+    "rule": "w",
+    "phonetic": "[v]",
+    "explanation": "Always pronounced like an English 'v'.",
+    "example_word": "Wasser",
+    "example_translation": "Water"
+  },
+  {
+    "rule": "z",
+    "phonetic": "[ts]",
+    "explanation": "Pronounced like 'ts', never like the English 'z' (buzzing sound). Example: 'cats'.",
+    "example_word": "Zwei",
+    "example_translation": "Two"
+  },
+  {
+    "rule": "th",
+    "phonetic": "[t]",
+    "explanation": "Pronounced just like a normal 't'. The English 'th' sound does not exist in German.",
+    "example_word": "Theater",
+    "example_translation": "Theater"
+  },
+  {
+    "rule": "-ig (at end of a word)",
+    "phonetic": "[ɪç]",
+    "explanation": "Often pronounced like the soft 'ch' (as in 'ich'), though in southern regions it may sound like a 'k'.",
+    "example_word": "König",
+    "example_translation": "King"
+  },
+  {
+    "rule": "dt",
+    "phonetic": "[t]",
+    "explanation": "Pronounced seamlessly as a single 't'.",
+    "example_word": "Stadt",
+    "example_translation": "City"
+  },
+  {
+    "rule": "-er (at end of a word)",
+    "phonetic": "[ɐ]",
+    "explanation": "The 'r' is almost silent; it sounds like a short, soft 'a', similar to the American 'er' in 'mother', but dropping the 'r'.",
+    "example_word": "Mutter",
+    "example_translation": "Mother"
+  }
+]

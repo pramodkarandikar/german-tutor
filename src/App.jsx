@@ -13,6 +13,9 @@ import AdjectivePractice from './components/AdjectivePractice';
 import OppositePractice from './components/OppositePractice';
 import Navigation from './components/Navigation';
 
+import Alphabet from './components/Alphabet';
+import PronunciationRules from './components/PronunciationRules';
+
 function App() {
   const [currentView, setCurrentView] = useState('flashcards');
 
@@ -20,6 +23,8 @@ function App() {
     <DataProvider>
       <ThemeProvider>
         <Navigation currentView={currentView} setCurrentView={setCurrentView}>
+          {currentView === 'alphabet' && <Alphabet />}
+          {currentView === 'pronunciation' && <PronunciationRules />}
           {currentView === 'flashcards' && <Quiz />}
           {currentView === 'writing' && <WritingPractice />}
           {currentView === 'mcq' && <MultipleChoice />}

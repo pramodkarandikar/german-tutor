@@ -1,0 +1,242 @@
+[
+  {
+    "letter": "A a",
+    "phonetic": "[aː]",
+    "sound": "Ah",
+    "pronunciation_tip": "Open mouth wide, like saying 'father'.",
+    "example_word": "Apfel",
+    "example_translation": "Apple"
+  },
+  {
+    "letter": "B b",
+    "phonetic": "[beː]",
+    "sound": "Bay",
+    "pronunciation_tip": "Similar to English 'b'.",
+    "example_word": "Buch",
+    "example_translation": "Book"
+  },
+  {
+    "letter": "C c",
+    "phonetic": "[tseː]",
+    "sound": "Tsay",
+    "pronunciation_tip": "Rarely used at the start of German words. Often sounds like 'ts' or 'k'.",
+    "example_word": "Computer",
+    "example_translation": "Computer"
+  },
+  {
+    "letter": "D d",
+    "phonetic": "[deː]",
+    "sound": "Day",
+    "pronunciation_tip": "Similar to English 'd', but at the end of a word it sounds like 't'.",
+    "example_word": "Danke",
+    "example_translation": "Thank you"
+  },
+  {
+    "letter": "E e",
+    "phonetic": "[eː]",
+    "sound": "Ay",
+    "pronunciation_tip": "Like the 'a' in 'pay', but shorter at the end of words.",
+    "example_word": "Elefant",
+    "example_translation": "Elephant"
+  },
+  {
+    "letter": "F f",
+    "phonetic": "[ɛf]",
+    "sound": "Eff",
+    "pronunciation_tip": "Same as in English.",
+    "example_word": "Fenster",
+    "example_translation": "Window"
+  },
+  {
+    "letter": "G g",
+    "phonetic": "[geː]",
+    "sound": "Gay",
+    "pronunciation_tip": "Always a hard 'g' like in 'go'. At the end of words in '-ig', it sounds like 'ich'.",
+    "example_word": "Guten",
+    "example_translation": "Good"
+  },
+  {
+    "letter": "H h",
+    "phonetic": "[haː]",
+    "sound": "Hah",
+    "pronunciation_tip": "Like English 'h' at start of words. After a vowel, it is silent and makes the vowel longer.",
+    "example_word": "Haus",
+    "example_translation": "House"
+  },
+  {
+    "letter": "I i",
+    "phonetic": "[iː]",
+    "sound": "Ee",
+    "pronunciation_tip": "Like the 'ee' in 'see'.",
+    "example_word": "Igel",
+    "example_translation": "Hedgehog"
+  },
+  {
+    "letter": "J j",
+    "phonetic": "[jɔt]",
+    "sound": "Yot",
+    "pronunciation_tip": "Pronounced like the English 'y' in 'yes'.",
+    "example_word": "Ja",
+    "example_translation": "Yes"
+  },
+  {
+    "letter": "K k",
+    "phonetic": "[kaː]",
+    "sound": "Kah",
+    "pronunciation_tip": "Same as English 'k'.",
+    "example_word": "Katze",
+    "example_translation": "Cat"
+  },
+  {
+    "letter": "L l",
+    "phonetic": "[ɛl]",
+    "sound": "Ell",
+    "pronunciation_tip": "Same as English 'l'.",
+    "example_word": "Liebe",
+    "example_translation": "Love"
+  },
+  {
+    "letter": "M m",
+    "phonetic": "[ɛm]",
+    "sound": "Emm",
+    "pronunciation_tip": "Same as English 'm'.",
+    "example_word": "Mutter",
+    "example_translation": "Mother"
+  },
+  {
+    "letter": "N n",
+    "phonetic": "[ɛn]",
+    "sound": "Enn",
+    "pronunciation_tip": "Same as English 'n'.",
+    "example_word": "Nacht",
+    "example_translation": "Night"
+  },
+  {
+    "letter": "O o",
+    "phonetic": "[oː]",
+    "sound": "Oh",
+    "pronunciation_tip": "A pure 'o' sound, like in 'boat' but shorter.",
+    "example_word": "Opa",
+    "example_translation": "Grandpa"
+  },
+  {
+    "letter": "P p",
+    "phonetic": "[peː]",
+    "sound": "Pay",
+    "pronunciation_tip": "Same as English 'p'.",
+    "example_word": "Papagei",
+    "example_translation": "Parrot"
+  },
+  {
+    "letter": "Q q",
+    "phonetic": "[kuː]",
+    "sound": "Koo",
+    "pronunciation_tip": "Always followed by 'u'. Pronounced like 'kv'.",
+    "example_word": "Quark",
+    "example_translation": "Curd cheese"
+  },
+  {
+    "letter": "R r",
+    "phonetic": "[ɛʁ]",
+    "sound": "Air",
+    "pronunciation_tip": "Pronounced from the back of the throat. At the end of words, it's very soft, almost like a short 'a'.",
+    "example_word": "Rot",
+    "example_translation": "Red"
+  },
+  {
+    "letter": "S s",
+    "phonetic": "[ɛs]",
+    "sound": "Ess",
+    "pronunciation_tip": "Like 'z' as in 'zoo' at the start of words or between vowels. Like 's' at the end.",
+    "example_word": "Sonne",
+    "example_translation": "Sun"
+  },
+  {
+    "letter": "T t",
+    "phonetic": "[teː]",
+    "sound": "Tay",
+    "pronunciation_tip": "Same as English 't'.",
+    "example_word": "Tag",
+    "example_translation": "Day"
+  },
+  {
+    "letter": "U u",
+    "phonetic": "[uː]",
+    "sound": "Oo",
+    "pronunciation_tip": "Like the 'oo' in 'boot'.",
+    "example_word": "Uhr",
+    "example_translation": "Clock"
+  },
+  {
+    "letter": "V v",
+    "phonetic": "[faʊ]",
+    "sound": "Fow",
+    "pronunciation_tip": "Usually pronounced like an English 'f'.",
+    "example_word": "Vogel",
+    "example_translation": "Bird"
+  },
+  {
+    "letter": "W w",
+    "phonetic": "[veː]",
+    "sound": "Vay",
+    "pronunciation_tip": "Pronounced like an English 'v'.",
+    "example_word": "Wasser",
+    "example_translation": "Water"
+  },
+  {
+    "letter": "X x",
+    "phonetic": "[ɪks]",
+    "sound": "Iks",
+    "pronunciation_tip": "Same as English 'x' (ks sound). Rare in German.",
+    "example_word": "Xylophon",
+    "example_translation": "Xylophone"
+  },
+  {
+    "letter": "Y y",
+    "phonetic": "[ˈʏpsilɔn]",
+    "sound": "Uu-psi-lon",
+    "pronunciation_tip": "Pronounced like the German 'ü'. Used mostly in foreign words.",
+    "example_word": "Yoga",
+    "example_translation": "Yoga"
+  },
+  {
+    "letter": "Z z",
+    "phonetic": "[tsɛt]",
+    "sound": "Tset",
+    "pronunciation_tip": "Pronounced exactly like 'ts' in 'cats'. Never like English 'z'.",
+    "example_word": "Zebra",
+    "example_translation": "Zebra"
+  },
+  {
+    "letter": "Ä ä",
+    "phonetic": "[ɛː]",
+    "sound": "Eh",
+    "pronunciation_tip": "Umlaut A. Sounds like the 'e' in 'bed' or 'a' in 'table'.",
+    "example_word": "Äpfel",
+    "example_translation": "Apples"
+  },
+  {
+    "letter": "Ö ö",
+    "phonetic": "[øː]",
+    "sound": "Uhh",
+    "pronunciation_tip": "Umlaut O. Shape your lips for 'o' but say 'e'. (Like in 'her' or 'bird').",
+    "example_word": "Öl",
+    "example_translation": "Oil"
+  },
+  {
+    "letter": "Ü ü",
+    "phonetic": "[yː]",
+    "sound": "Eww",
+    "pronunciation_tip": "Umlaut U. Shape your lips for 'oo' but say 'ee'.",
+    "example_word": "Über",
+    "example_translation": "Over/About"
+  },
+  {
+    "letter": "ß",
+    "phonetic": "[ɛsˈtsɛt]",
+    "sound": "Eszett",
+    "pronunciation_tip": "Called 'Eszett' or 'scharfes s' (sharp s). Sounds just like double 'ss'. Only used after long vowels or diphthongs.",
+    "example_word": "Straße",
+    "example_translation": "Street"
+  }
+]
