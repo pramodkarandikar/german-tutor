@@ -17,7 +17,7 @@ import Alphabet from './components/Alphabet';
 import PronunciationRules from './components/PronunciationRules';
 
 function App() {
-  const [currentView, setCurrentView] = useState('flashcards');
+  const [currentView, setCurrentView] = useState('alphabet');
 
   return (
     <DataProvider>

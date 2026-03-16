@@ -19,7 +19,6 @@ const PronunciationRules = () => {
         <div className="max-w-4xl mx-auto p-4 animate-fade-in pb-12">
             <div className="mb-10 text-center md:text-left">
                 <h1 className="text-4xl font-extrabold text-text mb-4 inline-flex items-center gap-4">
-                    <BookOpen size={36} className="text-primary" />
                     Pronunciation Rules
                 </h1>
                 <p className="text-lg text-text-muted max-w-2xl">
@@ -29,8 +28,8 @@ const PronunciationRules = () => {
 
             <div className="space-y-6">
                 {pronunciationData.map((item, index) => (
-                    <div 
-                        key={index} 
+                    <div
+                        key={index}
                         className="bg-surface rounded-2xl p-6 md:p-8 border border-border shadow-sm hover:shadow-md transition-all group flex flex-col md:flex-row gap-6 items-start"
                     >
                         {/* Rule Display */}
@@ -53,7 +52,7 @@ const PronunciationRules = () => {
                                     <span className="text-xl font-bold text-text mb-1">{item.example_word}</span>
                                     <span className="text-sm text-text-muted italic">{item.example_translation}</span>
                                 </div>
-                                <button 
+                                <button
                                     onClick={() => playAudio(item.example_word)}
                                     className="p-4 bg-primary text-white rounded-full hover:bg-primary/90 hover:scale-105 transition-all shadow-md flex-shrink-0"
                                     aria-label={`Listen to ${item.example_word}`}
