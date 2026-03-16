@@ -68,15 +68,17 @@ const Quiz = () => {
     }
 
     return (
-        <div className="max-w-4xl mx-auto p-4">
-            <div className="flex justify-between items-end mb-8 px-4">
-                <div>
-                    <h1 className="text-4xl font-extrabold text-text mb-2">Flashcards</h1>
-                    <p className="text-text-muted">Master your German skills with interactive flashcards</p>
-                </div>
+        <div className="max-w-4xl mx-auto p-4 md:p-8 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)] pb-24">
+            <div className="mb-6 text-center md:text-left mt-4">
+                <h1 className="text-3xl md:text-4xl font-black tracking-tight text-text mb-4">
+                    Flashcards.
+                </h1>
+                <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">
+                    Master your vocabulary with interactive, spaced repetition style practice.
+                </p>
             </div>
 
-            <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-10">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-6">
                 <CategoryFilter
                     categories={categories}
                     selectedCategories={selectedCategories}
@@ -84,10 +86,10 @@ const Quiz = () => {
                 />
                 <button
                     onClick={toggleRandom}
-                    className={`flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all duration-200 shadow-sm border
-             ${isRandom ? 'bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800' : 'bg-surface text-text hover:bg-background border-border drop-shadow-sm'}`}
+                    className={`flex items-center gap-3 px-6 py-3.5 rounded-2xl font-bold transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] border-2
+             ${isRandom ? 'bg-text text-background border-text shadow-xl scale-[1.02]' : 'bg-transparent text-text border-text/10 hover:border-text/30'}`}
                 >
-                    <Shuffle size={18} />
+                    <Shuffle size={20} strokeWidth={2.5} />
                     {isRandom ? 'Randomized' : 'Sequential'}
                 </button>
             </div>
@@ -107,23 +109,23 @@ const Quiz = () => {
                 </AnimatePresence>
             </div>
 
-            <div className="flex justify-center items-center gap-8 mt-8">
+            <div className="flex justify-center items-center gap-10 mt-16">
                 <button
                     onClick={handlePrev}
-                    className="p-3 rounded-full bg-surface shadow-md hover:bg-background hover:shadow-lg transition-all text-text border border-border"
+                    className="p-4 rounded-full bg-surface border-2 border-text/10 hover:border-text hover:bg-text hover:text-background transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] hover:scale-110 group shadow-sm"
                     aria-label="Previous card"
                 >
-                    <ChevronLeft size={24} />
+                    <ChevronLeft size={28} strokeWidth={2.5} className="group-hover:-translate-x-1 transition-transform" />
                 </button>
-                <span className="text-sm font-medium text-text-muted">
-                    {currentIndex + 1} / {cards.length}
+                <span className="text-lg font-bold font-mono text-text tracking-widest">
+                    {String(currentIndex + 1).padStart(2, '0')} <span className="text-text/30 mx-2">/</span> {String(cards.length).padStart(2, '0')}
                 </span>
                 <button
                     onClick={handleNext}
-                    className="p-3 rounded-full bg-surface shadow-md hover:bg-background hover:shadow-lg transition-all text-text border border-border"
+                    className="p-4 rounded-full bg-surface border-2 border-text/10 hover:border-text hover:bg-text hover:text-background transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] hover:scale-110 group shadow-sm"
                     aria-label="Next card"
                 >
-                    <ChevronRight size={24} />
+                    <ChevronRight size={28} strokeWidth={2.5} className="group-hover:translate-x-1 transition-transform" />
                 </button>
             </div>
         </div>

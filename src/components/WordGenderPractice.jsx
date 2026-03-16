@@ -63,18 +63,20 @@ const WordGenderPractice = () => {
         });
 
         return (
-            <div className="space-y-8 animate-fade-in">
+            <div className="space-y-12 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)]">
                 {Object.keys(rules).map(gender => (
-                    <div key={gender} className="bg-surface rounded-2xl shadow-sm border border-border p-6">
-                        <h2 className={`text-2xl font-bold mb-4 ${
+                    <div key={gender} className="border-t-4 border-text/10 pt-8 pb-12">
+                        <h2 className={`text-2xl md:text-3xl font-black tracking-tight mb-6 ${
                             gender === 'Der' ? 'text-blue-500' :
                             gender === 'Die' ? 'text-red-500' : 'text-green-500'
-                        }`}>{gender}</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        }`}>
+                            {gender}.
+                        </h2>
+                        <div className="flex flex-col gap-8">
                             {rules[gender].map((r, idx) => (
-                                <div key={idx} className="bg-background p-4 rounded-xl border border-border">
-                                    <div className="font-semibold text-text mb-1">{r.rule}</div>
-                                    <div className="text-text-muted italic text-sm">Example: {r.example}</div>
+                                <div key={idx} className="flex flex-col md:flex-row md:items-center gap-4 bg-transparent border-l-4 border-text/20 pl-6 py-2">
+                                    <div className="text-2xl font-bold text-text tracking-tight w-full md:w-2/3 leading-snug">{r.rule}</div>
+                                    <div className="text-text-muted text-xl italic font-light">Example: <span className="font-bold font-sans text-text">{r.example}</span></div>
                                 </div>
                             ))}
                         </div>
@@ -87,48 +89,48 @@ const WordGenderPractice = () => {
     if (!currentWord && mode === 'practice') return <div className="text-center p-8">Loading...</div>;
 
     return (
-        <div className="max-w-4xl mx-auto p-4 space-y-6">
-            <div className="flex flex-col mb-8 px-4 gap-4">
+        <div className="max-w-5xl mx-auto p-4 md:p-8 space-y-6 pb-24">
+            <div className="flex flex-col mb-6 px-4 gap-3 mt-4 text-center md:text-left">
                 <div>
-                    <h1 className="text-4xl font-extrabold text-text mb-2">Word Gender</h1>
-                    <p className="text-text-muted">
-                        {mode === 'practice' ? 'Choose the correct article for the noun.' : 'Learn the rules for noun genders.'}
+                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-text mb-4">Word Gender.</h1>
+                    <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">
+                        {mode === 'practice' ? 'Master the articles (der/die/das) through rapid repetition.' : 'Learn the patterns and rules for noun genders.'}
                     </p>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-2">
-                    <div className="flex items-center gap-4 bg-surface p-1 rounded-xl shadow-sm border border-border w-full sm:w-auto">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mt-6">
+                    <div className="flex items-center gap-2 bg-text text-background p-1.5 rounded-2xl shadow-xl w-full sm:w-auto">
                         <button
                             onClick={() => setMode('practice')}
-                            className={`flex flex-1 sm:flex-none items-center justify-center gap-2 px-6 py-2.5 rounded-lg font-medium transition-all ${
+                            className={`flex flex-1 sm:flex-none items-center justify-center gap-3 px-8 py-3.5 rounded-xl text-lg font-bold transition-all duration-300 ${
                                 mode === 'practice' 
-                                ? 'bg-blue-600 text-white shadow-md' 
-                                : 'text-text-muted hover:text-text hover:bg-background'
+                                ? 'bg-background text-text shadow-md scale-[1.02]' 
+                                : 'text-background/70 hover:text-background hover:bg-white/10'
                             }`}
                         >
-                            <PenTool size={18} />
+                            <PenTool size={20} strokeWidth={2.5} />
                             Practice
                         </button>
                         <button
                             onClick={() => setMode('study')}
-                            className={`flex flex-1 sm:flex-none items-center justify-center gap-2 px-6 py-2.5 rounded-lg font-medium transition-all ${
+                            className={`flex flex-1 sm:flex-none items-center justify-center gap-3 px-8 py-3.5 rounded-xl text-lg font-bold transition-all duration-300 ${
                                 mode === 'study' 
-                                ? 'bg-blue-600 text-white shadow-md' 
-                                : 'text-text-muted hover:text-text hover:bg-background'
+                                ? 'bg-background text-text shadow-md scale-[1.02]' 
+                                : 'text-background/70 hover:text-background hover:bg-white/10'
                             }`}
                         >
-                            <BookOpen size={18} />
+                            <BookOpen size={20} strokeWidth={2.5} />
                             Study
                         </button>
                     </div>
 
                     {mode === 'practice' && (
                         <div className="flex items-center w-full sm:w-auto mt-4 sm:mt-0 justify-end sm:justify-start">
-                            <div className="flex flex-col items-center bg-surface border border-border px-6 py-2 rounded-xl shadow-sm">
-                                <div className="text-[10px] text-text-muted uppercase font-bold tracking-wider mb-1">Streak</div>
-                                <div className={`font-bold flex items-center justify-center gap-1 ${streak > 2 ? 'text-orange-500' : 'text-text-muted'}`}>
-                                    <Flame size={18} fill={streak > 2 ? "currentColor" : "none"} />
-                                    <span className="text-xl leading-none">{streak}</span>
+                            <div className="flex flex-col items-center bg-transparent px-6 py-2">
+                                <div className="text-sm text-text-muted uppercase font-bold tracking-[0.2em] mb-1">Streak</div>
+                                <div className={`font-black flex items-center justify-center gap-2 ${streak > 2 ? 'text-orange-500' : 'text-text'}`}>
+                                    <Flame size={24} strokeWidth={streak > 2 ? 3 : 2} fill={streak > 2 ? "currentColor" : "none"} className={streak > 2 ? 'animate-pulse' : ''} />
+                                    <span className="text-3xl leading-none tracking-tighter">{streak}</span>
                                 </div>
                             </div>
                         </div>
@@ -138,33 +140,35 @@ const WordGenderPractice = () => {
 
             {mode === 'study' ? renderStudyMode() : (
                 <>
-                    <div className="bg-surface rounded-2xl shadow-xl p-8 text-center space-y-8 transition-all duration-300 hover:shadow-2xl max-w-2xl mx-auto">
-                        <div className="space-y-4">
-                            <h3 className="text-2xl font-bold text-text tracking-tight font-sans">
+                    <div className="text-center space-y-16 transition-all duration-300 max-w-4xl mx-auto pt-10">
+                        <div className="space-y-6 select-none">
+                            <h3 className="text-2xl md:text-3xl font-black text-text tracking-tight font-sans">
                                 {currentWord.word}
                             </h3>
-                            {showHint && currentWord.translation && (
-                                <p className="text-text-muted italic">{currentWord.translation}</p>
-                            )}
+                            <div className="h-8">
+                                {showHint && currentWord.translation && (
+                                    <p className="text-2xl text-text-muted italic font-light animate-[fade-in_0.3s_ease-out]">{currentWord.translation}</p>
+                                )}
+                            </div>
                         </div>
 
-                        <div className="grid grid-cols-3 gap-4 max-w-md mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto px-4">
                             {['Der', 'Die', 'Das'].map((gender) => (
                                 <button
                                     key={gender}
                                     onClick={() => handleGuess(gender)}
                                     disabled={feedback === 'correct'}
                                     className={`
-                                        py-4 px-6 rounded-xl text-xl font-bold transition-all transform active:scale-95
+                                        py-8 px-6 rounded-[2rem] text-4xl font-black tracking-tight transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] transform active:scale-95
                                         ${feedback === 'correct' && gender.toLowerCase() === currentWord.gender.toLowerCase()
-                                            ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border-2 border-green-500'
+                                            ? 'bg-green-500 text-white border-[4px] border-green-500 scale-105 shadow-2xl'
                                             : feedback === 'incorrect'
-                                                ? 'bg-gray-100 dark:bg-gray-800 text-gray-400 cursor-not-allowed'
-                                                : 'bg-background border-2 border-border text-text hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20'
+                                                ? 'bg-transparent text-text/20 border-[4px] border-text/5 cursor-not-allowed'
+                                                : 'bg-transparent border-[4px] border-text/10 text-text hover:border-text hover:-translate-y-2 hover:shadow-xl'
                                         }
                                     `}
                                 >
-                                    {gender}
+                                    {gender}.
                                 </button>
                             ))}
                         </div>

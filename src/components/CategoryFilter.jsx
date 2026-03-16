@@ -16,25 +16,25 @@ const CategoryFilter = ({ categories, selectedCategories, onToggleCategory }) =>
             <div className="flex justify-center">
                 <button
                     onClick={() => setIsExpanded(!isExpanded)}
-                    className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-200 shadow-sm border
+                    className={`flex items-center gap-3 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] border-[3px]
                         ${isExpanded
-                            ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800'
-                            : 'bg-surface text-text hover:bg-background border-border shadow-sm'}`}
+                            ? 'bg-text text-background border-text shadow-xl'
+                            : 'bg-transparent text-text border-text/10 hover:border-text hover:shadow-lg'}`}
                 >
-                    <Filter size={18} />
-                    <span>Filter: <span className="font-bold text-blue-600">{getLabel()}</span></span>
-                    {isExpanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                    <Filter size={22} strokeWidth={2.5} />
+                    <span>Filter: <span className="font-black">{getLabel()}</span></span>
+                    {isExpanded ? <ChevronUp size={22} strokeWidth={2.5} /> : <ChevronDown size={22} strokeWidth={2.5} />}
                 </button>
             </div>
 
             {isExpanded && (
-                <div className="flex flex-wrap gap-2 justify-center mt-4 animate-fade-in bg-surface p-4 rounded-2xl border border-border shadow-lg">
+                <div className="flex flex-wrap gap-3 justify-center mt-6 animate-[fade-in_0.3s_ease-out] py-6">
                     <button
                         onClick={() => onToggleCategory('All')}
-                        className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 
+                        className={`px-6 py-3 rounded-2xl text-base font-bold transition-all duration-300 border-[3px]
                   ${selectedCategories.length === 0
-                                ? 'bg-primary text-primary-foreground shadow-md scale-105'
-                                : 'bg-background text-text-muted hover:bg-surface border border-border'}`}
+                                ? 'bg-text text-background border-text shadow-lg scale-105'
+                                : 'bg-transparent text-text-muted border-text/10 hover:border-text hover:text-text'}`}
                     >
                         All
                     </button>
@@ -42,10 +42,10 @@ const CategoryFilter = ({ categories, selectedCategories, onToggleCategory }) =>
                         <button
                             key={category}
                             onClick={() => onToggleCategory(category)}
-                            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 
+                            className={`px-6 py-3 rounded-2xl text-base font-bold transition-all duration-300 border-[3px]
                     ${selectedCategories.includes(category)
-                                    ? 'bg-primary text-primary-foreground shadow-md scale-105'
-                                    : 'bg-background text-text-muted hover:bg-surface border border-border'}`}
+                                    ? 'bg-text text-background border-text shadow-lg scale-105'
+                                    : 'bg-transparent text-text-muted border-text/10 hover:border-text hover:text-text'}`}
                         >
                             {category}
                         </button>

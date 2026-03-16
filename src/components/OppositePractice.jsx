@@ -87,57 +87,61 @@ const OppositePractice = () => {
     }
 
     return (
-        <div className="max-w-4xl mx-auto p-4 animate-fade-in">
-            <div className="flex justify-between items-end mb-8">
+        <div className="max-w-5xl mx-auto p-4 md:p-8 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)] pb-24">
+            <div className="flex flex-col mb-6 px-4 gap-3 mt-4 text-center md:text-left">
                 <div>
-                    <h1 className="text-3xl font-extrabold text-text mb-2">Opposites Game</h1>
-                    <p className="text-text-muted">Find the matching German antonyms (e.g. groß ↔ klein)</p>
+                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-text mb-4">Opposites.</h1>
+                    <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">
+                        Find the matching German antonyms pairs (e.g. groß ↔ klein).
+                    </p>
                 </div>
 
-                <div className="flex gap-6">
-                    <div className="text-center">
-                        <div className="text-sm text-text-muted uppercase font-bold tracking-wider">Score</div>
-                        <div className="font-bold text-2xl text-blue-600 dark:text-blue-400">{score}</div>
+                <div className="flex gap-8 justify-center md:justify-start mt-6">
+                    <div className="text-center md:text-left bg-transparent">
+                        <div className="text-sm text-text-muted uppercase font-bold tracking-[0.2em] mb-1">Score</div>
+                        <div className="font-black text-4xl leading-none text-primary">{score}</div>
                     </div>
-                    <div className="text-center">
-                        <div className="text-sm text-text-muted uppercase font-bold tracking-wider">Attempts</div>
-                        <div className="font-bold text-2xl text-text">{attempts}</div>
+                    <div className="text-center md:text-left bg-transparent">
+                        <div className="text-sm text-text-muted uppercase font-bold tracking-[0.2em] mb-1">Attempts</div>
+                        <div className="font-black text-4xl leading-none text-text">{attempts}</div>
                     </div>
                 </div>
             </div>
 
             {gameWon ? (
-                <div className="bg-surface rounded-2xl shadow-xl border border-border p-12 text-center mt-6 animate-fade-in">
-                    <div className="w-24 h-24 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <Trophy size={48} />
+                <div className="text-center mt-16 space-y-8 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)]">
+                    <div className="w-32 h-32 bg-text text-background rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl scale-110">
+                        <Trophy size={64} strokeWidth={2.5} />
                     </div>
-                    <h3 className="text-3xl font-bold text-text mb-2">Excellent!</h3>
-                    <p className="text-text-muted mb-8 text-lg">You cleared the board in {attempts} attempts.</p>
-                    <button
-                        onClick={initializeGame}
-                        className="px-8 py-4 bg-blue-600 text-white rounded-xl font-bold text-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-2 shadow-md mx-auto"
-                    >
-                        <RefreshCw size={20} />
-                        Play Again
-                    </button>
+                    <h3 className="text-3xl md:text-5xl font-black tracking-tight text-text">Excellent!</h3>
+                    <p className="text-2xl text-text-muted font-light">You cleared the board in <span className="font-bold text-text">{attempts}</span> attempts.</p>
+                    <div className="pt-8">
+                        <button
+                            onClick={initializeGame}
+                            className="px-10 py-5 bg-text text-background rounded-[2rem] font-bold text-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] inline-flex items-center gap-4 border-4 border-transparent hover:border-text/20"
+                        >
+                            <RefreshCw size={28} strokeWidth={2.5} />
+                            Play Again
+                        </button>
+                    </div>
                 </div>
             ) : (
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-6">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mt-12 px-2">
                     {cards.map((card) => {
                         const isSelected = selectedCards.find(c => c.id === card.id);
                         const isMatched = matchedPairs.includes(card.pairId);
 
                         if (isMatched) {
-                            return <div key={card.id} className="h-32"></div>; // Placeholder
+                            return <div key={card.id} className="h-40 md:h-48 border-[3px] border-dashed border-text/5 rounded-[2rem]"></div>; // Placeholder
                         }
 
-                        let cardClass = "bg-surface text-text border-border hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20";
+                        let cardClass = "bg-transparent text-text border-[3px] border-text/10 hover:border-text hover:shadow-lg dark:hover:bg-white/5";
                         const isIncorrect = selectedCards.length === 2 && !isMatched && isSelected;
 
                         if (isSelected && !isIncorrect) {
-                            cardClass = "bg-blue-600 text-white border-blue-600 scale-105 shadow-xl z-10";
+                            cardClass = "bg-text text-background border-text scale-105 shadow-2xl z-10";
                         } else if (isIncorrect) {
-                            cardClass = "bg-red-500 text-white border-red-600 animate-[shake_0.5s_ease-in-out]";
+                            cardClass = "bg-red-500/10 text-red-600 dark:text-red-400 border-red-500 animate-[shake_0.5s_ease-in-out]";
                         }
 
                         return (
@@ -145,16 +149,15 @@ const OppositePractice = () => {
                                 key={card.id}
                                 layoutId={card.id}
                                 onClick={() => handleCardClick(card)}
-                                className={`h-32 rounded-xl flex flex-col items-center justify-center p-4 text-center cursor-pointer transition-all duration-200 shadow-sm border-2 relative group ${cardClass}`}
-                                whileHover={!isSelected ? { scale: 1.02 } : {}}
+                                className={`h-40 md:h-48 rounded-[2rem] flex flex-col items-center justify-center p-6 text-center cursor-pointer transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] relative group select-none ${cardClass}`}
                                 whileTap={!isSelected ? { scale: 0.95 } : {}}
                             >
-                                <span className="font-sans text-xl font-bold leading-tight select-none">
+                                <span className={`font-sans text-xl md:text-2xl xl:text-3xl font-black tracking-tight leading-none ${isSelected && !isIncorrect ? 'text-background' : 'text-text'}`}>
                                     {card.content}
                                 </span>
 
-                                <div className={`absolute bottom-2 right-2 p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity ${isSelected ? 'text-blue-200' : 'text-text-muted'}`}>
-                                    <Volume2 size={16} />
+                                <div className={`absolute bottom-4 right-4 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity ${isSelected && !isIncorrect ? 'text-background/50 hover:bg-background/20' : 'text-text/30 hover:bg-text/5 hover:text-text'}`}>
+                                    <Volume2 size={24} strokeWidth={2.5} />
                                 </div>
                             </motion.div>
                         );
@@ -163,12 +166,12 @@ const OppositePractice = () => {
             )}
 
             {!gameWon && (
-                <div className="text-center mt-12">
+                <div className="mt-16 flex justify-center border-t-2 border-text/5 pt-8">
                     <button
                         onClick={initializeGame}
-                        className="text-text-muted hover:text-text flex items-center gap-2 mx-auto text-sm font-medium transition-colors"
+                        className="flex items-center gap-3 text-text-muted hover:text-text transition-all duration-300 text-lg font-bold uppercase tracking-widest hover:scale-105"
                     >
-                        <RefreshCw size={16} />
+                        <RefreshCw size={24} strokeWidth={2.5} />
                         Reset Board
                     </button>
                 </div>

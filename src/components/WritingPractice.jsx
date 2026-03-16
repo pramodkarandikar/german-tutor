@@ -125,26 +125,26 @@ const WritingPractice = () => {
     if (!currentCard) return null;
 
     return (
-        <div className="max-w-2xl mx-auto">
-            <div className="flex justify-between items-end mb-8 px-4">
+        <div className="max-w-5xl mx-auto p-4 md:p-8 pb-24">
+            <div className="flex flex-col mb-6 px-4 gap-3 mt-4 text-center md:text-left">
                 <div>
-                    <h1 className="text-4xl font-extrabold text-text mb-2">Writing Practice</h1>
-                    <p className="text-text-muted">Translate the words to German</p>
+                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-text mb-4">Writing Practice.</h1>
+                    <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">Translate the words to German.</p>
                 </div>
 
-                <div className="flex gap-6">
-                    <div className="text-center bg-surface border border-border px-4 py-2 rounded-xl shadow-sm">
-                        <div className="text-[10px] text-text-muted uppercase font-bold tracking-wider mb-1">Score</div>
-                        <div className="font-bold text-lg text-text">
-                            <span className="text-blue-600">{score.correct}</span><span className="text-text-muted mx-1">/</span>{score.total}
+                <div className="flex gap-8 justify-center md:justify-start mt-6">
+                    <div className="text-center md:text-left bg-transparent">
+                        <div className="text-sm text-text-muted uppercase font-bold tracking-[0.2em] mb-1">Score</div>
+                        <div className="font-black text-text tracking-tighter">
+                            <span className="text-4xl leading-none text-primary">{score.correct}</span><span className="text-2xl text-text-muted opacity-50 ml-1">/ {score.total}</span>
                         </div>
                     </div>
 
-                    <div className="text-center bg-surface border border-border px-4 py-2 rounded-xl shadow-sm">
-                        <div className="text-[10px] text-text-muted uppercase font-bold tracking-wider mb-1">Streak</div>
-                        <div className={`font-bold text-lg flex items-center justify-center gap-1 ${streak > 2 ? 'text-orange-500' : 'text-text-muted'}`}>
-                            <Flame size={16} fill={streak > 2 ? "currentColor" : "none"} />
-                            {streak}
+                    <div className="text-center md:text-left bg-transparent">
+                        <div className="text-sm text-text-muted uppercase font-bold tracking-[0.2em] mb-1">Streak</div>
+                        <div className={`font-black flex items-center justify-center md:justify-start gap-2 ${streak > 2 ? 'text-orange-500' : 'text-text'}`}>
+                            <Flame size={24} strokeWidth={streak > 2 ? 3 : 2} fill={streak > 2 ? "currentColor" : "none"} className={streak > 2 ? 'animate-pulse' : ''} />
+                            <span className="text-3xl leading-none tracking-tighter">{streak}</span>
                         </div>
                     </div>
                 </div>
@@ -156,62 +156,72 @@ const WritingPractice = () => {
                 onToggleCategory={handleCategoryToggle}
             />
 
-            <div className="bg-surface rounded-2xl shadow-xl overflow-hidden mt-6 border border-border">
-                <div className="p-8 text-center relative">
-                    <span className="inline-block px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-300 text-xs font-semibold rounded-full mb-4">
-                        English
-                    </span>
-                    <h3 className="text-2xl font-bold text-text font-sans mb-2">{currentCard.english}</h3>
+            <div className="mt-6 max-w-4xl mx-auto">
+                <div className="text-center mb-8">
+                    <span className="text-sm text-text-muted font-bold uppercase tracking-[0.3em] mb-4 block">English</span>
+                    <h3 className="text-2xl md:text-3xl font-black text-text font-sans tracking-tight mb-3">{currentCard.english}</h3>
 
                     {/* Hint area */}
                     {currentCard.usage && feedback === 'incorrect' && (
-                        <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-700 dark:text-yellow-300 text-sm rounded-lg animate-fade-in">
-                            <span className="font-bold">Hint/Usage:</span> "{currentCard.usage}"
+                        <div className="mt-8 border-l-[6px] border-primary pl-8 py-4 text-left max-w-xl mx-auto animate-[fade-in_0.3s_ease-out]">
+                            <span className="text-lg font-bold text-text-muted uppercase tracking-[0.2em]">Hint/Usage</span>
+                            <p className="text-2xl text-text italic font-light mt-2">"{currentCard.usage}"</p>
                         </div>
                     )}
                 </div>
 
-                <div className="p-8 bg-background border-t border-border">
+                <div className="max-w-2xl mx-auto">
                     {!feedback ? (
-                        <div className="relative">
-                            <input
-                                ref={inputRef}
-                                type="text"
-                                value={userInput}
-                                onChange={(e) => setUserInput(e.target.value)}
-                                onKeyDown={handleKeyDown}
-                                placeholder="Type the German word..."
-                                className="w-full px-5 py-4 text-lg bg-surface border-2 border-border text-text rounded-xl focus:border-purple-500 focus:ring focus:ring-purple-200 dark:focus:ring-purple-900/50 outline-none transition-all"
-                                autoFocus
-                            />
-                            <button
-                                onClick={checkAnswer}
-                                disabled={!userInput.trim()}
-                                className="absolute right-3 top-3 p-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                            >
-                                <Send size={20} />
-                            </button>
+                        <div className="space-y-6">
+                            <div className="relative">
+                                <input
+                                    ref={inputRef}
+                                    type="text"
+                                    value={userInput}
+                                    onChange={(e) => setUserInput(e.target.value)}
+                                    onKeyDown={handleKeyDown}
+                                    placeholder="Type the German word..."
+                                    className="w-full px-6 py-5 text-2xl md:text-3xl font-bold text-center tracking-tight bg-transparent border-[3px] border-text/10 text-text rounded-2xl focus:border-text focus:shadow-xl outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] placeholder:text-text/15"
+                                    autoFocus
+                                />
+                                <button
+                                    onClick={checkAnswer}
+                                    disabled={!userInput.trim()}
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 p-4 bg-text text-background rounded-2xl hover:bg-primary disabled:opacity-20 disabled:cursor-not-allowed transition-all duration-300"
+                                >
+                                    <Send size={28} strokeWidth={2.5} />
+                                </button>
+                            </div>
+                            <div className="text-center">
+                                <button
+                                    onClick={handleGiveUp}
+                                    className="text-lg text-text-muted hover:text-text flex items-center gap-2 mx-auto font-bold uppercase tracking-widest transition-all duration-300 hover:scale-105"
+                                >
+                                    <HelpCircle size={22} strokeWidth={2.5} />
+                                    I don't know
+                                </button>
+                            </div>
                         </div>
                     ) : (
-                        <div className="text-center animate-fade-in-up">
+                        <div className="text-center animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)] space-y-8">
                             {feedback === 'correct' ? (
-                                <div className="mb-6 flex flex-col items-center">
-                                    <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center mb-3">
-                                        <CheckCircle size={32} />
+                                <div className="space-y-4">
+                                    <div className="w-24 h-24 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto shadow-2xl">
+                                        <CheckCircle size={48} strokeWidth={2.5} />
                                     </div>
-                                    <h4 className="text-xl font-bold text-green-700 dark:text-green-400">Richtig! (Correct)</h4>
-                                    <p className="text-text-muted mt-1 text-lg">{currentCard.german}</p>
-                                    <p className="text-sm text-text-muted mt-2">Next card in 1.5s...</p>
+                                    <h4 className="text-2xl md:text-3xl font-black text-green-500 tracking-tight">Richtig!</h4>
+                                    <p className="text-3xl text-text font-bold">{currentCard.german}</p>
+                                    <p className="text-lg text-text-muted">Next card in 1.5s...</p>
                                 </div>
                             ) : (
-                                <div className="mb-6 flex flex-col items-center">
-                                    <div className="w-16 h-16 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 rounded-full flex items-center justify-center mb-3">
-                                        <XCircle size={32} />
+                                <div className="space-y-4">
+                                    <div className="w-24 h-24 bg-red-500 text-white rounded-full flex items-center justify-center mx-auto shadow-2xl">
+                                        <XCircle size={48} strokeWidth={2.5} />
                                     </div>
-                                    <h4 className="text-xl font-bold text-red-700 dark:text-red-400">Falsch (Incorrect)</h4>
-                                    <div className="mt-2 text-lg">
-                                        <span className="text-text-muted line-through mr-2">{userInput}</span>
-                                        <span className="text-green-600 dark:text-green-400 font-bold">{currentCard.german}</span>
+                                    <h4 className="text-2xl md:text-3xl font-black text-red-500 tracking-tight">Falsch.</h4>
+                                    <div className="text-3xl">
+                                        <span className="text-text/30 line-through mr-4 font-bold">{userInput}</span>
+                                        <span className="text-green-500 font-black">{currentCard.german}</span>
                                     </div>
                                 </div>
                             )}
@@ -220,23 +230,13 @@ const WritingPractice = () => {
                                 ref={nextButtonRef}
                                 onClick={handleNext}
                                 onKeyDown={(e) => e.key === 'Enter' && handleNext()}
-                                className="px-8 py-3 bg-purple-600 text-white rounded-xl font-semibold hover:bg-purple-700 transition-colors flex items-center gap-2 mx-auto"
+                                className="px-10 py-5 bg-text text-background rounded-[2rem] font-bold text-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] flex items-center gap-4 mx-auto"
                             >
-                                <RefreshCw size={18} />
-                                Next Card <span className="text-xs opacity-50 font-normal ml-1">(Enter)</span>
+                                <RefreshCw size={28} strokeWidth={2.5} />
+                                Next Card <span className="text-sm opacity-40 font-normal ml-2">(Enter)</span>
                             </button>
                         </div>
                     )}
-
-                    <div className="mt-4 text-center">
-                        <button
-                            onClick={handleGiveUp}
-                            className={`text-sm text-text-muted hover:text-text flex items-center gap-1 mx-auto ${feedback ? 'hidden' : ''}`}
-                        >
-                            <HelpCircle size={14} />
-                            I don't know
-                        </button>
-                    </div>
                 </div>
             </div>
         </div>
