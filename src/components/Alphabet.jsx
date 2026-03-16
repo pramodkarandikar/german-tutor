@@ -23,7 +23,7 @@ const Alphabet = () => {
         <div className="max-w-6xl mx-auto p-4 animate-fade-in pb-12">
             <div className="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4 text-center md:text-left">
                 <div className="md:w-2/3">
-                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-text mb-3">German Alphabet.</h1>
+                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent mb-3">German Alphabet</h1>
                     <p className="text-base text-text-muted">
                         Master the basics! The German alphabet has 26 standard letters, 3 umlauts (Ä, Ö, Ü), and one special letter (ß).
                         Click the speaker icons to hear the pronunciation.
@@ -80,8 +80,8 @@ const Alphabet = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-12 mt-6 pb-12">
                 {alphabetData.map((item, index) => (
-                    <div 
-                        key={index} 
+                    <div
+                        key={index}
                         className="relative group flex flex-col justify-start"
                     >
                         {/* Massive Typography & Play Button */}
@@ -89,8 +89,8 @@ const Alphabet = () => {
                             <h2 className="absolute bottom-1 md:bottom-2 left-0 text-[3.5rem] sm:text-[4rem] lg:text-[4.5rem] xl:text-[5rem] leading-none font-black text-text font-sans tracking-tighter group-hover:text-primary transition-colors duration-700 ease-out select-none whitespace-nowrap z-0 pr-14" style={{ transformOrigin: 'left bottom' }}>
                                 {item.letter}
                             </h2>
-                            <button 
-                                onClick={() => playAudio(item.letter.split(' ')[0])} 
+                            <button
+                                onClick={() => playAudio(item.letter.split(' ')[0])}
                                 className="absolute bottom-2 md:bottom-3 right-0 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center bg-surface border border-border text-text hover:bg-primary hover:text-white hover:border-primary transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] shadow-sm group-hover:scale-105 z-10"
                                 aria-label={`Play pronunciation for ${item.letter}`}
                                 title={`Play letter`}
@@ -115,7 +115,7 @@ const Alphabet = () => {
                                     </p>
                                     <p className="text-base text-text-muted font-light">{item.example_translation}</p>
                                 </div>
-                                <button 
+                                <button
                                     className="p-3 text-text-muted opacity-0 -translate-x-4 group-hover/word:opacity-100 group-hover/word:translate-x-0 group-hover/word:text-primary transition-all duration-300 ease-out rounded-full hover:bg-primary/10"
                                     aria-label={`Play word ${item.example_word}`}
                                 >

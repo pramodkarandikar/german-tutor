@@ -88,9 +88,9 @@ const OppositePractice = () => {
 
     return (
         <div className="max-w-5xl mx-auto p-4 md:p-8 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)] pb-24">
-            <div className="flex flex-col mb-6 px-4 gap-3 mt-4 text-center md:text-left">
+            <div className="flex flex-col mb-6 px-4 gap-3 text-center md:text-left">
                 <div>
-                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-text mb-4">Opposites.</h1>
+                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent mb-4">Opposites</h1>
                     <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">
                         Find the matching German antonyms pairs (e.g. groß ↔ klein).
                     </p>
@@ -126,13 +126,13 @@ const OppositePractice = () => {
                     </div>
                 </div>
             ) : (
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mt-12 px-2">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 px-2">
                     {cards.map((card) => {
                         const isSelected = selectedCards.find(c => c.id === card.id);
                         const isMatched = matchedPairs.includes(card.pairId);
 
                         if (isMatched) {
-                            return <div key={card.id} className="h-40 md:h-48 border-[3px] border-dashed border-text/5 rounded-[2rem]"></div>; // Placeholder
+                            return <div key={card.id} className="h-28 md:h-32 border-[3px] border-dashed border-text/5 rounded-2xl md:rounded-[2rem]"></div>; // Placeholder
                         }
 
                         let cardClass = "bg-transparent text-text border-[3px] border-text/10 hover:border-text hover:shadow-lg dark:hover:bg-white/5";
@@ -149,10 +149,10 @@ const OppositePractice = () => {
                                 key={card.id}
                                 layoutId={card.id}
                                 onClick={() => handleCardClick(card)}
-                                className={`h-40 md:h-48 rounded-[2rem] flex flex-col items-center justify-center p-6 text-center cursor-pointer transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] relative group select-none ${cardClass}`}
+                                className={`h-28 md:h-32 rounded-2xl md:rounded-[2rem] flex flex-col items-center justify-center p-4 text-center cursor-pointer transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] relative group select-none ${cardClass}`}
                                 whileTap={!isSelected ? { scale: 0.95 } : {}}
                             >
-                                <span className={`font-sans text-xl md:text-2xl xl:text-3xl font-black tracking-tight leading-none ${isSelected && !isIncorrect ? 'text-background' : 'text-text'}`}>
+                                <span className={`font-sans text-lg md:text-xl xl:text-2xl font-black tracking-tight leading-none ${isSelected && !isIncorrect ? 'text-background' : 'text-text'}`}>
                                     {card.content}
                                 </span>
 
@@ -166,7 +166,7 @@ const OppositePractice = () => {
             )}
 
             {!gameWon && (
-                <div className="mt-16 flex justify-center border-t-2 border-text/5 pt-8">
+                <div className="mt-12 flex justify-center border-t-2 border-text/5 pt-8">
                     <button
                         onClick={initializeGame}
                         className="flex items-center gap-3 text-text-muted hover:text-text transition-all duration-300 text-lg font-bold uppercase tracking-widest hover:scale-105"

@@ -126,9 +126,9 @@ const WritingPractice = () => {
 
     return (
         <div className="max-w-5xl mx-auto p-4 md:p-8 pb-24">
-            <div className="flex flex-col mb-6 px-4 gap-3 mt-4 text-center md:text-left">
+            <div className="flex flex-col mb-6 px-4 gap-3 text-center md:text-left">
                 <div>
-                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-text mb-4">Writing Practice.</h1>
+                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent mb-4">Writing Practice</h1>
                     <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">Translate the words to German.</p>
                 </div>
 

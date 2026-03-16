@@ -32,11 +32,11 @@ const Navigation = ({ currentView, setCurrentView, children }) => {
             onClick={() => handleNavClick(item.id)}
             className={`w-full flex items-center gap-4 px-4 py-3 rounded-2xl transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] group
                 ${currentView === item.id
-                    ? 'bg-text text-background font-bold shadow-xl scale-[1.02]'
-                    : 'text-text-muted hover:bg-text/5 dark:hover:bg-white/5 hover:text-text font-medium'
+                    ? 'bg-primary text-primary-foreground font-bold shadow-lg shadow-primary/20 scale-[1.02]'
+                    : 'text-text-muted hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary font-medium'
                 }`}
         >
-            <item.icon size={20} strokeWidth={currentView === item.id ? 2.5 : 2} className={`transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-110 shrink-0 ${currentView === item.id ? 'text-background' : 'text-text-muted group-hover:text-text'}`} />
+            <item.icon size={20} strokeWidth={currentView === item.id ? 2.5 : 2} className={`transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-110 shrink-0 ${currentView === item.id ? 'text-primary-foreground' : 'text-text-muted group-hover:text-primary'}`} />
             <span className="text-[15px] truncate tracking-tight">{item.label}</span>
         </button>
     );
@@ -46,7 +46,7 @@ const Navigation = ({ currentView, setCurrentView, children }) => {
             {/* Desktop Sidebar */}
             <aside className="hidden md:flex flex-col w-72 bg-surface shadow-[4px_0_24px_rgba(0,0,0,0.02)] dark:shadow-[4px_0_24px_rgba(0,0,0,0.2)] fixed h-full z-20">
                 <div className="p-8 flex shrink-0 items-center gap-2">
-                    <h1 className="text-3xl font-black tracking-tighter text-text leading-none select-none">
+                    <h1 className="text-3xl font-black tracking-tighter leading-none select-none text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent">
                         Wise Umlaut.
                     </h1>
                 </div>
@@ -70,7 +70,7 @@ const Navigation = ({ currentView, setCurrentView, children }) => {
 
             {/* Mobile Header */}
             <div className="md:hidden fixed top-0 left-0 right-0 bg-surface/90 backdrop-blur-md z-30 px-6 h-20 flex items-center justify-between shadow-sm">
-                <span className="text-2xl font-black tracking-tighter text-text">
+                <span className="text-2xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent">
                     Wise Umlaut.
                 </span>
                 <div className="flex items-center gap-2">

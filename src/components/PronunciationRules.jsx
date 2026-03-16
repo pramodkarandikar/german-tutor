@@ -17,9 +17,9 @@ const PronunciationRules = () => {
 
     return (
         <div className="max-w-5xl mx-auto p-4 md:p-6 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)] pb-16">
-            <div className="mb-6 text-center md:text-left mt-4">
-                <h1 className="text-3xl md:text-4xl font-black tracking-tight text-text mb-2">
-                    Pronunciation.
+            <div className="mb-6 text-center md:text-left">
+                <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent mb-2">
+                    Pronunciation
                 </h1>
                 <p className="text-sm md:text-base text-text-muted max-w-2xl font-light">
                     German spelling is beautifully phonetic. Master these letter combinations, and you can read anything.
@@ -63,7 +63,7 @@ const PronunciationRules = () => {
                             </p>
 
                             <div className="flex flex-wrap items-center justify-between gap-2 w-full">
-                                <div 
+                                <div
                                     className="group/word cursor-pointer flex-1 min-w-0"
                                     onClick={() => playAudio(item.example_word)}
                                 >

@@ -46,8 +46,8 @@ const VerbPrepositionPractice = () => {
     const renderStudyMode = () => {
         if (!verbPrepositions || verbPrepositions.length === 0) return <div>No data available.</div>;
 
-        const filteredVerbs = verbPrepositions.filter(v => 
-            v.verb.toLowerCase().includes(searchQuery.toLowerCase()) || 
+        const filteredVerbs = verbPrepositions.filter(v =>
+            v.verb.toLowerCase().includes(searchQuery.toLowerCase()) ||
             v.translation.toLowerCase().includes(searchQuery.toLowerCase()) ||
             v.preposition.toLowerCase().includes(searchQuery.toLowerCase()) ||
             v.case.toLowerCase().includes(searchQuery.toLowerCase())
@@ -56,29 +56,31 @@ const VerbPrepositionPractice = () => {
         return (
             <div className="space-y-6 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)]">
                 <div className="relative mb-6">
-                    <input 
-                        type="text" 
-                        placeholder="Search verbs, translations, prepositions, or cases..." 
+                    <input
+                        type="text"
+                        placeholder="Search verbs, translations, prepositions, or cases..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         className="w-full p-6 text-2xl font-bold bg-transparent border-4 border-text/10 focus:border-text rounded-2xl text-text outline-none transition-all placeholder:text-text/20"
                     />
                 </div>
-                
-                <div className="flex flex-col gap-6">
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredVerbs.map((item, idx) => (
-                        <div key={idx} className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b-4 border-text/10 pb-8 hover:border-primary/50 transition-colors">
-                            <div className="flex-1">
-                                <div className="flex items-center gap-4 mb-2">
+                        <div key={idx} className="bg-transparent border-[3px] border-text/10 rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg transition-all flex flex-col justify-between">
+                            <div>
+                                <div className="flex flex-wrap items-center gap-3 mb-3">
                                     <h3 className="text-2xl md:text-3xl font-black text-text tracking-tight">{item.verb}</h3>
-                                    <span className="text-lg font-black text-primary bg-transparent border-[3px] border-primary/30 px-4 py-1.5 rounded-xl">
+                                    <span className="text-sm font-bold text-primary border-2 border-primary/30 px-3 py-1 rounded-lg">
                                         {item.preposition} + {item.case}
                                     </span>
                                 </div>
-                                <p className="text-xl md:text-2xl text-text-muted italic font-light">{item.translation}</p>
+                                <p className="text-lg md:text-xl text-text-muted italic font-light mb-6">{item.translation}</p>
                             </div>
-                            <div className="md:w-1/3">
-                                <p className="text-xl text-text italic border-l-4 border-text/20 pl-6 py-1 font-light">"{item.example}"</p>
+
+                            <div className="pt-4 border-t-2 border-text/5">
+                                <span className="text-xs text-text-muted uppercase font-bold tracking-[0.2em] block mb-2">Example</span>
+                                <p className="text-base text-text italic font-medium leading-relaxed">"{item.example}"</p>
                             </div>
                         </div>
                     ))}
@@ -96,34 +98,32 @@ const VerbPrepositionPractice = () => {
 
     return (
         <div className="max-w-5xl mx-auto p-4 md:p-8 space-y-6 pb-24">
-            <div className="flex flex-col mb-6 px-4 gap-3 mt-4 text-center md:text-left">
+            <div className="flex flex-col mb-6 px-4 gap-3 text-center md:text-left">
                 <div>
-                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-text mb-4">Verb Prepositions.</h1>
+                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent mb-4">Verb Prepositions</h1>
                     <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">
                         {mode === 'practice' ? 'Enter the correct preposition and case.' : 'Study the list of verbs and their prepositions.'}
                     </p>
                 </div>
-                
+
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mt-6">
-                    <div className="flex items-center gap-2 bg-text text-background p-1.5 rounded-2xl shadow-xl w-full sm:w-auto">
+                    <div className="flex items-center gap-2 bg-surface border-[3px] border-text/10 p-1.5 rounded-2xl shadow-sm w-full sm:w-auto flex-1 md:flex-none">
                         <button
                             onClick={() => setMode('practice')}
-                            className={`flex flex-1 sm:flex-none items-center justify-center gap-3 px-8 py-3.5 rounded-xl text-lg font-bold transition-all duration-300 ${
-                                mode === 'practice' 
-                                ? 'bg-background text-text shadow-md scale-[1.02]' 
-                                : 'text-background/70 hover:text-background hover:bg-white/10'
-                            }`}
+                            className={`flex flex-1 sm:flex-none items-center justify-center gap-3 px-8 py-3.5 rounded-xl text-lg font-bold transition-all duration-300 ${mode === 'practice'
+                                ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20 scale-[1.02]'
+                                : 'text-text-muted hover:text-primary hover:bg-primary/5'
+                                }`}
                         >
                             <PenTool size={20} strokeWidth={2.5} />
                             Practice
                         </button>
                         <button
                             onClick={() => setMode('study')}
-                            className={`flex flex-1 sm:flex-none items-center justify-center gap-3 px-8 py-3.5 rounded-xl text-lg font-bold transition-all duration-300 ${
-                                mode === 'study' 
-                                ? 'bg-background text-text shadow-md scale-[1.02]' 
-                                : 'text-background/70 hover:text-background hover:bg-white/10'
-                            }`}
+                            className={`flex flex-1 sm:flex-none items-center justify-center gap-3 px-8 py-3.5 rounded-xl text-lg font-bold transition-all duration-300 ${mode === 'study'
+                                ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20 scale-[1.02]'
+                                : 'text-text-muted hover:text-primary hover:bg-primary/5'
+                                }`}
                         >
                             <BookOpen size={20} strokeWidth={2.5} />
                             Study
@@ -146,7 +146,7 @@ const VerbPrepositionPractice = () => {
 
             {mode === 'study' ? renderStudyMode() : (
                 <>
-                    <div className="text-center space-y-16 transition-all duration-300 max-w-4xl mx-auto pt-10">
+                    <div className="text-center space-y-8 transition-all duration-300 max-w-4xl mx-auto pt-4">
                         <div className="space-y-6 select-none">
                             <h3 className="text-2xl md:text-3xl font-black text-text tracking-tight font-sans">
                                 {currentVerb.verb}
@@ -165,7 +165,7 @@ const VerbPrepositionPractice = () => {
                                     onChange={(e) => setPrepositionInput(e.target.value)}
                                     placeholder="Preposition (e.g. auf)"
                                     disabled={feedback === 'correct'}
-                                    className="w-full px-6 py-5 rounded-2xl border-[3px] bg-transparent text-text text-2xl md:text-3xl font-bold text-center tracking-tight outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] border-text/10 focus:border-text focus:shadow-xl placeholder:text-text/15"
+                                    className="w-full px-6 py-4 rounded-xl border-2 bg-transparent text-text text-xl md:text-2xl font-bold text-center tracking-tight outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] border-text/20 focus:border-text focus:shadow-xl placeholder:text-text/30"
                                 />
                             </div>
                             <div className="relative">
@@ -174,13 +174,13 @@ const VerbPrepositionPractice = () => {
                                     value={caseInput}
                                     onChange={(e) => setCaseInput(e.target.value)}
                                     disabled={feedback === 'correct'}
-                                    className="w-full px-6 py-5 rounded-2xl border-[3px] bg-transparent text-text text-2xl md:text-3xl font-bold text-center tracking-tight outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] border-text/10 focus:border-text focus:shadow-xl appearance-none cursor-pointer"
+                                    className="w-full px-6 py-4 rounded-xl border-2 bg-transparent text-text text-xl md:text-2xl font-bold text-center tracking-tight outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] border-text/20 focus:border-text focus:shadow-xl appearance-none cursor-pointer"
                                 >
-                                    <option value="">Select Case</option>
-                                    <option value="Akkusativ">Akkusativ</option>
-                                    <option value="Dativ">Dativ</option>
-                                    <option value="Genitiv">Genitiv</option>
-                                    <option value="Nominativ">Nominativ</option>
+                                    <option value="" className="bg-surface text-text">Select Case</option>
+                                    <option value="Akkusativ" className="bg-surface text-text">Akkusativ</option>
+                                    <option value="Dativ" className="bg-surface text-text">Dativ</option>
+                                    <option value="Genitiv" className="bg-surface text-text">Genitiv</option>
+                                    <option value="Nominativ" className="bg-surface text-text">Nominativ</option>
                                 </select>
                                 <ChevronDown className="absolute right-6 top-1/2 -translate-y-1/2 text-text-muted pointer-events-none" size={28} strokeWidth={2.5} />
                             </div>
@@ -238,7 +238,7 @@ const VerbPrepositionPractice = () => {
                         </div>
                     </div>
 
-                    <div className="mt-16 flex justify-center border-t-2 border-text/5 pt-8">
+                    <div className="mt-16 flex justify-center pt-8">
                         <button
                             onClick={nextVerb}
                             className="flex items-center gap-3 text-text-muted hover:text-text transition-all duration-300 text-lg font-bold uppercase tracking-widest hover:scale-105"

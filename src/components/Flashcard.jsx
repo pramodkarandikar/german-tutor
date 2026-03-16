@@ -26,7 +26,7 @@ const Flashcard = ({ card, onNext }) => {
                 transition={{ duration: 0.2, type: "tween", ease: "easeInOut" }}
             >
                 {/* Front */}
-                <div className="absolute w-full h-full backface-hidden bg-surface border-[3px] border-text/10 dark:border-text/5 rounded-[2rem] flex flex-col items-center justify-center p-8 md:p-12 transition-colors hover:border-primary/30">
+                <div className="absolute w-full h-full backface-hidden bg-gradient-to-br from-rose-50 to-teal-50 dark:from-rose-950/30 dark:to-teal-950/30 border-[3px] border-text/10 dark:border-text/5 rounded-[2rem] flex flex-col items-center justify-center p-8 md:p-12 transition-colors hover:border-primary/30">
                     <span className="text-xs font-mono text-text-muted font-bold uppercase tracking-[0.2em] mb-4">{card.category}</span>
                     <div className="flex items-center justify-center gap-4 relative w-full px-6">
                         <h2 className="text-2xl md:text-3xl font-black text-text font-sans tracking-tight">{card.german}</h2>
