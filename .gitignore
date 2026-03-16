@@ -23,3 +23,7 @@ input-data
 *.njsproj
 *.sln
 *.sw?
+
+.gemini/*
+impeccable-gemini.zip
+impeccable.zip

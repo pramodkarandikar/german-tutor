@@ -46,42 +46,46 @@ const VerbPrepositionPractice = () => {
     const renderStudyMode = () => {
         if (!verbPrepositions || verbPrepositions.length === 0) return <div>No data available.</div>;
 
-        const filteredVerbs = verbPrepositions.filter(v => 
-            v.verb.toLowerCase().includes(searchQuery.toLowerCase()) || 
+        const filteredVerbs = verbPrepositions.filter(v =>
+            v.verb.toLowerCase().includes(searchQuery.toLowerCase()) ||
             v.translation.toLowerCase().includes(searchQuery.toLowerCase()) ||
             v.preposition.toLowerCase().includes(searchQuery.toLowerCase()) ||
             v.case.toLowerCase().includes(searchQuery.toLowerCase())
         );
 
         return (
-            <div className="space-y-6 animate-fade-in">
-                <div className="relative">
-                    <input 
-                        type="text" 
-                        placeholder="Search verbs, translations, prepositions, or cases..." 
+            <div className="space-y-6 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)]">
+                <div className="relative mb-6">
+                    <input
+                        type="text"
+                        placeholder="Search verbs, translations, prepositions, or cases..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="w-full p-4 bg-surface border border-border rounded-xl text-text focus:ring-2 focus:ring-blue-500 outline-none"
+                        className="w-full p-6 text-2xl font-bold bg-transparent border-4 border-text/10 focus:border-text rounded-2xl text-text outline-none transition-all placeholder:text-text/20"
                     />
                 </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredVerbs.map((item, idx) => (
-                        <div key={idx} className="bg-surface p-6 rounded-2xl shadow-sm border border-border flex flex-col h-full hover:shadow-md transition-shadow">
-                            <div className="flex justify-between items-start mb-2">
-                                <h3 className="text-xl font-bold text-text">{item.verb}</h3>
-                                <div className="text-sm font-semibold text-blue-600 bg-blue-50 dark:bg-blue-900/30 dark:text-blue-400 px-3 py-1 rounded-full">
-                                    {item.preposition} + {item.case}
+                        <div key={idx} className="bg-transparent border-[3px] border-text/10 rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg transition-all flex flex-col justify-between">
+                            <div>
+                                <div className="flex flex-wrap items-center gap-3 mb-3">
+                                    <h3 className="text-2xl md:text-3xl font-black text-text tracking-tight">{item.verb}</h3>
+                                    <span className="text-sm font-bold text-primary border-2 border-primary/30 px-3 py-1 rounded-lg">
+                                        {item.preposition} + {item.case}
+                                    </span>
                                 </div>
+                                <p className="text-lg md:text-xl text-text-muted italic font-light mb-6">{item.translation}</p>
                             </div>
-                            <p className="text-text-muted italic mb-4">{item.translation}</p>
-                            <div className="mt-auto">
-                                <p className="text-sm text-text-muted italic border-l-2 border-blue-500 pl-3 py-1">"{item.example}"</p>
+
+                            <div className="pt-4 border-t-2 border-text/5">
+                                <span className="text-xs text-text-muted uppercase font-bold tracking-[0.2em] block mb-2">Example</span>
+                                <p className="text-base text-text italic font-medium leading-relaxed">"{item.example}"</p>
                             </div>
                         </div>
                     ))}
                     {filteredVerbs.length === 0 && (
-                        <div className="col-span-full text-center p-8 text-text-muted">
+                        <div className="text-center py-16 text-3xl font-bold text-text/20 italic">
                             No verbs found matching your search.
                         </div>
                     )}
@@ -93,48 +97,46 @@ const VerbPrepositionPractice = () => {
     if (!currentVerb && mode === 'practice') return <div className="text-center p-8">Loading...</div>;
 
     return (
-        <div className="max-w-4xl mx-auto p-4 space-y-6">
-            <div className="flex flex-col mb-8 px-4 gap-4">
+        <div className="max-w-5xl mx-auto p-4 md:p-8 space-y-6 pb-24">
+            <div className="flex flex-col mb-6 px-4 gap-3 text-center md:text-left">
                 <div>
-                    <h1 className="text-4xl font-extrabold text-text mb-2">Verb Prepositions</h1>
-                    <p className="text-text-muted">
+                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent mb-4">Verb Prepositions</h1>
+                    <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">
                         {mode === 'practice' ? 'Enter the correct preposition and case.' : 'Study the list of verbs and their prepositions.'}
                     </p>
                 </div>
-                
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-2">
-                    <div className="flex items-center gap-4 bg-surface p-1 rounded-xl shadow-sm border border-border w-full sm:w-auto">
+
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mt-6">
+                    <div className="flex items-center gap-2 bg-surface border-[3px] border-text/10 p-1.5 rounded-2xl shadow-sm w-full sm:w-auto flex-1 md:flex-none">
                         <button
                             onClick={() => setMode('practice')}
-                            className={`flex flex-1 sm:flex-none items-center justify-center gap-2 px-6 py-2.5 rounded-lg font-medium transition-all ${
-                                mode === 'practice' 
-                                ? 'bg-blue-600 text-white shadow-md' 
-                                : 'text-text-muted hover:text-text hover:bg-background'
-                            }`}
+                            className={`flex flex-1 sm:flex-none items-center justify-center gap-3 px-8 py-3.5 rounded-xl text-lg font-bold transition-all duration-300 ${mode === 'practice'
+                                ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20 scale-[1.02]'
+                                : 'text-text-muted hover:text-primary hover:bg-primary/5'
+                                }`}
                         >
-                            <PenTool size={18} />
+                            <PenTool size={20} strokeWidth={2.5} />
                             Practice
                         </button>
                         <button
                             onClick={() => setMode('study')}
-                            className={`flex flex-1 sm:flex-none items-center justify-center gap-2 px-6 py-2.5 rounded-lg font-medium transition-all ${
-                                mode === 'study' 
-                                ? 'bg-blue-600 text-white shadow-md' 
-                                : 'text-text-muted hover:text-text hover:bg-background'
-                            }`}
+                            className={`flex flex-1 sm:flex-none items-center justify-center gap-3 px-8 py-3.5 rounded-xl text-lg font-bold transition-all duration-300 ${mode === 'study'
+                                ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20 scale-[1.02]'
+                                : 'text-text-muted hover:text-primary hover:bg-primary/5'
+                                }`}
                         >
-                            <BookOpen size={18} />
+                            <BookOpen size={20} strokeWidth={2.5} />
                             Study
                         </button>
                     </div>
 
                     {mode === 'practice' && (
                         <div className="flex items-center w-full sm:w-auto mt-4 sm:mt-0 justify-end sm:justify-start">
-                            <div className="flex flex-col items-center bg-surface border border-border px-6 py-2 rounded-xl shadow-sm">
-                                <div className="text-[10px] text-text-muted uppercase font-bold tracking-wider mb-1">Streak</div>
-                                <div className={`font-bold flex items-center justify-center gap-1 ${streak > 2 ? 'text-orange-500' : 'text-text-muted'}`}>
-                                    <Flame size={18} fill={streak > 2 ? "currentColor" : "none"} />
-                                    <span className="text-xl leading-none">{streak}</span>
+                            <div className="flex flex-col items-center bg-transparent px-6 py-2">
+                                <div className="text-sm text-text-muted uppercase font-bold tracking-[0.2em] mb-1">Streak</div>
+                                <div className={`font-black flex items-center justify-center gap-2 ${streak > 2 ? 'text-orange-500' : 'text-text'}`}>
+                                    <Flame size={24} strokeWidth={streak > 2 ? 3 : 2} fill={streak > 2 ? "currentColor" : "none"} className={streak > 2 ? 'animate-pulse' : ''} />
+                                    <span className="text-3xl leading-none tracking-tighter">{streak}</span>
                                 </div>
                             </div>
                         </div>
@@ -144,98 +146,90 @@ const VerbPrepositionPractice = () => {
 
             {mode === 'study' ? renderStudyMode() : (
                 <>
-                    <div className="bg-surface rounded-2xl shadow-xl p-8 space-y-8 transition-all duration-300 hover:shadow-2xl max-w-2xl mx-auto">
-                        <div className="text-center space-y-4">
-                            <h3 className="text-2xl font-bold text-text font-sans tracking-tight">
+                    <div className="text-center space-y-8 transition-all duration-300 max-w-4xl mx-auto pt-4">
+                        <div className="space-y-6 select-none">
+                            <h3 className="text-2xl md:text-3xl font-black text-text tracking-tight font-sans">
                                 {currentVerb.verb}
                             </h3>
-                            <p className="text-xl text-text-muted italic">
+                            <p className="text-2xl text-text-muted italic font-light">
                                 {currentVerb.translation}
                             </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6">
-                            <div className="space-y-2">
-                                <label className="block text-sm font-medium text-text-muted">Preposition</label>
+                        <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                            <div>
+                                <label className="sr-only">Preposition</label>
                                 <input
                                     type="text"
                                     value={prepositionInput}
                                     onChange={(e) => setPrepositionInput(e.target.value)}
-                                    placeholder="e.g. auf"
+                                    placeholder="Preposition (e.g. auf)"
                                     disabled={feedback === 'correct'}
-                                    className="w-full p-3 bg-background border border-border text-text rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none"
+                                    className="w-full px-6 py-4 rounded-xl border-2 bg-transparent text-text text-xl md:text-2xl font-bold text-center tracking-tight outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] border-text/20 focus:border-text focus:shadow-xl placeholder:text-text/30"
                                 />
                             </div>
-                            <div className="space-y-2">
-                                <label className="block text-sm font-medium text-text-muted">Case</label>
-                                <div className="relative">
-                                    <select
-                                        value={caseInput}
-                                        onChange={(e) => setCaseInput(e.target.value)}
-                                        disabled={feedback === 'correct'}
-                                        className="w-full p-3 bg-background border border-border text-text rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none appearance-none"
-                                    >
-                                        <option value="">Select Case</option>
-                                        <option value="Akkusativ">Akkusativ</option>
-                                        <option value="Dativ">Dativ</option>
-                                        <option value="Genitiv">Genitiv</option>
-                                        <option value="Nominativ">Nominativ</option>
-                                    </select>
-                                    <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted pointer-events-none" size={20} />
-                                </div>
+                            <div className="relative">
+                                <label className="sr-only">Case</label>
+                                <select
+                                    value={caseInput}
+                                    onChange={(e) => setCaseInput(e.target.value)}
+                                    disabled={feedback === 'correct'}
+                                    className="w-full px-6 py-4 rounded-xl border-2 bg-transparent text-text text-xl md:text-2xl font-bold text-center tracking-tight outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] border-text/20 focus:border-text focus:shadow-xl appearance-none cursor-pointer"
+                                >
+                                    <option value="" className="bg-surface text-text">Select Case</option>
+                                    <option value="Akkusativ" className="bg-surface text-text">Akkusativ</option>
+                                    <option value="Dativ" className="bg-surface text-text">Dativ</option>
+                                    <option value="Genitiv" className="bg-surface text-text">Genitiv</option>
+                                    <option value="Nominativ" className="bg-surface text-text">Nominativ</option>
+                                </select>
+                                <ChevronDown className="absolute right-6 top-1/2 -translate-y-1/2 text-text-muted pointer-events-none" size={28} strokeWidth={2.5} />
                             </div>
                         </div>
 
                         {/* Feedback Area */}
-                        <div className="min-h-[100px] flex items-center justify-center">
+                        <div className="min-h-[120px] flex items-center justify-center">
                             {feedback === null && (
                                 <button
                                     onClick={checkAnswer}
                                     disabled={!prepositionInput || !caseInput}
-                                    className={`
-                                        w-full py-3 px-6 rounded-xl text-lg font-bold text-white transition-all transform active:scale-95
-                                        ${!prepositionInput || !caseInput
-                                            ? 'bg-gray-300 cursor-not-allowed'
-                                            : 'bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg'
-                                        }
-                                    `}
+                                    className="w-full max-w-2xl py-6 rounded-[2rem] bg-text hover:bg-primary text-background font-black text-2xl tracking-tight shadow-xl disabled:opacity-20 disabled:hover:bg-text disabled:cursor-not-allowed transition-all duration-300 hover:scale-[1.02]"
                                 >
                                     Check Answer
                                 </button>
                             )}
 
                             {feedback === 'correct' && (
-                                <div className="w-full space-y-4">
-                                    <div className="flex items-center justify-center gap-2 text-green-600 animate-bounce">
-                                        <Check size={28} />
-                                        <span className="text-xl font-bold">Richtig! Correct!</span>
+                                <div className="w-full space-y-8 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)]">
+                                    <div className="flex items-center justify-center gap-4 text-green-500">
+                                        <Check size={36} strokeWidth={3} />
+                                        <span className="text-4xl font-black tracking-tighter">Richtig!</span>
                                     </div>
-                                    <div className="bg-green-50 p-4 rounded-xl border border-green-200 text-green-800">
-                                        <p className="font-medium italic">"{currentVerb.example}"</p>
+                                    <div className="border-l-[6px] border-green-500 pl-8 py-4 text-left max-w-xl mx-auto">
+                                        <p className="text-2xl text-text italic font-light">"{currentVerb.example}"</p>
                                     </div>
                                     <button
                                         onClick={nextVerb}
-                                        className="w-full py-3 px-6 rounded-xl text-lg font-bold text-white bg-green-600 hover:bg-green-700 shadow-md hover:shadow-lg transition-all transform active:scale-95 flex items-center justify-center gap-2"
+                                        className="w-full max-w-2xl py-6 rounded-[2rem] bg-green-500 hover:bg-green-600 text-white font-black text-2xl tracking-tight shadow-xl transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-4 mx-auto"
                                     >
-                                        Next Verb <ArrowRight size={20} />
+                                        Next Verb <ArrowRight size={28} strokeWidth={2.5} />
                                     </button>
                                 </div>
                             )}
 
                             {feedback === 'incorrect' && (
-                                <div className="w-full space-y-4">
-                                    <div className="flex items-center justify-center gap-2 text-red-500">
-                                        <X size={28} />
-                                        <span className="text-xl font-bold">Leider Falsch.</span>
+                                <div className="w-full space-y-8 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)]">
+                                    <div className="flex items-center justify-center gap-4 text-red-500">
+                                        <X size={36} strokeWidth={3} />
+                                        <span className="text-4xl font-black tracking-tighter">Leider Falsch.</span>
                                     </div>
-                                    <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-200 dark:border-red-800 text-red-800 dark:text-red-300 space-y-2">
-                                        <p>Correct Answer:</p>
-                                        <p className="font-bold text-lg">{currentVerb.preposition} + {currentVerb.case}</p>
-                                        <p className="italic text-sm text-text-muted">"{currentVerb.example}"</p>
+                                    <div className="border-l-[6px] border-red-500 pl-8 py-4 text-left max-w-xl mx-auto space-y-3">
+                                        <p className="text-lg text-text-muted uppercase font-bold tracking-[0.2em]">Correct Answer</p>
+                                        <p className="text-3xl font-black text-text">{currentVerb.preposition} + {currentVerb.case}</p>
+                                        <p className="text-xl text-text italic font-light">"{currentVerb.example}"</p>
                                     </div>
                                     <button
-                                        onClick={nextVerb} // Or retry? Let's next for flow
-                                        className="w-full py-3 px-6 rounded-xl text-lg font-bold text-text-muted bg-background hover:bg-surface border border-border transition-all transform active:scale-95"
+                                        onClick={nextVerb}
+                                        className="w-full max-w-2xl py-6 rounded-[2rem] bg-text hover:bg-primary text-background font-black text-2xl tracking-tight shadow-xl transition-all duration-300 hover:scale-[1.02] mx-auto"
                                     >
                                         Next Verb
                                     </button>
@@ -244,12 +238,12 @@ const VerbPrepositionPractice = () => {
                         </div>
                     </div>
 
-                    <div className="flex justify-center">
+                    <div className="mt-16 flex justify-center pt-8">
                         <button
                             onClick={nextVerb}
-                            className="flex items-center gap-2 text-text-muted hover:text-text transition-colors"
+                            className="flex items-center gap-3 text-text-muted hover:text-text transition-all duration-300 text-lg font-bold uppercase tracking-widest hover:scale-105"
                         >
-                            <RefreshCw size={16} />
+                            <RefreshCw size={24} strokeWidth={2.5} />
                             Skip
                         </button>
                     </div>

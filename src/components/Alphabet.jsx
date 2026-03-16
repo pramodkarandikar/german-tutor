@@ -21,10 +21,10 @@ const Alphabet = () => {
 
     return (
         <div className="max-w-6xl mx-auto p-4 animate-fade-in pb-12">
-            <div className="mb-10 flex flex-col md:flex-row md:items-center justify-between gap-6 text-center md:text-left">
+            <div className="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4 text-center md:text-left">
                 <div className="md:w-2/3">
-                    <h1 className="text-4xl font-extrabold text-text mb-4">German Alphabet</h1>
-                    <p className="text-lg text-text-muted">
+                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent mb-3">German Alphabet</h1>
+                    <p className="text-base text-text-muted">
                         Master the basics! The German alphabet has 26 standard letters, 3 umlauts (Ä, Ö, Ü), and one special letter (ß).
                         Click the speaker icons to hear the pronunciation.
                     </p>
@@ -78,58 +78,56 @@ const Alphabet = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-12 mt-6 pb-12">
                 {alphabetData.map((item, index) => (
                     <div
                         key={index}
-                        className="bg-surface rounded-2xl p-6 border border-border shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group"
+                        className="relative group flex flex-col justify-start"
                     >
-                        {/* Decorative background element */}
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-10 -mt-10 transition-transform group-hover:scale-110"></div>
+                        {/* Massive Typography & Play Button */}
+                        <div className="relative h-[80px] md:h-[90px] lg:h-[100px] w-full mb-4 border-b-2 border-text/10 dark:border-text/5 border-solid transition-colors duration-500 group-hover:border-primary/50">
+                            <h2 className="absolute bottom-1 md:bottom-2 left-0 text-[3.5rem] sm:text-[4rem] lg:text-[4.5rem] xl:text-[5rem] leading-none font-black text-text font-sans tracking-tighter group-hover:text-primary transition-colors duration-700 ease-out select-none whitespace-nowrap z-0 pr-14" style={{ transformOrigin: 'left bottom' }}>
+                                {item.letter}
+                            </h2>
+                            <button
+                                onClick={() => playAudio(item.letter.split(' ')[0])}
+                                className="absolute bottom-2 md:bottom-3 right-0 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center bg-surface border border-border text-text hover:bg-primary hover:text-white hover:border-primary transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] shadow-sm group-hover:scale-105 z-10"
+                                aria-label={`Play pronunciation for ${item.letter}`}
+                                title={`Play letter`}
+                            >
+                                <Volume2 size={24} className="md:w-7 md:h-7" strokeWidth={1.5} />
+                            </button>
+                        </div>
 
-                        <div className="relative z-10">
-                            <div className="flex justify-between items-start mb-4">
+                        {/* Phonetics & Sound */}
+                        <div className="min-h-[60px] flex items-start sm:items-center gap-3 mb-4 pl-2 flex-wrap">
+                            <span className="text-lg font-mono text-accent tracking-tight font-medium shrink-0">{item.phonetic}</span>
+                            <div className="w-1.5 h-1.5 rounded-full bg-border hidden sm:block shrink-0 mt-1 sm:mt-0"></div>
+                            <span className="text-sm text-text-muted italic tracking-wide leading-snug">sounds like "{item.sound}"</span>
+                        </div>
+
+                        {/* Example Word & Tip Sequence, vertically spaced out for rhythm */}
+                        <div className="space-y-4 pl-2">
+                            <div className="group/word cursor-pointer flex justify-between items-center" onClick={() => playAudio(item.example_word)}>
                                 <div>
-                                    <h2 className="text-5xl font-bold text-text mb-1 font-sans">{item.letter}</h2>
-                                    <div className="flex items-center gap-2">
-                                        <span className="text-primary font-mono bg-primary/10 px-2 py-0.5 rounded text-sm">{item.phonetic}</span>
-                                        <span className="text-text-muted text-sm italic">sounds like "{item.sound}"</span>
-                                    </div>
+                                    <p className="text-xl font-bold text-text mb-1 group-hover/word:text-primary transition-colors duration-300">
+                                        {item.example_word}
+                                    </p>
+                                    <p className="text-base text-text-muted font-light">{item.example_translation}</p>
                                 </div>
                                 <button
-                                    onClick={() => playAudio(item.letter.split(' ')[0])}
-                                    className="p-3 bg-primary/10 text-primary rounded-full hover:bg-primary hover:text-white transition-colors flex-shrink-0"
-                                    aria-label={`Play pronunciation for ${item.letter}`}
-                                    title={`Play letter`}
+                                    className="p-3 text-text-muted opacity-0 -translate-x-4 group-hover/word:opacity-100 group-hover/word:translate-x-0 group-hover/word:text-primary transition-all duration-300 ease-out rounded-full hover:bg-primary/10"
+                                    aria-label={`Play word ${item.example_word}`}
                                 >
-                                    <Volume2 size={24} />
+                                    <PlayCircle size={24} strokeWidth={1.5} />
                                 </button>
                             </div>
 
-                            <div className="mb-5 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg border border-blue-100 dark:border-blue-800/50 flex gap-3">
-                                <Info size={20} className="text-blue-500 shrink-0 mt-0.5" />
-                                <p className="text-sm text-blue-800 dark:text-blue-200 leading-relaxed">
+                            {item.pronunciation_tip && (
+                                <p className="text-sm text-text-muted leading-relaxed border-l-[3px] border-accent/30 pl-4 py-1">
                                     {item.pronunciation_tip}
                                 </p>
-                            </div>
-
-                            <div className="border-t border-border pt-4">
-                                <p className="text-xs text-text-muted uppercase tracking-wider font-semibold mb-2">Example</p>
-                                <div className="flex justify-between items-center group/word cursor-pointer" onClick={() => playAudio(item.example_word)}>
-                                    <div>
-                                        <p className="font-bold text-lg text-text group-hover/word:text-primary transition-colors">
-                                            {item.example_word}
-                                        </p>
-                                        <p className="text-sm text-text-muted">{item.example_translation}</p>
-                                    </div>
-                                    <button
-                                        className="p-2 text-text-muted opacity-50 group-hover/word:opacity-100 group-hover/word:text-primary transition-all hover:bg-primary/10 rounded-full"
-                                        aria-label={`Play word ${item.example_word}`}
-                                    >
-                                        <Volume2 size={18} />
-                                    </button>
-                                </div>
-                            </div>
+                            )}
                         </div>
                     </div>
                 ))}

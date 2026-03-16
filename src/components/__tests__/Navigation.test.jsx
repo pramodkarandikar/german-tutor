@@ -36,7 +36,7 @@ describe('Navigation', () => {
             </ThemeProvider>
         );
 
-        expect(screen.getAllByText('Wise Umlaut')[0]).toBeInTheDocument();
+        expect(screen.getAllByText('Wise Umlaut.')[0]).toBeInTheDocument();
         expect(screen.getAllByText('Flashcards')[0]).toBeInTheDocument();
         expect(screen.getAllByText('Writing Practice')[0]).toBeInTheDocument();
         expect(screen.getByText('Child Content')).toBeInTheDocument();

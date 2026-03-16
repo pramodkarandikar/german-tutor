@@ -65,52 +65,49 @@ const VerbPractice = ({ onComplete }) => {
     const renderStudyMode = () => {
         if (!verbsData || verbsData.length === 0) return <div>No data available.</div>;
 
-        const filteredVerbs = verbsData.filter(v => 
-            v.German.toLowerCase().includes(searchQuery.toLowerCase()) || 
+        const filteredVerbs = verbsData.filter(v =>
+            v.German.toLowerCase().includes(searchQuery.toLowerCase()) ||
             v.English.toLowerCase().includes(searchQuery.toLowerCase()) ||
             v['Past Participle'].toLowerCase().includes(searchQuery.toLowerCase())
         );
 
         return (
-            <div className="space-y-6 animate-fade-in">
-                <div className="relative">
-                    <input 
-                        type="text" 
-                        placeholder="Search verbs, past participles or translations..." 
+            <div className="space-y-6 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)]">
+                <div className="relative mb-6">
+                    <input
+                        type="text"
+                        placeholder="Search verbs, past participles or translations..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="w-full p-4 bg-surface border border-border rounded-xl text-text focus:ring-2 focus:ring-blue-500 outline-none"
+                        className="w-full p-6 text-2xl font-bold bg-transparent border-4 border-text/10 focus:border-text rounded-2xl text-text outline-none transition-all placeholder:text-text/20"
                     />
                 </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredVerbs.map((item, idx) => (
-                        <div key={idx} className="bg-surface p-5 rounded-2xl shadow-sm border border-border flex flex-col hover:shadow-md transition-shadow">
-                            <div className="flex justify-between items-start mb-3">
-                                <div className="flex items-center gap-2">
-                                    <h3 className="text-xl font-bold text-text">{item.German}</h3>
+                        <div key={idx} className="bg-transparent border-[3px] border-text/10 rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg transition-all flex flex-col justify-between">
+                            <div>
+                                <div className="flex items-center justify-between gap-4 mb-2">
+                                    <h3 className="text-2xl md:text-3xl font-black text-text tracking-tight">{item.German}</h3>
                                     <button
                                         onClick={() => playPronunciation(item.German)}
-                                        className="p-1 rounded-full text-text-muted hover:text-primary hover:bg-primary/10 transition-colors"
+                                        className="p-2 rounded-full text-text hover:bg-text/5 transition-all"
                                         title="Play pronunciation"
                                     >
-                                        <Volume2 size={16} />
+                                        <Volume2 size={20} strokeWidth={2.5} />
                                     </button>
                                 </div>
+                                <p className="text-lg md:text-xl text-text-muted italic font-light mb-6">{item.English}</p>
                             </div>
-                            <div className="space-y-2 mb-4">
-                                <div className="flex flex-col">
-                                    <span className="text-xs text-text-muted uppercase font-semibold">Past Participle</span>
-                                    <span className="text-lg font-semibold text-blue-600 dark:text-blue-400">{item['Past Participle']}</span>
-                                </div>
-                            </div>
-                            <div className="mt-auto">
-                                <p className="text-text-muted italic">{item.English}</p>
+
+                            <div className="pt-4 border-t-2 border-text/5">
+                                <span className="text-xs text-text-muted uppercase font-bold tracking-[0.2em] block mb-1">Past Participle</span>
+                                <span className="text-2xl font-bold text-primary dark:text-blue-400">{item['Past Participle']}</span>
                             </div>
                         </div>
                     ))}
                     {filteredVerbs.length === 0 && (
-                        <div className="col-span-full text-center p-8 text-text-muted">
+                        <div className="text-center py-16 text-3xl font-bold text-text/20 italic">
                             No verbs found matching your search.
                         </div>
                     )}
@@ -122,48 +119,46 @@ const VerbPractice = ({ onComplete }) => {
     if (!currentVerb && mode === 'practice') return <div>Loading...</div>;
 
     return (
-        <div className="max-w-4xl mx-auto p-4 animate-fade-in space-y-6">
-            <div className="flex flex-col mb-8 px-4 gap-4">
+        <div className="max-w-5xl mx-auto p-4 md:p-8 space-y-6 pb-24">
+            <div className="flex flex-col mb-6 px-4 gap-3 text-center md:text-left">
                 <div>
-                    <h1 className="text-4xl font-extrabold text-text mb-2">Verbs Practice</h1>
-                    <p className="text-text-muted">
+                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent mb-4">Verbs Practice</h1>
+                    <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">
                         {mode === 'practice' ? 'Type the Past Participle for the given verb.' : 'Study the list of verbs and their past participles.'}
                     </p>
                 </div>
-                
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-2">
-                    <div className="flex items-center gap-4 bg-surface p-1 rounded-xl shadow-sm border border-border w-full sm:w-auto">
+
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mt-6">
+                    <div className="flex items-center gap-2 bg-surface border-[3px] border-text/10 p-1.5 rounded-2xl shadow-sm w-full sm:w-auto flex-1 md:flex-none">
                         <button
                             onClick={() => setMode('practice')}
-                            className={`flex flex-1 sm:flex-none items-center justify-center gap-2 px-6 py-2.5 rounded-lg font-medium transition-all ${
-                                mode === 'practice' 
-                                ? 'bg-blue-600 text-white shadow-md' 
-                                : 'text-text-muted hover:text-text hover:bg-background'
-                            }`}
+                            className={`flex flex-1 sm:flex-none items-center justify-center gap-3 px-8 py-3.5 rounded-xl text-lg font-bold transition-all duration-300 ${mode === 'practice'
+                                ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20 scale-[1.02]'
+                                : 'text-text-muted hover:text-primary hover:bg-primary/5'
+                                }`}
                         >
-                            <PenTool size={18} />
+                            <PenTool size={20} strokeWidth={2.5} />
                             Practice
                         </button>
                         <button
                             onClick={() => setMode('study')}
-                            className={`flex flex-1 sm:flex-none items-center justify-center gap-2 px-6 py-2.5 rounded-lg font-medium transition-all ${
-                                mode === 'study' 
-                                ? 'bg-blue-600 text-white shadow-md' 
-                                : 'text-text-muted hover:text-text hover:bg-background'
-                            }`}
+                            className={`flex flex-1 sm:flex-none items-center justify-center gap-3 px-8 py-3.5 rounded-xl text-lg font-bold transition-all duration-300 ${mode === 'study'
+                                ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20 scale-[1.02]'
+                                : 'text-text-muted hover:text-primary hover:bg-primary/5'
+                                }`}
                         >
-                            <BookOpen size={18} />
+                            <BookOpen size={20} strokeWidth={2.5} />
                             Study
                         </button>
                     </div>
 
                     {mode === 'practice' && (
                         <div className="flex items-center w-full sm:w-auto mt-4 sm:mt-0 justify-end sm:justify-start">
-                            <div className="flex flex-col items-center bg-surface border border-border px-6 py-2 rounded-xl shadow-sm">
-                                <span className="text-[10px] text-text-muted uppercase font-bold tracking-wider mb-1">Score</span>
-                                <div className="font-bold flex items-center justify-center text-blue-600 dark:text-blue-400">
-                                    <span className="text-xl leading-none">{score}</span>
-                                    <span className="text-sm text-text-muted ml-1">/ {attempts}</span>
+                            <div className="flex flex-col items-center bg-transparent px-6 py-2">
+                                <span className="text-sm text-text-muted uppercase font-bold tracking-[0.2em] mb-1">Score</span>
+                                <div className="font-black flex items-center justify-center text-text gap-2 tracking-tighter">
+                                    <span className="text-4xl leading-none text-primary">{score}</span>
+                                    <span className="text-2xl text-text-muted mt-1 opacity-50">/ {attempts}</span>
                                 </div>
                             </div>
                         </div>
@@ -173,25 +168,25 @@ const VerbPractice = ({ onComplete }) => {
 
             {mode === 'study' ? renderStudyMode() : (
                 <>
-                    <div className="bg-surface rounded-2xl shadow-sm border border-border p-8 relative overflow-hidden max-w-2xl mx-auto">
-                        <div className="text-center mb-10">
-                            <span className="text-sm text-purple-600 dark:text-purple-400 font-semibold uppercase tracking-wider mb-2 block">Infinitive</span>
-                            <div className="flex items-center justify-center gap-3">
-                                <h2 className="text-4xl font-bold text-text font-sans">{currentVerb.German}</h2>
+                    <div className="text-center space-y-8 transition-all duration-300 max-w-4xl mx-auto pt-4">
+                        <div className="space-y-2 select-none relative pt-4 pb-2">
+                            <span className="absolute top-0 left-1/2 -translate-x-1/2 text-xs md:text-sm text-text-muted font-bold uppercase tracking-[0.3em]">Infinitive</span>
+                            <div className="flex items-center justify-center gap-4">
+                                <h2 className="text-2xl md:text-3xl font-black text-text tracking-tight font-sans mt-2">{currentVerb.German}</h2>
                                 <button
                                     onClick={() => playPronunciation(currentVerb.German)}
-                                    className="p-2 rounded-full text-text-muted hover:text-primary hover:bg-primary/10 transition-colors"
+                                    className="p-3 rounded-full text-text border-2 border-transparent hover:border-text/10 hover:bg-text/5 transition-all outline-none mt-2"
                                     title="Play pronunciation"
                                 >
-                                    <Volume2 size={24} />
+                                    <Volume2 size={28} strokeWidth={2.5} />
                                 </button>
                             </div>
-                            <p className="text-lg text-text-muted mt-2">{currentVerb.English}</p>
+                            <p className="text-xl md:text-2xl text-text-muted italic font-light">{currentVerb.English}</p>
                         </div>
 
-                        <form onSubmit={handleSubmit} className="space-y-6">
+                        <form onSubmit={handleSubmit} className="space-y-8 max-w-2xl mx-auto">
                             <div>
-                                <label htmlFor="pastParticiple" className="block text-sm font-medium text-text-muted mb-2">Past Participle</label>
+                                <label htmlFor="pastParticiple" className="sr-only">Past Participle</label>
                                 <div className="relative">
                                     <input
                                         id="pastParticiple"
@@ -199,12 +194,12 @@ const VerbPractice = ({ onComplete }) => {
                                         value={userInput}
                                         onChange={(e) => setUserInput(e.target.value)}
                                         disabled={isSubmitted}
-                                        className={`w-full px-4 py-4 rounded-xl border-2 bg-background text-text text-lg shadow-inner outline-none transition-all
+                                        className={`w-full px-6 py-5 rounded-2xl border-[3px] bg-transparent text-text text-2xl md:text-3xl font-bold text-center tracking-tight shadow-sm outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)]
                                             ${!isSubmitted
-                                                ? 'border-border focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20'
+                                                ? 'border-text/10 focus:border-text focus:shadow-xl'
                                                 : isCorrect
-                                                    ? 'border-green-500 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300'
-                                                    : 'border-red-500 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300'
+                                                    ? 'border-green-500 bg-green-500/10 text-green-600 dark:text-green-400'
+                                                    : 'border-red-500 bg-red-500/10 text-red-600 dark:text-red-400'
                                             }`}
                                         placeholder="e.g. gewesen"
                                         autoFocus
@@ -265,7 +260,7 @@ const VerbPractice = ({ onComplete }) => {
                                 <button
                                     type="submit"
                                     disabled={!userInput.trim()}
-                                    className="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg shadow-md disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                                    className="w-full py-6 rounded-[2rem] bg-text hover:bg-primary text-background font-black text-2xl tracking-tight shadow-xl disabled:opacity-20 disabled:hover:bg-text disabled:cursor-not-allowed transition-all duration-300 hover:scale-[1.02]"
                                 >
                                     Check Answer
                                 </button>
@@ -273,12 +268,12 @@ const VerbPractice = ({ onComplete }) => {
                         </form>
                     </div>
 
-                    <div className="mt-8 flex justify-center">
+                    <div className="mt-16 flex justify-center">
                         <button
                             onClick={handleRestart}
-                            className="flex items-center gap-2 text-text-muted hover:text-text transition-colors text-sm font-medium"
+                            className="flex items-center gap-3 text-text-muted hover:text-text transition-all duration-300 text-lg font-bold uppercase tracking-widest hover:scale-105"
                         >
-                            <RefreshCw size={16} />
+                            <RefreshCw size={24} strokeWidth={2.5} />
                             Reset Score
                         </button>
                     </div>

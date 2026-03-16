@@ -6,16 +6,16 @@ const Navigation = ({ currentView, setCurrentView, children }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const navItems = [
-        { id: 'alphabet', label: 'German Alphabet', icon: Languages, color: 'text-orange-600', bg: 'bg-orange-100' },
-        { id: 'pronunciation', label: 'Pronunciation Rules', icon: MessageCircle, color: 'text-cyan-600', bg: 'bg-cyan-100' },
-        { id: 'flashcards', label: 'Flashcards', icon: BookOpen, color: 'text-blue-600', bg: 'bg-blue-100' },
-        { id: 'mcq', label: 'Multiple Choice', icon: LayoutGrid, color: 'text-indigo-600', bg: 'bg-indigo-100' },
-        { id: 'writing', label: 'Writing Practice', icon: PenTool, color: 'text-purple-600', bg: 'bg-purple-100' },
-        { id: 'gender', label: 'Word Gender', icon: Type, color: 'text-pink-600', bg: 'bg-pink-100' },
-        { id: 'prepositions', label: 'Prepositions', icon: Link2, color: 'text-teal-600', bg: 'bg-teal-100' },
-        { id: 'verb_practice', label: 'Verbs Practice', icon: Edit3, color: 'text-red-600', bg: 'bg-red-100' },
-        { id: 'adjective_practice', label: 'Adjectives Quiz', icon: List, color: 'text-yellow-600', bg: 'bg-yellow-100' },
-        { id: 'opposite_practice', label: 'Opposites Match', icon: Repeat, color: 'text-green-600', bg: 'bg-green-100' },
+        { id: 'alphabet', label: 'German Alphabet', icon: Languages },
+        { id: 'pronunciation', label: 'Pronunciation Rules', icon: MessageCircle },
+        { id: 'flashcards', label: 'Flashcards', icon: BookOpen },
+        { id: 'mcq', label: 'Multiple Choice', icon: LayoutGrid },
+        { id: 'writing', label: 'Writing Practice', icon: PenTool },
+        { id: 'gender', label: 'Word Gender', icon: Type },
+        { id: 'prepositions', label: 'Prepositions', icon: Link2 },
+        { id: 'verb_practice', label: 'Verbs Practice', icon: Edit3 },
+        { id: 'adjective_practice', label: 'Adjectives Quiz', icon: List },
+        { id: 'opposite_practice', label: 'Opposites Match', icon: Repeat },
     ];
 
     const bottomItems = [
@@ -30,34 +30,34 @@ const Navigation = ({ currentView, setCurrentView, children }) => {
     const NavButton = ({ item }) => (
         <button
             onClick={() => handleNavClick(item.id)}
-            className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 group
+            className={`w-full flex items-center gap-4 px-4 py-3 rounded-2xl transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] group
                 ${currentView === item.id
-                    ? `${item.bg} dark:bg-slate-700 dark:text-primary font-semibold shadow-sm`
-                    : 'text-text-muted hover:bg-surface hover:text-text'
+                    ? 'bg-primary text-primary-foreground font-bold shadow-lg shadow-primary/20 scale-[1.02]'
+                    : 'text-text-muted hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary font-medium'
                 }`}
         >
-            <item.icon size={18} className={`transition-transform group-hover:scale-110 shrink-0 ${currentView === item.id ? 'text-primary' : 'text-text-muted group-hover:text-text'}`} />
-            <span className="text-sm truncate">{item.label}</span>
+            <item.icon size={20} strokeWidth={currentView === item.id ? 2.5 : 2} className={`transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-110 shrink-0 ${currentView === item.id ? 'text-primary-foreground' : 'text-text-muted group-hover:text-primary'}`} />
+            <span className="text-[15px] truncate tracking-tight">{item.label}</span>
         </button>
     );
 
     return (
         <div className="min-h-screen bg-background text-text flex overflow-hidden">
             {/* Desktop Sidebar */}
-            <aside className="hidden md:flex flex-col w-64 bg-surface border-r border-border fixed h-full z-20 shadow-sm">
-                <div className="p-4 border-b border-border flex shrink-0 items-center gap-2">
-                    <h1 className="text-xl font-logo tracking-wide font-normal bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-                        Wise Umlaut
+            <aside className="hidden md:flex flex-col w-72 bg-surface shadow-[4px_0_24px_rgba(0,0,0,0.02)] dark:shadow-[4px_0_24px_rgba(0,0,0,0.2)] fixed h-full z-20">
+                <div className="p-8 flex shrink-0 items-center gap-2">
+                    <h1 className="text-3xl font-black tracking-tighter leading-none select-none text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent">
+                        Wise Umlaut.
                     </h1>
                 </div>
 
-                <div className="flex-1 overflow-y-auto py-3 px-3 space-y-1 flex flex-col custom-scrollbar">
+                <div className="flex-1 overflow-y-auto px-6 pb-6 space-y-1.5 flex flex-col custom-scrollbar">
                     {navItems.map(item => (
                         <NavButton key={item.id} item={item} />
                     ))}
                 </div>
 
-                <div className="p-3 border-t border-border bg-surface shrink-0">
+                <div className="p-6 bg-surface shrink-0">
                     {bottomItems.map(item => (
                         <NavButton key={item.id} item={item} />
                     ))}
@@ -69,9 +69,9 @@ const Navigation = ({ currentView, setCurrentView, children }) => {
             </aside>
 
             {/* Mobile Header */}
-            <div className="md:hidden fixed top-0 left-0 right-0 bg-surface border-b border-border z-30 px-4 h-16 flex items-center justify-between">
-                <span className="text-lg font-logo tracking-wide font-normal bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-                    Wise Umlaut
+            <div className="md:hidden fixed top-0 left-0 right-0 bg-surface/90 backdrop-blur-md z-30 px-6 h-20 flex items-center justify-between shadow-sm">
+                <span className="text-2xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent">
+                    Wise Umlaut.
                 </span>
                 <div className="flex items-center gap-2">
                     <ThemeSelector />
@@ -93,19 +93,19 @@ const Navigation = ({ currentView, setCurrentView, children }) => {
             )}
 
             {/* Mobile Drawer Side Panel */}
-            <div className={`md:hidden fixed inset-y-0 left-0 w-3/4 max-w-xs bg-surface shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+            <div className={`md:hidden fixed inset-y-0 left-0 w-[85%] max-w-sm bg-surface shadow-2xl z-50 transform transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                 <div className="flex flex-col h-full">
-                    <div className="p-6 border-b border-border">
-                        <h2 className="text-xl font-bold text-text">Menu</h2>
+                    <div className="p-8">
+                        <h2 className="text-3xl font-black tracking-tighter text-text">Menu.</h2>
                     </div>
 
-                    <div className="flex-1 overflow-y-auto py-4 px-4 space-y-1">
+                    <div className="flex-1 overflow-y-auto px-6 pb-6 space-y-2">
                         {navItems.map(item => (
                             <NavButton key={item.id} item={item} />
                         ))}
                     </div>
 
-                    <div className="p-4 border-t border-border bg-background">
+                    <div className="p-6 bg-surface">
                         {bottomItems.map(item => (
                             <NavButton key={item.id} item={item} />
                         ))}
@@ -114,8 +114,8 @@ const Navigation = ({ currentView, setCurrentView, children }) => {
             </div>
 
             {/* Main Content Area */}
-            <main className="flex-1 md:ml-64 pt-16 md:pt-0 min-h-screen transition-all duration-300 bg-background text-text">
-                <div className="p-4 md:p-8 max-w-5xl mx-auto">
+            <main className="flex-1 md:ml-72 pt-20 md:pt-0 min-h-screen transition-all duration-300 bg-background text-text">
+                <div className="p-4 md:p-12 lg:p-16 max-w-6xl mx-auto">
                     {children}
                 </div>
             </main>

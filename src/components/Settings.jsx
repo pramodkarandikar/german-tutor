@@ -35,86 +35,88 @@ const Settings = () => {
     };
 
     return (
-        <div className="max-w-2xl mx-auto">
-            <div className="flex justify-between items-end mb-8 px-4">
-                <div>
-                    <h1 className="text-4xl font-extrabold text-text mb-2">Settings</h1>
-                    <p className="text-text-muted">Manage your vocabulary data</p>
-                </div>
+        <div className="max-w-4xl mx-auto p-4 md:p-8 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)] pb-24">
+            <div className="mb-6 text-center md:text-left">
+                <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent mb-4">
+                    Settings.
+                </h1>
+                <p className="text-xl md:text-2xl text-text-muted max-w-2xl font-light">
+                    Manage your vocabulary data and application state.
+                </p>
             </div>
 
-            <div className="bg-surface rounded-2xl shadow-xl overflow-hidden border border-border">
-                <div className="p-8">
-                    <div className="flex items-center gap-4 mb-6">
-                        <div className={`w-12 h-12 rounded-full flex items-center justify-center ${isCustom ? 'bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400' : 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'}`}>
-                            <FileSpreadsheet size={24} />
+            <div className="flex flex-col gap-16">
+                <div className="flex flex-col gap-6">
+                    <div className="flex items-center gap-6 mb-8 border-b-2 border-text/10 dark:border-text/5 pb-8">
+                        <div className={`w-14 h-14 rounded-full flex items-center justify-center shrink-0 ${isCustom ? 'bg-text text-background' : 'bg-surface border-2 border-text/10 text-text'}`}>
+                            <FileSpreadsheet size={28} strokeWidth={2} />
                         </div>
                         <div>
-                            <h3 className="text-lg font-bold text-text">Current Data Source</h3>
-                            <p className="text-text-muted text-sm">
-                                {isCustom ? 'Custom File (LocalStorage)' : 'Default App Data'}
-                                <span className="mx-2">•</span>
-                                {vocabulary.length} words
+                            <h3 className="text-2xl font-bold text-text mb-1 tracking-tight">Current Data Source</h3>
+                            <p className="text-text-muted text-lg">
+                                {isCustom ? 'Custom File' : 'Default App Data'}
+                                <span className="mx-3 opacity-30">•</span>
+                                <span className="font-mono bg-text/5 px-2 py-0.5 rounded">{vocabulary.length} words</span>
                             </p>
                         </div>
                     </div>
 
-                    <div className="border-t border-border py-6">
-                        <h4 className="font-semibold text-text mb-4">Upload New Data</h4>
-                        <p className="text-sm text-text-muted mb-4">
+                    <div className="border-b-2 border-text/10 dark:border-text/5 pb-12">
+                        <h4 className="text-3xl font-bold text-text mb-4 tracking-tight">Upload New Data</h4>
+                        <p className="text-lg text-text-muted mb-8 font-light">
                             Upload an Excel (.xlsx) file with columns: <strong>German</strong>, <strong>English</strong>, <strong>Category</strong>, <strong>Usage</strong>.
                         </p>
 
-                        <div className="flex gap-4 items-center">
-                            <label className="flex-1">
+                        <div className="flex flex-col md:flex-row gap-6 md:items-center">
+                            <label className="flex-1 relative">
                                 <input
                                     type="file"
                                     accept=".xlsx, .xls"
                                     onChange={handleFileChange}
                                     ref={fileInputRef}
                                     disabled={uploading}
-                                    className="block w-full text-sm text-text-muted
-                                      file:mr-4 file:py-2.5 file:px-4
-                                      file:rounded-full file:border-0
-                                      file:text-sm file:font-semibold
-                                      file:bg-blue-50 dark:file:bg-blue-900/30 file:text-blue-700 dark:file:text-blue-300
-                                      hover:file:bg-blue-100 dark:hover:file:bg-blue-800/30
+                                    className="block w-full text-base text-text-muted
+                                      file:mr-6 file:py-3 file:px-6
+                                      file:rounded-full file:border-2 file:border-transparent
+                                      file:text-base file:font-bold
+                                      file:bg-text file:text-background
+                                      hover:file:scale-[1.02] hover:file:shadow-lg file:transition-all
                                       cursor-pointer disabled:opacity-50"
                                 />
                             </label>
-                            {uploading && <span className="text-sm text-text-muted">Processing...</span>}
+                            {uploading && <span className="text-lg font-medium animate-pulse text-text-muted">Processing...</span>}
                         </div>
                     </div>
 
                     {isCustom && (
-                        <div className="border-t border-border pt-6 mt-2">
+                        <div className="mt-8">
                             <button
                                 onClick={handleReset}
-                                className="flex items-center gap-2 text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 text-sm font-medium transition-colors"
+                                className="inline-flex items-center gap-3 text-red-600 dark:text-red-400 hover:text-red-700 hover:bg-red-50 dark:hover:bg-red-900/10 px-6 py-3 rounded-full text-lg font-bold transition-all"
                             >
-                                <Trash2 size={16} />
+                                <Trash2 size={20} strokeWidth={2.5} />
                                 Reset to Default Data
                             </button>
                         </div>
                     )}
 
                     {message && (
-                        <div className={`mt-6 p-4 rounded-xl flex items-start gap-3 ${message.type === 'success' ? 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400' : 'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400'}`}>
-                            {message.type === 'success' ? <CheckCircle size={20} className="mt-0.5" /> : <AlertCircle size={20} className="mt-0.5" />}
+                        <div className={`mt-8 p-6 rounded-2xl flex items-start gap-4 border-2 ${message.type === 'success' ? 'border-primary/20 bg-primary/5 text-primary' : 'border-red-500/20 bg-red-500/5 text-red-600'}`}>
+                            {message.type === 'success' ? <CheckCircle size={24} strokeWidth={2.5} className="mt-1 shrink-0" /> : <AlertCircle size={24} strokeWidth={2.5} className="mt-1 shrink-0" />}
                             <div>
-                                <p className="font-semibold">{message.type === 'success' ? 'Success' : 'Error'}</p>
-                                <p className="text-sm opacity-90">{message.text}</p>
+                                <p className="text-lg font-bold">{message.type === 'success' ? 'Success' : 'Error'}</p>
+                                <p className="text-lg opacity-90">{message.text}</p>
                             </div>
                         </div>
                     )}
                 </div>
             </div>
 
-            <div className="mt-8 bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl text-sm text-blue-800 dark:text-blue-300 border border-blue-100 dark:border-blue-900/50">
-                <h5 className="font-bold flex items-center gap-2 mb-2">
-                    <AlertCircle size={16} /> Note on Privacy
+            <div className="mt-24 max-w-2xl border-l-[4px] border-text/20 pl-6 py-2">
+                <h5 className="font-bold flex items-center gap-3 mb-3 text-xl tracking-tight">
+                    <AlertCircle size={20} strokeWidth={2.5} /> Privacy Note
                 </h5>
-                <p>
+                <p className="text-text-muted text-lg leading-relaxed font-light">
                     Your uploaded data is processed entirely in your browser and saved to your device's local storage.
                     It serves as a "Dynamic Update" mechanism. No data is sent to any server.
                 </p>
