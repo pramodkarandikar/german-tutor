@@ -65,15 +65,13 @@ const WordGenderPractice = () => {
         return (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)]">
                 {Object.keys(rules).map(gender => (
-                    <div key={gender} className={`border-[3px] rounded-2xl p-4 lg:p-6 flex flex-col ${
-                        gender === 'Der' ? 'bg-blue-50/50 dark:bg-blue-900/10 border-blue-200 dark:border-blue-900/50' :
+                    <div key={gender} className={`border-[3px] rounded-2xl p-4 lg:p-6 flex flex-col ${gender === 'Der' ? 'bg-blue-50/50 dark:bg-blue-900/10 border-blue-200 dark:border-blue-900/50' :
                         gender === 'Die' ? 'bg-red-50/50 dark:bg-red-900/10 border-red-200 dark:border-red-900/50' :
-                        'bg-green-50/50 dark:bg-green-900/10 border-green-200 dark:border-green-900/50'
-                    }`}>
-                        <h2 className={`text-2xl md:text-3xl font-black tracking-tight mb-4 border-b-[3px] pb-3 ${
-                            gender === 'Der' ? 'text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-900/50' :
-                            gender === 'Die' ? 'text-red-500 dark:text-red-400 border-red-200 dark:border-red-900/50' : 
-                            'text-green-600 dark:text-green-400 border-green-200 dark:border-green-900/50'
+                            'bg-green-50/50 dark:bg-green-900/10 border-green-200 dark:border-green-900/50'
+                        }`}>
+                        <h2 className={`text-2xl md:text-3xl font-black tracking-tight mb-4 border-b-[3px] pb-3 ${gender === 'Der' ? 'text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-900/50' :
+                            gender === 'Die' ? 'text-red-500 dark:text-red-400 border-red-200 dark:border-red-900/50' :
+                                'text-green-600 dark:text-green-400 border-green-200 dark:border-green-900/50'
                             }`}>
                             {gender}
                         </h2>
@@ -81,7 +79,7 @@ const WordGenderPractice = () => {
                             {rules[gender].map((r, idx) => (
                                 <div key={idx} className="flex flex-col gap-1 bg-transparent border-l-4 border-text/20 pl-3 py-1 hover:border-primary/50 transition-colors">
                                     <div className="text-base font-bold text-text tracking-tight leading-snug">{r.rule}</div>
-                                    <div className="text-text-muted text-sm italic font-light">Ex: <span className="font-bold font-sans text-text">{r.example}</span></div>
+                                    <div className="text-text-muted text-sm italic font-light"><span className="font-bold font-sans text-text">{r.example}</span></div>
                                 </div>
                             ))}
                         </div>
@@ -97,7 +95,7 @@ const WordGenderPractice = () => {
         <div className="max-w-5xl mx-auto p-4 md:p-8 space-y-6 pb-24">
             <div className="flex flex-col mb-6 px-4 gap-3 text-center md:text-left">
                 <div>
-                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent mb-4">Word Gender</h1>
+                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-4">Word Gender</h1>
                     <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">
                         {mode === 'practice' ? 'Master the articles (der/die/das) through rapid repetition.' : 'Learn the patterns and rules for noun genders.'}
                     </p>
@@ -167,10 +165,9 @@ const WordGenderPractice = () => {
                                             ? 'bg-green-500 text-white border-[4px] border-green-500 scale-105 shadow-2xl'
                                             : feedback === 'incorrect'
                                                 ? 'bg-surface text-text/20 border-[4px] border-text/5 cursor-not-allowed'
-                                                : `border-[4px] text-text hover:text-white hover:-translate-y-2 hover:shadow-xl ${
-                                                    gender === 'Der' ? 'bg-blue-100 hover:bg-blue-500 border-blue-200 dark:bg-blue-900/40 dark:border-blue-800' :
+                                                : `border-[4px] text-text hover:text-white hover:-translate-y-2 hover:shadow-xl ${gender === 'Der' ? 'bg-blue-100 hover:bg-blue-500 border-blue-200 dark:bg-blue-900/40 dark:border-blue-800' :
                                                     gender === 'Die' ? 'bg-red-100 hover:bg-red-500 border-red-200 dark:bg-red-900/40 dark:border-red-800' :
-                                                    'bg-green-100 hover:bg-green-500 border-green-200 dark:bg-green-900/40 dark:border-green-800'
+                                                        'bg-green-100 hover:bg-green-500 border-green-200 dark:bg-green-900/40 dark:border-green-800'
                                                 }`
                                         }
                                     `}

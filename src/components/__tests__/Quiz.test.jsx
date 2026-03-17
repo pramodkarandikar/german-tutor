@@ -42,7 +42,7 @@ describe('Quiz', () => {
             </DataContext.Provider>
         );
 
-        expect(screen.getByText('Flashcards.')).toBeInTheDocument();
+        expect(screen.getByText('Flashcards')).toBeInTheDocument();
         expect(screen.getByTestId('flashcard')).toHaveTextContent('Hund');
     });
 
