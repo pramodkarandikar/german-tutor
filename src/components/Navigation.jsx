@@ -8,7 +8,7 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
     const navItems = [
         { id: 'flashcards', label: 'Flashcards', icon: BookOpen },
         { id: 'mcq', label: 'Multiple Choice', icon: LayoutGrid },
-        { id: 'writing', label: 'Writing Practice', icon: PenTool },
+        // { id: 'writing', label: 'Writing Practice', icon: PenTool },
         { id: 'gender', label: 'Word Gender', icon: Type },
         { id: 'prepositions', label: 'Prepositions', icon: Link2 },
         { id: 'verb_practice', label: 'Verbs Practice', icon: Edit3 },
@@ -53,7 +53,7 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
             {/* Desktop Sidebar */}
             <aside className="hidden md:flex flex-col w-72 bg-surface shadow-[4px_0_24px_rgba(0,0,0,0.02)] dark:shadow-[4px_0_24px_rgba(0,0,0,0.2)] fixed h-full z-20">
                 <div className="p-6 flex shrink-0 items-center justify-start gap-2">
-                    <h1 className="text-3xl font-black tracking-tighter leading-none select-none text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">
+                    <h1 className="text-3xl font-logo font-black tracking-tighter leading-none select-none text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">
                         Wise Umlaut.
                     </h1>
                 </div>
@@ -80,7 +80,7 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
 
             {/* Mobile Header */}
             <div className="md:hidden fixed top-0 left-0 right-0 bg-surface/90 backdrop-blur-md z-30 px-6 h-20 flex items-center justify-between shadow-sm">
-                <span className="text-2xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">
+                <span className="text-2xl font-logo font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">
                     Wise Umlaut.
                 </span>
                 <div className="flex items-center gap-2">
