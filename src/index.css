@@ -5,15 +5,19 @@
 @tailwind utilities;
 
 @layer base {
-  /* Removed global header font override to use default sans font (Inter) */
+  *, *::before, *::after {
+    font-feature-settings: "ss01" 1;
+  }
 }
 
 :root {
   --background: #fafaf9;
   --surface: #ffffff;
-  --primary: #4f46e5; /* Indigo 600 */
+  --primary: #4f46e5;
+  /* Indigo 600 */
   --primary-foreground: #ffffff;
-  --accent: #0ea5e9; /* Sky 500 */
+  --accent: #0ea5e9;
+  /* Sky 500 */
   --accent-foreground: #ffffff;
   --text: #1c1917;
   --text-muted: #78716c;
@@ -21,11 +25,15 @@
 }
 
 .dark {
-  --background: #1f2937; /* Gray 800 */
-  --surface: #374151; /* Gray 700 */
-  --primary: #818cf8; /* Indigo 400 */
+  --background: #1f2937;
+  /* Gray 800 */
+  --surface: #374151;
+  /* Gray 700 */
+  --primary: #818cf8;
+  /* Indigo 400 */
   --primary-foreground: #ffffff;
-  --accent: #38bdf8; /* Sky 400 */
+  --accent: #38bdf8;
+  /* Sky 400 */
   --accent-foreground: #111827;
   --text: #f9fafb;
   --text-muted: #9ca3af;

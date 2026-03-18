@@ -8,9 +8,9 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Inter', 'sans-serif'],
-                logo: ['"Playwrite NZ Guides"', 'cursive'],
-                heading: ['Bitter', 'serif'],
+                sans: ['Stack Sans Headline', 'sans-serif'],
+                logo: ['"Stack Sans Headline"', 'sans-serif'],
+                heading: ['"Stack Sans Headline"', 'sans-serif'],
             },
             colors: {
                 background: 'var(--background)',
