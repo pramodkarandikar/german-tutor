@@ -87,7 +87,7 @@ const Quiz = () => {
                 <button
                     onClick={toggleRandom}
                     className={`flex items-center gap-3 px-6 py-3.5 rounded-2xl font-bold transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] border-2
-             ${isRandom ? 'bg-text text-background border-text shadow-xl scale-[1.02]' : 'bg-transparent text-text border-text/10 hover:border-text/30'}`}
+             ${isRandom ? 'bg-text text-background border-text shadow-xl scale-[1.02]' : 'bg-transparent text-text border-subtle hover:border-border'}`}
                 >
                     <Shuffle size={20} strokeWidth={2.5} />
                     {isRandom ? 'Randomized' : 'Sequential'}
@@ -112,7 +112,7 @@ const Quiz = () => {
             <div className="flex justify-center items-center gap-10 mt-8">
                 <button
                     onClick={handlePrev}
-                    className="p-4 rounded-full bg-surface border-2 border-text/10 hover:border-text hover:bg-text hover:text-background transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] hover:scale-110 group shadow-sm"
+                    className="p-4 rounded-full bg-surface border-2 border-subtle hover:border-border hover:bg-text hover:text-background transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] hover:scale-110 group shadow-sm"
                     aria-label="Previous card"
                 >
                     <ChevronLeft size={28} strokeWidth={2.5} className="group-hover:-translate-x-1 transition-transform" />
@@ -122,7 +122,7 @@ const Quiz = () => {
                 </span>
                 <button
                     onClick={handleNext}
-                    className="p-4 rounded-full bg-surface border-2 border-text/10 hover:border-text hover:bg-text hover:text-background transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] hover:scale-110 group shadow-sm"
+                    className="p-4 rounded-full bg-surface border-2 border-subtle hover:border-border hover:bg-text hover:text-background transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] hover:scale-110 group shadow-sm"
                     aria-label="Next card"
                 >
                     <ChevronRight size={28} strokeWidth={2.5} className="group-hover:translate-x-1 transition-transform" />

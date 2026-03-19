@@ -9,7 +9,7 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Stack Sans Headline', 'sans-serif'],
-                logo: ['"Stack Sans Headline"', 'sans-serif'],
+                logo: ['"Montserrat Underline"', 'sans-serif'],
                 heading: ['"Stack Sans Headline"', 'sans-serif'],
             },
             colors: {
@@ -22,6 +22,7 @@ export default {
                 text: 'var(--text)',
                 'text-muted': 'var(--text-muted)',
                 border: 'var(--border)',
+                'border-subtle': 'var(--border-subtle)',
             },
             keyframes: {
                 'fade-in': {

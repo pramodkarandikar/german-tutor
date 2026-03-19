@@ -79,13 +79,13 @@ const VerbPractice = ({ onComplete }) => {
                         placeholder="Search verbs, past participles or translations..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="w-full p-6 text-2xl font-bold bg-transparent border-4 border-text/10 focus:border-text rounded-2xl text-text outline-none transition-all placeholder:text-text/20"
+                        className="w-full p-6 text-2xl font-bold bg-transparent border-2 border-subtle focus:border-border rounded-2xl text-text outline-none transition-all placeholder:text-text/20"
                     />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredVerbs.map((item, idx) => (
-                        <div key={idx} className="bg-transparent border-[3px] border-text/10 rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg transition-all flex flex-col justify-between">
+                        <div key={idx} className="bg-transparent border-[2px] border-subtle rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg transition-all flex flex-col justify-between">
                             <div>
                                 <div className="flex items-center justify-between gap-4 mb-2">
                                     <h3 className="text-2xl md:text-3xl font-black text-text tracking-tight">{item.German}</h3>
@@ -100,7 +100,7 @@ const VerbPractice = ({ onComplete }) => {
                                 <p className="text-lg md:text-xl text-text-muted italic font-light mb-6">{item.English}</p>
                             </div>
 
-                            <div className="pt-4 border-t-2 border-text/5">
+                            <div className="pt-4 border-t-2 border-subtle">
                                 <span className="text-xs text-text-muted uppercase font-bold tracking-[0.2em] block mb-1">Past Participle</span>
                                 <span className="text-2xl font-bold text-primary dark:text-blue-400">{item['Past Participle']}</span>
                             </div>
@@ -129,7 +129,7 @@ const VerbPractice = ({ onComplete }) => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mt-6">
-                    <div className="flex items-center gap-2 bg-surface border-[3px] border-text/10 p-1.5 rounded-2xl shadow-sm w-full sm:w-auto flex-1 md:flex-none">
+                    <div className="flex items-center gap-2 bg-surface border-[2px] border-subtle p-1.5 rounded-2xl shadow-sm w-full sm:w-auto flex-1 md:flex-none">
                         <button
                             onClick={() => setMode('practice')}
                             className={`flex flex-1 sm:flex-none items-center justify-center gap-3 px-8 py-3.5 rounded-xl text-lg font-bold transition-all duration-300 ${mode === 'practice'
@@ -175,7 +175,7 @@ const VerbPractice = ({ onComplete }) => {
                                 <h2 className="text-2xl md:text-3xl font-black text-text tracking-tight font-sans mt-2">{currentVerb.German}</h2>
                                 <button
                                     onClick={() => playPronunciation(currentVerb.German)}
-                                    className="p-3 rounded-full text-text border-2 border-transparent hover:border-text/10 hover:bg-text/5 transition-all outline-none mt-2"
+                                    className="p-3 rounded-full text-text border-2 border-transparent hover:border-subtle hover:bg-text/5 transition-all outline-none mt-2"
                                     title="Play pronunciation"
                                 >
                                     <Volume2 size={28} strokeWidth={2.5} />
@@ -194,9 +194,9 @@ const VerbPractice = ({ onComplete }) => {
                                         value={userInput}
                                         onChange={(e) => setUserInput(e.target.value)}
                                         disabled={isSubmitted}
-                                        className={`w-full px-6 py-5 rounded-2xl border-[3px] bg-transparent text-text text-2xl md:text-3xl font-bold text-center tracking-tight shadow-sm outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)]
+                                        className={`w-full px-6 py-5 rounded-2xl border-[2px] bg-transparent text-text text-2xl md:text-3xl font-bold text-center tracking-tight shadow-sm outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)]
                                             ${!isSubmitted
-                                                ? 'border-text/10 focus:border-text focus:shadow-xl'
+                                                ? 'border-subtle focus:border-border focus:shadow-xl'
                                                 : isCorrect
                                                     ? 'border-green-500 bg-green-500/10 text-green-600 dark:text-green-400'
                                                     : 'border-red-500 bg-red-500/10 text-red-600 dark:text-red-400'

@@ -99,7 +99,7 @@ const AdjectivePractice = () => {
                     <div className="pt-8">
                         <button
                             onClick={handleRestart}
-                            className="px-10 py-5 bg-text text-background rounded-[2rem] font-bold text-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] inline-flex items-center gap-4 border-4 border-transparent hover:border-text/20"
+                            className="px-10 py-5 bg-text text-background rounded-[2rem] font-bold text-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] inline-flex items-center gap-4 border-4 border-transparent hover:border-border"
                         >
                             <RefreshCw size={28} strokeWidth={2.5} />
                             Play Again
@@ -140,7 +140,7 @@ const AdjectivePractice = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                     {options.map((option, index) => {
-                        let buttonClass = "bg-transparent border-[3px] border-text/10 text-text hover:border-text hover:shadow-xl dark:hover:bg-white/5";
+                        let buttonClass = "bg-transparent border-[2px] border-subtle text-text hover:border-border hover:shadow-xl dark:hover:bg-white/5";
 
                         if (selectedOption !== null) {
                             if (option === currentAdjective.German) {
@@ -148,7 +148,7 @@ const AdjectivePractice = () => {
                             } else if (option === selectedOption && !isCorrect) {
                                 buttonClass = "bg-red-500/10 text-red-600 dark:text-red-400 border-red-500";
                             } else {
-                                buttonClass = "bg-transparent border-text/5 text-text/30 cursor-not-allowed";
+                                buttonClass = "bg-transparent border-subtle text-text/30 cursor-not-allowed";
                             }
                         }
 
@@ -188,7 +188,7 @@ const AdjectivePractice = () => {
                                 Example Sentence
                                 <button
                                     onClick={() => playPronunciation(currentAdjective.Example)}
-                                    className="p-2 rounded-full border-2 border-text/10 hover:border-text hover:bg-text hover:text-background transition-all"
+                                    className="p-2 rounded-full border-2 border-subtle hover:border-text hover:bg-text hover:text-background transition-all"
                                     title="Play Example Sentence"
                                 >
                                     <Volume2 size={20} strokeWidth={2.5} />
@@ -203,7 +203,7 @@ const AdjectivePractice = () => {
                             className={`px-10 py-5 rounded-[2rem] font-bold text-2xl flex items-center gap-4 transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] whitespace-nowrap shadow-xl hover:scale-105 border-4
                                 ${isCorrect
                                     ? 'bg-green-500 text-white border-transparent hover:border-green-600'
-                                    : 'bg-text text-background border-transparent hover:border-text/20'
+                                    : 'bg-text text-background border-transparent hover:border-border'
                                 }`}
                         >
                             Next <ArrowRight size={28} strokeWidth={2.5} />

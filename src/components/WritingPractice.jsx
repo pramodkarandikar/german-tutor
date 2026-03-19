@@ -181,13 +181,13 @@ const WritingPractice = () => {
                                     onChange={(e) => setUserInput(e.target.value)}
                                     onKeyDown={handleKeyDown}
                                     placeholder="Type the German word..."
-                                    className="w-full px-6 py-5 text-2xl md:text-3xl font-bold text-center tracking-tight bg-transparent border-[3px] border-text/10 text-text rounded-2xl focus:border-text focus:shadow-xl outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] placeholder:text-text/15"
+                                    className="w-full px-6 py-5 text-2xl md:text-3xl font-bold text-center tracking-tight bg-transparent border-[2px] border-subtle text-text rounded-2xl focus:border-text focus:shadow-xl outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] placeholder:text-text/15"
                                     autoFocus
                                 />
                                 <button
                                     onClick={checkAnswer}
                                     disabled={!userInput.trim()}
-                                    className="absolute right-4 top-1/2 -translate-y-1/2 p-4 bg-text text-background rounded-2xl hover:bg-primary disabled:opacity-20 disabled:cursor-not-allowed transition-all duration-300"
+                                    className="p-3 rounded-full border-2 border-subtle hover:border-border hover:bg-text hover:text-background transition-all absolute right-4 top-1/2 -translate-y-1/2 hover:bg-primary disabled:opacity-20 disabled:cursor-not-allowed duration-300"
                                 >
                                     <Send size={28} strokeWidth={2.5} />
                                 </button>

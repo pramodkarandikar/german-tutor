@@ -65,7 +65,7 @@ const WordGenderPractice = () => {
         return (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)]">
                 {Object.keys(rules).map(gender => (
-                    <div key={gender} className={`border-[3px] rounded-2xl p-4 lg:p-6 flex flex-col ${gender === 'Der' ? 'bg-blue-50/50 dark:bg-blue-900/10 border-blue-200 dark:border-blue-900/50' :
+                    <div key={gender} className={`border-[2px] rounded-2xl p-4 lg:p-6 flex flex-col ${gender === 'Der' ? 'bg-blue-50/50 dark:bg-blue-900/10 border-blue-200 dark:border-blue-900/50' :
                         gender === 'Die' ? 'bg-red-50/50 dark:bg-red-900/10 border-red-200 dark:border-red-900/50' :
                             'bg-green-50/50 dark:bg-green-900/10 border-green-200 dark:border-green-900/50'
                         }`}>
@@ -77,7 +77,7 @@ const WordGenderPractice = () => {
                         </h2>
                         <div className="flex flex-col gap-4">
                             {rules[gender].map((r, idx) => (
-                                <div key={idx} className="flex flex-col gap-1 bg-transparent border-l-4 border-text/20 pl-3 py-1 hover:border-primary/50 transition-colors">
+                                <div key={idx} className="flex flex-col gap-1 bg-transparent border-l-4 border-subtle pl-3 py-1 hover:border-primary/50 transition-colors">
                                     <div className="text-base font-bold text-text tracking-tight leading-snug">{r.rule}</div>
                                     <div className="text-text-muted text-sm italic font-light"><span className="font-bold font-sans text-text">{r.example}</span></div>
                                 </div>
@@ -102,7 +102,7 @@ const WordGenderPractice = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mt-6">
-                    <div className="flex items-center gap-2 bg-surface border-[3px] border-text/10 p-1.5 rounded-2xl shadow-sm w-full sm:w-auto flex-1 md:flex-none">
+                    <div className="flex items-center gap-2 bg-surface border-[2px] border-subtle p-1.5 rounded-2xl shadow-sm w-full sm:w-auto flex-1 md:flex-none">
                         <button
                             onClick={() => setMode('practice')}
                             className={`flex flex-1 sm:flex-none items-center justify-center gap-3 px-8 py-3.5 rounded-xl text-lg font-bold transition-all duration-300 ${mode === 'practice'
@@ -162,10 +162,10 @@ const WordGenderPractice = () => {
                                     className={`
                                         py-4 lg:py-5 px-6 rounded-2xl md:rounded-[2rem] text-3xl font-black tracking-tight transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] transform active:scale-95
                                         ${feedback === 'correct' && gender.toLowerCase() === currentWord.gender.toLowerCase()
-                                            ? 'bg-green-500 text-white border-[4px] border-green-500 scale-105 shadow-2xl'
+                                            ? 'bg-green-500 text-white border-2 border-green-500 scale-105 shadow-2xl'
                                             : feedback === 'incorrect'
-                                                ? 'bg-surface text-text/20 border-[4px] border-text/5 cursor-not-allowed'
-                                                : `border-[4px] text-text hover:text-white hover:-translate-y-2 hover:shadow-xl ${gender === 'Der' ? 'bg-blue-100 hover:bg-blue-500 border-blue-200 dark:bg-blue-900/40 dark:border-blue-800' :
+                                                ? 'bg-surface text-text/20 border-2 border-subtle cursor-not-allowed'
+                                                : `border-2 text-text hover:text-white hover:-translate-y-2 hover:shadow-xl ${gender === 'Der' ? 'bg-blue-100 hover:bg-blue-500 border-blue-200 dark:bg-blue-900/40 dark:border-blue-800' :
                                                     gender === 'Die' ? 'bg-red-100 hover:bg-red-500 border-red-200 dark:bg-red-900/40 dark:border-red-800' :
                                                         'bg-green-100 hover:bg-green-500 border-green-200 dark:bg-green-900/40 dark:border-green-800'
                                                 }`

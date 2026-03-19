@@ -61,24 +61,24 @@ const VerbPrepositionPractice = () => {
                         placeholder="Search verbs, translations, prepositions, or cases..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="w-full p-6 text-2xl font-bold bg-transparent border-4 border-text/10 focus:border-text rounded-2xl text-text outline-none transition-all placeholder:text-text/20"
+                        className="w-full p-6 text-2xl font-bold bg-transparent border-2 border-subtle focus:border-border rounded-2xl text-text outline-none transition-all placeholder:text-text/20"
                     />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredVerbs.map((item, idx) => (
-                        <div key={idx} className="bg-transparent border-[3px] border-text/10 rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg transition-all flex flex-col justify-between">
+                        <div key={idx} className="bg-transparent border-[2px] border-subtle rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg transition-all flex flex-col justify-between">
                             <div>
                                 <div className="flex flex-wrap items-center gap-3 mb-3">
                                     <h3 className="text-2xl md:text-3xl font-black text-text tracking-tight">{item.verb}</h3>
-                                    <span className="text-sm font-bold text-primary border-2 border-primary/30 px-3 py-1 rounded-lg">
+                                    <span className="text-sm font-bold text-primary border-2 border-subtle px-3 py-1 rounded-lg">
                                         {item.preposition} + {item.case}
                                     </span>
                                 </div>
                                 <p className="text-lg md:text-xl text-text-muted italic font-light mb-6">{item.translation}</p>
                             </div>
 
-                            <div className="pt-4 border-t-2 border-text/5">
+                            <div className="pt-4 border-t-2 border-subtle">
                                 <span className="text-xs text-text-muted uppercase font-bold tracking-[0.2em] block mb-2">Example</span>
                                 <p className="text-base text-text italic font-medium leading-relaxed">"{item.example}"</p>
                             </div>
@@ -107,7 +107,7 @@ const VerbPrepositionPractice = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mt-6">
-                    <div className="flex items-center gap-2 bg-surface border-[3px] border-text/10 p-1.5 rounded-2xl shadow-sm w-full sm:w-auto flex-1 md:flex-none">
+                    <div className="flex items-center gap-2 bg-surface border-[2px] border-subtle p-1.5 rounded-2xl shadow-sm w-full sm:w-auto flex-1 md:flex-none">
                         <button
                             onClick={() => setMode('practice')}
                             className={`flex flex-1 sm:flex-none items-center justify-center gap-3 px-8 py-3.5 rounded-xl text-lg font-bold transition-all duration-300 ${mode === 'practice'
@@ -165,7 +165,7 @@ const VerbPrepositionPractice = () => {
                                     onChange={(e) => setPrepositionInput(e.target.value)}
                                     placeholder="Preposition (e.g. auf)"
                                     disabled={feedback === 'correct'}
-                                    className="w-full px-6 py-4 rounded-xl border-2 bg-transparent text-text text-xl md:text-2xl font-bold text-center tracking-tight outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] border-text/20 focus:border-text focus:shadow-xl placeholder:text-text/30"
+                                    className="w-full px-6 py-4 rounded-xl border-2 bg-transparent text-text text-xl md:text-2xl font-bold text-center tracking-tight outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] border-subtle focus:border-border focus:shadow-xl placeholder:text-text/30"
                                 />
                             </div>
                             <div className="relative">
@@ -174,7 +174,7 @@ const VerbPrepositionPractice = () => {
                                     value={caseInput}
                                     onChange={(e) => setCaseInput(e.target.value)}
                                     disabled={feedback === 'correct'}
-                                    className="w-full px-6 py-4 rounded-xl border-2 bg-transparent text-text text-xl md:text-2xl font-bold text-center tracking-tight outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] border-text/20 focus:border-text focus:shadow-xl appearance-none cursor-pointer"
+                                    className="w-full px-6 py-4 rounded-xl border-2 bg-transparent text-text text-xl md:text-2xl font-bold text-center tracking-tight outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] border-subtle focus:border-border focus:shadow-xl appearance-none cursor-pointer"
                                 >
                                     <option value="" className="bg-surface text-text">Select Case</option>
                                     <option value="Akkusativ" className="bg-surface text-text">Akkusativ</option>

@@ -47,8 +47,8 @@ const Settings = () => {
 
             <div className="flex flex-col gap-16">
                 <div className="flex flex-col gap-6">
-                    <div className="flex items-center gap-6 mb-8 border-b-2 border-text/10 dark:border-text/5 pb-8">
-                        <div className={`w-14 h-14 rounded-full flex items-center justify-center shrink-0 ${isCustom ? 'bg-text text-background' : 'bg-surface border-2 border-text/10 text-text'}`}>
+                    <div className="flex items-center gap-6 mb-8 border-b-2 border-subtle dark:border-subtle pb-8">
+                        <div className={`w-14 h-14 rounded-full flex items-center justify-center shrink-0 ${isCustom ? 'bg-text text-background' : 'bg-surface border-2 border-subtle text-text'}`}>
                             <FileSpreadsheet size={28} strokeWidth={2} />
                         </div>
                         <div>
@@ -61,7 +61,7 @@ const Settings = () => {
                         </div>
                     </div>
 
-                    <div className="border-b-2 border-text/10 dark:border-text/5 pb-12">
+                    <div className="border-b-2 border-subtle dark:border-subtle pb-12">
                         <h4 className="text-3xl font-bold text-text mb-4 tracking-tight">Upload New Data</h4>
                         <p className="text-lg text-text-muted mb-8 font-light">
                             Upload an Excel (.xlsx) file with columns: <strong>German</strong>, <strong>English</strong>, <strong>Category</strong>, <strong>Usage</strong>.
@@ -112,7 +112,7 @@ const Settings = () => {
                 </div>
             </div>
 
-            <div className="mt-24 max-w-2xl border-l-[4px] border-text/20 pl-6 py-2">
+            <div className="mt-24 max-w-2xl border-l-[4px] border-border pl-6 py-2">
                 <h5 className="font-bold flex items-center gap-3 mb-3 text-xl tracking-tight">
                     <AlertCircle size={20} strokeWidth={2.5} /> Privacy Note
                 </h5>

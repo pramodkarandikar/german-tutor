@@ -118,7 +118,7 @@ const OppositePractice = () => {
                     <div className="pt-8">
                         <button
                             onClick={initializeGame}
-                            className="px-10 py-5 bg-text text-background rounded-[2rem] font-bold text-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] inline-flex items-center gap-4 border-4 border-transparent hover:border-text/20"
+                            className="px-10 py-5 bg-text text-background rounded-[2rem] font-bold text-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] inline-flex items-center gap-4 border-4 border-transparent hover:border-border"
                         >
                             <RefreshCw size={28} strokeWidth={2.5} />
                             Play Again
@@ -132,10 +132,10 @@ const OppositePractice = () => {
                         const isMatched = matchedPairs.includes(card.pairId);
 
                         if (isMatched) {
-                            return <div key={card.id} className="h-28 md:h-32 border-[3px] border-dashed border-text/5 rounded-2xl md:rounded-[2rem]"></div>; // Placeholder
+                            return <div key={card.id} className="h-28 md:h-32 border-[2px] border-dashed border-subtle rounded-2xl md:rounded-[2rem]"></div>; // Placeholder
                         }
 
-                        let cardClass = "bg-transparent text-text border-[3px] border-text/10 hover:border-text hover:shadow-lg dark:hover:bg-white/5";
+                        let cardClass = "bg-transparent text-text border-[2px] border-subtle hover:border-border hover:shadow-lg dark:hover:bg-white/5";
                         const isIncorrect = selectedCards.length === 2 && !isMatched && isSelected;
 
                         if (isSelected && !isIncorrect) {

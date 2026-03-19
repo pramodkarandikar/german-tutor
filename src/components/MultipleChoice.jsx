@@ -137,14 +137,14 @@ const MultipleChoice = () => {
 
                         if (selectedOption) {
                             if (option === currentCard.german) {
-                                btnClass += "bg-green-500 text-white border-green-500 scale-105 shadow-2xl z-10 border-[3px]";
+                                btnClass += "bg-green-500 text-white border-green-500 scale-105 shadow-2xl z-10 border-[2px]";
                             } else if (option === selectedOption) {
-                                btnClass += "bg-red-500/10 text-red-600 dark:text-red-400 border-red-500 border-[3px]";
+                                btnClass += "bg-red-500/10 text-red-600 dark:text-red-400 border-red-500 border-[2px]";
                             } else {
-                                btnClass += "bg-transparent border-text/5 text-text/30 cursor-not-allowed border-[3px]";
+                                btnClass += "bg-transparent border-text/5 text-text/30 cursor-not-allowed border-[2px]";
                             }
                         } else {
-                            btnClass += "bg-transparent border-[3px] border-text/10 text-text hover:border-text hover:shadow-xl dark:hover:bg-white/5 cursor-pointer";
+                            btnClass += "bg-transparent border-[2px] border-subtle text-text hover:border-border hover:shadow-xl dark:hover:bg-white/5 cursor-pointer";
                         }
 
                         return (

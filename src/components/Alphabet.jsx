@@ -85,7 +85,7 @@ const Alphabet = () => {
                         className="relative group flex flex-col justify-start"
                     >
                         {/* Massive Typography & Play Button */}
-                        <div className="relative h-[80px] md:h-[90px] lg:h-[100px] w-full mb-4 border-b-2 border-text/10 dark:border-text/5 border-solid transition-colors duration-500 group-hover:border-primary/50">
+                        <div className="relative h-[80px] md:h-[90px] lg:h-[100px] w-full mb-4 border-b-2 border-subtle dark:border-subtle border-solid transition-colors duration-500 group-hover:border-primary/50">
                             <h2 className="absolute bottom-1 md:bottom-2 left-0 text-[3.5rem] sm:text-[4rem] lg:text-[4.5rem] xl:text-[5rem] leading-none font-black text-text font-sans tracking-tighter group-hover:text-primary transition-colors duration-700 ease-out select-none whitespace-nowrap z-0 pr-14" style={{ transformOrigin: 'left bottom' }}>
                                 {item.letter}
                             </h2>

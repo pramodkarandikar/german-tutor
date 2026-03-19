@@ -53,8 +53,8 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
             {/* Desktop Sidebar */}
             <aside className="hidden md:flex flex-col w-72 bg-surface shadow-[4px_0_24px_rgba(0,0,0,0.02)] dark:shadow-[4px_0_24px_rgba(0,0,0,0.2)] fixed h-full z-20">
                 <div className="p-6 flex shrink-0 items-center justify-start gap-2">
-                    <h1 className="text-3xl font-logo font-black tracking-tighter leading-none select-none text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">
-                        Wise Umlaut.
+                    <h1 className="text-3xl font-logo tracking-tighter leading-none select-none text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">
+                        Wise Umlaut
                     </h1>
                 </div>
 
@@ -64,7 +64,7 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
                     ))}
                 </div>
 
-                <div className="p-4 bg-surface shrink-0 border-t border-border/50">
+                <div className="p-4 bg-surface shrink-0 border-t border-subtle">
                     <h3 className="text-xs font-bold text-text-muted uppercase tracking-wider mb-2 px-2">Back to Basics</h3>
                     <div className="space-y-1 mb-2">
                         {bottomItems.map(item => (
@@ -80,8 +80,8 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
 
             {/* Mobile Header */}
             <div className="md:hidden fixed top-0 left-0 right-0 bg-surface/90 backdrop-blur-md z-30 px-6 h-20 flex items-center justify-between shadow-sm">
-                <span className="text-2xl font-logo font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">
-                    Wise Umlaut.
+                <span className="text-2xl font-logo tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">
+                    Wise Umlaut
                 </span>
                 <div className="flex items-center gap-2">
                     <ThemeSelector />

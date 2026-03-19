@@ -16,10 +16,10 @@ const CategoryFilter = ({ categories, selectedCategories, onToggleCategory }) =>
             <div className="flex justify-center">
                 <button
                     onClick={() => setIsExpanded(!isExpanded)}
-                    className={`flex items-center gap-3 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] border-[3px]
+                    className={`flex items-center gap-3 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] border-[2px]
                         ${isExpanded
                             ? 'bg-text text-background border-text shadow-xl'
-                            : 'bg-transparent text-text border-text/10 hover:border-text hover:shadow-lg'}`}
+                                    : 'bg-transparent text-text-muted border-subtle hover:border-border hover:text-text'}`}
                 >
                     <Filter size={22} strokeWidth={2.5} />
                     <span>Filter: <span className="font-black">{getLabel()}</span></span>
@@ -31,10 +31,10 @@ const CategoryFilter = ({ categories, selectedCategories, onToggleCategory }) =>
                 <div className="flex flex-wrap gap-3 justify-center mt-6 animate-[fade-in_0.3s_ease-out] py-6">
                     <button
                         onClick={() => onToggleCategory('All')}
-                        className={`px-6 py-3 rounded-2xl text-base font-bold transition-all duration-300 border-[3px]
+                        className={`px-6 py-3 rounded-2xl text-base font-bold transition-all duration-300 border-[2px]
                   ${selectedCategories.length === 0
                                 ? 'bg-text text-background border-text shadow-lg scale-105'
-                                : 'bg-transparent text-text-muted border-text/10 hover:border-text hover:text-text'}`}
+                                : 'bg-transparent text-text-muted border-subtle hover:border-text hover:text-text'}`}
                     >
                         All
                     </button>
@@ -42,10 +42,10 @@ const CategoryFilter = ({ categories, selectedCategories, onToggleCategory }) =>
                         <button
                             key={category}
                             onClick={() => onToggleCategory(category)}
-                            className={`px-6 py-3 rounded-2xl text-base font-bold transition-all duration-300 border-[3px]
+                            className={`px-6 py-3 rounded-2xl text-base font-bold transition-all duration-300 border-[2px]
                     ${selectedCategories.includes(category)
                                     ? 'bg-text text-background border-text shadow-lg scale-105'
-                                    : 'bg-transparent text-text-muted border-text/10 hover:border-text hover:text-text'}`}
+                                    : 'bg-transparent text-text-muted border-subtle hover:border-border hover:text-text'}`}
                         >
                             {category}
                         </button>

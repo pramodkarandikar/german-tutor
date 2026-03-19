@@ -30,7 +30,7 @@ const PronunciationRules = () => {
                 {pronunciationData.map((item, index) => (
                     <div
                         key={index}
-                        className="group flex flex-col md:flex-row gap-4 md:gap-8 py-5 md:py-6 border-b border-text/10 dark:border-text/5 hover:border-primary/40 transition-colors duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] items-start"
+                        className="group flex flex-col md:flex-row gap-4 md:gap-8 py-5 md:py-6 border-b border-subtle dark:border-subtle hover:border-primary/40 transition-colors duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] items-start"
                     >
                         {/* Rule Display */}
                         {(() => {
