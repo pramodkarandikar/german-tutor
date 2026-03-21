@@ -1,8 +1,10 @@
-import React from 'react';
-import { BookOpen, PenTool, LayoutGrid, Type, Link2, Edit3, List, Repeat, Languages, MessageCircle } from 'lucide-react';
+import React, { useState } from 'react';
+import { BookOpen, PenTool, LayoutGrid, Type, Link2, Edit3, List, Repeat, Languages, MessageCircle, Menu, X } from 'lucide-react';
 import ThemeSelector from './ThemeSelector';
 
 const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, children }) => {
+    const [isMenuOpen, setIsMenuOpen] = useState(true);
+
     const navItems = [
         { id: 'flashcards', label: 'Flashcards', icon: BookOpen },
         { id: 'mcq', label: 'Multiple Choice', icon: LayoutGrid },
@@ -20,6 +22,7 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
 
     const handleNavClick = (viewId) => {
         setCurrentView(viewId);
+        setIsMenuOpen(false);
     };
 
     const handleBottomClick = (viewId) => {
@@ -29,17 +32,18 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
     return (
         <div className="min-h-screen bg-background text-text flex overflow-hidden relative">
             {/* Top Left - Logo */}
-            <div className="fixed top-4 md:top-6 left-4 md:left-6 z-40">
-                <div className="px-5 py-2.5 md:px-6 md:py-3 bg-surface/70 backdrop-blur-xl border border-white/10 dark:border-white/5 shadow-lg rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-xl hover:bg-surface/90">
+            <div className="fixed top-4 md:top-6 left-4 md:left-6 z-[60]">
+                <div className="flex items-center justify-center transition-all duration-300 hover:shadow-xl hover:bg-surface/90">
                     <h1 className="text-xl md:text-2xl font-logo tracking-tighter leading-none select-none text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">
                         Wise Umlaut
                     </h1>
                 </div>
             </div>
 
-            {/* Top Right - Controls */}
-            <div className="fixed top-4 md:top-6 right-4 md:right-6 z-40 flex items-center gap-2">
+            {/* Top Right - Controls & Hamburger */}
+            <div className="fixed top-4 md:top-6 right-4 md:right-6 z-[60] flex items-center gap-2">
                 <div className="flex items-center gap-1 px-1.5 py-1.5 md:px-2 md:py-2 bg-surface/70 backdrop-blur-xl border border-white/10 dark:border-white/5 shadow-lg rounded-full transition-all duration-300 hover:shadow-xl hover:bg-surface/90">
+                    {/* Always visible secondary actions */}
                     {bottomItems.map(item => (
                         <button
                             key={item.id}
@@ -55,44 +59,64 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
                     ))}
                     <div className="w-[1px] h-6 bg-border mx-1"></div>
                     <ThemeSelector />
+                    <div className="w-[1px] h-6 bg-border mx-1"></div>
+
+                    {/* Menu Toggle Button */}
+                    <button
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        className={`p-2 md:p-2.5 rounded-full transition-all duration-300 hover:scale-105
+                            ${isMenuOpen ? 'bg-primary text-primary-foreground shadow-md' : 'text-text hover:bg-primary/10 hover:text-primary dark:hover:bg-primary/20'}`}
+                        aria-label="Toggle Menu"
+                    >
+                        {isMenuOpen ? <X size={20} className="md:w-[22px] md:h-[22px]" /> : <Menu size={20} className="md:w-[22px] md:h-[22px]" />}
+                    </button>
                 </div>
             </div>
 
-            {/* Bottom Center - Floating Dock */}
-            <div className="fixed bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-max px-2 md:px-4">
-                <div className="flex items-center gap-1 md:gap-2 px-2 py-2 md:px-3 md:py-3 bg-surface/80 backdrop-blur-xl border border-white/10 dark:border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.12)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.3)] rounded-full transition-all duration-500 overflow-x-auto [&::-webkit-scrollbar]:hidden">
-                    {navItems.map(item => {
-                        const isActive = currentView === item.id;
-                        return (
-                            <button
-                                key={item.id}
-                                onClick={() => handleNavClick(item.id)}
-                                className="relative group flex items-center justify-center min-w-[2.5rem] md:min-w-[3.5rem]"
-                            >
-                                <div className={`flex items-center justify-center w-10 h-10 md:w-14 md:h-14 rounded-full transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]
-                                    ${isActive
-                                        ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/40 scale-[1.15] md:scale-125 z-20'
-                                        : 'bg-transparent text-text-muted hover:bg-surface-hover hover:scale-[1.15] md:hover:scale-125 hover:z-20 hover:shadow-xl hover:text-primary dark:hover:text-primary'
-                                    }`}
+            {/* Fullscreen Overlay Menu */}
+            {isMenuOpen && (
+                <div className="fixed inset-0 z-[50] bg-background/95 backdrop-blur-2xl animate-in fade-in duration-300 flex flex-col items-center justify-center p-6 pt-28 overflow-y-auto">
+                    <div className="w-full max-w-4xl mb-6 text-center animate-in slide-in-from-bottom-4 duration-500 delay-100">
+                        <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-text mb-2">Where would you like to start?</h2>
+                        <p className="text-text-muted text-sm md:text-base">Select a practice mode to begin</p>
+                    </div>
+
+                    <div className="w-full max-w-4xl grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 pb-20">
+                        {navItems.map((item, index) => {
+                            const isActive = currentView === item.id;
+                            return (
+                                <button
+                                    key={item.id}
+                                    onClick={() => handleNavClick(item.id)}
+                                    className={`group flex flex-col items-center justify-center gap-3 p-5 md:p-6 rounded-[1.5rem] transition-all duration-500 w-full text-center outline-none animate-in zoom-in-95 fill-mode-both min-h-[9rem] md:min-h-[10rem]
+                                        ${isActive
+                                            ? 'bg-primary/10 border-2 border-primary shadow-2xl shadow-primary/20 scale-[1.02]'
+                                            : 'bg-surface/50 hover:bg-surface-hover hover:scale-[1.02] active:scale-95 border border-white/5 dark:border-white/5 backdrop-blur-sm shadow-md hover:shadow-xl'}`}
+                                    style={{ animationDelay: `${index * 40 + 100}ms` }}
                                 >
-                                    <item.icon size={20} strokeWidth={isActive ? 2.5 : 2} className={`transition-transform duration-300 md:w-[24px] md:h-[24px] ${isActive ? 'scale-110' : ''}`} />
-                                </div>
-
-                                {/* Tooltip */}
-                                <div className={`absolute -top-14 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:-translate-y-2 bg-surface/95 backdrop-blur-sm border border-white/10 dark:border-white/5 text-text text-[13px] md:text-sm font-semibold px-3 py-1.5 rounded-xl shadow-xl pointer-events-none whitespace-nowrap z-30 flex items-center gap-1.5
-                                    ${isActive ? 'text-primary' : ''}`}>
-                                    {item.label}
-                                    {isActive && <div className="w-1.5 h-1.5 rounded-full bg-primary" />}
-                                </div>
-                            </button>
-                        );
-                    })}
+                                    <div className={`flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-2xl transition-all duration-500
+                                        ${isActive
+                                            ? 'bg-primary text-primary-foreground shadow-inner shadow-primary/40'
+                                            : 'bg-primary/10 text-primary group-hover:bg-primary/20 group-hover:scale-110'}`}
+                                    >
+                                        <item.icon size={26} strokeWidth={isActive ? 2.5 : 2} className="md:w-[32px] md:h-[32px]" />
+                                    </div>
+                                    <div>
+                                        <h3 className={`text-base md:text-lg font-bold tracking-tight transition-colors duration-300
+                                            ${isActive ? 'text-primary' : 'text-text group-hover:text-primary'}`}>
+                                            {item.label}
+                                        </h3>
+                                    </div>
+                                </button>
+                            );
+                        })}
+                    </div>
                 </div>
-            </div>
+            )}
 
             {/* Main Content Area */}
             <main className="flex-1 w-full min-h-screen transition-all duration-300 bg-background text-text">
-                <div className="pt-24 md:pt-28 pb-32 md:pb-40 px-4 md:px-6 w-full max-w-5xl mx-auto h-full box-border">
+                <div className="pt-24 md:pt-28 pb-12 px-4 md:px-6 w-full max-w-5xl mx-auto h-full box-border">
                     {children}
                 </div>
             </main>
