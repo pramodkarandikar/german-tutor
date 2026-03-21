@@ -125,10 +125,10 @@ const WritingPractice = () => {
     if (!currentCard) return null;
 
     return (
-        <div className="max-w-5xl mx-auto p-4 md:p-8 pb-24">
-            <div className="flex flex-col mb-6 px-4 gap-3 text-center md:text-left">
+        <div className="max-w-6xl mx-auto p-4 md:p-8 pb-24">
+            <div className="flex flex-col mb-6 gap-3 text-center md:text-left">
                 <div>
-                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-4">Writing Practice</h1>
+                    <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-3">Writing Practice</h1>
                     <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">Translate the words to German.</p>
                 </div>
 
@@ -150,11 +150,13 @@ const WritingPractice = () => {
                 </div>
             </div>
 
-            <CategoryFilter
-                categories={[...new Set(vocabulary.map(item => item.category))].sort()}
-                selectedCategories={selectedCategories}
-                onToggleCategory={handleCategoryToggle}
-            />
+            <div className="w-full md:w-72 mb-8 mx-auto md:mx-0">
+                <CategoryFilter
+                    categories={[...new Set(vocabulary.map(item => item.category))].sort()}
+                    selectedCategories={selectedCategories}
+                    onToggleCategory={handleCategoryToggle}
+                />
+            </div>
 
             <div className="mt-6 max-w-4xl mx-auto">
                 <div className="text-center mb-8">

@@ -23,8 +23,8 @@ const Alphabet = () => {
         <div className="max-w-6xl mx-auto p-4 animate-fade-in pb-12">
             <div className="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4 text-center md:text-left">
                 <div className="md:w-2/3">
-                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-3">German Alphabet</h1>
-                    <p className="text-base text-text-muted">
+                    <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-3">German Alphabet</h1>
+                    <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">
                         Master the basics! The German alphabet has 26 standard letters, 3 umlauts (Ä, Ö, Ü), and one special letter (ß).
                         Click the speaker icons to hear the pronunciation.
                     </p>

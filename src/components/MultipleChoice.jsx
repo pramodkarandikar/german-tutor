@@ -94,85 +94,113 @@ const MultipleChoice = () => {
     if (!currentCard) return null;
 
     return (
-        <div className="max-w-5xl mx-auto p-4 md:p-8 pb-24">
-            <div className="flex flex-col mb-6 px-4 gap-3 text-center md:text-left">
-                <div>
-                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-4">Multiple Choice</h1>
-                    <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">Select the correct German translation.</p>
-                </div>
+        <div className="max-w-6xl mx-auto p-4 md:p-8 pb-24 relative">
+            {/* Background Decorative Elements */}
+            <div className="absolute -top-20 -right-20 w-80 h-80 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />
 
-                <div className="flex gap-8 justify-center md:justify-start mt-6">
-                    <div className="text-center md:text-left bg-transparent">
-                        <div className="text-sm text-text-muted uppercase font-bold tracking-[0.2em] mb-1">Score</div>
-                        <div className="font-black text-text tracking-tighter">
-                            <span className="text-4xl leading-none text-primary">{score.correct}</span><span className="text-2xl text-text-muted opacity-50 ml-1">/ {score.total}</span>
-                        </div>
+            <div className="mb-10 text-center md:text-left relative z-10">
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                    <div>
+                        <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-3">Multiple Choice</h1>
+                        <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">Select the correct German translation.</p>
                     </div>
 
-                    <div className="text-center md:text-left bg-transparent">
-                        <div className="text-sm text-text-muted uppercase font-bold tracking-[0.2em] mb-1">Streak</div>
-                        <div className={`font-black flex items-center justify-center md:justify-start gap-2 ${streak > 2 ? 'text-orange-500' : 'text-text'}`}>
-                            <Flame size={24} strokeWidth={streak > 2 ? 3 : 2} fill={streak > 2 ? "currentColor" : "none"} className={streak > 2 ? 'animate-pulse' : ''} />
-                            <span className="text-3xl leading-none tracking-tighter">{streak}</span>
+                    <div className="flex items-center gap-6 justify-center md:justify-end shrink-0 bg-surface/50 backdrop-blur-md border border-subtle px-7 py-4 rounded-[2rem] shadow-sm">
+                        <div className="text-center md:text-right">
+                            <div className="text-[10px] text-text-muted uppercase font-black tracking-[0.2em] mb-1">Score</div>
+                            <div className="font-black text-text tracking-tighter">
+                                <span className="text-3xl md:text-4xl leading-none text-primary">{score.correct}</span><span className="text-xl md:text-2xl text-text-muted opacity-50 ml-1">/ {score.total}</span>
+                            </div>
+                        </div>
+                        <div className="w-[2px] h-12 bg-border/50 rounded-full" />
+                        <div className="text-center md:text-left">
+                            <div className="text-[10px] text-text-muted uppercase font-black tracking-[0.2em] mb-1">Streak</div>
+                            <div className={`font-black flex items-center justify-center md:justify-start gap-1.5 ${streak > 2 ? 'text-orange-500' : 'text-text'}`}>
+                                <Flame size={24} strokeWidth={streak > 2 ? 3 : 2} fill={streak > 2 ? "currentColor" : "none"} className={streak > 2 ? 'animate-pulse' : ''} />
+                                <span className="text-3xl md:text-4xl leading-none tracking-tighter">{streak}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <CategoryFilter
-                categories={[...new Set(vocabulary.map(item => item.category))].sort()}
-                selectedCategories={selectedCategories}
-                onToggleCategory={handleCategoryToggle}
-            />
-
-            <div className="mt-6">
-                <div className="text-center mb-8">
-                    <span className="text-sm text-text-muted font-bold uppercase tracking-[0.3em] mb-4 block">Translate this</span>
-                    <h3 className="text-2xl md:text-3xl font-black text-text font-sans tracking-tight">{currentCard.english}</h3>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                    {options.map((option, index) => {
-                        let btnClass = "px-6 py-5 rounded-2xl text-xl md:text-2xl font-bold tracking-tight transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] text-center flex justify-between items-center ";
-
-                        if (selectedOption) {
-                            if (option === currentCard.german) {
-                                btnClass += "bg-green-500 text-white border-green-500 scale-105 shadow-2xl z-10 border-[2px]";
-                            } else if (option === selectedOption) {
-                                btnClass += "bg-red-500/10 text-red-600 dark:text-red-400 border-red-500 border-[2px]";
-                            } else {
-                                btnClass += "bg-transparent border-text/5 text-text/30 cursor-not-allowed border-[2px]";
-                            }
-                        } else {
-                            btnClass += "bg-transparent border-[2px] border-subtle text-text hover:border-border hover:shadow-xl dark:hover:bg-white/5 cursor-pointer";
-                        }
-
-                        return (
-                            <button
-                                key={index}
-                                onClick={() => handleOptionClick(option)}
-                                disabled={!!selectedOption}
-                                className={btnClass}
-                            >
-                                <span className="flex-1 text-center">{option}</span>
-                                {selectedOption && option === currentCard.german && <CheckCircle size={28} strokeWidth={2.5} className="text-white" />}
-                                {selectedOption && option === selectedOption && option !== currentCard.german && <XCircle size={28} strokeWidth={2.5} className="text-red-500" />}
-                            </button>
-                        );
-                    })}
-                </div>
-
-                {selectedOption && !isCorrect && (
-                    <div className="flex justify-center mt-12 animate-[fade-in_0.3s_ease-out]">
-                        <button
-                            onClick={handleNext}
-                            className="px-10 py-5 bg-text text-background rounded-[2rem] font-bold text-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] flex items-center gap-4"
-                        >
-                            <RefreshCw size={28} strokeWidth={2.5} />
-                            Next Question
-                        </button>
+            <div className="flex flex-col lg:flex-row justify-center items-start gap-8 relative z-10 min-h-[460px]">
+                {/* Left Sidebar for Controls on Desktop */}
+                <div className="w-full lg:w-72 flex flex-col gap-4 order-2 lg:order-1 h-auto">
+                    <div className="bg-surface/40 backdrop-blur-md border border-subtle rounded-[2.5rem] p-6 space-y-5 shadow-sm">
+                        <div>
+                            <h3 className="text-[10px] font-black text-text-muted uppercase tracking-[0.2em] mb-3">Filters</h3>
+                            <CategoryFilter
+                                categories={[...new Set(vocabulary.map(item => item.category))].sort()}
+                                selectedCategories={selectedCategories}
+                                onToggleCategory={handleCategoryToggle}
+                            />
+                        </div>
                     </div>
-                )}
+
+                    <div className="hidden lg:flex flex-col gap-2 bg-indigo-500/5 dark:bg-indigo-400/5 p-6 rounded-[2rem] border border-indigo-500/10 backdrop-blur-sm">
+                        <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 mb-1">
+                            <span className="text-[10px] font-bold uppercase tracking-widest leading-none">Pro Tip</span>
+                        </div>
+                        <p className="text-xs text-text-muted font-medium leading-[1.6]">
+                            Read all options carefully before selecting. Eliminate obvious wrong answers first.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Main Card Area */}
+                <div className="flex-1 w-full order-1 lg:order-2">
+                    <div className="bg-surface/20 backdrop-blur-sm border border-subtle rounded-[2.5rem] p-8 md:p-12 shadow-sm relative overflow-hidden">
+                        <div className="text-center mb-10 relative z-10">
+                            <span className="text-sm text-text-muted font-bold uppercase tracking-[0.3em] mb-4 block">Translate this</span>
+                            <h3 className="text-3xl md:text-5xl font-black text-text tracking-tight leading-tight">{currentCard.english}</h3>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto relative z-10">
+                            {options.map((option, index) => {
+                                let btnClass = "px-6 py-6 rounded-2xl text-xl md:text-2xl font-bold tracking-tight transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] text-center flex justify-between items-center ";
+
+                                if (selectedOption) {
+                                    if (option === currentCard.german) {
+                                        btnClass += "bg-green-500 text-white border-green-500 scale-105 shadow-2xl z-10 border-[2px]";
+                                    } else if (option === selectedOption) {
+                                        btnClass += "bg-red-500/10 text-red-600 dark:text-red-400 border-red-500 border-[2px]";
+                                    } else {
+                                        btnClass += "bg-transparent border-text/5 text-text/30 cursor-not-allowed border-[2px] scale-[0.98]";
+                                    }
+                                } else {
+                                    btnClass += "bg-surface border-[2px] border-subtle text-text hover:border-text hover:shadow-xl dark:hover:bg-white/5 cursor-pointer hover:-translate-y-1 shadow-sm";
+                                }
+
+                                return (
+                                    <button
+                                        key={index}
+                                        onClick={() => handleOptionClick(option)}
+                                        disabled={!!selectedOption}
+                                        className={btnClass}
+                                    >
+                                        <span className="flex-1 text-center">{option}</span>
+                                        {selectedOption && option === currentCard.german && <CheckCircle size={28} strokeWidth={2.5} className="text-white shrink-0 ml-3" />}
+                                        {selectedOption && option === selectedOption && option !== currentCard.german && <XCircle size={28} strokeWidth={2.5} className="text-red-500 shrink-0 ml-3" />}
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </div>
+
+                    {selectedOption && !isCorrect && (
+                        <div className="flex justify-center mt-8 animate-[fade-in_0.3s_ease-out]">
+                            <button
+                                onClick={handleNext}
+                                className="px-10 py-5 bg-text text-background rounded-[2rem] font-bold text-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] flex items-center gap-4"
+                            >
+                                <RefreshCw size={28} strokeWidth={2.5} />
+                                Next Question
+                            </button>
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     );

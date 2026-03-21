@@ -89,7 +89,7 @@ const AdjectivePractice = () => {
 
     if (gameWon) {
         return (
-            <div className="max-w-5xl mx-auto p-4 md:p-8 flex flex-col items-center justify-center min-h-[50vh] animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)]">
+            <div className="max-w-6xl mx-auto p-4 md:p-8 flex flex-col items-center justify-center min-h-[50vh] animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)]">
                 <div className="text-center space-y-8">
                     <div className="w-32 h-32 bg-text text-background rounded-full flex items-center justify-center mx-auto shadow-2xl scale-110">
                         <Trophy size={64} strokeWidth={2.5} />
@@ -111,10 +111,10 @@ const AdjectivePractice = () => {
     }
 
     return (
-        <div className="max-w-5xl mx-auto p-4 md:p-8 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)] space-y-6 pb-24">
-            <div className="flex flex-col mb-6 px-4 gap-3 text-center md:text-left">
+        <div className="max-w-6xl mx-auto p-4 md:p-8 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)] space-y-6 pb-24">
+            <div className="flex flex-col mb-6 gap-3 text-center md:text-left">
                 <div>
-                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-4">Adjectives</h1>
+                    <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-3">Adjectives</h1>
                     <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">
                         Select the correct German translation.
                     </p>

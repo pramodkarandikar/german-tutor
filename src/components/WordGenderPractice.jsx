@@ -62,24 +62,26 @@ const WordGenderPractice = () => {
             }
         });
 
+        const structuredRules = [
+            { gender: 'Der', color: 'blue', rules: rules['Der'] },
+            { gender: 'Die', color: 'red', rules: rules['Die'] },
+            { gender: 'Das', color: 'green', rules: rules['Das'] },
+        ];
+
         return (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)]">
-                {Object.keys(rules).map(gender => (
-                    <div key={gender} className={`border-[2px] rounded-2xl p-4 lg:p-6 flex flex-col ${gender === 'Der' ? 'bg-blue-50/50 dark:bg-blue-900/10 border-blue-200 dark:border-blue-900/50' :
-                        gender === 'Die' ? 'bg-red-50/50 dark:bg-red-900/10 border-red-200 dark:border-red-900/50' :
-                            'bg-green-50/50 dark:bg-green-900/10 border-green-200 dark:border-green-900/50'
-                        }`}>
-                        <h2 className={`text-2xl md:text-3xl font-black tracking-tight mb-4 border-b-[3px] pb-3 ${gender === 'Der' ? 'text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-900/50' :
-                            gender === 'Die' ? 'text-red-500 dark:text-red-400 border-red-200 dark:border-red-900/50' :
-                                'text-green-600 dark:text-green-400 border-green-200 dark:border-green-900/50'
-                            }`}>
-                            {gender}
-                        </h2>
-                        <div className="flex flex-col gap-4">
-                            {rules[gender].map((r, idx) => (
+            <div className="grid lg:grid-cols-3 gap-6 w-full max-w-6xl mx-auto animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)]">
+                {structuredRules.map((category, idx) => (
+                    <div key={idx} className={`bg-surface/20 backdrop-blur-sm border-[2px] rounded-[2rem] p-6 shadow-sm flex flex-col h-full border-${category.color}-500/20`}>
+                        <div className={`text-2xl font-black mb-6 pb-4 border-b-[3px] border-${category.color}-500/20 text-${category.color}-600 dark:text-${category.color}-400`}>
+                            {category.gender}
+                        </div>
+                        <div className="space-y-4 flex-1">
+                            {category.rules.map((r, idx) => (
                                 <div key={idx} className="flex flex-col gap-1 bg-transparent border-l-4 border-subtle pl-3 py-1 hover:border-primary/50 transition-colors">
                                     <div className="text-base font-bold text-text tracking-tight leading-snug">{r.rule}</div>
-                                    <div className="text-text-muted text-sm italic font-light"><span className="font-bold font-sans text-text">{r.example}</span></div>
+                                    <div className="text-text-muted text-sm italic font-light">
+                                        <span className="font-bold font-sans text-text">{r.example}</span>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -92,46 +94,57 @@ const WordGenderPractice = () => {
     if (!currentWord && mode === 'practice') return <div className="text-center p-8">Loading...</div>;
 
     return (
-        <div className="max-w-5xl mx-auto p-4 md:p-8 space-y-6 pb-24">
-            <div className="flex flex-col mb-6 px-4 gap-3 text-center md:text-left">
-                <div>
-                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-4">Word Gender</h1>
-                    <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">
-                        {mode === 'practice' ? 'Master the articles (der/die/das) through rapid repetition.' : 'Learn the patterns and rules for noun genders.'}
-                    </p>
-                </div>
+        <div className="max-w-6xl mx-auto p-4 md:p-8 pb-24 relative">
+            {/* Background Decorative Elements */}
+            <div className="absolute -top-20 -right-20 w-80 h-80 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />
 
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mt-6">
-                    <div className="flex items-center gap-2 bg-surface border-[2px] border-subtle p-1.5 rounded-2xl shadow-sm w-full sm:w-auto flex-1 md:flex-none">
-                        <button
-                            onClick={() => setMode('practice')}
-                            className={`flex flex-1 sm:flex-none items-center justify-center gap-3 px-8 py-3.5 rounded-xl text-lg font-bold transition-all duration-300 ${mode === 'practice'
-                                ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20 scale-[1.02]'
-                                : 'text-text-muted hover:text-primary hover:bg-primary/5'
-                                }`}
-                        >
-                            <PenTool size={20} strokeWidth={2.5} />
-                            Practice
-                        </button>
-                        <button
-                            onClick={() => setMode('study')}
-                            className={`flex flex-1 sm:flex-none items-center justify-center gap-3 px-8 py-3.5 rounded-xl text-lg font-bold transition-all duration-300 ${mode === 'study'
-                                ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20 scale-[1.02]'
-                                : 'text-text-muted hover:text-primary hover:bg-primary/5'
-                                }`}
-                        >
-                            <BookOpen size={20} strokeWidth={2.5} />
-                            Study
-                        </button>
+            {/* HEADER BLOCK */}
+            {/* HEADER BLOCK */}
+            <div className="mb-6 text-center md:text-left relative z-10">
+                <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                    <div className="flex-1">
+                        <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-2">Word Gender</h1>
+                        <p className="text-sm md:text-base text-text-muted max-w-2xl font-light mb-6">
+                            {mode === 'practice' ? 'Master the articles (der/die/das) through rapid repetition.' : 'Study the comprehensive vocabulary list.'}
+                        </p>
+
+                        {/* MODE TOGGLE */}
+                        <div className="inline-flex p-1.5 bg-surface/80 border border-subtle rounded-2xl shadow-sm relative">
+                            {/* Sliding Background */}
+                            <div
+                                className={`absolute top-1.5 bottom-1.5 w-[calc(50%-6px)] bg-primary rounded-xl transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] shadow-md shadow-primary/20 pointer-events-none ${mode === 'practice' ? 'left-1.5' : 'left-[calc(50%+1.5px)]'}`}
+                            />
+                            <button
+                                onClick={() => setMode('practice')}
+                                className={`w-36 flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-bold transition-all duration-300 relative z-10 ${mode === 'practice'
+                                    ? 'text-primary-foreground'
+                                    : 'text-text-muted hover:text-text'
+                                    }`}
+                            >
+                                <PenTool size={18} strokeWidth={2.5} />
+                                Practice
+                            </button>
+                            <button
+                                onClick={() => setMode('study')}
+                                className={`w-36 flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-bold transition-all duration-300 relative z-10 ${mode === 'study'
+                                    ? 'text-primary-foreground'
+                                    : 'text-text-muted hover:text-text'
+                                    }`}
+                            >
+                                <BookOpen size={18} strokeWidth={2.5} />
+                                Study
+                            </button>
+                        </div>
                     </div>
 
                     {mode === 'practice' && (
-                        <div className="flex items-center w-full sm:w-auto mt-4 sm:mt-0 justify-end sm:justify-start">
-                            <div className="flex flex-col items-center bg-transparent px-6 py-2">
-                                <div className="text-sm text-text-muted uppercase font-bold tracking-[0.2em] mb-1">Streak</div>
-                                <div className={`font-black flex items-center justify-center gap-2 ${streak > 2 ? 'text-orange-500' : 'text-text'}`}>
+                        <div className="flex items-center gap-6 justify-center md:justify-end shrink-0 bg-surface/50 backdrop-blur-md border border-subtle px-7 py-4 rounded-[2rem] shadow-sm">
+                            <div className="text-center md:text-left">
+                                <div className="text-[10px] text-text-muted uppercase font-black tracking-[0.2em] mb-1">Streak</div>
+                                <div className={`font-black flex items-center justify-center md:justify-start gap-1.5 ${streak > 2 ? 'text-orange-500' : 'text-text'}`}>
                                     <Flame size={24} strokeWidth={streak > 2 ? 3 : 2} fill={streak > 2 ? "currentColor" : "none"} className={streak > 2 ? 'animate-pulse' : ''} />
-                                    <span className="text-3xl leading-none tracking-tighter">{streak}</span>
+                                    <span className="text-3xl md:text-4xl leading-none tracking-tighter">{streak}</span>
                                 </div>
                             </div>
                         </div>
@@ -139,80 +152,95 @@ const WordGenderPractice = () => {
                 </div>
             </div>
 
-            {mode === 'study' ? renderStudyMode() : (
-                <>
-                    <div className="text-center space-y-4 transition-all duration-300 max-w-4xl mx-auto pt-2">
-                        <div className="space-y-2 select-none">
-                            <h3 className="text-2xl md:text-3xl font-black text-text tracking-tight font-sans">
-                                {currentWord.word}
-                            </h3>
-                            <div className="h-6">
-                                {showHint && currentWord.translation && (
-                                    <p className="text-xl md:text-2xl text-text-muted italic font-light animate-[fade-in_0.3s_ease-out]">{currentWord.translation}</p>
-                                )}
-                            </div>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto px-4">
-                            {['Der', 'Die', 'Das'].map((gender) => (
-                                <button
-                                    key={gender}
-                                    onClick={() => handleGuess(gender)}
-                                    disabled={feedback === 'correct'}
-                                    className={`
-                                        py-4 lg:py-5 px-6 rounded-2xl md:rounded-[2rem] text-3xl font-black tracking-tight transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] transform active:scale-95
-                                        ${feedback === 'correct' && gender.toLowerCase() === currentWord.gender.toLowerCase()
-                                            ? 'bg-green-500 text-white border-2 border-green-500 scale-105 shadow-2xl'
-                                            : feedback === 'incorrect'
-                                                ? 'bg-surface text-text/20 border-2 border-subtle cursor-not-allowed'
-                                                : `border-2 text-text hover:text-white hover:-translate-y-2 hover:shadow-xl ${gender === 'Der' ? 'bg-blue-100 hover:bg-blue-500 border-blue-200 dark:bg-blue-900/40 dark:border-blue-800' :
-                                                    gender === 'Die' ? 'bg-red-100 hover:bg-red-500 border-red-200 dark:bg-red-900/40 dark:border-red-800' :
-                                                        'bg-green-100 hover:bg-green-500 border-green-200 dark:bg-green-900/40 dark:border-green-800'
-                                                }`
-                                        }
-                                    `}
-                                >
-                                    {gender}
-                                </button>
-                            ))}
-                        </div>
-
-                        {/* Feedback Area */}
-                        <div className="h-16 flex items-center justify-center">
-                            {feedback === 'correct' && (
-                                <div className="flex items-center gap-2 text-green-600 animate-bounce">
-                                    <Check size={24} />
-                                    <span className="text-lg font-medium">Richtig! Correct!</span>
-                                </div>
-                            )}
-                            {feedback === 'incorrect' && (
-                                <div className="space-y-2">
-                                    <div className="flex items-center justify-center gap-2 text-red-500">
-                                        <X size={24} />
-                                        <span className="text-lg font-medium">Falsch! Try again.</span>
+            {/* MAIN LAYOUT */}
+            <div className="relative z-10 min-h-[400px] w-full">
+                {mode === 'study' ? renderStudyMode() : (
+                    <div className="flex flex-col items-center gap-4 w-full max-w-4xl mx-auto">
+                        <div className="bg-surface/20 backdrop-blur-sm border border-subtle rounded-[2rem] p-5 md:p-6 shadow-sm relative overflow-hidden w-full">
+                            <div className="text-center space-y-4 transition-all duration-300 mx-auto relative z-10">
+                                <div className="space-y-2 select-none mb-4">
+                                    <span className="text-xs text-text-muted font-bold uppercase tracking-[0.3em] mb-2 block">Select Article</span>
+                                    <h3 className="text-2xl md:text-4xl font-black text-text tracking-tight leading-tight">
+                                        {currentWord.word}
+                                    </h3>
+                                    <div className="h-5 mt-2">
+                                        {showHint && currentWord.translation && (
+                                            <p className="text-base md:text-lg text-text-muted italic font-light animate-[fade-in_0.3s_ease-out]">{currentWord.translation}</p>
+                                        )}
                                     </div>
-                                    {currentWord.rule && (
-                                        <div className="text-sm text-text-muted bg-background p-3 rounded-lg border border-border">
-                                            <p className="font-semibold text-text">Rule Hint:</p>
-                                            <p>{currentWord.rule}</p>
+                                </div>
+
+                                <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-2xl mx-auto">
+                                    {['Der', 'Die', 'Das'].map((gender) => (
+                                        <button
+                                            key={gender}
+                                            onClick={() => handleGuess(gender)}
+                                            disabled={feedback === 'correct'}
+                                            className={`
+                                                flex flex-col items-center justify-center py-2.5 px-3 rounded-[1.25rem] text-xl md:text-2xl font-black tracking-tight transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] transform active:scale-95
+                                                ${feedback === 'correct' && gender.toLowerCase() === currentWord.gender.toLowerCase()
+                                                    ? 'bg-green-500 text-white border-2 border-green-500 scale-105 shadow-xl'
+                                                    : feedback === 'incorrect'
+                                                        ? gender.toLowerCase() === currentWord.gender.toLowerCase()
+                                                            ? 'bg-green-500/20 text-green-500 border-2 border-green-500/30'
+                                                            : 'bg-surface/40 text-text/30 border-2 border-border/30 scale-95 opacity-50'
+                                                        : `bg-surface text-text border-2 border-border hover:border-primary hover:text-primary hover:shadow-md hover:-translate-y-1`
+                                                }
+                                            `}
+                                        >
+                                            {gender}
+                                        </button>
+                                    ))}
+                                </div>
+
+                                {/* Feedback Area */}
+                                <div className="h-16 flex items-center justify-center mt-4">
+                                    {feedback === 'correct' && (
+                                        <div className="flex items-center gap-2 text-green-500 animate-bounce bg-green-500/10 px-5 py-2.5 rounded-[1.25rem] border border-green-500/20">
+                                            <Check size={24} strokeWidth={2.5} />
+                                            <span className="text-xl font-black tracking-tight">Richtig! Correct!</span>
+                                        </div>
+                                    )}
+                                    {feedback === 'incorrect' && (
+                                        <div className="w-full max-w-xl mx-auto border border-red-500/20 rounded-[1rem] overflow-hidden shadow-sm animate-[fade-in_0.3s_cubic-bezier(0.19,1,0.22,1)]">
+                                            <div className="flex items-center justify-center gap-2 text-red-500 bg-red-500/10 px-4 py-2">
+                                                <X size={18} strokeWidth={2.5} />
+                                                <span className="text-base font-black tracking-tight">Falsch! Try again.</span>
+                                            </div>
+                                            {currentWord.rule && (
+                                                <div className="text-sm text-text bg-surface/80 px-3 py-2 border-t border-red-500/10 flex flex-col items-center justify-center text-center">
+                                                    <p className="font-bold text-text-muted mb-0.5 uppercase tracking-widest text-[9px]">Rule Hint</p>
+                                                    <p className="font-medium text-text text-sm">{currentWord.rule}</p>
+                                                </div>
+                                            )}
                                         </div>
                                     )}
                                 </div>
-                            )}
+                            </div>
+
+                            <div className="mt-4 flex justify-center border-t border-subtle pt-3">
+                                <button
+                                    onClick={nextWord}
+                                    className="flex items-center gap-2 text-text-muted hover:text-text transition-all duration-300 font-bold uppercase tracking-widest text-[11px] hover:scale-105"
+                                >
+                                    <RefreshCw size={14} strokeWidth={2.5} />
+                                    Skip Word
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Pro Tip - Moved inside Practice mode below the card */}
+                        <div className="flex flex-col gap-1.5 bg-indigo-500/5 dark:bg-indigo-400/5 p-4 rounded-3xl border border-indigo-500/10 backdrop-blur-sm w-full mx-auto max-w-4xl">
+                            <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 mb-0.5">
+                                <span className="text-[10px] font-bold uppercase tracking-widest leading-none">Pro Tip</span>
+                            </div>
+                            <p className="text-xs text-text-muted font-medium leading-[1.5]">
+                                Focus on the word endings: <span className="text-indigo-600 dark:text-indigo-400 font-bold">-keit</span>, <span className="text-indigo-600 dark:text-indigo-400 font-bold">-heit</span>, <span className="text-indigo-600 dark:text-indigo-400 font-bold">-ung</span> are always DIE. <span className="text-indigo-600 dark:text-indigo-400 font-bold">-er</span> is often DER. <span className="text-indigo-600 dark:text-indigo-400 font-bold">-chen</span> is always DAS!
+                            </p>
                         </div>
                     </div>
-
-                    <div className="flex justify-center">
-                        <button
-                            onClick={nextWord}
-                            className="flex items-center gap-2 text-text-muted hover:text-text transition-colors"
-                        >
-                            <RefreshCw size={16} />
-                            Skip Word
-                        </button>
-                    </div>
-                </>
-            )}
+                )}
+            </div>
         </div>
     );
 };

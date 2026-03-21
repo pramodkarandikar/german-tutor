@@ -29,20 +29,16 @@
 }
 
 .dark {
-  --background: #1d0b27;
-  /* Gray 800 */
-  --surface: #250c28;
-  /* Gray 700 */
-  --primary: #513560;
-  /* Indigo 400 */
+  --background: #1c1917; /* Stone 900 - Warm dark gray */
+  --surface: #292524; /* Stone 800 */
+  --primary: #818cf8; /* Indigo 400 - Matches light theme branding better */
   --primary-foreground: #ffffff;
-  --accent: #38bdf8;
-  /* Sky 400 */
-  --accent-foreground: #111827;
-  --text: #f9fafb;
-  --text-muted: #9ca3af;
-  --border: #351a44;
-  --border-subtle: rgba(249, 250, 251, 0.05);
+  --accent: #fbbf24; /* Amber 400 - Warm accent */
+  --accent-foreground: #1c1917;
+  --text: #fafaf9; /* Stone 50 */
+  --text-muted: #a8a29e; /* Stone 400 */
+  --border: rgba(250, 250, 249, 0.1); /* Subtle translucent border */
+  --border-subtle: rgba(250, 250, 249, 0.04); /* Very faint translucent border */
 }
 
 body {
