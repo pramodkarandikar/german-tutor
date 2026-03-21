@@ -128,7 +128,7 @@ const VerbPractice = ({ onComplete }) => {
             <div className="mb-6 text-center md:text-left relative z-10">
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
                     <div className="flex-1">
-                        <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-2">Verbs Practice</h1>
+                        <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-3">Verbs Practice</h1>
                         <p className="text-sm md:text-base text-text-muted max-w-2xl font-light mb-6">
                             {mode === 'practice' ? 'Type the Past Participle for the given verb.' : 'Study the list of verbs and their past participles.'}
                         </p>
@@ -282,7 +282,7 @@ const VerbPractice = ({ onComplete }) => {
                                 </form>
                             </div>
 
-                            <div className="mt-5 flex justify-center border-t border-subtle pt-4">
+                            <div className="mt-5 flex justify-center">
                                 <button
                                     onClick={handleRestart}
                                     className="flex items-center gap-2 text-text-muted hover:text-text transition-all duration-300 text-[11px] font-bold uppercase tracking-widest hover:scale-105"

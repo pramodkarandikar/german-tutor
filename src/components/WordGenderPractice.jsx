@@ -104,7 +104,7 @@ const WordGenderPractice = () => {
             <div className="mb-6 text-center md:text-left relative z-10">
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
                     <div className="flex-1">
-                        <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-2">Word Gender</h1>
+                        <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-3">Word Gender</h1>
                         <p className="text-sm md:text-base text-text-muted max-w-2xl font-light mb-6">
                             {mode === 'practice' ? 'Master the articles (der/die/das) through rapid repetition.' : 'Study the comprehensive vocabulary list.'}
                         </p>
@@ -218,7 +218,7 @@ const WordGenderPractice = () => {
                                 </div>
                             </div>
 
-                            <div className="mt-4 flex justify-center border-t border-subtle pt-3">
+                            <div className="mt-4 flex justify-center">
                                 <button
                                     onClick={nextWord}
                                     className="flex items-center gap-2 text-text-muted hover:text-text transition-all duration-300 font-bold uppercase tracking-widest text-[11px] hover:scale-105"
