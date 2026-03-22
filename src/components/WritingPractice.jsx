@@ -128,7 +128,7 @@ const WritingPractice = () => {
         <div className="max-w-6xl mx-auto p-4 md:p-8 pb-24">
             <div className="flex flex-col mb-6 gap-3 text-center md:text-left">
                 <div>
-                    <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-3">Writing Practice</h1>
+                    <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary via-primary/80 to-accent dark:from-primary dark:via-primary/80 dark:to-accent mb-3">Writing Practice</h1>
                     <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">Translate the words to German.</p>
                 </div>
 

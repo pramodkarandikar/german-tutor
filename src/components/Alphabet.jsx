@@ -23,7 +23,7 @@ const Alphabet = () => {
         <div className="max-w-6xl mx-auto p-4 animate-fade-in pb-12">
             <div className="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4 text-center md:text-left">
                 <div className="md:w-2/3">
-                    <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-3">German Alphabet</h1>
+                    <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary via-primary/80 to-accent dark:from-primary dark:via-primary/80 dark:to-accent mb-3">German Alphabet</h1>
                     <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">
                         Master the basics! The German alphabet has 26 standard letters, 3 umlauts (Ä, Ö, Ü), and one special letter (ß).
                         Click the speaker icons to hear the pronunciation.
@@ -36,8 +36,8 @@ const Alphabet = () => {
                         onClick={() => setShowSong(!showSong)}
                         className={`inline-flex items-center gap-2 px-5 py-3 rounded-full font-bold transition-all shadow-sm border border-transparent z-10
                             ${showSong
-                                ? 'bg-purple-600 text-white shadow-md'
-                                : 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 hover:bg-purple-200 dark:hover:bg-purple-900/50 hover:border-purple-300'
+                                ? 'bg-primary text-white shadow-md'
+                                : 'bg-primary/10 text-primary hover:bg-primary/20 hover:border-primary/30'
                             }`}
                         aria-expanded={showSong}
                         aria-controls="song-tooltip"
@@ -101,9 +101,9 @@ const Alphabet = () => {
 
                         {/* Phonetics & Sound */}
                         <div className="min-h-[60px] flex items-start sm:items-center gap-3 mb-4 pl-2 flex-wrap">
-                            <span className="text-lg font-mono text-accent tracking-tight font-medium shrink-0">{item.phonetic}</span>
+                            <span className="text-lg font-mono text-text tracking-tight font-black shrink-0">{item.phonetic}</span>
                             <div className="w-1.5 h-1.5 rounded-full bg-border hidden sm:block shrink-0 mt-1 sm:mt-0"></div>
-                            <span className="text-sm text-text-muted italic tracking-wide leading-snug">sounds like "{item.sound}"</span>
+                            <span className="text-sm text-text italic tracking-wide font-medium leading-snug">sounds like "{item.sound}"</span>
                         </div>
 
                         {/* Example Word & Tip Sequence, vertically spaced out for rhythm */}

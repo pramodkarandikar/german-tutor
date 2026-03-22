@@ -6,13 +6,13 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
     const [isMenuOpen, setIsMenuOpen] = useState(true);
 
     const navItems = [
-        { id: 'flashcards', label: 'Flashcards', icon: BookOpen },
-        { id: 'mcq', label: 'Multiple Choice', icon: LayoutGrid },
-        { id: 'gender', label: 'Word Gender', icon: Type },
-        { id: 'prepositions', label: 'Prepositions', icon: Link2 },
-        { id: 'verb_practice', label: 'Verbs Practice', icon: Edit3 },
-        { id: 'adjective_practice', label: 'Adjectives Quiz', icon: List },
-        { id: 'opposite_practice', label: 'Opposites Match', icon: Repeat },
+        { id: 'flashcards', label: 'Flashcards', description: 'Review essential vocabulary definitions', icon: BookOpen, color: 'text-rose-500', bg: 'bg-rose-500/5', hover: 'hover:bg-rose-500/15', border: 'border-rose-500/30' },
+        { id: 'mcq', label: 'Multiple Choice', description: 'Test your knowledge with quick quizzes', icon: LayoutGrid, color: 'text-amber-500', bg: 'bg-amber-500/5', hover: 'hover:bg-amber-500/15', border: 'border-amber-500/30' },
+        { id: 'gender', label: 'Word Gender', description: 'Master Der, Die, and Das rules', icon: Type, color: 'text-emerald-500', bg: 'bg-emerald-500/5', hover: 'hover:bg-emerald-500/15', border: 'border-emerald-500/30' },
+        { id: 'prepositions', label: 'Prepositions', description: 'Learn verb prepositions effectively', icon: Link2, color: 'text-blue-500', bg: 'bg-blue-500/5', hover: 'hover:bg-blue-500/15', border: 'border-blue-500/30' },
+        { id: 'verb_practice', label: 'Verbs Practice', description: 'Conjugate common German verbs', icon: Edit3, color: 'text-purple-500', bg: 'bg-purple-500/5', hover: 'hover:bg-purple-500/15', border: 'border-purple-500/30' },
+        { id: 'adjective_practice', label: 'Adjectives Quiz', description: 'Practice correct adjective endings', icon: List, color: 'text-teal-500', bg: 'bg-teal-500/5', hover: 'hover:bg-teal-500/15', border: 'border-teal-500/30' },
+        { id: 'opposite_practice', label: 'Opposites Match', description: 'Match opposing word pairs rapidly', icon: Repeat, color: 'text-pink-500', bg: 'bg-pink-500/5', hover: 'hover:bg-pink-500/15', border: 'border-pink-500/30' },
     ];
 
     const bottomItems = [
@@ -32,9 +32,9 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
     return (
         <div className="min-h-screen bg-background text-text flex overflow-hidden relative">
             {/* Top Left - Logo */}
-            <div className="fixed top-4 md:top-6 left-4 md:left-6 z-[60]">
-                <div className="flex items-center justify-center transition-all duration-300 hover:shadow-xl hover:bg-surface/90">
-                    <h1 className="text-xl md:text-2xl font-logo tracking-tighter leading-none select-none text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">
+            <div className="fixed top-0 left-4 md:left-8 z-[60]">
+                <div className="bg-text dark:bg-surface shadow-xl border-x border-b border-white/10 dark:border-white/5 px-6 pt-5 md:pt-7 pb-4 md:pb-5 rounded-b-[2rem] flex items-center justify-center transition-all duration-300 hover:shadow-2xl group">
+                    <h1 className="text-xl md:text-2xl font-logo tracking-tighter leading-none select-none text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent group-hover:from-accent group-hover:to-primary transition-all duration-500">
                         Wise Umlaut
                     </h1>
                 </div>
@@ -57,8 +57,7 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
                             <item.icon size={18} strokeWidth={overlayView === item.id ? 2.5 : 2} className="transition-transform md:w-[20px] md:h-[20px]" />
                         </button>
                     ))}
-                    <div className="w-[1px] h-6 bg-border mx-1"></div>
-                    <ThemeSelector />
+
                     <div className="w-[1px] h-6 bg-border mx-1"></div>
 
                     {/* Menu Toggle Button */}
@@ -75,37 +74,41 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
 
             {/* Fullscreen Overlay Menu */}
             {isMenuOpen && (
-                <div className="fixed inset-0 z-[50] bg-background/95 backdrop-blur-2xl animate-in fade-in duration-300 flex flex-col items-center justify-center p-6 pt-28 overflow-y-auto">
+                <div className="fixed inset-0 z-[50] bg-background animate-in fade-in duration-300 flex flex-col items-center justify-center p-6 pt-28 overflow-y-auto">
                     <div className="w-full max-w-4xl mb-6 text-center animate-in slide-in-from-bottom-4 duration-500 delay-100">
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-text mb-2">Where would you like to start?</h2>
                         <p className="text-text-muted text-sm md:text-base">Select a practice mode to begin</p>
                     </div>
 
-                    <div className="w-full max-w-4xl grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 pb-20">
+                    <div className="w-full max-w-6xl grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 pb-20 px-4">
                         {navItems.map((item, index) => {
                             const isActive = currentView === item.id;
+                            // Adding the color class safely using style instead if needed, but tailwind processes these in dev
                             return (
                                 <button
                                     key={item.id}
                                     onClick={() => handleNavClick(item.id)}
-                                    className={`group flex flex-col items-center justify-center gap-3 p-5 md:p-6 rounded-[1.5rem] transition-all duration-500 w-full text-center outline-none animate-in zoom-in-95 fill-mode-both min-h-[9rem] md:min-h-[10rem]
+                                    className={`group flex flex-col items-center justify-center gap-2 p-4 md:p-5 rounded-[1.5rem] transition-all duration-500 w-full text-center outline-none animate-in zoom-in-95 fill-mode-both min-h-[8.5rem] md:min-h-[9.5rem] border-[1.5px]
                                         ${isActive
-                                            ? 'bg-primary/10 border-2 border-primary shadow-2xl shadow-primary/20 scale-[1.02]'
-                                            : 'bg-surface/50 hover:bg-surface-hover hover:scale-[1.02] active:scale-95 border border-white/5 dark:border-white/5 backdrop-blur-sm shadow-md hover:shadow-xl'}`}
+                                            ? `${item.bg} ${item.border} border-solid shadow-xl scale-[1.02]`
+                                            : `${item.bg} border-transparent backdrop-blur-sm shadow-md ${item.hover} hover:border-white/10 dark:hover:border-white/5 hover:shadow-xl hover:scale-[1.03] active:scale-95`}`}
                                     style={{ animationDelay: `${index * 40 + 100}ms` }}
                                 >
-                                    <div className={`flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-2xl transition-all duration-500
+                                    <div className={`flex items-center justify-center w-12 h-12 md:w-[3.25rem] md:h-[3.25rem] rounded-2xl transition-all duration-500 mb-0.5
                                         ${isActive
-                                            ? 'bg-primary text-primary-foreground shadow-inner shadow-primary/40'
-                                            : 'bg-primary/10 text-primary group-hover:bg-primary/20 group-hover:scale-110'}`}
+                                            ? `bg-surface shadow-md ${item.color}`
+                                            : `bg-surface/60 dark:bg-surface/30 ${item.color} shadow-sm group-hover:bg-surface group-hover:scale-110 group-hover:shadow-md`}`}
                                     >
-                                        <item.icon size={26} strokeWidth={isActive ? 2.5 : 2} className="md:w-[32px] md:h-[32px]" />
+                                        <item.icon size={22} strokeWidth={isActive ? 2.5 : 2} className="w-[22px] h-[22px] md:w-[26px] md:h-[26px]" />
                                     </div>
-                                    <div>
-                                        <h3 className={`text-base md:text-lg font-bold tracking-tight transition-colors duration-300
-                                            ${isActive ? 'text-primary' : 'text-text group-hover:text-primary'}`}>
+                                    <div className="flex flex-col items-center gap-1">
+                                        <h3 className={`text-sm md:text-base font-black tracking-tight transition-colors duration-300
+                                            ${isActive ? item.color : 'text-text group-hover:' + item.color}`}>
                                             {item.label}
                                         </h3>
+                                        <p className="text-[11px] md:text-xs text-text-muted font-medium px-2 leading-snug opacity-90 group-hover:opacity-100 transition-opacity">
+                                            {item.description}
+                                        </p>
                                     </div>
                                 </button>
                             );

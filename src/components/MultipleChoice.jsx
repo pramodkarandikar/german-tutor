@@ -97,12 +97,12 @@ const MultipleChoice = () => {
         <div className="max-w-6xl mx-auto p-4 md:p-8 pb-24 relative">
             {/* Background Decorative Elements */}
             <div className="absolute -top-20 -right-20 w-80 h-80 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
-            <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
 
             <div className="mb-10 text-center md:text-left relative z-10">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                     <div>
-                        <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-3">Multiple Choice</h1>
+                        <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary via-primary/80 to-accent dark:from-primary dark:via-primary/80 dark:to-accent mb-3">Multiple Choice</h1>
                         <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">Select the correct German translation.</p>
                     </div>
 
@@ -139,8 +139,8 @@ const MultipleChoice = () => {
                         </div>
                     </div>
 
-                    <div className="hidden lg:flex flex-col gap-2 bg-indigo-500/5 dark:bg-indigo-400/5 p-6 rounded-[2rem] border border-indigo-500/10 backdrop-blur-sm">
-                        <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 mb-1">
+                    <div className="hidden lg:flex flex-col gap-2 bg-primary/5 dark:bg-primary/5 p-6 rounded-[2rem] border border-primary/10 backdrop-blur-sm">
+                        <div className="flex items-center gap-2 text-primary mb-1">
                             <span className="text-[10px] font-bold uppercase tracking-widest leading-none">Pro Tip</span>
                         </div>
                         <p className="text-xs text-text-muted font-medium leading-[1.6]">
