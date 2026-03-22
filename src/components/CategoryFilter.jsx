@@ -22,7 +22,7 @@ const CategoryFilter = ({ categories, selectedCategories, onToggleCategory }) =>
             <button
                 onClick={() => setIsOpen(!isOpen)}
                 className={`w-full flex items-center justify-between gap-3 px-5 py-3.5 rounded-2xl font-bold transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] border-2 shadow-sm
-                    ${isOpen
+ ${isOpen
                         ? 'bg-text text-background border-text'
                         : 'bg-surface text-text border-subtle hover:border-border'}`}
             >
@@ -38,7 +38,7 @@ const CategoryFilter = ({ categories, selectedCategories, onToggleCategory }) =>
                     {isOpen && (
                         <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 lg:p-12 pointer-events-none">
                             {/* Backdrop */}
-                            <motion.div 
+                            <motion.div
                                 key="backdrop"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
@@ -48,7 +48,7 @@ const CategoryFilter = ({ categories, selectedCategories, onToggleCategory }) =>
                             />
 
                             {/* Modal */}
-                            <motion.div 
+                            <motion.div
                                 key="modal"
                                 initial={{ opacity: 0, scale: 0.95, y: 30 }}
                                 animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -58,9 +58,9 @@ const CategoryFilter = ({ categories, selectedCategories, onToggleCategory }) =>
                                 <div className="p-8 pb-6 flex items-center justify-between border-b border-subtle bg-surface/50 backdrop-blur-md sticky top-0 z-10 shrink-0">
                                     <div className="pr-12">
                                         <h2 className="text-3xl font-black text-text tracking-tight">Focus your study</h2>
-                                        <p className="text-base text-text-muted mt-2 italic font-medium">Select one or more categories</p>
+                                        <p className="text-base text-text-muted mt-2">Select one or more categories</p>
                                     </div>
-                                    <button 
+                                    <button
                                         onClick={() => setIsOpen(false)}
                                         className="p-4 rounded-full bg-surface border border-subtle hover:border-border hover:bg-text/5 transition-colors text-text-muted hover:text-text shadow-sm"
                                         aria-label="Close filters"
@@ -71,20 +71,6 @@ const CategoryFilter = ({ categories, selectedCategories, onToggleCategory }) =>
 
                                 <div className="p-8 overflow-y-auto custom-scrollbar flex-1 bg-surface/30">
                                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-4">
-                                        <button
-                                            onClick={() => {
-                                                onToggleCategory('All');
-                                                setIsOpen(false);
-                                            }}
-                                            className={`col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 mb-4 flex items-center justify-between px-8 py-6 rounded-2xl text-lg font-black transition-all duration-300 border-2
-                                                ${selectedCategories.length === 0
-                                                    ? 'bg-gradient-to-r from-primary to-accent text-white border-transparent shadow-xl scale-[1.01]'
-                                                    : 'bg-surface text-text border-subtle hover:border-border hover:bg-surface/80'}`}
-                                        >
-                                            <span className="tracking-wide">Show Everything</span>
-                                            {selectedCategories.length === 0 && <Check size={24} strokeWidth={3} />}
-                                        </button>
-
                                         {categories.map((category) => {
                                             const isSelected = selectedCategories.includes(category);
                                             return (
@@ -92,7 +78,7 @@ const CategoryFilter = ({ categories, selectedCategories, onToggleCategory }) =>
                                                     key={category}
                                                     onClick={() => onToggleCategory(category)}
                                                     className={`flex items-center justify-between px-6 py-5 rounded-2xl text-[15px] font-bold transition-all duration-300 border-2 group
-                                                        ${isSelected
+ ${isSelected
                                                             ? 'bg-text text-background border-text shadow-md scale-[1.03]'
                                                             : 'bg-surface text-text border-subtle hover:border-border hover:bg-surface/80 hover:shadow-sm'}`}
                                                 >
@@ -104,16 +90,29 @@ const CategoryFilter = ({ categories, selectedCategories, onToggleCategory }) =>
                                     </div>
                                 </div>
 
-                                <div className="p-8 bg-surface border-t border-subtle flex gap-6 shrink-0 backdrop-blur-md">
+                                <div className="p-4 sm:p-8 bg-surface border-t border-subtle flex flex-wrap sm:flex-nowrap gap-4 sm:gap-6 shrink-0 backdrop-blur-md">
+                                    <button
+                                        onClick={() => {
+                                            onToggleCategory('All');
+                                            setIsOpen(false);
+                                        }}
+                                        className={`flex-[1] flex items-center justify-center gap-2 py-4 sm:py-5 px-4 rounded-2xl font-black transition-all text-[15px] sm:text-base border-2
+ ${selectedCategories.length === 0
+                                                ? 'bg-gradient-to-r from-primary to-accent text-white border-transparent shadow-md'
+                                                : 'bg-surface text-text border-subtle hover:border-border hover:bg-surface/80'}`}
+                                    >
+                                        <span>Show All</span>
+                                        {selectedCategories.length === 0 && <Check size={18} strokeWidth={3} />}
+                                    </button>
                                     <button
                                         onClick={() => onToggleCategory('All')}
-                                        className="flex-[1] py-5 px-8 rounded-2xl border-2 border-subtle font-black text-text-muted hover:text-text hover:border-border transition-all text-lg"
+                                        className="flex-[1] py-4 sm:py-5 px-4 rounded-2xl border-2 border-subtle font-black text-text-muted hover:text-text hover:border-border transition-all text-[15px] sm:text-base"
                                     >
-                                        Reset All
+                                        Reset
                                     </button>
                                     <button
                                         onClick={() => setIsOpen(false)}
-                                        className="flex-[2] py-5 px-8 rounded-2xl bg-text text-background font-black border-2 border-text hover:bg-transparent hover:text-text transition-all shadow-xl text-lg tracking-wide"
+                                        className="flex-[1] sm:flex-[2] py-4 sm:py-5 px-4 rounded-2xl bg-text text-background font-black border-2 border-text hover:bg-transparent hover:text-text transition-all shadow-xl text-[15px] sm:text-base tracking-wide"
                                     >
                                         Apply Filters
                                     </button>
