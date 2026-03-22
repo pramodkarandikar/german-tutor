@@ -26,18 +26,7 @@
   --border-subtle: #edf2f7;
 }
 
-.dark {
-  --background: #1c1917; /* Stone 900 - Warm dark gray */
-  --surface: #292524; /* Stone 800 */
-  --primary: #818cf8; /* Indigo 400 - Matches light theme branding better */
-  --primary-foreground: #ffffff;
-  --accent: #fbbf24; /* Amber 400 - Warm accent */
-  --accent-foreground: #1c1917;
-  --text: #fafaf9; /* Stone 50 */
-  --text-muted: #a8a29e; /* Stone 400 */
-  --border: rgba(250, 250, 249, 0.1); /* Subtle translucent border */
-  --border-subtle: rgba(250, 250, 249, 0.04); /* Very faint translucent border */
-}
+
 
 body {
   background-color: var(--background);
