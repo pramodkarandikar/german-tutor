@@ -26,7 +26,7 @@ const Flashcard = ({ card, onNext }) => {
                 transition={{ duration: 0.6, type: "spring", stiffness: 260, damping: 20 }}
             >
                 {/* Front Side */}
-                <div className="absolute w-full h-full backface-hidden bg-gradient-to-br from-indigo-50/20 via-surface to-purple-50/20 dark:from-indigo-950/30 dark:via-surface dark:to-purple-950/30 border-2 border-subtle rounded-[2.5rem] flex flex-col items-center justify-center p-10 md:p-12 transition-all duration-500 group-hover/card:border-primary/30 group-hover/card:shadow-2xl group-hover/card:-translate-y-1 overflow-hidden">
+                <div className="absolute w-full h-full backface-hidden bg-gradient-to-br from-primary/10 via-surface to-accent/10 dark:from-primary/10 dark:via-surface dark:to-accent/10 border-2 border-subtle rounded-[2.5rem] flex flex-col items-center justify-center p-10 md:p-12 transition-all duration-500 group-hover/card:border-primary/30 group-hover/card:shadow-2xl group-hover/card:-translate-y-1 overflow-hidden">
                     <div className="absolute top-6 left-8 flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                         <span className="text-[10px] font-mono text-text-muted font-black uppercase tracking-[0.3em]">{card.category}</span>

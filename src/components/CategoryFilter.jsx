@@ -78,7 +78,7 @@ const CategoryFilter = ({ categories, selectedCategories, onToggleCategory }) =>
                                             }}
                                             className={`col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 mb-4 flex items-center justify-between px-8 py-6 rounded-2xl text-lg font-black transition-all duration-300 border-2
                                                 ${selectedCategories.length === 0
-                                                    ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white border-transparent shadow-xl scale-[1.01]'
+                                                    ? 'bg-gradient-to-r from-primary to-accent text-white border-transparent shadow-xl scale-[1.01]'
                                                     : 'bg-surface text-text border-subtle hover:border-border hover:bg-surface/80'}`}
                                         >
                                             <span className="tracking-wide">Show Everything</span>
