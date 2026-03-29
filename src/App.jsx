@@ -14,8 +14,20 @@ import Navigation from './components/Navigation';
 
 import Alphabet from './components/Alphabet';
 import PronunciationRules from './components/PronunciationRules';
+import StudyMenu from './components/StudyMenu';
+import StudyViewer from './components/StudyViewer';
 import { X } from 'lucide-react';
 
+import vocabularyData from './data/vocabulary.json';
+import wordGendersData from './data/word-genders.json';
+import verbsPpData from './data/verbs_pp.json';
+import verbPrepositionsData from './data/verb-prepositions.json';
+import oppositesData from './data/opposites.json';
+import adjectivesData from './data/adjectives.json';
+import daUsageData from './data/da-usage.json';
+import expressionsData from './data/expressions.json';
+import articlesAndMoreData from './data/articles-and-more.json';
+import localPrepositionsData from './data/local-prepositions.json';
 function App() {
  const [currentView, setCurrentView] = useState('flashcards');
  const [overlayView, setOverlayView] = useState(null);
@@ -67,10 +79,21 @@ function App() {
  >
  <X size={24} />
  </button>
- <div className="flex-1 overflow-y-auto p-4 pt-16 sm:p-8 sm:pt-20 custom-scrollbar">
- {overlayView === 'alphabet' && <Alphabet />}
- {overlayView === 'pronunciation' && <PronunciationRules />}
- </div>
+          <div className="flex-1 overflow-y-auto p-4 pt-16 sm:p-8 sm:pt-20 custom-scrollbar">
+            {overlayView === 'alphabet' && <Alphabet />}
+            {overlayView === 'pronunciation' && <PronunciationRules />}
+            {overlayView === 'study_menu' && <StudyMenu onSelect={(id) => setOverlayView(`study_${id}`)} />}
+            {overlayView === 'study_vocabulary' && <StudyViewer title="Vocabulary" data={vocabularyData} onBack={() => setOverlayView('study_menu')} />}
+            {overlayView === 'study_word-genders' && <StudyViewer title="Word Genders" data={wordGendersData} onBack={() => setOverlayView('study_menu')} />}
+            {overlayView === 'study_verbs_pp' && <StudyViewer title="Verbs Past Participles" data={verbsPpData} onBack={() => setOverlayView('study_menu')} />}
+            {overlayView === 'study_verb-prepositions' && <StudyViewer title="Verb Prepositions" data={verbPrepositionsData} onBack={() => setOverlayView('study_menu')} />}
+            {overlayView === 'study_opposites' && <StudyViewer title="Opposites" data={oppositesData} onBack={() => setOverlayView('study_menu')} />}
+            {overlayView === 'study_adjectives' && <StudyViewer title="Adjectives" data={adjectivesData} onBack={() => setOverlayView('study_menu')} />}
+            {overlayView === 'study_da-usage' && <StudyViewer title="Da Usage" data={daUsageData} onBack={() => setOverlayView('study_menu')} />}
+            {overlayView === 'study_expressions' && <StudyViewer title="Expressions" data={expressionsData} onBack={() => setOverlayView('study_menu')} />}
+            {overlayView === 'study_articles-and-more' && <StudyViewer title="Articles and More" data={articlesAndMoreData} onBack={() => setOverlayView('study_menu')} />}
+            {overlayView === 'study_local-prepositions' && <StudyViewer title="Local Prepositions" data={localPrepositionsData} onBack={() => setOverlayView('study_menu')} />}
+          </div>
  </div>
  </div>
  )}

@@ -1,0 +1,140 @@
+[
+  {
+    "Meaning Category": "Local: To be present",
+    "Usage Note": "Used with \"sein\" (da sein).",
+    "German Example": "Ich bin wieder da. ",
+    "English Translation": "I am back. "
+  },
+  {
+    "Meaning Category": "Local: To be present",
+    "Usage Note": "Often implies \"at home\" or \"arrived\".",
+    "German Example": "Ist Mutti schon da? ",
+    "English Translation": "Is mom already here/home? "
+  },
+  {
+    "Meaning Category": "Local: To be present",
+    "Usage Note": "\"Da\" used to indicate availability or existence.",
+    "German Example": "Ist noch Butter da? ",
+    "English Translation": "Is there any butter left? "
+  },
+  {
+    "Meaning Category": "Local: There",
+    "Usage Note": "Standard locational \"there\".",
+    "German Example": "Mal hier, mal da. ",
+    "English Translation": "Sometimes here sometimes there. "
+  },
+  {
+    "Meaning Category": "Local: There",
+    "Usage Note": "Used to point out a location.",
+    "German Example": "Deine Jacke ist da hinten. ",
+    "English Translation": "Your jacket is back there. "
+  },
+  {
+    "Meaning Category": "Local: There",
+    "Usage Note": "Indicates reaching a destination.",
+    "German Example": "Sind wir schon da? ",
+    "English Translation": "Are we there yet? "
+  },
+  {
+    "Meaning Category": "Temporal: At that time",
+    "Usage Note": "\"Da\" refers back to a specific time mentioned.",
+    "German Example": "Wie wär's mit morgen? - Da kann ich nicht. ",
+    "English Translation": "How about tomorrow? - I can't (tomorrow). "
+  },
+  {
+    "Meaning Category": "Temporal: At that time",
+    "Usage Note": "Substitutes for repeating the day.",
+    "German Example": "Was machst du am Sonntag? - Da habe ich Geburtstag. ",
+    "English Translation": "What are you doing on Sunday? - It's my birthday (on Sunday). "
+  },
+  {
+    "Meaning Category": "Temporal: At that time",
+    "Usage Note": "Translates to \"by then\" or \"at that point\".",
+    "German Example": "Er hat mich angerufen, aber da habe ich schon geschlafen. ",
+    "English Translation": "He called me, but I was already asleep by then. "
+  },
+  {
+    "Meaning Category": "Modal: About that",
+    "Usage Note": "Used to agree or disagree with a statement.",
+    "German Example": "Das ist scheise. - Da hast du Recht. ",
+    "English Translation": "This is $sh^{*}t.$ - You're right about that. "
+  },
+  {
+    "Meaning Category": "Modal: On that",
+    "Usage Note": "Shows agreement on a point.",
+    "German Example": "Die Deutschen sind ordentlich. - Da stimme ich dir zu. ",
+    "English Translation": "Germans are organized. - I agree with you on that. "
+  },
+  {
+    "Meaning Category": "Modal: On that",
+    "Usage Note": "Shows disagreement on a point.",
+    "German Example": "Die Deutschen sind pünktlich. - Da bin ich ganz anderer Meinung. ",
+    "English Translation": "Germans are punctual. - I completely disagree on that. "
+  },
+  {
+    "Meaning Category": "Causal: Because / Since",
+    "Usage Note": "Used as a conjunction like \"because\" or \"since\".",
+    "German Example": "Da ich solange weg war, will ich morgen ein paar Videos machen. ",
+    "English Translation": "Since/Because I've been away for so long, I want to make a few videos tomorrow. "
+  },
+  {
+    "Meaning Category": "Causal: Because / Since",
+    "Usage Note": "Links cause and effect.",
+    "German Example": "Da es geregnet hat, bin ich zu Hause geblieben. ",
+    "English Translation": "Since/Because it was raining, I stayed at home. "
+  },
+  {
+    "Meaning Category": "Causal: Because / Since",
+    "Usage Note": "\"Da\" is more formal than \"weil\" in speech.",
+    "German Example": "Ich gehe heute in den Park, da ich frei habe. ",
+    "English Translation": "I'm going to the park today because I have a day off. "
+  },
+  {
+    "Meaning Category": "Da-Word: For that",
+    "Usage Note": "\"Da\" combines with prepositions (da + für).",
+    "German Example": "Dafür hab ich jetzt keinen Nerv. / Da hab ich jetzt keinen Nerv für. ",
+    "English Translation": "I don't have the nerve for that right now. "
+  },
+  {
+    "Meaning Category": "Da-Word: To that",
+    "Usage Note": "Da + zu.",
+    "German Example": "Da hab ich keine Lust zu. / Dazu habe ich keine Lust. ",
+    "English Translation": "I'm not in the mood for that. "
+  },
+  {
+    "Meaning Category": "Da-Word: Of that",
+    "Usage Note": "Da + von.",
+    "German Example": "Da träume ich seit Jahren von. / Davon träume ich seit Jahren. ",
+    "English Translation": "I've been dreaming about that for years. "
+  },
+  {
+    "Meaning Category": "Filler: Problem",
+    "Usage Note": "Used as a general opening or filler word.",
+    "German Example": "Da haben wir ein Problem. ",
+    "English Translation": "(There) we have a problem. "
+  },
+  {
+    "Meaning Category": "Filler: Idiom",
+    "Usage Note": "Literally \"There we have the salad\".",
+    "German Example": "Da haben wir den Salat. ",
+    "English Translation": "We're in a fine mess now. / The fat's in the fire. "
+  },
+  {
+    "Meaning Category": "Filler: Luck",
+    "Usage Note": "Used to emphasize the situation.",
+    "German Example": "Da haben wir Glück gehabt! ",
+    "English Translation": "We were lucky! "
+  },
+  {
+    "Meaning Category": "Correction: Location",
+    "Usage Note": "Distinguishes between being at a place vs. going to one.",
+    "German Example": "Wo ist der Supermarkt? Er ist da. ",
+    "English Translation": "Where is the supermarket? It's there. "
+  },
+  {
+    "Meaning Category": "Correction: Direction",
+    "Usage Note": "Use \"da hin\" for movement toward a place.",
+    "German Example": "An der Ecke ist ein Supermarkt. Ich gehe da hin. ",
+    "English Translation": "There is a supermarket on the corner. I'm going there. "
+  }
+]

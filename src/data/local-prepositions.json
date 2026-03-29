@@ -1,0 +1,83 @@
+[
+  {
+    "Context / Location": "Rooms / Buildings",
+    "Wo? (Dativ) ": "in + Dativ ",
+    "Wohin? (Akk/Dat) +1": "in + Akkusativ ",
+    "Woher? (Dativ) ": "aus + Dativ ",
+    "Used for People? +2": "No",
+    "Used for Activities? +2": "No",
+    "Example (German)": "Ich bin im Wohnzimmer. "
+  },
+  {
+    "Context / Location": "Cities / Countries",
+    "Wo? (Dativ) ": "in + Dativ ",
+    "Wohin? (Akk/Dat) +1": "nach ",
+    "Woher? (Dativ) ": "aus + Dativ ",
+    "Used for People? +2": "No",
+    "Used for Activities? +2": "No",
+    "Example (German)": "Ich fahre nach Berlin. "
+  },
+  {
+    "Context / Location": "Countries w/ Articles",
+    "Wo? (Dativ) ": "in + Dativ ",
+    "Wohin? (Akk/Dat) +1": "in + Akkusativ ",
+    "Woher? (Dativ) ": "aus + Dativ ",
+    "Used for People? +2": "No",
+    "Used for Activities? +2": "No",
+    "Example (German)": "Ich komme aus der Ukraine. "
+  },
+  {
+    "Context / Location": "Water / Vertical Contact",
+    "Wo? (Dativ) ": "an + Dativ ",
+    "Wohin? (Akk/Dat) +1": "an + Akkusativ ",
+    "Woher? (Dativ) ": "von + Dativ ",
+    "Used for People? +2": "No",
+    "Used for Activities? +2": "No",
+    "Example (German)": "Ich gehe an den Strand. "
+  },
+  {
+    "Context / Location": "Open Spaces / Surfaces",
+    "Wo? (Dativ) ": "auf + Dativ ",
+    "Wohin? (Akk/Dat) +1": "auf + Akkusativ ",
+    "Woher? (Dativ) ": "von + Dativ ",
+    "Used for People? +2": "No",
+    "Used for Activities? +2": "No",
+    "Example (German)": "Ich bin auf dem Balkon. "
+  },
+  {
+    "Context / Location": "Social / Professional",
+    "Wo? (Dativ) ": "bei + Dativ ",
+    "Wohin? (Akk/Dat) +1": "zu + Dativ ",
+    "Woher? (Dativ) ": "von + Dativ ",
+    "Used for People? +2": "Yes ",
+    "Used for Activities? +2": "Yes ",
+    "Example (German)": "Ich gehe zum Zahnarzt. "
+  },
+  {
+    "Context / Location": "Home (Fixed Expression)",
+    "Wo? (Dativ) ": "zu Hause ",
+    "Wohin? (Akk/Dat) +1": "nach Hause ",
+    "Woher? (Dativ) ": "von zu Hause ",
+    "Used for People? +2": "No",
+    "Used for Activities? +2": "No",
+    "Example (German)": "Ich gehe nach Hause. "
+  },
+  {
+    "Context / Location": "Islands (Specific)",
+    "Wo? (Dativ) ": "auf + Dativ ",
+    "Wohin? (Akk/Dat) +1": "nach ",
+    "Woher? (Dativ) ": "von + Dativ",
+    "Used for People? +2": "No",
+    "Used for Activities? +2": "No",
+    "Example (German)": "Ich bin auf Mallorca. "
+  },
+  {
+    "Context / Location": "Islands (General)",
+    "Wo? (Dativ) ": "auf + Dativ ",
+    "Wohin? (Akk/Dat) +1": "auf + Akkusativ ",
+    "Woher? (Dativ) ": "von + Dativ",
+    "Used for People? +2": "No",
+    "Used for Activities? +2": "No",
+    "Example (German)": "Ich fahre auf die Insel. "
+  }
+]

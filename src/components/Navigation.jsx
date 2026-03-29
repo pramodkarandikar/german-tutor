@@ -18,6 +18,7 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
     const bottomItems = [
         { id: 'alphabet', label: 'German Alphabet', icon: Languages },
         { id: 'pronunciation', label: 'Pronunciation', icon: MessageCircle },
+        { id: 'study_menu', label: 'Study', icon: BookOpen },
     ];
 
     const handleNavClick = (viewId) => {

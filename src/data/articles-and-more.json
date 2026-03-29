@@ -1,0 +1,235 @@
+[
+  {
+    "Definite Articles (\"The\")": "Gender",
+    "__EMPTY": "Nominativ",
+    "__EMPTY_1": "Akkusativ",
+    "__EMPTY_2": "Dativ",
+    "__EMPTY_3": "Genitiv"
+  },
+  {
+    "Definite Articles (\"The\")": "Masculine",
+    "__EMPTY": "der ",
+    "__EMPTY_1": "den ",
+    "__EMPTY_2": "dem",
+    "__EMPTY_3": "des"
+  },
+  {
+    "Definite Articles (\"The\")": "Feminine",
+    "__EMPTY": "die ",
+    "__EMPTY_1": "die ",
+    "__EMPTY_2": "der",
+    "__EMPTY_3": "der"
+  },
+  {
+    "Definite Articles (\"The\")": "Neuter",
+    "__EMPTY": "das ",
+    "__EMPTY_1": "das ",
+    "__EMPTY_2": "dem",
+    "__EMPTY_3": "des"
+  },
+  {
+    "Definite Articles (\"The\")": "Plural",
+    "__EMPTY": "die ",
+    "__EMPTY_1": "die ",
+    "__EMPTY_2": "den*",
+    "__EMPTY_3": "der"
+  },
+  {
+    "Definite Articles (\"The\")": "Note: In the Dative Plural, if the noun doesn't already end in \r\n-s or -n, you must add an -n to the end of the noun (e.g., den Kindern)."
+  },
+  {
+    "Definite Articles (\"The\")": "Table 2: Indefinite Articles (\"A / An\")"
+  },
+  {
+    "Definite Articles (\"The\")": "Gender",
+    "__EMPTY": "Nominativ",
+    "__EMPTY_1": "Akkusativ",
+    "__EMPTY_2": "Dativ",
+    "__EMPTY_3": "Genitiv"
+  },
+  {
+    "Definite Articles (\"The\")": "Masculine",
+    "__EMPTY": "ein ",
+    "__EMPTY_1": "einen ",
+    "__EMPTY_2": "einem",
+    "__EMPTY_3": "eines"
+  },
+  {
+    "Definite Articles (\"The\")": "Feminine",
+    "__EMPTY": "eine ",
+    "__EMPTY_1": "eine ",
+    "__EMPTY_2": "einer",
+    "__EMPTY_3": "einer"
+  },
+  {
+    "Definite Articles (\"The\")": "Neuter",
+    "__EMPTY": "ein ",
+    "__EMPTY_1": "ein ",
+    "__EMPTY_2": "einem",
+    "__EMPTY_3": "eines"
+  },
+  {
+    "Definite Articles (\"The\")": "Plural",
+    "__EMPTY": "(none) ",
+    "__EMPTY_1": "(none) ",
+    "__EMPTY_2": "meinen / (none)",
+    "__EMPTY_3": "meiner / (none)"
+  },
+  {
+    "Definite Articles (\"The\")": "Table 3: Adjective Endings"
+  },
+  {
+    "Definite Articles (\"The\")": "Context + Gender",
+    "__EMPTY": "Nominativ",
+    "__EMPTY_1": "Akkusativ",
+    "__EMPTY_2": "Dativ",
+    "__EMPTY_3": "Genitiv"
+  },
+  {
+    "Definite Articles (\"The\")": "Definite: Masculine",
+    "__EMPTY": "-e",
+    "__EMPTY_1": "-en",
+    "__EMPTY_2": "-en",
+    "__EMPTY_3": "-en"
+  },
+  {
+    "Definite Articles (\"The\")": "Definite: Feminine",
+    "__EMPTY": "-e",
+    "__EMPTY_1": "-e",
+    "__EMPTY_2": "-en",
+    "__EMPTY_3": "-en"
+  },
+  {
+    "Definite Articles (\"The\")": "Definite: Neuter",
+    "__EMPTY": "-e",
+    "__EMPTY_1": "-e",
+    "__EMPTY_2": "-en",
+    "__EMPTY_3": "-en"
+  },
+  {
+    "Definite Articles (\"The\")": "Definite: Plural",
+    "__EMPTY": "-en",
+    "__EMPTY_1": "-en",
+    "__EMPTY_2": "-en",
+    "__EMPTY_3": "-en"
+  },
+  {
+    "Definite Articles (\"The\")": "Indefinite: Masculine",
+    "__EMPTY": "-er",
+    "__EMPTY_1": "-en",
+    "__EMPTY_2": "-en",
+    "__EMPTY_3": "-en"
+  },
+  {
+    "Definite Articles (\"The\")": "Indefinite: Feminine",
+    "__EMPTY": "-e",
+    "__EMPTY_1": "-e",
+    "__EMPTY_2": "-en",
+    "__EMPTY_3": "-en"
+  },
+  {
+    "Definite Articles (\"The\")": "Indefinite: Neuter",
+    "__EMPTY": "-es",
+    "__EMPTY_1": "-es",
+    "__EMPTY_2": "-en",
+    "__EMPTY_3": "-en"
+  },
+  {
+    "Definite Articles (\"The\")": "Indefinite: Plural",
+    "__EMPTY": "-e",
+    "__EMPTY_1": "-e",
+    "__EMPTY_2": "-en",
+    "__EMPTY_3": "-er"
+  },
+  {
+    "Definite Articles (\"The\")": "Nullartikel: Masculine",
+    "__EMPTY": "-er",
+    "__EMPTY_1": "-en",
+    "__EMPTY_2": "-em",
+    "__EMPTY_3": "-en"
+  },
+  {
+    "Definite Articles (\"The\")": "Nullartikel: Feminine",
+    "__EMPTY": "-e",
+    "__EMPTY_1": "-e",
+    "__EMPTY_2": "-er",
+    "__EMPTY_3": "-er"
+  },
+  {
+    "Definite Articles (\"The\")": "Nullartikel: Neuter",
+    "__EMPTY": "-es",
+    "__EMPTY_1": "-es",
+    "__EMPTY_2": "-em",
+    "__EMPTY_3": "-en"
+  },
+  {
+    "Definite Articles (\"The\")": "Nullartikel: Plural",
+    "__EMPTY": "-e",
+    "__EMPTY_1": "-e",
+    "__EMPTY_2": "-en",
+    "__EMPTY_3": "-er"
+  },
+  {
+    "Definite Articles (\"The\")": "Table 4: Personal Pronouns"
+  },
+  {
+    "Definite Articles (\"The\")": "Person (English)",
+    "__EMPTY": "Nominativ (Subject)",
+    "__EMPTY_1": "Akkusativ (Dir. Object)",
+    "__EMPTY_2": "Dativ (Indir. Object)"
+  },
+  {
+    "Definite Articles (\"The\")": "I / me",
+    "__EMPTY": "ich",
+    "__EMPTY_1": "mich",
+    "__EMPTY_2": "mir"
+  },
+  {
+    "Definite Articles (\"The\")": "You (informal)",
+    "__EMPTY": "du",
+    "__EMPTY_1": "dich",
+    "__EMPTY_2": "dir"
+  },
+  {
+    "Definite Articles (\"The\")": "He / him",
+    "__EMPTY": "er",
+    "__EMPTY_1": "ihn",
+    "__EMPTY_2": "ihm"
+  },
+  {
+    "Definite Articles (\"The\")": "She / her",
+    "__EMPTY": "sie",
+    "__EMPTY_1": "sie",
+    "__EMPTY_2": "ihr"
+  },
+  {
+    "Definite Articles (\"The\")": "It",
+    "__EMPTY": "es",
+    "__EMPTY_1": "es",
+    "__EMPTY_2": "ihm"
+  },
+  {
+    "Definite Articles (\"The\")": "We / us",
+    "__EMPTY": "wir",
+    "__EMPTY_1": "uns",
+    "__EMPTY_2": "uns"
+  },
+  {
+    "Definite Articles (\"The\")": "You all (plural)",
+    "__EMPTY": "ihr",
+    "__EMPTY_1": "euch",
+    "__EMPTY_2": "euch"
+  },
+  {
+    "Definite Articles (\"The\")": "They / them",
+    "__EMPTY": "sie",
+    "__EMPTY_1": "sie",
+    "__EMPTY_2": "ihnen"
+  },
+  {
+    "Definite Articles (\"The\")": "You (formal)",
+    "__EMPTY": "Sie",
+    "__EMPTY_1": "Sie",
+    "__EMPTY_2": "Ihnen"
+  }
+]
