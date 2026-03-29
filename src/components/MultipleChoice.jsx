@@ -127,7 +127,7 @@ const MultipleChoice = () => {
 
  <div className="flex flex-col lg:flex-row justify-center items-start gap-8 relative z-10 min-h-[460px]">
  {/* Left Sidebar for Controls on Desktop */}
- <div className="w-full lg:w-72 flex flex-col gap-4 order-2 lg:order-1 h-auto">
+ <div className="w-full lg:w-72 flex flex-col gap-4 order-1 lg:order-1 h-auto">
  <div className="bg-surface/40 backdrop-blur-md border border-subtle rounded-[2.5rem] p-6 space-y-5 shadow-sm">
  <div>
  <h3 className="text-[10px] font-black text-text-muted uppercase tracking-[0.2em] mb-3">Filters</h3>
@@ -150,7 +150,7 @@ const MultipleChoice = () => {
  </div>
 
  {/* Main Card Area */}
- <div className="flex-1 w-full order-1 lg:order-2">
+ <div className="flex-1 w-full order-2 lg:order-2">
  <div className="bg-surface/20 backdrop-blur-sm border border-subtle rounded-[2.5rem] p-8 md:p-12 shadow-sm relative overflow-hidden">
  <div className="text-center mb-10 relative z-10">
  <span className="text-sm text-text-muted font-bold uppercase tracking-[0.3em] mb-4 block">Translate this</span>

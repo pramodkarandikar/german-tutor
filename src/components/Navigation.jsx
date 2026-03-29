@@ -75,13 +75,13 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
 
             {/* Fullscreen Overlay Menu */}
             {isMenuOpen && (
-                <div className="fixed inset-0 z-[50] bg-background animate-in fade-in duration-300 flex flex-col items-center justify-center p-6 pt-28 overflow-y-auto">
-                    <div className="w-full max-w-4xl mb-6 text-center animate-in slide-in-from-bottom-4 duration-500 delay-100">
+                <div className="fixed inset-0 z-[50] bg-background animate-in fade-in duration-300 flex flex-col items-center justify-start p-4 pt-32 md:p-6 md:pt-36 overflow-y-auto">
+                    <div className="w-full max-w-4xl mb-6 text-center animate-in slide-in-from-bottom-4 duration-500 delay-100 md:mt-auto">
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-text mb-2">Where would you like to start?</h2>
                         <p className="text-text-muted text-sm md:text-base">Select a practice mode to begin</p>
                     </div>
 
-                    <div className="w-full max-w-6xl grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 pb-20 px-4">
+                    <div className="w-full max-w-6xl grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 pb-20 px-4 md:pb-6 md:mb-auto">
                         {navItems.map((item, index) => {
                             const isActive = currentView === item.id;
                             // Adding the color class safely using style instead if needed, but tailwind processes these in dev

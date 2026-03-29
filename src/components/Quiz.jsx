@@ -131,7 +131,7 @@ const Quiz = () => {
 
  <div className="flex flex-col lg:flex-row justify-center items-stretch gap-8 relative z-10 min-h-[460px]">
  {/* Left Sidebar for Controls on Desktop */}
- <div className="w-full lg:w-72 flex flex-col gap-4 order-2 lg:order-1 h-auto">
+ <div className="w-full lg:w-72 flex flex-col gap-4 order-1 lg:order-1 h-auto">
  <div className="bg-surface/40 backdrop-blur-md border border-subtle rounded-[2.5rem] p-6 space-y-5 shadow-sm">
  <div>
  <h3 className="text-[10px] font-black text-text-muted uppercase tracking-[0.2em] mb-3">Filters</h3>
@@ -168,7 +168,7 @@ const Quiz = () => {
  </div>
 
  {/* Main Card Area */}
- <div className="flex-1 w-full order-1 lg:order-2 flex flex-col justify-between">
+ <div className="flex-1 w-full order-2 lg:order-2 flex flex-col justify-between">
  <div className="relative h-[380px] flex items-center justify-center mb-10 w-full max-w-2xl mx-auto">
  {/* Card Stack Effect (Decorative) */}
  {/* <div className="absolute w-[88%] h-[340px] bg-surface/30 border border-subtle/50 rounded-[2.5rem] translate-y-10 scale-[0.88] opacity-20 -z-10"/>
