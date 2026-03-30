@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, PenTool, LayoutGrid, Type, Link2, Edit3, List, Repeat, Languages, MessageCircle, Menu, X } from 'lucide-react';
+import { BookOpen, PenTool, LayoutGrid, Edit3, List, Repeat, Languages, MessageCircle, Menu, X, Tags, Puzzle } from 'lucide-react';
 
 
 const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, children }) => {
@@ -8,8 +8,8 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
     const navItems = [
         { id: 'flashcards', label: 'Flashcards', description: 'Review essential vocabulary definitions', icon: BookOpen, color: 'text-rose-500', bg: 'bg-rose-500/5', hover: 'hover:bg-rose-500/15', border: 'border-rose-500/30' },
         { id: 'mcq', label: 'Multiple Choice', description: 'Test your knowledge with quick quizzes', icon: LayoutGrid, color: 'text-amber-500', bg: 'bg-amber-500/5', hover: 'hover:bg-amber-500/15', border: 'border-amber-500/30' },
-        { id: 'gender', label: 'Word Gender', description: 'Master Der, Die, and Das rules', icon: Type, color: 'text-emerald-500', bg: 'bg-emerald-500/5', hover: 'hover:bg-emerald-500/15', border: 'border-emerald-500/30' },
-        { id: 'prepositions', label: 'Prepositions', description: 'Learn verb prepositions effectively', icon: Link2, color: 'text-blue-500', bg: 'bg-blue-500/5', hover: 'hover:bg-blue-500/15', border: 'border-blue-500/30' },
+        { id: 'gender', label: 'Word Gender', description: 'Master Der, Die, and Das rules', icon: Tags, color: 'text-emerald-500', bg: 'bg-emerald-500/5', hover: 'hover:bg-emerald-500/15', border: 'border-emerald-500/30' },
+        { id: 'prepositions', label: 'Prepositions', description: 'Learn verb prepositions effectively', icon: Puzzle, color: 'text-blue-500', bg: 'bg-blue-500/5', hover: 'hover:bg-blue-500/15', border: 'border-blue-500/30' },
         { id: 'verb_practice', label: 'Verbs Practice', description: 'Using past participles of common German verbs', icon: Edit3, color: 'text-purple-500', bg: 'bg-purple-500/5', hover: 'hover:bg-purple-500/15', border: 'border-purple-500/30' },
         { id: 'adjective_practice', label: 'Adjectives Quiz', description: 'Practice adjectives for different scenarios', icon: List, color: 'text-teal-500', bg: 'bg-teal-500/5', hover: 'hover:bg-teal-500/15', border: 'border-teal-500/30' },
         { id: 'opposite_practice', label: 'Opposites Match', description: 'Match opposing word pairs rapidly', icon: Repeat, color: 'text-pink-500', bg: 'bg-pink-500/5', hover: 'hover:bg-pink-500/15', border: 'border-pink-500/30' },
