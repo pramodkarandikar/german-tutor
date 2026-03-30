@@ -12,7 +12,7 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
         { id: 'prepositions', label: 'Prepositions', description: 'Learn verb prepositions effectively', icon: Puzzle, color: 'text-blue-500', bg: 'bg-blue-500/5', hover: 'hover:bg-blue-500/15', border: 'border-blue-500/30' },
         { id: 'verb_practice', label: 'Verbs Practice', description: 'Using past participles of common German verbs', icon: Edit3, color: 'text-purple-500', bg: 'bg-purple-500/5', hover: 'hover:bg-purple-500/15', border: 'border-purple-500/30' },
         { id: 'adjective_practice', label: 'Adjectives Quiz', description: 'Practice adjectives for different scenarios', icon: List, color: 'text-teal-500', bg: 'bg-teal-500/5', hover: 'hover:bg-teal-500/15', border: 'border-teal-500/30' },
-        { id: 'opposite_practice', label: 'Opposites Match', description: 'Match opposing word pairs rapidly', icon: Repeat, color: 'text-pink-500', bg: 'bg-pink-500/5', hover: 'hover:bg-pink-500/15', border: 'border-pink-500/30' },
+        { id: 'opposite_practice', label: 'Opposites Match', description: 'Match opposing word pairs rapidly', icon: Repeat, color: 'text-indigo-500', bg: 'bg-indigo-500/5', hover: 'hover:bg-indigo-500/15', border: 'border-indigo-500/30' },
     ];
 
     const bottomItems = [
