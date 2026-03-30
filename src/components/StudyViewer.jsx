@@ -19,7 +19,7 @@ const StudyViewer = ({ title, data, onBack }) => {
 
   // Some tables like articles-and-more have '__EMPTY' keys for columns, let's just use all keys if they contain useful data.
   // Actually, for articles-and-more, the first row contains the real headers sometimes. Let's just render whatever keys are present.
-  const actualColumns = Array.from(allKeys);
+  const actualColumns = Array.from(allKeys).filter(key => key !== 'id');
 
   return (
     <div className="animate-fade-in p-4 pb-12 w-full max-w-6xl mx-auto">
@@ -44,8 +44,8 @@ const StudyViewer = ({ title, data, onBack }) => {
           <thead>
             <tr className="bg-primary/5 border-b border-border">
               {actualColumns.map((col, idx) => (
-                <th key={idx} className="p-3 md:p-4 font-bold text-text text-sm md:text-base whitespace-nowrap">
-                  {col.startsWith('__EMPTY') ? '' : col}
+                <th key={idx} className="p-3 md:p-4 font-bold text-text text-sm md:text-base whitespace-nowrap capitalize">
+                  {col.startsWith('__EMPTY') ? '' : col.replace(/_/g, ' ')}
                 </th>
               ))}
             </tr>
