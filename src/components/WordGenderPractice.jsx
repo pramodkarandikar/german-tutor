@@ -208,7 +208,7 @@ const WordGenderPractice = () => {
  </div>
 
  {/* Feedback Area */}
- <div className="h-16 flex items-center justify-center mt-4">
+ <div className="min-h-[4rem] flex flex-col items-center justify-center mt-4 w-full">
  {feedback === 'correct' && (
  <div className="flex items-center gap-2 text-green-500 animate-bounce bg-green-500/10 px-5 py-2.5 rounded-[1.25rem] border border-green-500/20">
  <Check size={24} strokeWidth={2.5} />

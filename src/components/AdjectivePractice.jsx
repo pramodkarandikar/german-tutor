@@ -144,11 +144,11 @@ const AdjectivePractice = () => {
 
  if (selectedOption !== null) {
  if (option === currentAdjective.German) {
- buttonClass ="bg-green-500 text-white border-green-500 scale-105 shadow-2xl z-10";
+ buttonClass ="bg-green-500 text-white border-[2px] border-green-500 scale-105 shadow-2xl z-10";
  } else if (option === selectedOption && !isCorrect) {
- buttonClass ="bg-red-500/10 text-red-600 border-red-500";
+ buttonClass ="bg-red-500/10 text-red-600 border-[2px] border-red-500";
  } else {
- buttonClass ="bg-transparent border-subtle text-text/30 cursor-not-allowed";
+ buttonClass ="bg-transparent border-[2px] border-subtle text-text/30 cursor-not-allowed";
  }
  }
 

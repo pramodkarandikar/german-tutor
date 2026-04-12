@@ -180,7 +180,7 @@ const MultipleChoice = () => {
  disabled={!!selectedOption}
  className={btnClass}
  >
- <span className="flex-1 text-center">{option}</span>
+ <span className="flex-1 text-center break-words whitespace-normal">{option}</span>
  {selectedOption && option === currentCard.german && <CheckCircle size={28} strokeWidth={2.5} className="text-white shrink-0 ml-3"/>}
  {selectedOption && option === selectedOption && option !== currentCard.german && <XCircle size={28} strokeWidth={2.5} className="text-red-500 shrink-0 ml-3"/>}
  </button>

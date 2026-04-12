@@ -6,13 +6,13 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
     const [isMenuOpen, setIsMenuOpen] = useState(true);
 
     const navItems = [
-        { id: 'flashcards', label: 'Flashcards', description: 'Review essential vocabulary definitions', icon: BookOpen, color: 'text-rose-500', bg: 'bg-rose-500/5', hover: 'hover:bg-rose-500/15', border: 'border-rose-500/30' },
-        { id: 'mcq', label: 'Multiple Choice', description: 'Test your knowledge with quick quizzes', icon: LayoutGrid, color: 'text-amber-500', bg: 'bg-amber-500/5', hover: 'hover:bg-amber-500/15', border: 'border-amber-500/30' },
-        { id: 'gender', label: 'Word Gender', description: 'Master Der, Die, and Das rules', icon: Tags, color: 'text-emerald-500', bg: 'bg-emerald-500/5', hover: 'hover:bg-emerald-500/15', border: 'border-emerald-500/30' },
-        { id: 'prepositions', label: 'Prepositions', description: 'Learn verb prepositions effectively', icon: Puzzle, color: 'text-blue-500', bg: 'bg-blue-500/5', hover: 'hover:bg-blue-500/15', border: 'border-blue-500/30' },
-        { id: 'verb_practice', label: 'Verbs Practice', description: 'Using past participles of common German verbs', icon: Edit3, color: 'text-purple-500', bg: 'bg-purple-500/5', hover: 'hover:bg-purple-500/15', border: 'border-purple-500/30' },
-        { id: 'adjective_practice', label: 'Adjectives Quiz', description: 'Practice adjectives for different scenarios', icon: List, color: 'text-teal-500', bg: 'bg-teal-500/5', hover: 'hover:bg-teal-500/15', border: 'border-teal-500/30' },
-        { id: 'opposite_practice', label: 'Opposites Match', description: 'Match opposing word pairs rapidly', icon: Repeat, color: 'text-indigo-500', bg: 'bg-indigo-500/5', hover: 'hover:bg-indigo-500/15', border: 'border-indigo-500/30' },
+        { id: 'flashcards', label: 'Flashcards', description: 'Review essential vocabulary definitions', icon: BookOpen, color: 'text-neutral-900', bg: 'bg-neutral-900/15', hover: 'hover:bg-neutral-900/25', border: 'border-neutral-900/40' },
+        { id: 'mcq', label: 'Multiple Choice', description: 'Test your knowledge with quick quizzes', icon: LayoutGrid, color: 'text-red-600', bg: 'bg-red-600/15', hover: 'hover:bg-red-600/25', border: 'border-red-600/40' },
+        { id: 'gender', label: 'Word Gender', description: 'Master Der, Die, and Das rules', icon: Tags, color: 'text-yellow-500', bg: 'bg-yellow-500/20', hover: 'hover:bg-yellow-500/30', border: 'border-yellow-500/50' },
+        { id: 'prepositions', label: 'Prepositions', description: 'Learn verb prepositions effectively', icon: Puzzle, color: 'text-orange-500', bg: 'bg-orange-500/15', hover: 'hover:bg-orange-500/25', border: 'border-orange-500/40' },
+        { id: 'verb_practice', label: 'Verbs Practice', description: 'Using past participles of common German verbs', icon: Edit3, color: 'text-amber-900', bg: 'bg-amber-900/15', hover: 'hover:bg-amber-900/25', border: 'border-amber-900/40' },
+        { id: 'adjective_practice', label: 'Adjectives Quiz', description: 'Practice adjectives for different scenarios', icon: List, color: 'text-rose-900', bg: 'bg-rose-900/15', hover: 'hover:bg-rose-900/25', border: 'border-rose-900/40' },
+        { id: 'opposite_practice', label: 'Opposites Match', description: 'Match opposing word pairs rapidly', icon: Repeat, color: 'text-slate-500', bg: 'bg-slate-500/15', hover: 'hover:bg-slate-500/25', border: 'border-slate-500/40' },
     ];
 
     const bottomItems = [
@@ -75,13 +75,13 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
 
             {/* Fullscreen Overlay Menu */}
             {isMenuOpen && (
-                <div className="fixed inset-0 z-[50] bg-background animate-in fade-in duration-300 flex flex-col items-center justify-start p-4 pt-32 md:p-6 md:pt-36 overflow-y-auto">
-                    <div className="w-full max-w-4xl mb-6 text-center animate-in slide-in-from-bottom-4 duration-500 delay-100 md:mt-auto">
+                <div className="fixed inset-0 z-[50] bg-background animate-in fade-in duration-300 flex flex-col items-center justify-start p-4 pt-28 md:p-6 md:pt-32 overflow-y-auto">
+                    <div className="w-full max-w-4xl mb-6 mt-4 md:mt-8 text-center animate-in slide-in-from-bottom-4 duration-500 delay-100">
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-text mb-2">Where would you like to start?</h2>
                         <p className="text-text-muted text-sm md:text-base">Select a practice mode to begin</p>
                     </div>
 
-                    <div className="w-full max-w-6xl grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 pb-20 px-4 md:pb-6 md:mb-auto">
+                    <div className="w-full max-w-6xl grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 pb-20 px-4 md:pb-6">
                         {navItems.map((item, index) => {
                             const isActive = currentView === item.id;
                             // Adding the color class safely using style instead if needed, but tailwind processes these in dev
