@@ -5,42 +5,56 @@ import causalAdverbsData from '../data/causal-adverbs.json';
 
 const CausalAdverbPractice = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [options, setOptions] = useState([]);
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedWord, setSelectedWord] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
   const [score, setScore] = useState(0);
   const [attempts, setAttempts] = useState(0);
   const [gameWon, setGameWon] = useState(false);
+  const [wordBank, setWordBank] = useState([]);
 
-  // Shuffle adverbs on load
+  // Prepare questions: filter out ones without proper examples
   const questions = useMemo(() => {
-    return [...causalAdverbsData].sort(() => Math.random() - 0.5);
+    return causalAdverbsData
+      .filter(a => a.Example && !a.Example.startsWith('('))
+      .sort(() => Math.random() - 0.5);
   }, []);
 
-  const currentAdverb = questions[currentIndex];
+  const currentItem = questions[currentIndex];
 
-  // Generate options when the question changes
   useEffect(() => {
-    if (!currentAdverb) return;
-
-    const generateOptions = () => {
-      const correctAnswer = currentAdverb.German;
-      // Get 3 random other adverbs
-      const others = questions
-        .filter(a => a.German !== correctAnswer)
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 3)
-        .map(a => a.German);
-
-      // Combine and shuffle options
-      const allOptions = [correctAnswer, ...others].sort(() => Math.random() - 0.5);
-      setOptions(allOptions);
-    };
-
-    generateOptions();
-    setSelectedOption(null);
+    if (!currentItem) return;
+    
+    // Generate word bank (correct answer + 4 random others)
+    const correctAnswer = currentItem.German;
+    const otherWords = causalAdverbsData
+      .map(a => a.German)
+      .filter(w => w !== correctAnswer)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 4);
+      
+    setWordBank([correctAnswer, ...otherWords].sort(() => Math.random() - 0.5));
+    setSelectedWord(null);
     setIsCorrect(null);
-  }, [currentIndex, currentAdverb, questions]);
+  }, [currentIndex, currentItem]);
+
+  // parsing example to create the blank
+  const parsedExample = useMemo(() => {
+    if (!currentItem) return null;
+    const exampleText = currentItem.Example;
+    const match = exampleText.match(/^(.*?)\s*\((.*?)\)$/);
+    const germanEx = match ? match[1].trim() : exampleText;
+    const englishEx = match ? match[2].trim() : '';
+    
+    // Split the german sentence around the target word
+    const regex = new RegExp(`\\b${currentItem.German}\\b`, 'i');
+    const parts = germanEx.split(regex);
+    
+    if (parts.length === 1) {
+       return { parts: [germanEx, ''], english: englishEx, fullGerman: germanEx };
+    }
+    
+    return { parts, english: englishEx, fullGerman: germanEx };
+  }, [currentItem]);
 
   const playPronunciation = (text) => {
     const utterance = new SpeechSynthesisUtterance(text);
@@ -48,27 +62,23 @@ const CausalAdverbPractice = () => {
     window.speechSynthesis.speak(utterance);
   };
 
-  const handleOptionSelect = (option) => {
-    // Prevent clicking if already answered
-    if (selectedOption !== null) return;
-
-    setSelectedOption(option);
-    const correct = option === currentAdverb.German;
+  const handleWordSelect = (word) => {
+    if (selectedWord !== null) return;
+    
+    setSelectedWord(word);
+    const correct = word === currentItem.German;
     setIsCorrect(correct);
     setAttempts(prev => prev + 1);
 
     if (correct) {
       setScore(prev => prev + 1);
-      // Auto play correct pronunciation
-      playPronunciation(currentAdverb.German);
-
-      if (currentIndex >= Math.min(19, questions.length - 1)) {
-        // Win condition after 20 attempts, or max questions
+      playPronunciation(parsedExample.fullGerman);
+      
+      if (currentIndex >= Math.min(9, questions.length - 1)) {
         setTimeout(() => setGameWon(true), 1500);
       }
     } else {
-      // If incorrect, still show them the right pronunciation
-      playPronunciation(currentAdverb.German);
+      playPronunciation(word);
     }
   };
 
@@ -81,11 +91,11 @@ const CausalAdverbPractice = () => {
     setScore(0);
     setAttempts(0);
     setGameWon(false);
-    setSelectedOption(null);
+    setSelectedWord(null);
     setIsCorrect(null);
   };
 
-  if (!currentAdverb) return <div className="p-8 text-center">Loading...</div>;
+  if (!currentItem || !parsedExample) return <div className="p-8 text-center">Loading...</div>;
 
   if (gameWon) {
     return (
@@ -94,7 +104,7 @@ const CausalAdverbPractice = () => {
           <div className="w-32 h-32 bg-text text-background rounded-full flex items-center justify-center mx-auto shadow-2xl scale-110">
             <Trophy size={64} strokeWidth={2.5} />
           </div>
-          <h3 className="text-3xl md:text-5xl font-black tracking-tight text-text">Great job!</h3>
+          <h3 className="text-3xl md:text-5xl font-black tracking-tight text-text">Wunderbar!</h3>
           <p className="text-2xl text-text-muted font-light">You scored <span className="font-bold text-text">{score}</span> out of <span className="font-bold text-text">{attempts}</span>.</p>
           <div className="pt-8">
             <button
@@ -116,14 +126,14 @@ const CausalAdverbPractice = () => {
         <div>
           <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary via-primary/80 to-accent mb-3">Causal Adverbs</h1>
           <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">
-            Select the correct German adverb.
+            Fill in the blank with the correct causal adverb.
           </p>
         </div>
 
         <div className="flex gap-8 justify-center md:justify-start mt-6">
           <div className="text-center md:text-left bg-transparent">
             <div className="text-sm text-text-muted uppercase font-bold tracking-[0.2em] mb-1">Score</div>
-            <div className="font-black text-4xl leading-none text-primary">{score}</div>
+            <div className="font-black text-4xl leading-none text-amber-600">{score}</div>
           </div>
           <div className="text-center md:text-left bg-transparent">
             <div className="text-sm text-text-muted uppercase font-bold tracking-[0.2em] mb-1">Attempts</div>
@@ -132,96 +142,87 @@ const CausalAdverbPractice = () => {
         </div>
       </div>
 
-      <div className="mb-8 relative">
-        <div className="text-center mb-8">
-          <span className="text-sm text-text-muted font-bold uppercase tracking-[0.3em] mb-4 block">English</span>
-          <h2 className="text-2xl md:text-3xl font-black text-text font-sans tracking-tight">{currentAdverb.English}</h2>
-        </div>
+      <div className="mb-8 relative max-w-4xl mx-auto mt-12">
+        <div className="bg-surface rounded-[2rem] p-8 md:p-12 shadow-xl border border-border text-center">
+            
+          <h2 className="text-2xl md:text-4xl font-light text-text leading-relaxed mb-8 flex flex-wrap justify-center items-center gap-2">
+            <span>{parsedExample.parts[0]}</span>
+            <span className={`inline-flex items-center justify-center min-w-[120px] h-[50px] border-b-4 font-bold px-4 rounded-t-lg transition-all duration-300
+                ${selectedWord === null ? 'border-text-muted bg-border-subtle/50 text-transparent' : 
+                  isCorrect ? 'border-green-500 bg-green-50 text-green-600' : 'border-red-500 bg-red-50 text-red-600'}`}
+            >
+                {selectedWord || '______'}
+            </span>
+            <span>{parsedExample.parts[1]}</span>
+          </h2>
+          
+          <div className="flex items-center justify-center gap-3 text-text-muted mt-6 italic font-serif">
+              <span className="text-lg md:text-xl">"{parsedExample.english}"</span>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {options.map((option, index) => {
-            let buttonClass ="bg-transparent border-[2px] border-subtle text-text hover:border-border hover:shadow-xl hover:bg-white/5";
-
-            if (selectedOption !== null) {
-              if (option === currentAdverb.German) {
-                buttonClass ="bg-green-500 text-white border-[2px] border-green-500 scale-105 shadow-2xl z-10";
-              } else if (option === selectedOption && !isCorrect) {
-                buttonClass ="bg-red-500/10 text-red-600 border-[2px] border-red-500";
-              } else {
-                buttonClass ="bg-transparent border-[2px] border-subtle text-text/30 cursor-not-allowed";
-              }
-            }
-
-            return (
-              <button
-                key={index}
-                onClick={() => handleOptionSelect(option)}
-                disabled={selectedOption !== null}
-                className={`px-6 py-5 rounded-2xl text-xl md:text-2xl font-bold tracking-tight transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] text-center flex items-center justify-between group ${buttonClass}`}
+          <AnimatePresence>
+            {selectedWord !== null && (
+              <motion.div
+                initial={{ opacity: 0, height: 0, marginTop: 0 }}
+                animate={{ opacity: 1, height: 'auto', marginTop: 32 }}
+                exit={{ opacity: 0, height: 0, marginTop: 0 }}
+                className="flex justify-center"
               >
-                <span className="flex-1 truncate text-center">{option}</span>
-                {option === currentAdverb.German && selectedOption !== null && (
-                  <div
-                    className="p-3 -mr-2 rounded-full hover:bg-black/20 text-white transition-colors cursor-pointer"
-                    onClick={(e) => { e.stopPropagation(); playPronunciation(option); }}
-                    title="Play pronunciation"
+                <div className="flex flex-col items-center gap-4">
+                  {!isCorrect && (
+                    <p className="text-red-500 font-bold bg-red-50 px-6 py-2 rounded-full border border-red-100">
+                      The correct word was <span className="italic text-red-700">{currentItem.German}</span> ({currentItem.English})
+                    </p>
+                  )}
+                  <button
+                    onClick={handleNext}
+                    className={`px-10 py-4 rounded-[2rem] font-bold text-xl flex items-center gap-3 transition-all duration-300 shadow-lg hover:scale-105 border-2
+                      ${isCorrect
+                        ? 'bg-green-500 text-white border-transparent hover:bg-green-600'
+                        : 'bg-text text-background border-transparent hover:bg-black'
+                      }`}
                   >
-                    <Volume2 size={28} strokeWidth={2.5} />
-                  </div>
-                )}
-              </button>
-            );
-          })}
+                    Continue <ArrowRight size={24} strokeWidth={2.5} />
+                  </button>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
 
-      <AnimatePresence>
-        {selectedOption !== null && (() => {
-          const exampleText = currentAdverb.Example || '';
-          const match = exampleText.match(/^(.*?)\s*\((.*?)\)$/);
-          const germanEx = match ? match[1].trim() : exampleText;
-          const englishEx = match ? match[2].trim() : '';
+      <div className="max-w-4xl mx-auto">
+         <h3 className="text-sm text-text-muted font-bold uppercase tracking-[0.2em] mb-4 text-center">Word Bank</h3>
+         <div className="flex flex-wrap justify-center gap-3">
+            {wordBank.map((word, index) => {
+              const isSelected = selectedWord === word;
+              const isCorrectAnswer = word === currentItem.German;
+              
+              let buttonStyle = "bg-surface border-2 border-border text-text hover:border-amber-500 hover:shadow-md hover:-translate-y-1";
+              
+              if (selectedWord !== null) {
+                  if (isSelected) {
+                      buttonStyle = isCorrect ? "bg-green-500 text-white border-green-500 scale-105 shadow-lg" : "bg-red-500 text-white border-red-500 scale-95 opacity-80";
+                  } else if (isCorrectAnswer && !isCorrect) {
+                      buttonStyle = "bg-green-50 text-green-600 border-green-300 border-dashed animate-pulse";
+                  } else {
+                      buttonStyle = "bg-background border-border text-text/30 cursor-not-allowed opacity-50";
+                  }
+              }
 
-          return (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="mt-16 border-l-[6px] border-primary pl-8 py-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 max-w-4xl mx-auto"
-          >
-            <div className="flex-1">
-              <h4 className="text-xl font-bold font-mono uppercase tracking-[0.2em] text-text-muted mb-4 flex items-center gap-4">
-                Example Sentence
+              return (
                 <button
-                  onClick={() => playPronunciation(germanEx)}
-                  className="p-2 rounded-full border-2 border-subtle hover:border-text hover:bg-text hover:text-background transition-all"
-                  title="Play Example Sentence"
+                  key={index}
+                  onClick={() => handleWordSelect(word)}
+                  disabled={selectedWord !== null}
+                  className={`px-6 py-3 rounded-xl text-lg font-bold transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] ${buttonStyle}`}
                 >
-                  <Volume2 size={20} strokeWidth={2.5} />
+                  {word}
                 </button>
-              </h4>
-              <p className="text-2xl md:text-3xl text-text italic font-light leading-snug mb-2">
-                {germanEx}
-              </p>
-              {englishEx && (
-                <p className="text-lg text-text-muted font-light leading-snug">
-                  {englishEx}
-                </p>
-              )}
-            </div>
-            <button
-              onClick={handleNext}
-              className={`px-10 py-5 rounded-[2rem] font-bold text-2xl flex items-center gap-4 transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] whitespace-nowrap shadow-xl hover:scale-105 border-4
-                ${isCorrect
-                  ? 'bg-green-500 text-white border-transparent hover:border-green-600'
-                  : 'bg-text text-background border-transparent hover:border-border'
-                }`}
-            >
-              Next <ArrowRight size={28} strokeWidth={2.5} />
-            </button>
-          </motion.div>
-        );})()}
-      </AnimatePresence>
+              );
+            })}
+         </div>
+      </div>
     </div>
   );
 };
