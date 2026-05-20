@@ -13,6 +13,7 @@ const StudyMenu = ({ onSelect }) => {
     { id: 'expressions', label: 'Expressions', desc: 'Common phrases', color: 'text-emerald-500', bg: 'bg-emerald-500/10', border: 'border-emerald-500/30' },
     { id: 'articles-and-more', label: 'Articles & More', desc: 'Grammar tables', color: 'text-sky-500', bg: 'bg-sky-500/10', border: 'border-sky-500/30' },
     { id: 'local-prepositions', label: 'Local Prepositions', desc: 'Wo, wohin, woher', color: 'text-orange-500', bg: 'bg-orange-500/10', border: 'border-orange-500/30' },
+    { id: 'causal-adverbs', label: 'Causal Adverbs', desc: 'Reasoning adverbs', color: 'text-violet-500', bg: 'bg-violet-500/10', border: 'border-violet-500/30' },
   ];
 
   return (

@@ -10,6 +10,7 @@ import VerbPrepositionPractice from './components/VerbPrepositionPractice';
 import VerbPractice from './components/VerbPractice';
 import AdjectivePractice from './components/AdjectivePractice';
 import OppositePractice from './components/OppositePractice';
+import CausalAdverbPractice from './components/CausalAdverbPractice';
 import Navigation from './components/Navigation';
 
 import Alphabet from './components/Alphabet';
@@ -28,6 +29,7 @@ import daUsageData from './data/da-usage.json';
 import expressionsData from './data/expressions.json';
 import articlesAndMoreData from './data/articles-and-more.json';
 import localPrepositionsData from './data/local-prepositions.json';
+import causalAdverbsData from './data/causal-adverbs.json';
 function App() {
  const [currentView, setCurrentView] = useState('flashcards');
  const [overlayView, setOverlayView] = useState(null);
@@ -61,6 +63,7 @@ function App() {
  {currentView === 'verb_practice' && <VerbPractice />}
  {currentView === 'adjective_practice' && <AdjectivePractice />}
  {currentView === 'opposite_practice' && <OppositePractice />}
+ {currentView === 'causal_adverbs' && <CausalAdverbPractice />}
  {currentView === 'settings' && <Settings />}
  </Navigation>
 
@@ -93,6 +96,7 @@ function App() {
             {overlayView === 'study_expressions' && <StudyViewer title="Expressions" data={expressionsData} onBack={() => setOverlayView('study_menu')} />}
             {overlayView === 'study_articles-and-more' && <StudyViewer title="Articles and More" data={articlesAndMoreData} onBack={() => setOverlayView('study_menu')} />}
             {overlayView === 'study_local-prepositions' && <StudyViewer title="Local Prepositions" data={localPrepositionsData} onBack={() => setOverlayView('study_menu')} />}
+            {overlayView === 'study_causal-adverbs' && <StudyViewer title="Causal Adverbs" data={causalAdverbsData} onBack={() => setOverlayView('study_menu')} />}
           </div>
  </div>
  </div>
