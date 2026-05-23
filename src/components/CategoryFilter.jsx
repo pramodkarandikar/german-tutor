@@ -53,7 +53,7 @@ const CategoryFilter = ({ categories, selectedCategories, onToggleCategory }) =>
                                 initial={{ opacity: 0, scale: 0.95, y: 30 }}
                                 animate={{ opacity: 1, scale: 1, y: 0 }}
                                 exit={{ opacity: 0, scale: 0.95, y: 30 }}
-                                className="relative w-full max-w-4xl max-h-full flex flex-col bg-surface border-2 border-subtle/50 rounded-[2.5rem] shadow-2xl overflow-hidden pointer-events-auto ring-1 ring-border/10"
+                                className="relative w-full max-w-4xl max-h-full flex flex-col bg-surface border-2 border-subtle/50 rounded-[1rem] shadow-2xl overflow-hidden pointer-events-auto ring-border/10"
                             >
                                 <div className="p-8 pb-6 flex items-center justify-between border-b border-subtle bg-surface/50 backdrop-blur-md sticky top-0 z-10 shrink-0">
                                     <div className="pr-12">
