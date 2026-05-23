@@ -69,26 +69,24 @@ const WordGenderPractice = () => {
  ];
 
  return (
- <div className="grid lg:grid-cols-3 gap-6 w-full max-w-6xl mx-auto animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)]">
- {structuredRules.map((category, idx) => (
- <div key={idx} className={`bg-surface/20 backdrop-blur-sm border-[2px] rounded-[2rem] p-6 shadow-sm flex flex-col h-full border-${category.color}-500/20`}>
- <div className={`text-2xl font-black mb-6 pb-4 border-b-[3px] border-${category.color}-500/20 text-${category.color}-600 ${category.color}-400`}>
- {category.gender}
- </div>
- <div className="space-y-4 flex-1">
- {category.rules.map((r, idx) => (
- <div key={idx} className="flex flex-col gap-1 bg-transparent border-l-4 border-subtle pl-3 py-1 hover:border-primary/50 transition-colors">
- <div className="text-base font-bold text-text tracking-tight leading-snug">{r.rule}</div>
- <div className="text-text-muted text-sm italic font-light">
- <span className="font-bold font-sans text-text">{r.example}</span>
- </div>
- </div>
- ))}
- </div>
- </div>
- ))}
- </div>
- );
+  <div className="grid lg:grid-cols-3 gap-6 w-full max-w-7xl mx-auto animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)]">
+  {structuredRules.map((category, idx) => (
+  <div key={idx} className={`bg-surface/20 backdrop-blur-sm border-[2px] rounded-[2rem] p-5 shadow-sm flex flex-col h-full border-${category.color}-500/20`}>
+  <div className={`text-xl md:text-2xl font-black mb-4 pb-3 border-b-[2px] border-${category.color}-500/20 text-${category.color}-600 ${category.color}-400`}>
+  {category.gender}
+  </div>
+  <div className="flex flex-wrap gap-2 md:gap-2.5 flex-1 content-start">
+  {category.rules.map((r, idx) => (
+  <div key={idx} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-${category.color}-500/20 bg-${category.color}-500/5 hover:bg-${category.color}-500/10 transition-colors`}>
+  <span className="text-sm font-bold text-text whitespace-nowrap">{r.rule}</span>
+  <span className="text-[11px] text-text-muted italic whitespace-nowrap">{r.example}</span>
+  </div>
+  ))}
+  </div>
+  </div>
+  ))}
+  </div>
+  );
  };
 
  if (!currentWord && mode === 'practice') return <div className="text-center p-8">Loading...</div>;

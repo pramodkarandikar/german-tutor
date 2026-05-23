@@ -82,7 +82,7 @@ function App() {
  >
  <X size={24} />
  </button>
-          <div className="flex-1 overflow-y-auto p-4 pt-16 sm:p-8 sm:pt-20 custom-scrollbar">
+          <div className="flex-1 overflow-y-auto p-4 pt-12 sm:p-8 sm:pt-12 custom-scrollbar">
             {overlayView === 'alphabet' && <Alphabet />}
             {overlayView === 'pronunciation' && <PronunciationRules />}
             {overlayView === 'study_menu' && <StudyMenu onSelect={(id) => setOverlayView(`study_${id}`)} />}

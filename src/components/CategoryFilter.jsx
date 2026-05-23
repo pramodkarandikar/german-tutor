@@ -90,32 +90,37 @@ const CategoryFilter = ({ categories, selectedCategories, onToggleCategory }) =>
                                     </div>
                                 </div>
 
-                                <div className="p-4 sm:p-8 bg-surface border-t border-subtle flex flex-wrap sm:flex-nowrap gap-4 sm:gap-6 shrink-0 backdrop-blur-md">
-                                    <button
-                                        onClick={() => {
-                                            onToggleCategory('All');
-                                            setIsOpen(false);
-                                        }}
-                                        className={`flex-[1] flex items-center justify-center gap-2 py-4 sm:py-5 px-4 rounded-2xl font-black transition-all text-[15px] sm:text-base border-2
- ${selectedCategories.length === 0
-                                                ? 'bg-gradient-to-r from-primary to-accent text-white border-transparent shadow-md'
-                                                : 'bg-surface text-text border-subtle hover:border-border hover:bg-surface/80'}`}
-                                    >
-                                        <span>Show All</span>
-                                        {selectedCategories.length === 0 && <Check size={18} strokeWidth={3} />}
-                                    </button>
-                                    <button
-                                        onClick={() => onToggleCategory('All')}
-                                        className="flex-[1] py-4 sm:py-5 px-4 rounded-2xl border-2 border-subtle font-black text-text-muted hover:text-text hover:border-border transition-all text-[15px] sm:text-base"
-                                    >
-                                        Reset
-                                    </button>
-                                    <button
-                                        onClick={() => setIsOpen(false)}
-                                        className="flex-[1] sm:flex-[2] py-4 sm:py-5 px-4 rounded-2xl bg-text text-background font-black border-2 border-text hover:bg-transparent hover:text-text transition-all shadow-xl text-[15px] sm:text-base tracking-wide"
-                                    >
-                                        Apply Filters
-                                    </button>
+                                <div className="p-4 sm:p-6 bg-surface border-t border-subtle flex items-center justify-between shrink-0 backdrop-blur-md">
+                                    <label className="flex items-center gap-2.5 cursor-pointer group select-none">
+                                        <div className={`w-5 h-5 rounded flex items-center justify-center transition-colors border-2 ${selectedCategories.length === 0 ? 'bg-primary border-primary text-white' : 'border-subtle bg-transparent group-hover:border-border text-transparent'}`}>
+                                            <Check size={14} strokeWidth={3} />
+                                        </div>
+                                        <span className="text-sm font-bold text-text">Show All</span>
+                                        <input 
+                                            type="checkbox" 
+                                            className="sr-only" 
+                                            checked={selectedCategories.length === 0}
+                                            onChange={() => {
+                                                if (selectedCategories.length !== 0) {
+                                                    onToggleCategory('All');
+                                                }
+                                            }}
+                                        />
+                                    </label>
+                                    <div className="flex gap-3">
+                                        <button
+                                            onClick={() => onToggleCategory('All')}
+                                            className="py-2.5 px-5 rounded-xl border-2 border-subtle font-bold text-text-muted hover:text-text hover:border-border transition-all text-sm"
+                                        >
+                                            Reset
+                                        </button>
+                                        <button
+                                            onClick={() => setIsOpen(false)}
+                                            className="py-2.5 px-6 rounded-xl bg-text text-background font-bold border-2 border-text hover:bg-transparent hover:text-text transition-all shadow-md text-sm"
+                                        >
+                                            Apply Filters
+                                        </button>
+                                    </div>
                                 </div>
                             </motion.div>
                         </div>

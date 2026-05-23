@@ -61,7 +61,7 @@ const VerbPrepositionPractice = () => {
  placeholder="Search verbs, translations, prepositions, or cases..."
  value={searchQuery}
  onChange={(e) => setSearchQuery(e.target.value)}
- className="w-full p-6 text-2xl font-bold bg-transparent border-2 border-subtle focus:border-border rounded-2xl text-text outline-none transition-all placeholder:text-text/20"
+ className="w-full p-6 text-xl bg-transparent border-2 border-subtle focus:border-border rounded-2xl text-text outline-none transition-all placeholder:text-text/20"
  />
  </div>
 

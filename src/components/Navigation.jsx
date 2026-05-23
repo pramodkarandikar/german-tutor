@@ -76,7 +76,7 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
 
             {/* Fullscreen Overlay Menu */}
             {isMenuOpen && (
-                <div className="fixed inset-0 z-[50] bg-background animate-in fade-in duration-300 flex flex-col items-center justify-start p-4 pt-28 md:p-6 md:pt-32 overflow-y-auto">
+                <div className="fixed inset-0 z-[50] bg-background animate-in fade-in duration-300 flex flex-col items-center justify-start p-4 pt-20 md:p-6 md:pt-24 overflow-y-auto">
                     <div className="w-full max-w-4xl mb-6 mt-4 md:mt-8 text-center animate-in slide-in-from-bottom-4 duration-500 delay-100">
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-text mb-2">Where would you like to start?</h2>
                         <p className="text-text-muted text-sm md:text-base">Select a practice mode to begin</p>
@@ -121,7 +121,7 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
 
             {/* Main Content Area */}
             <main className="flex-1 w-full min-h-screen transition-all duration-300 bg-background text-text">
-                <div className="pt-24 md:pt-28 pb-12 px-4 md:px-6 w-full max-w-5xl mx-auto h-full box-border">
+                <div className="pt-12 md:pt-16 pb-12 px-4 md:px-6 w-full max-w-7xl mx-auto h-full box-border">
                     {children}
                 </div>
             </main>
