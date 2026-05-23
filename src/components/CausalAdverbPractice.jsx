@@ -133,7 +133,7 @@ const CausalAdverbPractice = () => {
         <div className="flex gap-8 justify-center md:justify-start mt-6">
           <div className="text-center md:text-left bg-transparent">
             <div className="text-sm text-text-muted uppercase font-bold tracking-[0.2em] mb-1">Score</div>
-            <div className="font-black text-4xl leading-none text-amber-600">{score}</div>
+            <div className="font-black text-4xl leading-none text-primary">{score}</div>
           </div>
           <div className="text-center md:text-left bg-transparent">
             <div className="text-sm text-text-muted uppercase font-bold tracking-[0.2em] mb-1">Attempts</div>
