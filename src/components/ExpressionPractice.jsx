@@ -128,7 +128,7 @@ const ExpressionPractice = ({ onBack }) => {
           
           {exampleText && (
             <div className="text-sm md:text-base text-text-muted/90 font-medium bg-background/50 py-3 px-4 rounded-xl inline-block max-w-2xl">
-              Beispiel: {exampleText}
+              {exampleText}
             </div>
           )}
         </div>
