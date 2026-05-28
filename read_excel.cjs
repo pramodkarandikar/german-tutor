@@ -17,3 +17,5 @@ function convertToJson(filePath, outPath) {
 convertToJson('d:/Food for thought/experiments/input-data/100-verbs-pp.xlsx', './src/data/verbs_pp.json');
 convertToJson('d:/Food for thought/experiments/input-data/adjectives.xlsx', './src/data/adjectives.json');
 convertToJson('d:/Food for thought/experiments/input-data/opposites.xlsx', './src/data/opposites.json');
+convertToJson('d:/Food for thought/experiments/input-data/expressions-idioms.xlsx', './src/data/expressions.json');
+

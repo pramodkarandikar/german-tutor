@@ -156,7 +156,7 @@ const CausalAdverbPractice = () => {
             <span>{parsedExample.parts[1]}</span>
           </h2>
           
-          <div className="flex items-center justify-center gap-3 text-text-muted mt-6 italic font-serif">
+          <div className="text-sm md:text-base text-text-muted/80 font-medium bg-background/50 py-3 px-4 rounded-xl inline-block max-w-2xl">
               <span className="text-lg md:text-xl">"{parsedExample.english}"</span>
           </div>
 

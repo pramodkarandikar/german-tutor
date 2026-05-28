@@ -11,6 +11,7 @@ import VerbPractice from './components/VerbPractice';
 import AdjectivePractice from './components/AdjectivePractice';
 import OppositePractice from './components/OppositePractice';
 import CausalAdverbPractice from './components/CausalAdverbPractice';
+import ExpressionPractice from './components/ExpressionPractice';
 import Navigation from './components/Navigation';
 
 import Alphabet from './components/Alphabet';
@@ -64,6 +65,7 @@ function App() {
  {currentView === 'adjective_practice' && <AdjectivePractice />}
  {currentView === 'opposite_practice' && <OppositePractice />}
  {currentView === 'causal_adverbs' && <CausalAdverbPractice />}
+ {currentView === 'expression_practice' && <ExpressionPractice />}
  {currentView === 'settings' && <Settings />}
  </Navigation>
 

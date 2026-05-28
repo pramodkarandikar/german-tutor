@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, PenTool, LayoutGrid, Edit3, List, Repeat, Languages, MessageCircle, Menu, X, Tags, Puzzle, Zap } from 'lucide-react';
+import { BookOpen, PenTool, LayoutGrid, Edit3, List, Repeat, Languages, MessageCircle, Menu, X, Tags, Puzzle, Zap, Wand2 } from 'lucide-react';
 
 
 const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, children }) => {
@@ -14,6 +14,7 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
         { id: 'adjective_practice', label: 'Adjectives Quiz', description: 'Practice adjectives for different scenarios', icon: List, color: 'text-rose-900', bg: 'bg-rose-900/15', hover: 'hover:bg-rose-900/25', border: 'border-rose-900/40' },
         { id: 'opposite_practice', label: 'Opposites Match', description: 'Match opposing word pairs rapidly', icon: Repeat, color: 'text-slate-500', bg: 'bg-slate-500/15', hover: 'hover:bg-slate-500/25', border: 'border-slate-500/40' },
         { id: 'causal_adverbs', label: 'Causal Adverbs', description: 'Practice using causal adverbs', icon: Zap, color: 'text-violet-500', bg: 'bg-violet-500/15', hover: 'hover:bg-violet-500/25', border: 'border-violet-500/40' },
+        { id: 'expression_practice', label: 'Idioms Builder', description: 'Reconstruct expressions', icon: Wand2, color: 'text-emerald-500', bg: 'bg-emerald-500/15', hover: 'hover:bg-emerald-500/25', border: 'border-emerald-500/40' },
     ];
 
     const bottomItems = [
@@ -82,7 +83,7 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
                         <p className="text-text-muted text-sm md:text-base">Select a practice mode to begin</p>
                     </div>
 
-                    <div className="w-full max-w-6xl grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 pb-20 px-4 md:pb-6">
+                    <div className="w-full max-w-6xl grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4 pb-20 px-4 md:pb-6">
                         {navItems.map((item, index) => {
                             const isActive = currentView === item.id;
                             // Adding the color class safely using style instead if needed, but tailwind processes these in dev
