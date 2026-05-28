@@ -36,8 +36,13 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
         <div className="min-h-screen bg-background text-text flex overflow-hidden relative">
             {/* Top Left - Logo */}
             <div className="fixed top-0 left-4 md:left-8 z-[60]">
-                <div className="bg-text shadow-xl border-x border-b border-white/10 px-6 pt-5 md:pt-7 pb-4 md:pb-5 rounded-b-[2rem] flex items-center justify-center transition-all duration-300 hover:shadow-2xl group">
-                    <h1 className="text-xl md:text-2xl font-logo tracking-tighter leading-none select-none text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent group-hover:from-accent group-hover:to-primary transition-all duration-500">
+                <div className="bg-white/80 backdrop-blur-xl shadow-lg border-2 border-neutral-300 px-7 pt-5 md:pt-6 pb-4 md:pb-5 rounded-b-2xl flex flex-col items-center justify-center transition-all duration-300 hover:shadow-xl group">
+                    <div className="flex gap-0 w-full mb-3 rounded-full overflow-hidden">
+                        <div className="h-[3px] flex-1 bg-neutral-900 transition-all duration-500 group-hover:h-[4px]"></div>
+                        <div className="h-[3px] flex-1 bg-red-600 transition-all duration-500 group-hover:h-[4px]"></div>
+                        <div className="h-[3px] flex-1 bg-yellow-500 transition-all duration-500 group-hover:h-[4px]"></div>
+                    </div>
+                    <h1 className="text-xl md:text-2xl font-sans font-black tracking-tight leading-none select-none text-text transition-all duration-500">
                         Wise Umlaut
                     </h1>
                 </div>
