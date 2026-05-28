@@ -13,8 +13,8 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
         { id: 'verb_practice', label: 'Verbs Practice', description: 'Using past participles of common German verbs', icon: Edit3, color: 'text-amber-900', bg: 'bg-amber-900/15', hover: 'hover:bg-amber-900/25', border: 'border-amber-900/40' },
         { id: 'adjective_practice', label: 'Adjectives Quiz', description: 'Practice adjectives for different scenarios', icon: List, color: 'text-rose-900', bg: 'bg-rose-900/15', hover: 'hover:bg-rose-900/25', border: 'border-rose-900/40' },
         { id: 'opposite_practice', label: 'Opposites Match', description: 'Match opposing word pairs rapidly', icon: Repeat, color: 'text-slate-500', bg: 'bg-slate-500/15', hover: 'hover:bg-slate-500/25', border: 'border-slate-500/40' },
-        { id: 'causal_adverbs', label: 'Causal Adverbs', description: 'Practice using causal adverbs', icon: Zap, color: 'text-violet-500', bg: 'bg-violet-500/15', hover: 'hover:bg-violet-500/25', border: 'border-violet-500/40' },
-        { id: 'expression_practice', label: 'Idioms Builder', description: 'Reconstruct expressions', icon: Wand2, color: 'text-emerald-500', bg: 'bg-emerald-500/15', hover: 'hover:bg-emerald-500/25', border: 'border-emerald-500/40' },
+        { id: 'causal_adverbs', label: 'Causal Adverbs', description: 'Practice using causal adverbs', icon: Zap, color: 'text-amber-500', bg: 'bg-amber-500/15', hover: 'hover:bg-amber-500/25', border: 'border-amber-500/40' },
+        { id: 'expression_practice', label: 'Idioms Builder', description: 'Reconstruct expressions', icon: Wand2, color: 'text-stone-800', bg: 'bg-stone-800/15', hover: 'hover:bg-stone-800/25', border: 'border-stone-800/40' },
     ];
 
     const bottomItems = [
