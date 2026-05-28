@@ -117,9 +117,9 @@ const ExpressionPractice = ({ onBack }) => {
         </div>
       </div>
 
-      <div className="flex-1 flex flex-col justify-center gap-8">
+      <div className="flex-1 flex flex-col justify-center gap-4">
         {/* Context Card */}
-        <div className="bg-surface border border-border rounded-3xl p-6 md:p-8 shadow-sm text-center relative overflow-hidden">
+        <div className="bg-surface border border-border rounded-3xl p-4 md:p-5 shadow-sm text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-accent opacity-50"></div>
           
           <h2 className="text-2xl md:text-3xl font-black tracking-tight text-text mb-4 leading-tight">
@@ -134,10 +134,10 @@ const ExpressionPractice = ({ onBack }) => {
         </div>
 
         {/* Builder Area */}
-        <div className="space-y-6 mt-4">
+        <div className="space-y-3 mt-1">
           {/* Selected Words Area (The slots) */}
           <div 
-            className={`min-h-[80px] p-4 rounded-2xl border-2 flex flex-wrap gap-2 items-center justify-center transition-all duration-300
+            className={`min-h-[60px] p-3 rounded-2xl border-2 flex flex-wrap gap-2 items-center justify-center transition-all duration-300
               ${status === 'correct' ? 'border-green-500 bg-green-500/10' : 
                 status === 'incorrect' ? 'border-red-500 bg-red-500/10 animate-[shake_0.5s_ease-in-out]' : 
                 'border-dashed border-border bg-surface/50'}`}
@@ -169,7 +169,7 @@ const ExpressionPractice = ({ onBack }) => {
           </div>
 
           {/* Word Bank */}
-          <div className="min-h-[120px] p-4 flex flex-wrap gap-3 items-center justify-center">
+          <div className="min-h-[80px] p-2 flex flex-wrap gap-3 items-center justify-center">
             <AnimatePresence mode="popLayout">
               {wordBank.map((wordObj) => (
                 <motion.button
@@ -189,7 +189,7 @@ const ExpressionPractice = ({ onBack }) => {
         </div>
 
         {/* Action Button */}
-        <div className="flex justify-center mt-4">
+        <div className="flex justify-center mt-2">
           <AnimatePresence mode="wait">
             {status === 'playing' ? (
               <motion.button
