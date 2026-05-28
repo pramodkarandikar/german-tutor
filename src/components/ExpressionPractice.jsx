@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { RefreshCw, Check, ArrowRight, Trophy, Volume2 } from 'lucide-react';
+import { RefreshCw, Check, ArrowRight, Trophy, Volume2, Eye } from 'lucide-react';
 import expressionsData from '../data/expressions.json';
 
 const ExpressionPractice = ({ onBack }) => {
@@ -87,6 +87,28 @@ const ExpressionPractice = ({ onBack }) => {
     }
   };
 
+  const handleShowAnswer = () => {
+    const targetWords = currentExpr['German Expression'].split(' ');
+    const allAvailable = [...wordBank, ...selectedWords];
+    
+    const newSelected = [];
+    const usedIds = new Set();
+    
+    targetWords.forEach(word => {
+      const match = allAvailable.find(w => w.word === word && !usedIds.has(w.id));
+      if (match) {
+        newSelected.push(match);
+        usedIds.add(match.id);
+      }
+    });
+    
+    setSelectedWords(newSelected);
+    setWordBank(allAvailable.filter(w => !usedIds.has(w.id)));
+    setStatus('correct');
+    setStreak(0);
+    playPronunciation(currentExpr['German Expression']);
+  };
+
   const handleNext = () => {
     initializeRound();
   };
@@ -98,22 +120,12 @@ const ExpressionPractice = ({ onBack }) => {
 
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-8 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)] pb-24 h-full flex flex-col">
-      <div className="flex justify-between items-center mb-6">
+      <div className="mb-6 text-center md:text-left relative z-10">
         <div>
           <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary via-primary/80 to-accent mb-3">
-            Expression Builder
+            German Expressions
           </h1>
           <p className="text-text-muted">Construct the German idiom</p>
-        </div>
-        <div className="flex gap-4">
-          <div className="text-center">
-            <div className="text-xs text-text-muted uppercase font-bold tracking-widest mb-1">Streak</div>
-            <div className="font-black text-2xl text-text">{streak}</div>
-          </div>
-          <div className="text-center">
-            <div className="text-xs text-text-muted uppercase font-bold tracking-widest mb-1">Score</div>
-            <div className="font-black text-2xl text-primary">{score}</div>
-          </div>
         </div>
       </div>
 
@@ -121,11 +133,11 @@ const ExpressionPractice = ({ onBack }) => {
         {/* Context Card */}
         <div className="bg-surface border border-border rounded-3xl p-4 md:p-5 shadow-sm text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-accent opacity-50"></div>
-          
+
           <h2 className="text-2xl md:text-3xl font-black tracking-tight text-text mb-4 leading-tight">
             {currentExpr['English Translation']}
           </h2>
-          
+
           {exampleText && (
             <div className="text-sm md:text-base text-text-muted/90 font-medium bg-background/50 py-3 px-4 rounded-xl inline-block max-w-2xl">
               {exampleText}
@@ -136,7 +148,7 @@ const ExpressionPractice = ({ onBack }) => {
         {/* Builder Area */}
         <div className="space-y-3 mt-1">
           {/* Selected Words Area (The slots) */}
-          <div 
+          <div
             className={`min-h-[60px] p-3 rounded-2xl border-2 flex flex-wrap gap-2 items-center justify-center transition-all duration-300
               ${status === 'correct' ? 'border-green-500 bg-green-500/10' : 
                 status === 'incorrect' ? 'border-red-500 bg-red-500/10 animate-[shake_0.5s_ease-in-out]' : 
@@ -189,37 +201,64 @@ const ExpressionPractice = ({ onBack }) => {
         </div>
 
         {/* Action Button */}
-        <div className="flex justify-center mt-2">
-          <AnimatePresence mode="wait">
-            {status === 'playing' ? (
+        <div className="flex flex-col items-center gap-4 mt-2">
+          <div className="flex justify-center w-full max-w-md">
+            <AnimatePresence mode="wait">
+              {status !== 'correct' ? (
+                <motion.div
+                  key="actions"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="flex flex-wrap justify-center gap-3 w-full"
+                >
+                  <button
+                    onClick={handleNext}
+                    className="px-6 py-4 rounded-2xl font-bold text-lg flex items-center gap-2 transition-all duration-300 bg-surface border-2 border-border text-text hover:bg-border/50 hover:scale-105 active:scale-95 flex-1 justify-center"
+                  >
+                    Skip
+                  </button>
+                  <button
+                    onClick={handleCheck}
+                    disabled={selectedWords.length === 0}
+                    className={`px-6 py-4 rounded-2xl font-black text-xl flex items-center gap-2 transition-all duration-300 flex-1 justify-center ${
+                      selectedWords.length > 0 
+                        ? 'bg-primary text-primary-foreground shadow-lg hover:shadow-xl hover:scale-105 active:scale-95' 
+                        : 'bg-surface border-2 border-border text-text-muted cursor-not-allowed'
+                    }`}
+                  >
+                    <Check size={24} strokeWidth={3} />
+                    Check
+                  </button>
+                </motion.div>
+              ) : (
+                <motion.button
+                  key="next"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  onClick={handleNext}
+                  className="px-8 py-4 rounded-2xl font-black text-xl flex items-center gap-2 bg-text text-background hover:bg-primary shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 w-full justify-center"
+                >
+                  Continue
+                  <ArrowRight size={24} strokeWidth={3} />
+                </motion.button>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <AnimatePresence>
+            {status !== 'correct' && (
               <motion.button
-                key="check"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                onClick={handleCheck}
-                disabled={selectedWords.length === 0}
-                className={`px-8 py-4 rounded-2xl font-black text-xl flex items-center gap-2 transition-all duration-300 ${
-                  selectedWords.length > 0 
-                    ? 'bg-primary text-primary-foreground shadow-lg hover:shadow-xl hover:scale-105 active:scale-95' 
-                    : 'bg-surface border-2 border-border text-text-muted cursor-not-allowed'
-                }`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={handleShowAnswer}
+                className="flex items-center gap-2 text-sm font-bold text-text-muted hover:text-primary transition-colors"
               >
-                <Check size={24} strokeWidth={3} />
-                Check Answer
+                <Eye size={16} />
+                Show Answer
               </motion.button>
-            ) : status === 'correct' ? (
-              <motion.button
-                key="next"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                onClick={handleNext}
-                className="px-8 py-4 rounded-2xl font-black text-xl flex items-center gap-2 bg-text text-background hover:bg-primary shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300"
-              >
-                Continue
-                <ArrowRight size={24} strokeWidth={3} />
-              </motion.button>
-            ) : null}
+            )}
           </AnimatePresence>
         </div>
       </div>
