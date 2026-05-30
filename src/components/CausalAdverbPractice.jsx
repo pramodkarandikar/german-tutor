@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Volume2, Trophy, RefreshCw, ArrowRight } from 'lucide-react';
+import PageHeader from './common/PageHeader';
+import ScoreStreak from './common/ScoreStreak';
 import causalAdverbsData from '../data/causal-adverbs.json';
 
 const CausalAdverbPractice = () => {
@@ -109,9 +111,9 @@ const CausalAdverbPractice = () => {
           <div className="pt-8">
             <button
               onClick={handleRestart}
-              className="px-10 py-5 bg-text text-background rounded-[2rem] font-bold text-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] inline-flex items-center gap-4 border-4 border-transparent hover:border-border"
+              className="px-8 py-4 bg-text text-background rounded-2xl font-bold text-xl hover:scale-105 hover:shadow-xl transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] inline-flex items-center gap-3 border-4 border-transparent hover:border-border"
             >
-              <RefreshCw size={28} strokeWidth={2.5} />
+              <RefreshCw size={24} strokeWidth={2.5} />
               Play Again
             </button>
           </div>
@@ -122,28 +124,14 @@ const CausalAdverbPractice = () => {
 
   return (
     <div className="max-w-6xl mx-auto p-4 md:p-8 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)] space-y-6 pb-24">
-      <div className="flex flex-col mb-6 gap-3 text-center md:text-left">
-        <div>
-          <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary via-primary/80 to-accent mb-3">Causal Adverbs</h1>
-          <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">
-            Fill in the blank with the correct causal adverb.
-          </p>
-        </div>
-
-        <div className="flex gap-8 justify-center md:justify-start mt-6">
-          <div className="text-center md:text-left bg-transparent">
-            <div className="text-sm text-text-muted uppercase font-bold tracking-[0.2em] mb-1">Score</div>
-            <div className="font-black text-4xl leading-none text-primary">{score}</div>
-          </div>
-          <div className="text-center md:text-left bg-transparent">
-            <div className="text-sm text-text-muted uppercase font-bold tracking-[0.2em] mb-1">Attempts</div>
-            <div className="font-black text-4xl leading-none text-text">{attempts}</div>
-          </div>
-        </div>
-      </div>
+      <PageHeader 
+        title="Causal Adverbs" 
+        description="Fill in the blank with the correct causal adverb." 
+        rightContent={<ScoreStreak score={{ correct: score, total: attempts }} />} 
+      />
 
       <div className="mb-8 relative max-w-4xl mx-auto mt-12">
-        <div className="bg-surface rounded-[2rem] p-8 md:p-12 shadow-xl border border-border text-center">
+        <div className="bg-surface rounded-2xl p-6 md:p-8 shadow-xl border border-border text-center">
             
           <h2 className="text-2xl md:text-4xl font-light text-text leading-relaxed mb-8 flex flex-wrap justify-center items-center gap-2">
             <span>{parsedExample.parts[0]}</span>
@@ -176,7 +164,7 @@ const CausalAdverbPractice = () => {
                   )}
                   <button
                     onClick={handleNext}
-                    className={`px-10 py-4 rounded-[2rem] font-bold text-xl flex items-center gap-3 transition-all duration-300 shadow-lg hover:scale-105 border-2
+                    className={`px-8 py-3 rounded-2xl font-bold text-lg flex items-center gap-3 transition-all duration-300 shadow-lg hover:scale-105 border-2
                       ${isCorrect
                         ? 'bg-green-500 text-white border-transparent hover:bg-green-600'
                         : 'bg-text text-background border-transparent hover:bg-black'
@@ -215,7 +203,7 @@ const CausalAdverbPractice = () => {
                   key={index}
                   onClick={() => handleWordSelect(word)}
                   disabled={selectedWord !== null}
-                  className={`px-6 py-3 rounded-xl text-lg font-bold transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] ${buttonStyle}`}
+                  className={`px-5 py-2.5 rounded-xl text-base md:text-lg font-bold transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] ${buttonStyle}`}
                 >
                   {word}
                 </button>

@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RefreshCw, Trophy, Volume2 } from 'lucide-react';
+import PageHeader from './common/PageHeader';
+import ScoreStreak from './common/ScoreStreak';
 import oppositesData from '../data/opposites.json';
 
 const OppositePractice = () => {
@@ -88,25 +90,11 @@ const OppositePractice = () => {
 
  return (
  <div className="max-w-6xl mx-auto p-4 md:p-8 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)] pb-24">
- <div className="flex flex-col mb-6 gap-3 text-center md:text-left">
- <div>
- <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary via-primary/80 to-accent mb-3">Opposites</h1>
- <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">
- Find the matching German antonyms pairs (e.g. groß ↔ klein).
- </p>
- </div>
-
- <div className="flex gap-8 justify-center md:justify-start mt-6">
- <div className="text-center md:text-left bg-transparent">
- <div className="text-sm text-text-muted uppercase font-bold tracking-[0.2em] mb-1">Score</div>
- <div className="font-black text-4xl leading-none text-primary">{score}</div>
- </div>
- <div className="text-center md:text-left bg-transparent">
- <div className="text-sm text-text-muted uppercase font-bold tracking-[0.2em] mb-1">Attempts</div>
- <div className="font-black text-4xl leading-none text-text">{attempts}</div>
- </div>
- </div>
- </div>
+ <PageHeader
+ title="Opposites"
+ description="Find the matching German antonyms pairs (e.g. groß ↔ klein)."
+ rightContent={<ScoreStreak score={{ correct: score, total: attempts }} />}
+ />
 
  {gameWon ? (
  <div className="text-center mt-16 space-y-8 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)]">
@@ -118,9 +106,9 @@ const OppositePractice = () => {
  <div className="pt-8">
  <button
  onClick={initializeGame}
- className="px-10 py-5 bg-text text-background rounded-[2rem] font-bold text-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] inline-flex items-center gap-4 border-4 border-transparent hover:border-border"
+ className="px-8 py-4 bg-text text-background rounded-2xl font-bold text-xl hover:scale-105 hover:shadow-xl transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] inline-flex items-center gap-3 border-4 border-transparent hover:border-border"
  >
- <RefreshCw size={28} strokeWidth={2.5} />
+ <RefreshCw size={24} strokeWidth={2.5} />
  Play Again
  </button>
  </div>
@@ -132,7 +120,7 @@ const OppositePractice = () => {
  const isMatched = matchedPairs.includes(card.pairId);
 
  if (isMatched) {
- return <div key={card.id} className="h-28 md:h-32 border-[2px] border-dashed border-subtle rounded-2xl md:rounded-[2rem]"></div>; // Placeholder
+ return <div key={card.id} className="h-24 md:h-28 border-[2px] border-dashed border-subtle rounded-2xl"></div>; // Placeholder
  }
 
  let cardClass ="bg-transparent text-text border-[2px] border-subtle hover:border-border hover:shadow-lg :bg-white/5";
@@ -149,7 +137,7 @@ const OppositePractice = () => {
  key={card.id}
  layoutId={card.id}
  onClick={() => handleCardClick(card)}
- className={`h-28 md:h-32 rounded-2xl md:rounded-[2rem] flex flex-col items-center justify-center p-4 text-center cursor-pointer transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] relative group select-none ${cardClass}`}
+ className={`h-24 md:h-28 rounded-2xl flex flex-col items-center justify-center p-4 text-center cursor-pointer transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] relative group select-none ${cardClass}`}
  whileTap={!isSelected ? { scale: 0.95 } : {}}
  >
  <span className={`font-sans text-lg md:text-xl xl:text-2xl font-black tracking-tight leading-none ${isSelected && !isIncorrect ? 'text-background' : 'text-text'}`}>

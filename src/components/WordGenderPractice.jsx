@@ -1,6 +1,8 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { DataContext } from '../contexts/DataContext';
 import { Check, X, RefreshCw, HelpCircle, Flame, BookOpen, PenTool } from 'lucide-react';
+import PageHeader from './common/PageHeader';
+import ScoreStreak from './common/ScoreStreak';
 
 const WordGenderPractice = () => {
  const { wordGenders } = useContext(DataContext);
@@ -69,9 +71,9 @@ const WordGenderPractice = () => {
  ];
 
  return (
-  <div className="grid lg:grid-cols-3 gap-6 w-full max-w-7xl mx-auto animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)]">
+  <div className="grid lg:grid-cols-3 gap-4 w-full max-w-7xl mx-auto animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)]">
   {structuredRules.map((category, idx) => (
-  <div key={idx} className={`bg-surface/20 backdrop-blur-sm border-[2px] rounded-[2rem] p-5 shadow-sm flex flex-col h-full border-${category.color}-500/20`}>
+  <div key={idx} className={`bg-surface/20 backdrop-blur-sm border-[2px] rounded-2xl p-5 shadow-sm flex flex-col h-full border-${category.color}-500/20`}>
   <div className={`text-xl md:text-2xl font-black mb-4 pb-3 border-b-[2px] border-${category.color}-500/20 text-${category.color}-600 ${category.color}-400`}>
   {category.gender}
   </div>
@@ -98,15 +100,11 @@ const WordGenderPractice = () => {
  <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none"/>
 
  {/* HEADER BLOCK */}
- {/* HEADER BLOCK */}
- <div className="mb-6 text-center md:text-left relative z-10">
- <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
- <div className="flex-1">
- <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary via-primary/80 to-accent mb-3">Word Gender</h1>
- <p className="text-sm md:text-base text-text-muted max-w-2xl font-light mb-6">
- {mode === 'practice' ? 'Master the articles (der/die/das) through rapid repetition.' : 'Study the comprehensive vocabulary list.'}
- </p>
-
+ <PageHeader
+ title="Word Gender"
+ description={mode === 'practice' ? 'Master the articles (der/die/das) through rapid repetition.' : 'Study the comprehensive vocabulary list.'}
+ rightContent={mode === 'practice' && <ScoreStreak streak={streak} />}
+ >
  <div className="flex flex-col xl:flex-row items-start xl:items-center gap-4">
  {/* MODE TOGGLE */}
  <div className="inline-flex p-1.5 bg-surface/80 border border-subtle rounded-2xl shadow-sm relative shrink-0">
@@ -148,27 +146,13 @@ const WordGenderPractice = () => {
  </div>
  )}
  </div>
- </div>
-
- {mode === 'practice' && (
- <div className="flex items-center gap-6 justify-center md:justify-end shrink-0 bg-surface/50 backdrop-blur-md border border-subtle px-7 py-4 rounded-[2rem] shadow-sm">
- <div className="text-center md:text-left">
- <div className="text-[10px] text-text-muted uppercase font-black tracking-[0.2em] mb-1">Streak</div>
- <div className={`font-black flex items-center justify-center md:justify-start gap-1.5 ${streak > 2 ? 'text-orange-500' : 'text-text'}`}>
- <Flame size={24} strokeWidth={streak > 2 ? 3 : 2} fill={streak > 2 ?"currentColor":"none"} className={streak > 2 ? 'animate-pulse' : ''} />
- <span className="text-3xl md:text-4xl leading-none tracking-tighter">{streak}</span>
- </div>
- </div>
- </div>
- )}
- </div>
- </div>
+ </PageHeader>
 
  {/* MAIN LAYOUT */}
  <div className="relative z-10 min-h-[400px] w-full">
  {mode === 'study' ? renderStudyMode() : (
  <div className="flex flex-col items-center gap-4 w-full max-w-4xl mx-auto">
- <div className="bg-surface/20 backdrop-blur-sm border border-subtle rounded-[2rem] p-5 md:p-6 shadow-sm relative overflow-hidden w-full">
+ <div className="bg-surface/20 backdrop-blur-sm border border-subtle rounded-2xl p-4 md:p-6 shadow-sm relative overflow-hidden w-full">
  <div className="text-center space-y-4 transition-all duration-300 mx-auto relative z-10">
  <div className="space-y-2 select-none mb-4">
  <span className="text-xs text-text-muted font-bold uppercase tracking-[0.3em] mb-2 block">Select Article</span>
@@ -214,7 +198,7 @@ const WordGenderPractice = () => {
  </div>
  )}
  {feedback === 'incorrect' && (
- <div className="w-full max-w-xl mx-auto border border-red-500/20 rounded-[1rem] overflow-hidden shadow-sm animate-[fade-in_0.3s_cubic-bezier(0.19,1,0.22,1)]">
+ <div className="w-full max-w-xl mx-auto border border-red-500/20 rounded-2xl overflow-hidden shadow-sm animate-[fade-in_0.3s_cubic-bezier(0.19,1,0.22,1)]">
  <div className="flex items-center justify-center gap-2 text-red-500 bg-red-500/10 px-4 py-2">
  <X size={18} strokeWidth={2.5} />
  <span className="text-base font-black tracking-tight">Falsch! Try again.</span>

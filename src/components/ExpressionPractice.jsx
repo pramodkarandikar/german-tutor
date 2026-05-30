@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RefreshCw, Check, ArrowRight, Trophy, Volume2, Eye } from 'lucide-react';
+import PageHeader from './common/PageHeader';
+import ScoreStreak from './common/ScoreStreak';
 import expressionsData from '../data/expressions.json';
 
 const ExpressionPractice = ({ onBack }) => {
@@ -120,18 +122,15 @@ const ExpressionPractice = ({ onBack }) => {
 
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-8 animate-[fade-in_0.5s_cubic-bezier(0.19,1,0.22,1)] pb-24 h-full flex flex-col">
-      <div className="mb-6 text-center md:text-left relative z-10">
-        <div>
-          <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary via-primary/80 to-accent mb-3">
-            German Expressions
-          </h1>
-          <p className="text-text-muted">Construct the German idiom</p>
-        </div>
-      </div>
+      <PageHeader
+        title="German Expressions"
+        description="Construct the German idiom."
+        rightContent={<ScoreStreak score={score} streak={streak} />}
+      />
 
       <div className="flex-1 flex flex-col justify-center gap-4">
         {/* Context Card */}
-        <div className="bg-surface border border-border rounded-3xl p-4 md:p-5 shadow-sm text-center relative overflow-hidden">
+        <div className="bg-surface border border-border rounded-2xl p-4 md:p-5 shadow-sm text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-accent opacity-50"></div>
 
           <h2 className="text-2xl md:text-3xl font-black tracking-tight text-text mb-4 leading-tight">

@@ -3,6 +3,8 @@ import React, { useState, useMemo, useEffect, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, XCircle, RefreshCw, HelpCircle, Flame, Layers } from 'lucide-react';
 import CategoryFilter from './CategoryFilter';
+import PageHeader from './common/PageHeader';
+import ScoreStreak from './common/ScoreStreak';
 import { DataContext } from '../contexts/DataContext';
 
 const MultipleChoice = () => {
@@ -99,31 +101,11 @@ const MultipleChoice = () => {
  <div className="absolute -top-20 -right-20 w-80 h-80 bg-primary/5 rounded-full blur-[100px] pointer-events-none"/>
  <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none"/>
 
- <div className="mb-8 text-center md:text-left relative z-10">
- <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
- <div>
- <h1 className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary via-primary/80 to-accent mb-2">Multiple Choice</h1>
- <p className="text-sm md:text-base text-text-muted max-w-2xl font-light">Select the correct German translation.</p>
- </div>
-
- <div className="flex items-center gap-4 justify-center md:justify-end shrink-0 bg-surface/50 backdrop-blur-md border border-subtle px-5 py-3 rounded-2xl shadow-sm">
- <div className="text-center md:text-right">
- <div className="text-[10px] text-text-muted uppercase font-black tracking-[0.2em] mb-1">Score</div>
- <div className="font-black text-text tracking-tighter">
- <span className="text-2xl md:text-3xl leading-none text-primary">{score.correct}</span><span className="text-lg md:text-xl text-text-muted opacity-50 ml-1">/ {score.total}</span>
- </div>
- </div>
- <div className="w-[2px] h-10 bg-border/50 rounded-full"/>
- <div className="text-center md:text-left">
- <div className="text-[10px] text-text-muted uppercase font-black tracking-[0.2em] mb-1">Streak</div>
- <div className={`font-black flex items-center justify-center md:justify-start gap-1.5 ${streak > 2 ? 'text-orange-500' : 'text-text'}`}>
- <Flame size={20} strokeWidth={streak > 2 ? 3 : 2} fill={streak > 2 ?"currentColor":"none"} className={streak > 2 ? 'animate-pulse' : ''} />
- <span className="text-2xl md:text-3xl leading-none tracking-tighter">{streak}</span>
- </div>
- </div>
- </div>
- </div>
- </div>
+ <PageHeader 
+ title="Multiple Choice"
+ description="Select the correct German translation."
+ rightContent={<ScoreStreak score={score} streak={streak} />}
+ />
 
  <div className="flex flex-col lg:flex-row justify-center items-start gap-6 relative z-10 min-h-[400px]">
  {/* Left Sidebar for Controls on Desktop */}

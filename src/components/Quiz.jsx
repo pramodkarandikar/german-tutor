@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, ChevronLeft, Shuffle } from 'lucide-react';
 import Flashcard from './Flashcard';
 import CategoryFilter from './CategoryFilter';
+import PageHeader from './common/PageHeader';
 import { DataContext } from '../contexts/DataContext';
 
 const Quiz = () => {
@@ -102,17 +103,10 @@ const Quiz = () => {
  <div className="absolute -top-20 -right-20 w-80 h-80 bg-primary/5 rounded-full blur-[100px] pointer-events-none"/>
  <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none"/>
 
- <div className="mb-10 text-center md:text-left relative z-10">
- <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
- <div>
- <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary via-primary/80 to-accent mb-3">
- Flashcards
- </h1>
- <p className="text-base md:text-lg text-text-muted max-w-2xl font-light">
- Master your vocabulary with interactive, spaced repetition style practice.
- </p>
- </div>
-
+ <PageHeader
+ title="Flashcards"
+ description="Master your vocabulary with interactive, spaced repetition style practice."
+ rightContent={
  <div className="flex flex-col items-center md:items-end gap-3 shrink-0">
  <span className="text-[10px] font-black text-text-muted uppercase tracking-[0.2em] opacity-80">
  Session Progress
@@ -126,13 +120,13 @@ const Quiz = () => {
  />
  </div>
  </div>
- </div>
- </div>
+ }
+ />
 
- <div className="flex flex-col lg:flex-row justify-center items-stretch gap-8 relative z-10 min-h-[460px]">
+ <div className="flex flex-col lg:flex-row justify-center items-stretch gap-6 relative z-10 min-h-[460px]">
  {/* Left Sidebar for Controls on Desktop */}
- <div className="w-full lg:w-72 flex flex-col gap-4 order-1 lg:order-1 h-auto">
- <div className="bg-surface/40 backdrop-blur-md border border-subtle rounded-[2.5rem] p-6 space-y-5 shadow-sm">
+ <div className="w-full lg:w-64 flex flex-col gap-4 order-1 lg:order-1 h-auto">
+ <div className="bg-surface/40 backdrop-blur-md border border-subtle rounded-2xl p-5 space-y-4 shadow-sm">
  <div>
  <h3 className="text-[10px] font-black text-text-muted uppercase tracking-[0.2em] mb-3">Filters</h3>
  <CategoryFilter
@@ -146,7 +140,7 @@ const Quiz = () => {
  <h3 className="text-[10px] font-black text-text-muted uppercase tracking-[0.2em] mb-3">Mode</h3>
  <button
  onClick={toggleRandom}
- className={`w-full flex items-center justify-center gap-3 px-6 py-3.5 rounded-2xl font-bold transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] border-2
+ className={`w-full flex items-center justify-center gap-3 px-4 py-3 rounded-xl font-bold transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] border-2
  ${isRandom
  ? 'bg-text text-background border-text shadow-xl scale-[1.02]'
  : 'bg-surface text-text border-subtle hover:border-border hover:bg-surface/80'}`}
@@ -157,7 +151,7 @@ const Quiz = () => {
  </div>
  </div>
 
- <div className="hidden lg:flex flex-col gap-2 bg-primary/5 p-6 rounded-[2rem] border border-primary/10 backdrop-blur-sm">
+ <div className="hidden lg:flex flex-col gap-2 bg-primary/5 p-5 rounded-2xl border border-primary/10 backdrop-blur-sm">
  <div className="flex items-center gap-2 text-primary mb-1">
  <span className="text-[10px] font-bold uppercase tracking-widest leading-none">Keyboard Tip</span>
  </div>
