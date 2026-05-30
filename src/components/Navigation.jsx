@@ -6,15 +6,15 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
     const [isMenuOpen, setIsMenuOpen] = useState(true);
 
     const navItems = [
-        { id: 'flashcards', label: 'Flashcards', description: 'Review essential vocabulary definitions', icon: BookOpen, color: 'text-neutral-900', bg: 'bg-neutral-900/15', hover: 'hover:bg-neutral-900/25', border: 'border-neutral-900/40' },
-        { id: 'mcq', label: 'Multiple Choice', description: 'Test your knowledge with quick quizzes', icon: LayoutGrid, color: 'text-red-600', bg: 'bg-red-600/15', hover: 'hover:bg-red-600/25', border: 'border-red-600/40' },
-        { id: 'gender', label: 'Word Gender', description: 'Master Der, Die, and Das rules', icon: Tags, color: 'text-yellow-500', bg: 'bg-yellow-500/20', hover: 'hover:bg-yellow-500/30', border: 'border-yellow-500/50' },
-        { id: 'prepositions', label: 'Prepositions', description: 'Learn verb prepositions effectively', icon: Puzzle, color: 'text-orange-500', bg: 'bg-orange-500/15', hover: 'hover:bg-orange-500/25', border: 'border-orange-500/40' },
-        { id: 'verb_practice', label: 'Verbs Practice', description: 'Using past participles of common German verbs', icon: Edit3, color: 'text-amber-900', bg: 'bg-amber-900/15', hover: 'hover:bg-amber-900/25', border: 'border-amber-900/40' },
-        { id: 'adjective_practice', label: 'Adjectives Quiz', description: 'Practice adjectives for different scenarios', icon: List, color: 'text-rose-900', bg: 'bg-rose-900/15', hover: 'hover:bg-rose-900/25', border: 'border-rose-900/40' },
-        { id: 'opposite_practice', label: 'Opposites Match', description: 'Match opposing word pairs rapidly', icon: Repeat, color: 'text-slate-500', bg: 'bg-slate-500/15', hover: 'hover:bg-slate-500/25', border: 'border-slate-500/40' },
-        { id: 'causal_adverbs', label: 'Causal Adverbs', description: 'Practice using causal adverbs', icon: Zap, color: 'text-amber-500', bg: 'bg-amber-500/15', hover: 'hover:bg-amber-500/25', border: 'border-amber-500/40' },
-        { id: 'expression_practice', label: 'Idioms Builder', description: 'Reconstruct expressions', icon: Wand2, color: 'text-stone-800', bg: 'bg-stone-800/15', hover: 'hover:bg-stone-800/25', border: 'border-stone-800/40' },
+        { id: 'flashcards', label: 'Flashcards', description: 'Review essential vocabulary definitions', icon: BookOpen, color: 'text-blue-600', blockBg: 'bg-blue-100', blockHoverBg: 'bg-blue-200', border: 'border-blue-300', shadow: 'hover:shadow-blue-300/50' },
+        { id: 'mcq', label: 'Multiple Choice', description: 'Test your knowledge with quick quizzes', icon: LayoutGrid, color: 'text-purple-600', blockBg: 'bg-purple-100', blockHoverBg: 'bg-purple-200', border: 'border-purple-300', shadow: 'hover:shadow-purple-300/50' },
+        { id: 'gender', label: 'Word Gender', description: 'Master Der, Die, and Das rules', icon: Tags, color: 'text-emerald-600', blockBg: 'bg-emerald-100', blockHoverBg: 'bg-emerald-200', border: 'border-emerald-300', shadow: 'hover:shadow-emerald-300/50' },
+        { id: 'prepositions', label: 'Prepositions', description: 'Learn verb prepositions effectively', icon: Puzzle, color: 'text-orange-600', blockBg: 'bg-orange-100', blockHoverBg: 'bg-orange-200', border: 'border-orange-300', shadow: 'hover:shadow-orange-300/50' },
+        { id: 'verb_practice', label: 'Verbs Practice', description: 'Using past participles of common German verbs', icon: Edit3, color: 'text-rose-600', blockBg: 'bg-rose-100', blockHoverBg: 'bg-rose-200', border: 'border-rose-300', shadow: 'hover:shadow-rose-300/50' },
+        { id: 'adjective_practice', label: 'Adjectives Quiz', description: 'Practice adjectives for different scenarios', icon: List, color: 'text-indigo-600', blockBg: 'bg-indigo-100', blockHoverBg: 'bg-indigo-200', border: 'border-indigo-300', shadow: 'hover:shadow-indigo-300/50' },
+        { id: 'opposite_practice', label: 'Opposites Match', description: 'Match opposing word pairs rapidly', icon: Repeat, color: 'text-violet-600', blockBg: 'bg-violet-100', blockHoverBg: 'bg-violet-200', border: 'border-violet-300', shadow: 'hover:shadow-violet-300/50' },
+        { id: 'causal_adverbs', label: 'Causal Adverbs', description: 'Practice using causal adverbs', icon: Zap, color: 'text-amber-600', blockBg: 'bg-amber-100', blockHoverBg: 'bg-amber-200', border: 'border-amber-300', shadow: 'hover:shadow-amber-300/50' },
+        { id: 'expression_practice', label: 'Idioms Builder', description: 'Reconstruct expressions', icon: Wand2, color: 'text-red-600', blockBg: 'bg-red-100', blockHoverBg: 'bg-red-200', border: 'border-red-300', shadow: 'hover:shadow-red-300/50' },
     ];
 
     const bottomItems = [
@@ -84,28 +84,27 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
             {isMenuOpen && (
                 <div className="fixed inset-0 z-[50] bg-background animate-in fade-in duration-300 flex flex-col items-center justify-start p-4 pt-20 md:p-6 md:pt-24 overflow-y-auto">
                     <div className="w-full max-w-4xl mb-6 mt-4 md:mt-8 text-center animate-in slide-in-from-bottom-4 duration-500 delay-100">
-                        <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-text mb-2">Where would you like to start?</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-text mb-2">Los geht's!</h2>
                         <p className="text-text-muted text-sm md:text-base">Select a practice mode to begin</p>
                     </div>
 
                     <div className="w-full max-w-6xl grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4 pb-20 px-4 md:pb-6">
                         {navItems.map((item, index) => {
                             const isActive = currentView === item.id;
-                            // Adding the color class safely using style instead if needed, but tailwind processes these in dev
                             return (
                                 <button
                                     key={item.id}
                                     onClick={() => handleNavClick(item.id)}
-                                    className={`group flex flex-col items-center justify-center gap-2 p-4 md:p-5 rounded-[1.5rem] transition-all duration-500 w-full text-center outline-none animate-in zoom-in-95 fill-mode-both min-h-[8.5rem] md:min-h-[9.5rem] border-[1.5px]
+                                    className={`group flex flex-col items-center justify-center gap-2 p-4 md:p-5 rounded-[1.5rem] transition-all duration-500 w-full text-center outline-none animate-in zoom-in-95 fill-mode-both min-h-[8.5rem] md:min-h-[9.5rem] border-[1px]
  ${isActive
-                                            ? `${item.bg} ${item.border} border-solid shadow-xl scale-[1.02]`
-                                            : `${item.bg} border-transparent backdrop-blur-sm shadow-md ${item.hover} hover:border-white/10 :border-white/5 hover:shadow-xl hover:scale-[1.03] active:scale-95`}`}
+                                            ? `${item.blockHoverBg} ${item.border} shadow-sm scale-[1.02]`
+                                            : `${item.blockBg} border-border/60 shadow-sm hover:${item.blockHoverBg} hover:${item.border} ${item.shadow} hover:shadow-md hover:scale-[1.03] active:scale-95`}`}
                                     style={{ animationDelay: `${index * 40 + 100}ms` }}
                                 >
-                                    <div className={`flex items-center justify-center w-12 h-12 md:w-[3.25rem] md:h-[3.25rem] rounded-2xl transition-all duration-500 mb-0.5
+                                    <div className={`flex items-center justify-center w-12 h-12 md:w-[3.25rem] md:h-[3.25rem] rounded-2xl transition-all duration-500 mb-0.5 ${item.color} shadow-sm bg-surface
  ${isActive
-                                            ? `bg-surface shadow-md ${item.color}`
-                                            : `bg-surface/60 ${item.color} shadow-sm group-hover:bg-surface group-hover:scale-110 group-hover:shadow-md`}`}
+                                            ? `scale-110`
+                                            : `opacity-90 group-hover:opacity-100 group-hover:scale-110`}`}
                                     >
                                         <item.icon size={22} strokeWidth={isActive ? 2.5 : 2} className="w-[22px] h-[22px] md:w-[26px] md:h-[26px]" />
                                     </div>
