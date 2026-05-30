@@ -127,7 +127,7 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
 
             {/* Main Content Area */}
             <main className="flex-1 w-full min-h-screen transition-all duration-300 bg-background text-text">
-                <div className="pt-12 md:pt-16 pb-12 px-4 md:px-6 w-full max-w-7xl mx-auto h-full box-border">
+                <div className="pt-24 md:pt-16 pb-12 px-4 md:px-6 w-full max-w-7xl mx-auto h-full box-border">
                     {children}
                 </div>
             </main>
