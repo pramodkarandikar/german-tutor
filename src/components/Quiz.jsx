@@ -108,17 +108,6 @@ const Quiz = () => {
  description="Master your vocabulary with interactive, spaced repetition style practice."
  rightContent={
  <div className="flex flex-col items-center md:items-end gap-3 shrink-0">
- <span className="text-[10px] font-black text-text-muted uppercase tracking-[0.2em] opacity-80">
- Session Progress
- </span>
- <div className="w-48 h-2 bg-surface/50 border border-subtle rounded-full overflow-hidden shadow-sm backdrop-blur-sm">
- <motion.div
- className="h-full bg-gradient-to-r from-primary to-accent"
- initial={{ width: 0 }}
- animate={{ width:`${progress}%` }}
- transition={{ duration: 0.8, ease:"easeOut"}}
- />
- </div>
  </div>
  }
  />
