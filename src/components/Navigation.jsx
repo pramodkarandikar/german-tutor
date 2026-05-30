@@ -6,15 +6,15 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
     const [isMenuOpen, setIsMenuOpen] = useState(true);
 
     const navItems = [
-        { id: 'flashcards', label: 'Flashcards', description: 'Review essential vocabulary definitions', icon: BookOpen, color: 'text-blue-600', blockBg: 'bg-blue-100', blockHoverBg: 'bg-blue-200', border: 'border-blue-300', shadow: 'hover:shadow-blue-300/50' },
+        { id: 'flashcards', label: 'Flashcards', description: 'Review essential vocabulary definitions', icon: BookOpen, color: 'text-cyan-600', blockBg: 'bg-cyan-100', blockHoverBg: 'bg-cyan-200', border: 'border-cyan-300', shadow: 'hover:shadow-cyan-300/50' },
         { id: 'mcq', label: 'Multiple Choice', description: 'Test your knowledge with quick quizzes', icon: LayoutGrid, color: 'text-purple-600', blockBg: 'bg-purple-100', blockHoverBg: 'bg-purple-200', border: 'border-purple-300', shadow: 'hover:shadow-purple-300/50' },
         { id: 'gender', label: 'Word Gender', description: 'Master Der, Die, and Das rules', icon: Tags, color: 'text-emerald-600', blockBg: 'bg-emerald-100', blockHoverBg: 'bg-emerald-200', border: 'border-emerald-300', shadow: 'hover:shadow-emerald-300/50' },
         { id: 'prepositions', label: 'Prepositions', description: 'Learn verb prepositions effectively', icon: Puzzle, color: 'text-orange-600', blockBg: 'bg-orange-100', blockHoverBg: 'bg-orange-200', border: 'border-orange-300', shadow: 'hover:shadow-orange-300/50' },
-        { id: 'verb_practice', label: 'Verbs Practice', description: 'Using past participles of common German verbs', icon: Edit3, color: 'text-rose-600', blockBg: 'bg-rose-100', blockHoverBg: 'bg-rose-200', border: 'border-rose-300', shadow: 'hover:shadow-rose-300/50' },
-        { id: 'adjective_practice', label: 'Adjectives Quiz', description: 'Practice adjectives for different scenarios', icon: List, color: 'text-indigo-600', blockBg: 'bg-indigo-100', blockHoverBg: 'bg-indigo-200', border: 'border-indigo-300', shadow: 'hover:shadow-indigo-300/50' },
-        { id: 'opposite_practice', label: 'Opposites Match', description: 'Match opposing word pairs rapidly', icon: Repeat, color: 'text-violet-600', blockBg: 'bg-violet-100', blockHoverBg: 'bg-violet-200', border: 'border-violet-300', shadow: 'hover:shadow-violet-300/50' },
-        { id: 'causal_adverbs', label: 'Causal Adverbs', description: 'Practice using causal adverbs', icon: Zap, color: 'text-amber-600', blockBg: 'bg-amber-100', blockHoverBg: 'bg-amber-200', border: 'border-amber-300', shadow: 'hover:shadow-amber-300/50' },
-        { id: 'expression_practice', label: 'Idioms Builder', description: 'Reconstruct expressions', icon: Wand2, color: 'text-red-600', blockBg: 'bg-red-100', blockHoverBg: 'bg-red-200', border: 'border-red-300', shadow: 'hover:shadow-red-300/50' },
+        { id: 'verb_practice', label: 'Verbs Practice', description: 'Using past participles of common German verbs', icon: Edit3, color: 'text-red-600', blockBg: 'bg-red-100', blockHoverBg: 'bg-red-200', border: 'border-red-300', shadow: 'hover:shadow-red-300/50' },
+        { id: 'adjective_practice', label: 'Adjectives Quiz', description: 'Practice adjectives for different scenarios', icon: List, color: 'text-blue-600', blockBg: 'bg-blue-100', blockHoverBg: 'bg-blue-200', border: 'border-blue-300', shadow: 'hover:shadow-blue-300/50' },
+        { id: 'opposite_practice', label: 'Opposites Match', description: 'Match opposing word pairs rapidly', icon: Repeat, color: 'text-fuchsia-600', blockBg: 'bg-fuchsia-100', blockHoverBg: 'bg-fuchsia-200', border: 'border-fuchsia-300', shadow: 'hover:shadow-fuchsia-300/50' },
+        { id: 'causal_adverbs', label: 'Causal Adverbs', description: 'Practice using causal adverbs', icon: Zap, color: 'text-yellow-600', blockBg: 'bg-yellow-100', blockHoverBg: 'bg-yellow-200', border: 'border-yellow-300', shadow: 'hover:shadow-yellow-300/50' },
+        { id: 'expression_practice', label: 'Idioms Builder', description: 'Reconstruct expressions', icon: Wand2, color: 'text-lime-600', blockBg: 'bg-lime-100', blockHoverBg: 'bg-lime-200', border: 'border-lime-300', shadow: 'hover:shadow-lime-300/50' },
     ];
 
     const bottomItems = [
