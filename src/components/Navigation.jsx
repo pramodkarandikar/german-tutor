@@ -34,15 +34,16 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
 
     return (
         <div className="min-h-screen bg-background text-text flex overflow-hidden relative">
-            {/* Top Left - Logo */}
-            <div className="fixed top-0 left-4 md:left-8 z-[60]">
-                <div className="bg-white/80 backdrop-blur-xl shadow-lg border-2 border-neutral-300 px-7 pt-5 md:pt-6 pb-4 md:pb-5 rounded-b-2xl flex flex-col items-center justify-center transition-all duration-300 hover:shadow-xl group">
-                    <div className="flex gap-0 w-full mb-3 rounded-full overflow-hidden">
-                        <div className="h-[3px] flex-1 bg-neutral-900 transition-all duration-500 group-hover:h-[4px]"></div>
-                        <div className="h-[3px] flex-1 bg-red-600 transition-all duration-500 group-hover:h-[4px]"></div>
-                        <div className="h-[3px] flex-1 bg-yellow-500 transition-all duration-500 group-hover:h-[4px]"></div>
+            {/* Top Left Floating - Logo */}
+            <div className="fixed top-4 md:top-6 left-4 md:left-6 z-[60]">
+                <div className="flex items-center gap-3 bg-surface/70 backdrop-blur-xl px-5 py-2.5 rounded-full border border-neutral-200 shadow-lg hover:shadow-xl hover:bg-surface/90 group transition-all duration-300 cursor-default">
+                    {/* Three Dots */}
+                    <div className="flex gap-1.5">
+                        <div className="w-2.5 h-2.5 rounded-full bg-neutral-900 group-hover:-translate-y-0.5 transition-transform duration-300"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-red-600 group-hover:-translate-y-0.5 transition-transform duration-300 delay-75"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500 group-hover:-translate-y-0.5 transition-transform duration-300 delay-150"></div>
                     </div>
-                    <h1 className="text-xl md:text-2xl font-sans font-black tracking-tight leading-none select-none text-text transition-all duration-500">
+                    <h1 className="text-lg md:text-xl font-bold font-sans tracking-tight text-text">
                         Wise Umlaut
                     </h1>
                 </div>
