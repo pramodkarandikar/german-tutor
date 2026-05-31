@@ -8,7 +8,7 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Stack Sans Headline', 'sans-serif'],
-                logo: ['"Montserrat Underline"', 'sans-serif'],
+                logo: ['"Momo Trust Display"', 'sans-serif'],
                 heading: ['"Stack Sans Headline"', 'sans-serif'],
             },
             colors: {

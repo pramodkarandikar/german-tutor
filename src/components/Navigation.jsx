@@ -43,7 +43,7 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
                         <div className="w-2.5 h-2.5 rounded-full bg-red-600 group-hover:-translate-y-0.5 transition-transform duration-300 delay-75"></div>
                         <div className="w-2.5 h-2.5 rounded-full bg-yellow-500 group-hover:-translate-y-0.5 transition-transform duration-300 delay-150"></div>
                     </div>
-                    <h1 className="text-lg md:text-xl font-bold font-sans tracking-tight text-text">
+                    <h1 className="md:text-xl font-logo tracking-tight text-text">
                         Wise Umlaut
                     </h1>
                 </div>
