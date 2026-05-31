@@ -239,7 +239,7 @@ const VerbPractice = ({ onComplete }) => {
  >
  <div className="flex-1 text-center md:text-left">
  <p className={`font-black text-base mb-1 tracking-tight ${isCorrect ? 'text-green-800 ' : 'text-red-800 '}`}>
- {isCorrect ? 'Richtig! (Correct!)' : 'Falsch! (Incorrect!)'}
+ {isCorrect ? 'Richtig!' : 'Falsch!'}
  </p>
  {!isCorrect && (
  <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-2 mt-1">

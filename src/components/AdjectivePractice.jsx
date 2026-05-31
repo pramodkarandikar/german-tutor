@@ -172,7 +172,7 @@ const AdjectivePractice = () => {
  className="mt-16 border-l-[6px] border-primary pl-8 py-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 max-w-4xl mx-auto"
  >
  <div className="flex-1">
- <h4 className="text-xl font-bold font-mono uppercase tracking-[0.2em] text-text-muted mb-4 flex items-center gap-4">
+ <h3 className="text-m tracking-[0.2em] text-text-muted mb-4 flex items-center gap-4">
  Example Sentence
  <button
  onClick={() => playPronunciation(currentAdjective.Example)}
@@ -181,8 +181,8 @@ const AdjectivePractice = () => {
  >
  <Volume2 size={20} strokeWidth={2.5} />
  </button>
- </h4>
- <p className="text-2xl md:text-3xl text-text italic font-light leading-snug">
+ </h3>
+ <p className="text-xl md:text-xl text-text leading-snug">
  {currentAdjective.Example}
  </p>
  </div>
