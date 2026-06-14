@@ -4,6 +4,7 @@ import * as XLSX from 'xlsx';
 import defaultVocabulary from '../data/vocabulary.json';
 import wordGendersData from '../data/word-genders.json';
 import verbPrepositionsData from '../data/verb-prepositions.json';
+import casesPracticeData from '../data/cases-practice.json';
 
 export const DataContext = createContext();
 
@@ -98,7 +99,8 @@ export const DataProvider = ({ children }) => {
  uploadData,
  resetData,
  wordGenders: wordGendersData,
- verbPrepositions: verbPrepositionsData
+ verbPrepositions: verbPrepositionsData,
+ casesPractice: casesPracticeData
  }}>
  {children}
  </DataContext.Provider>

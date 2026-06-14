@@ -1,0 +1,2090 @@
+[
+  {
+    "id": "1",
+    "german_sentence_template": "Ich sehe {blank}.",
+    "base_word_hint": "die Tasche",
+    "expected_answer": "die Tasche",
+    "options": [
+      "die Tasche",
+      "der Tasche",
+      "den Tasche",
+      "dem Tasche"
+    ],
+    "english_translation": "I see the bag.",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'sehen' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "2",
+    "german_sentence_template": "Ich sehe {blank}.",
+    "base_word_hint": "der Stuhl",
+    "expected_answer": "den Stuhl",
+    "options": [
+      "des Stuhls",
+      "dem Stuhl",
+      "den Stuhl",
+      "der Stuhl"
+    ],
+    "english_translation": "I see the chair.",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "masculine",
+    "explanation": "The verb 'sehen' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "3",
+    "german_sentence_template": "Ich sehe {blank}.",
+    "base_word_hint": "die Blume",
+    "expected_answer": "die Blume",
+    "options": [
+      "den Blume",
+      "dem Blume",
+      "der Blume",
+      "die Blume"
+    ],
+    "english_translation": "I see the flower.",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'sehen' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "4",
+    "german_sentence_template": "Ich sehe {blank}.",
+    "base_word_hint": "das Haus",
+    "expected_answer": "das Haus",
+    "options": [
+      "das Haus",
+      "dem Haus",
+      "des Hauses",
+      "den Haus"
+    ],
+    "english_translation": "I see the house.",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "neuter",
+    "explanation": "The verb 'sehen' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "5",
+    "german_sentence_template": "Er kauft {blank}.",
+    "base_word_hint": "die Schule",
+    "expected_answer": "die Schule",
+    "options": [
+      "die Schule",
+      "der Schule",
+      "dem Schule",
+      "den Schule"
+    ],
+    "english_translation": "He buys the school.",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'kaufen' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "6",
+    "german_sentence_template": "Er kauft {blank}.",
+    "base_word_hint": "die Tür",
+    "expected_answer": "die Tür",
+    "options": [
+      "die Tür",
+      "der Tür",
+      "dem Tür",
+      "den Tür"
+    ],
+    "english_translation": "He buys the door.",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'kaufen' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "7",
+    "german_sentence_template": "Er kauft {blank}.",
+    "base_word_hint": "die Lampe",
+    "expected_answer": "die Lampe",
+    "options": [
+      "die Lampe",
+      "den Lampe",
+      "der Lampe",
+      "dem Lampe"
+    ],
+    "english_translation": "He buys the lamp.",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'kaufen' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "8",
+    "german_sentence_template": "Er kauft {blank}.",
+    "base_word_hint": "die Stadt",
+    "expected_answer": "die Stadt",
+    "options": [
+      "der Stadt",
+      "die Stadt",
+      "dem Stadt",
+      "den Stadt"
+    ],
+    "english_translation": "He buys the city.",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'kaufen' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "9",
+    "german_sentence_template": "Wir suchen {blank}.",
+    "base_word_hint": "die Stadt",
+    "expected_answer": "die Stadt",
+    "options": [
+      "den Stadt",
+      "die Stadt",
+      "der Stadt",
+      "dem Stadt"
+    ],
+    "english_translation": "We are looking for the city.",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'suchen' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "10",
+    "german_sentence_template": "Wir suchen {blank}.",
+    "base_word_hint": "das Sofa",
+    "expected_answer": "das Sofa",
+    "options": [
+      "das Sofa",
+      "dem Sofa",
+      "des Sofas",
+      "den Sofa"
+    ],
+    "english_translation": "We are looking for the sofa.",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "neuter",
+    "explanation": "The verb 'suchen' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "11",
+    "german_sentence_template": "Wir suchen {blank}.",
+    "base_word_hint": "die Lampe",
+    "expected_answer": "die Lampe",
+    "options": [
+      "die Lampe",
+      "der Lampe",
+      "dem Lampe",
+      "den Lampe"
+    ],
+    "english_translation": "We are looking for the lamp.",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'suchen' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "12",
+    "german_sentence_template": "Wir suchen {blank}.",
+    "base_word_hint": "der Mann",
+    "expected_answer": "den Mann",
+    "options": [
+      "des Mannes",
+      "dem Mann",
+      "den Mann",
+      "der Mann"
+    ],
+    "english_translation": "We are looking for the man.",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "masculine",
+    "explanation": "The verb 'suchen' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "13",
+    "german_sentence_template": "Sie liebt {blank}.",
+    "base_word_hint": "der Lehrer",
+    "expected_answer": "den Lehrer",
+    "options": [
+      "der Lehrer",
+      "des Lehrers",
+      "den Lehrer",
+      "dem Lehrer"
+    ],
+    "english_translation": "She loves the teacher.",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "masculine",
+    "explanation": "The verb 'lieben' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "14",
+    "german_sentence_template": "Sie liebt {blank}.",
+    "base_word_hint": "die Tasche",
+    "expected_answer": "die Tasche",
+    "options": [
+      "die Tasche",
+      "dem Tasche",
+      "den Tasche",
+      "der Tasche"
+    ],
+    "english_translation": "She loves the bag.",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'lieben' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "15",
+    "german_sentence_template": "Sie liebt {blank}.",
+    "base_word_hint": "der Garten",
+    "expected_answer": "den Garten",
+    "options": [
+      "der Garten",
+      "des Gartens",
+      "dem Garten",
+      "den Garten"
+    ],
+    "english_translation": "She loves the garden.",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "masculine",
+    "explanation": "The verb 'lieben' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "16",
+    "german_sentence_template": "Sie liebt {blank}.",
+    "base_word_hint": "der Baum",
+    "expected_answer": "den Baum",
+    "options": [
+      "der Baum",
+      "des Baumes",
+      "den Baum",
+      "dem Baum"
+    ],
+    "english_translation": "She loves the tree.",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "masculine",
+    "explanation": "The verb 'lieben' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "17",
+    "german_sentence_template": "Hörst du {blank}?",
+    "base_word_hint": "die Tasche",
+    "expected_answer": "die Tasche",
+    "options": [
+      "der Tasche",
+      "dem Tasche",
+      "die Tasche",
+      "den Tasche"
+    ],
+    "english_translation": "Do you hear the bag?",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'hören' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "18",
+    "german_sentence_template": "Hörst du {blank}?",
+    "base_word_hint": "die Blume",
+    "expected_answer": "die Blume",
+    "options": [
+      "die Blume",
+      "der Blume",
+      "dem Blume",
+      "den Blume"
+    ],
+    "english_translation": "Do you hear the flower?",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'hören' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "19",
+    "german_sentence_template": "Hörst du {blank}?",
+    "base_word_hint": "das Haus",
+    "expected_answer": "das Haus",
+    "options": [
+      "des Hauses",
+      "den Haus",
+      "dem Haus",
+      "das Haus"
+    ],
+    "english_translation": "Do you hear the house?",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "neuter",
+    "explanation": "The verb 'hören' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "20",
+    "german_sentence_template": "Hörst du {blank}?",
+    "base_word_hint": "die Katze",
+    "expected_answer": "die Katze",
+    "options": [
+      "der Katze",
+      "den Katze",
+      "dem Katze",
+      "die Katze"
+    ],
+    "english_translation": "Do you hear the cat?",
+    "grammar_category": "Accusative Case",
+    "sub_category": "Direct Object",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'hören' takes an accusative direct object.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "21",
+    "german_sentence_template": "Ich helfe {blank}.",
+    "base_word_hint": "das Bett",
+    "expected_answer": "dem Bett",
+    "options": [
+      "das Bett",
+      "den Bett",
+      "dem Bett",
+      "des Bettes"
+    ],
+    "english_translation": "I am helping the bed.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "neuter",
+    "explanation": "The verb 'helfen' always requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "22",
+    "german_sentence_template": "Ich helfe {blank}.",
+    "base_word_hint": "der Ball",
+    "expected_answer": "dem Ball",
+    "options": [
+      "dem Ball",
+      "den Ball",
+      "des Balles",
+      "der Ball"
+    ],
+    "english_translation": "I am helping the ball.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "masculine",
+    "explanation": "The verb 'helfen' always requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "23",
+    "german_sentence_template": "Ich helfe {blank}.",
+    "base_word_hint": "das Wasser",
+    "expected_answer": "dem Wasser",
+    "options": [
+      "den Wasser",
+      "das Wasser",
+      "des Wassers",
+      "dem Wasser"
+    ],
+    "english_translation": "I am helping the water.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "neuter",
+    "explanation": "The verb 'helfen' always requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "24",
+    "german_sentence_template": "Ich helfe {blank}.",
+    "base_word_hint": "das Sofa",
+    "expected_answer": "dem Sofa",
+    "options": [
+      "den Sofa",
+      "das Sofa",
+      "dem Sofa",
+      "des Sofas"
+    ],
+    "english_translation": "I am helping the sofa.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "neuter",
+    "explanation": "The verb 'helfen' always requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "25",
+    "german_sentence_template": "Das Buch gehört {blank}.",
+    "base_word_hint": "die Schule",
+    "expected_answer": "der Schule",
+    "options": [
+      "die Schule",
+      "der Schule",
+      "dem Schule",
+      "den Schule"
+    ],
+    "english_translation": "The book belongs to the school.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'gehören' requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "26",
+    "german_sentence_template": "Das Buch gehört {blank}.",
+    "base_word_hint": "die Frau",
+    "expected_answer": "der Frau",
+    "options": [
+      "die Frau",
+      "der Frau",
+      "dem Frau",
+      "den Frau"
+    ],
+    "english_translation": "The book belongs to the woman.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'gehören' requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "27",
+    "german_sentence_template": "Das Buch gehört {blank}.",
+    "base_word_hint": "das Auto",
+    "expected_answer": "dem Auto",
+    "options": [
+      "des Autos",
+      "das Auto",
+      "dem Auto",
+      "den Auto"
+    ],
+    "english_translation": "The book belongs to the car.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "neuter",
+    "explanation": "The verb 'gehören' requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "28",
+    "german_sentence_template": "Das Buch gehört {blank}.",
+    "base_word_hint": "der Tisch",
+    "expected_answer": "dem Tisch",
+    "options": [
+      "der Tisch",
+      "den Tisch",
+      "des Tisches",
+      "dem Tisch"
+    ],
+    "english_translation": "The book belongs to the table.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "masculine",
+    "explanation": "The verb 'gehören' requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "29",
+    "german_sentence_template": "Ich danke {blank}.",
+    "base_word_hint": "die Lampe",
+    "expected_answer": "der Lampe",
+    "options": [
+      "die Lampe",
+      "der Lampe",
+      "den Lampe",
+      "dem Lampe"
+    ],
+    "english_translation": "I thank the lamp.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'danken' requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "30",
+    "german_sentence_template": "Ich danke {blank}.",
+    "base_word_hint": "die Katze",
+    "expected_answer": "der Katze",
+    "options": [
+      "dem Katze",
+      "die Katze",
+      "den Katze",
+      "der Katze"
+    ],
+    "english_translation": "I thank the cat.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'danken' requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "31",
+    "german_sentence_template": "Ich danke {blank}.",
+    "base_word_hint": "die Stadt",
+    "expected_answer": "der Stadt",
+    "options": [
+      "den Stadt",
+      "der Stadt",
+      "die Stadt",
+      "dem Stadt"
+    ],
+    "english_translation": "I thank the city.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'danken' requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "32",
+    "german_sentence_template": "Ich danke {blank}.",
+    "base_word_hint": "die Mutter",
+    "expected_answer": "der Mutter",
+    "options": [
+      "der Mutter",
+      "den Mutter",
+      "die Mutter",
+      "dem Mutter"
+    ],
+    "english_translation": "I thank the mother.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'danken' requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "33",
+    "german_sentence_template": "Es gefällt {blank} nicht.",
+    "base_word_hint": "der Stuhl",
+    "expected_answer": "dem Stuhl",
+    "options": [
+      "des Stuhls",
+      "dem Stuhl",
+      "den Stuhl",
+      "der Stuhl"
+    ],
+    "english_translation": "The chair doesn't like it.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "masculine",
+    "explanation": "The verb 'gefallen' requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "34",
+    "german_sentence_template": "Es gefällt {blank} nicht.",
+    "base_word_hint": "das Haus",
+    "expected_answer": "dem Haus",
+    "options": [
+      "den Haus",
+      "das Haus",
+      "dem Haus",
+      "des Hauses"
+    ],
+    "english_translation": "The house doesn't like it.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "neuter",
+    "explanation": "The verb 'gefallen' requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "35",
+    "german_sentence_template": "Es gefällt {blank} nicht.",
+    "base_word_hint": "das Mädchen",
+    "expected_answer": "dem Mädchen",
+    "options": [
+      "das Mädchen",
+      "dem Mädchen",
+      "den Mädchen",
+      "des Mädchens"
+    ],
+    "english_translation": "The girl doesn't like it.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "neuter",
+    "explanation": "The verb 'gefallen' requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "36",
+    "german_sentence_template": "Es gefällt {blank} nicht.",
+    "base_word_hint": "das Kind",
+    "expected_answer": "dem Kind",
+    "options": [
+      "das Kind",
+      "den Kind",
+      "dem Kind",
+      "des Kindes"
+    ],
+    "english_translation": "The child doesn't like it.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "neuter",
+    "explanation": "The verb 'gefallen' requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "37",
+    "german_sentence_template": "Wir glauben {blank}.",
+    "base_word_hint": "der Lehrer",
+    "expected_answer": "dem Lehrer",
+    "options": [
+      "des Lehrers",
+      "der Lehrer",
+      "dem Lehrer",
+      "den Lehrer"
+    ],
+    "english_translation": "We believe the teacher.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "masculine",
+    "explanation": "The verb 'glauben' requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "38",
+    "german_sentence_template": "Wir glauben {blank}.",
+    "base_word_hint": "die Lampe",
+    "expected_answer": "der Lampe",
+    "options": [
+      "die Lampe",
+      "der Lampe",
+      "den Lampe",
+      "dem Lampe"
+    ],
+    "english_translation": "We believe the lamp.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "feminine",
+    "explanation": "The verb 'glauben' requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "39",
+    "german_sentence_template": "Wir glauben {blank}.",
+    "base_word_hint": "der Mann",
+    "expected_answer": "dem Mann",
+    "options": [
+      "des Mannes",
+      "dem Mann",
+      "den Mann",
+      "der Mann"
+    ],
+    "english_translation": "We believe the man.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "masculine",
+    "explanation": "The verb 'glauben' requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "40",
+    "german_sentence_template": "Wir glauben {blank}.",
+    "base_word_hint": "der Baum",
+    "expected_answer": "dem Baum",
+    "options": [
+      "der Baum",
+      "den Baum",
+      "dem Baum",
+      "des Baumes"
+    ],
+    "english_translation": "We believe the tree.",
+    "grammar_category": "Dative Case",
+    "sub_category": "Dative Verb",
+    "noun_gender": "masculine",
+    "explanation": "The verb 'glauben' requires the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "41",
+    "german_sentence_template": "Das ist für {blank}.",
+    "base_word_hint": "die Katze",
+    "expected_answer": "die Katze",
+    "options": [
+      "dem Katze",
+      "die Katze",
+      "den Katze",
+      "der Katze"
+    ],
+    "english_translation": "That is for the cat.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "für",
+    "noun_gender": "feminine",
+    "explanation": "The preposition 'für' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "42",
+    "german_sentence_template": "Das ist für {blank}.",
+    "base_word_hint": "die Stadt",
+    "expected_answer": "die Stadt",
+    "options": [
+      "die Stadt",
+      "der Stadt",
+      "den Stadt",
+      "dem Stadt"
+    ],
+    "english_translation": "That is for the city.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "für",
+    "noun_gender": "feminine",
+    "explanation": "The preposition 'für' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "43",
+    "german_sentence_template": "Das ist für {blank}.",
+    "base_word_hint": "der Stuhl",
+    "expected_answer": "den Stuhl",
+    "options": [
+      "der Stuhl",
+      "den Stuhl",
+      "dem Stuhl",
+      "des Stuhls"
+    ],
+    "english_translation": "That is for the chair.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "für",
+    "noun_gender": "masculine",
+    "explanation": "The preposition 'für' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "44",
+    "german_sentence_template": "Das ist für {blank}.",
+    "base_word_hint": "die Frau",
+    "expected_answer": "die Frau",
+    "options": [
+      "die Frau",
+      "der Frau",
+      "den Frau",
+      "dem Frau"
+    ],
+    "english_translation": "That is for the woman.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "für",
+    "noun_gender": "feminine",
+    "explanation": "The preposition 'für' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "45",
+    "german_sentence_template": "Wir gehen durch {blank}.",
+    "base_word_hint": "die Tür",
+    "expected_answer": "die Tür",
+    "options": [
+      "die Tür",
+      "der Tür",
+      "dem Tür",
+      "den Tür"
+    ],
+    "english_translation": "We are walking through the door.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "durch",
+    "noun_gender": "feminine",
+    "explanation": "The preposition 'durch' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "46",
+    "german_sentence_template": "Wir gehen durch {blank}.",
+    "base_word_hint": "das Sofa",
+    "expected_answer": "das Sofa",
+    "options": [
+      "des Sofas",
+      "den Sofa",
+      "dem Sofa",
+      "das Sofa"
+    ],
+    "english_translation": "We are walking through the sofa.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "durch",
+    "noun_gender": "neuter",
+    "explanation": "The preposition 'durch' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "47",
+    "german_sentence_template": "Wir gehen durch {blank}.",
+    "base_word_hint": "der Ball",
+    "expected_answer": "den Ball",
+    "options": [
+      "des Balles",
+      "dem Ball",
+      "den Ball",
+      "der Ball"
+    ],
+    "english_translation": "We are walking through the ball.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "durch",
+    "noun_gender": "masculine",
+    "explanation": "The preposition 'durch' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "48",
+    "german_sentence_template": "Wir gehen durch {blank}.",
+    "base_word_hint": "die Katze",
+    "expected_answer": "die Katze",
+    "options": [
+      "den Katze",
+      "die Katze",
+      "der Katze",
+      "dem Katze"
+    ],
+    "english_translation": "We are walking through the cat.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "durch",
+    "noun_gender": "feminine",
+    "explanation": "The preposition 'durch' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "49",
+    "german_sentence_template": "Er kommt ohne {blank}.",
+    "base_word_hint": "das Haus",
+    "expected_answer": "das Haus",
+    "options": [
+      "des Hauses",
+      "dem Haus",
+      "den Haus",
+      "das Haus"
+    ],
+    "english_translation": "He is coming without the house.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "ohne",
+    "noun_gender": "neuter",
+    "explanation": "The preposition 'ohne' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "50",
+    "german_sentence_template": "Er kommt ohne {blank}.",
+    "base_word_hint": "die Tür",
+    "expected_answer": "die Tür",
+    "options": [
+      "der Tür",
+      "dem Tür",
+      "den Tür",
+      "die Tür"
+    ],
+    "english_translation": "He is coming without the door.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "ohne",
+    "noun_gender": "feminine",
+    "explanation": "The preposition 'ohne' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "51",
+    "german_sentence_template": "Er kommt ohne {blank}.",
+    "base_word_hint": "das Fenster",
+    "expected_answer": "das Fenster",
+    "options": [
+      "das Fenster",
+      "dem Fenster",
+      "des Fensters",
+      "den Fenster"
+    ],
+    "english_translation": "He is coming without the window.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "ohne",
+    "noun_gender": "neuter",
+    "explanation": "The preposition 'ohne' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "52",
+    "german_sentence_template": "Er kommt ohne {blank}.",
+    "base_word_hint": "der Garten",
+    "expected_answer": "den Garten",
+    "options": [
+      "der Garten",
+      "den Garten",
+      "des Gartens",
+      "dem Garten"
+    ],
+    "english_translation": "He is coming without the garden.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "ohne",
+    "noun_gender": "masculine",
+    "explanation": "The preposition 'ohne' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "53",
+    "german_sentence_template": "Sie laufen gegen {blank}.",
+    "base_word_hint": "der Ball",
+    "expected_answer": "den Ball",
+    "options": [
+      "des Balles",
+      "dem Ball",
+      "der Ball",
+      "den Ball"
+    ],
+    "english_translation": "They run against the ball.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "gegen",
+    "noun_gender": "masculine",
+    "explanation": "The preposition 'gegen' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "54",
+    "german_sentence_template": "Sie laufen gegen {blank}.",
+    "base_word_hint": "das Fenster",
+    "expected_answer": "das Fenster",
+    "options": [
+      "des Fensters",
+      "dem Fenster",
+      "den Fenster",
+      "das Fenster"
+    ],
+    "english_translation": "They run against the window.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "gegen",
+    "noun_gender": "neuter",
+    "explanation": "The preposition 'gegen' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "55",
+    "german_sentence_template": "Sie laufen gegen {blank}.",
+    "base_word_hint": "der Freund",
+    "expected_answer": "den Freund",
+    "options": [
+      "des Freundes",
+      "der Freund",
+      "den Freund",
+      "dem Freund"
+    ],
+    "english_translation": "They run against the friend.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "gegen",
+    "noun_gender": "masculine",
+    "explanation": "The preposition 'gegen' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "56",
+    "german_sentence_template": "Sie laufen gegen {blank}.",
+    "base_word_hint": "der Stuhl",
+    "expected_answer": "den Stuhl",
+    "options": [
+      "den Stuhl",
+      "der Stuhl",
+      "des Stuhls",
+      "dem Stuhl"
+    ],
+    "english_translation": "They run against the chair.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "gegen",
+    "noun_gender": "masculine",
+    "explanation": "The preposition 'gegen' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "57",
+    "german_sentence_template": "Die Katze läuft um {blank}.",
+    "base_word_hint": "der Ball",
+    "expected_answer": "den Ball",
+    "options": [
+      "des Balles",
+      "der Ball",
+      "dem Ball",
+      "den Ball"
+    ],
+    "english_translation": "The cat runs around the ball.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "um",
+    "noun_gender": "masculine",
+    "explanation": "The preposition 'um' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "58",
+    "german_sentence_template": "Die Katze läuft um {blank}.",
+    "base_word_hint": "die Tür",
+    "expected_answer": "die Tür",
+    "options": [
+      "den Tür",
+      "dem Tür",
+      "der Tür",
+      "die Tür"
+    ],
+    "english_translation": "The cat runs around the door.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "um",
+    "noun_gender": "feminine",
+    "explanation": "The preposition 'um' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "59",
+    "german_sentence_template": "Die Katze läuft um {blank}.",
+    "base_word_hint": "das Buch",
+    "expected_answer": "das Buch",
+    "options": [
+      "das Buch",
+      "dem Buch",
+      "des Buches",
+      "den Buch"
+    ],
+    "english_translation": "The cat runs around the book.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "um",
+    "noun_gender": "neuter",
+    "explanation": "The preposition 'um' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "60",
+    "german_sentence_template": "Die Katze läuft um {blank}.",
+    "base_word_hint": "der Mann",
+    "expected_answer": "den Mann",
+    "options": [
+      "der Mann",
+      "den Mann",
+      "dem Mann",
+      "des Mannes"
+    ],
+    "english_translation": "The cat runs around the man.",
+    "grammar_category": "Accusative Prepositions",
+    "sub_category": "um",
+    "noun_gender": "masculine",
+    "explanation": "The preposition 'um' always takes the accusative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "61",
+    "german_sentence_template": "Er kommt aus {blank}.",
+    "base_word_hint": "die Tasche",
+    "expected_answer": "der Tasche",
+    "options": [
+      "den Tasche",
+      "dem Tasche",
+      "der Tasche",
+      "die Tasche"
+    ],
+    "english_translation": "He comes out of the bag.",
+    "grammar_category": "Dative Prepositions",
+    "sub_category": "aus",
+    "noun_gender": "feminine",
+    "explanation": "The preposition 'aus' always takes the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "62",
+    "german_sentence_template": "Er kommt aus {blank}.",
+    "base_word_hint": "der Ball",
+    "expected_answer": "dem Ball",
+    "options": [
+      "den Ball",
+      "dem Ball",
+      "des Balles",
+      "der Ball"
+    ],
+    "english_translation": "He comes out of the ball.",
+    "grammar_category": "Dative Prepositions",
+    "sub_category": "aus",
+    "noun_gender": "masculine",
+    "explanation": "The preposition 'aus' always takes the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "63",
+    "german_sentence_template": "Er kommt aus {blank}.",
+    "base_word_hint": "die Tür",
+    "expected_answer": "der Tür",
+    "options": [
+      "den Tür",
+      "dem Tür",
+      "der Tür",
+      "die Tür"
+    ],
+    "english_translation": "He comes out of the door.",
+    "grammar_category": "Dative Prepositions",
+    "sub_category": "aus",
+    "noun_gender": "feminine",
+    "explanation": "The preposition 'aus' always takes the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "64",
+    "german_sentence_template": "Er kommt aus {blank}.",
+    "base_word_hint": "das Wasser",
+    "expected_answer": "dem Wasser",
+    "options": [
+      "das Wasser",
+      "dem Wasser",
+      "des Wassers",
+      "den Wasser"
+    ],
+    "english_translation": "He comes out of the water.",
+    "grammar_category": "Dative Prepositions",
+    "sub_category": "aus",
+    "noun_gender": "neuter",
+    "explanation": "The preposition 'aus' always takes the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "65",
+    "german_sentence_template": "Wir sprechen mit {blank}.",
+    "base_word_hint": "die Katze",
+    "expected_answer": "der Katze",
+    "options": [
+      "der Katze",
+      "dem Katze",
+      "den Katze",
+      "die Katze"
+    ],
+    "english_translation": "We are talking with the cat.",
+    "grammar_category": "Dative Prepositions",
+    "sub_category": "mit",
+    "noun_gender": "feminine",
+    "explanation": "The preposition 'mit' always takes the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "66",
+    "german_sentence_template": "Wir sprechen mit {blank}.",
+    "base_word_hint": "der Freund",
+    "expected_answer": "dem Freund",
+    "options": [
+      "des Freundes",
+      "der Freund",
+      "den Freund",
+      "dem Freund"
+    ],
+    "english_translation": "We are talking with the friend.",
+    "grammar_category": "Dative Prepositions",
+    "sub_category": "mit",
+    "noun_gender": "masculine",
+    "explanation": "The preposition 'mit' always takes the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "67",
+    "german_sentence_template": "Wir sprechen mit {blank}.",
+    "base_word_hint": "die Blume",
+    "expected_answer": "der Blume",
+    "options": [
+      "den Blume",
+      "die Blume",
+      "der Blume",
+      "dem Blume"
+    ],
+    "english_translation": "We are talking with the flower.",
+    "grammar_category": "Dative Prepositions",
+    "sub_category": "mit",
+    "noun_gender": "feminine",
+    "explanation": "The preposition 'mit' always takes the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "68",
+    "german_sentence_template": "Wir sprechen mit {blank}.",
+    "base_word_hint": "die Tasche",
+    "expected_answer": "der Tasche",
+    "options": [
+      "die Tasche",
+      "der Tasche",
+      "dem Tasche",
+      "den Tasche"
+    ],
+    "english_translation": "We are talking with the bag.",
+    "grammar_category": "Dative Prepositions",
+    "sub_category": "mit",
+    "noun_gender": "feminine",
+    "explanation": "The preposition 'mit' always takes the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "69",
+    "german_sentence_template": "Sie wohnt bei {blank}.",
+    "base_word_hint": "der Stuhl",
+    "expected_answer": "dem Stuhl",
+    "options": [
+      "der Stuhl",
+      "den Stuhl",
+      "dem Stuhl",
+      "des Stuhls"
+    ],
+    "english_translation": "She lives at the chair's.",
+    "grammar_category": "Dative Prepositions",
+    "sub_category": "bei",
+    "noun_gender": "masculine",
+    "explanation": "The preposition 'bei' always takes the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "70",
+    "german_sentence_template": "Sie wohnt bei {blank}.",
+    "base_word_hint": "die Stadt",
+    "expected_answer": "der Stadt",
+    "options": [
+      "den Stadt",
+      "der Stadt",
+      "dem Stadt",
+      "die Stadt"
+    ],
+    "english_translation": "She lives at the city's.",
+    "grammar_category": "Dative Prepositions",
+    "sub_category": "bei",
+    "noun_gender": "feminine",
+    "explanation": "The preposition 'bei' always takes the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "71",
+    "german_sentence_template": "Sie wohnt bei {blank}.",
+    "base_word_hint": "das Haus",
+    "expected_answer": "dem Haus",
+    "options": [
+      "den Haus",
+      "das Haus",
+      "dem Haus",
+      "des Hauses"
+    ],
+    "english_translation": "She lives at the house's.",
+    "grammar_category": "Dative Prepositions",
+    "sub_category": "bei",
+    "noun_gender": "neuter",
+    "explanation": "The preposition 'bei' always takes the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "72",
+    "german_sentence_template": "Sie wohnt bei {blank}.",
+    "base_word_hint": "der Lehrer",
+    "expected_answer": "dem Lehrer",
+    "options": [
+      "des Lehrers",
+      "den Lehrer",
+      "dem Lehrer",
+      "der Lehrer"
+    ],
+    "english_translation": "She lives at the teacher's.",
+    "grammar_category": "Dative Prepositions",
+    "sub_category": "bei",
+    "noun_gender": "masculine",
+    "explanation": "The preposition 'bei' always takes the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "73",
+    "german_sentence_template": "Das ist von {blank}.",
+    "base_word_hint": "der Lehrer",
+    "expected_answer": "dem Lehrer",
+    "options": [
+      "des Lehrers",
+      "der Lehrer",
+      "dem Lehrer",
+      "den Lehrer"
+    ],
+    "english_translation": "This is from the teacher.",
+    "grammar_category": "Dative Prepositions",
+    "sub_category": "von",
+    "noun_gender": "masculine",
+    "explanation": "The preposition 'von' always takes the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "74",
+    "german_sentence_template": "Das ist von {blank}.",
+    "base_word_hint": "die Tasche",
+    "expected_answer": "der Tasche",
+    "options": [
+      "den Tasche",
+      "dem Tasche",
+      "der Tasche",
+      "die Tasche"
+    ],
+    "english_translation": "This is from the bag.",
+    "grammar_category": "Dative Prepositions",
+    "sub_category": "von",
+    "noun_gender": "feminine",
+    "explanation": "The preposition 'von' always takes the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "75",
+    "german_sentence_template": "Das ist von {blank}.",
+    "base_word_hint": "die Schule",
+    "expected_answer": "der Schule",
+    "options": [
+      "den Schule",
+      "der Schule",
+      "dem Schule",
+      "die Schule"
+    ],
+    "english_translation": "This is from the school.",
+    "grammar_category": "Dative Prepositions",
+    "sub_category": "von",
+    "noun_gender": "feminine",
+    "explanation": "The preposition 'von' always takes the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "76",
+    "german_sentence_template": "Das ist von {blank}.",
+    "base_word_hint": "die Stadt",
+    "expected_answer": "der Stadt",
+    "options": [
+      "dem Stadt",
+      "der Stadt",
+      "den Stadt",
+      "die Stadt"
+    ],
+    "english_translation": "This is from the city.",
+    "grammar_category": "Dative Prepositions",
+    "sub_category": "von",
+    "noun_gender": "feminine",
+    "explanation": "The preposition 'von' always takes the dative case.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "77",
+    "german_sentence_template": "Ich lege das Buch auf {blank}.",
+    "base_word_hint": "der Freund",
+    "expected_answer": "den Freund",
+    "options": [
+      "dem Freund",
+      "des Freundes",
+      "der Freund",
+      "den Freund"
+    ],
+    "english_translation": "I lay the book on the friend.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "masculine",
+    "explanation": "The two-way preposition 'auf' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "78",
+    "german_sentence_template": "Ich lege das Buch auf {blank}.",
+    "base_word_hint": "der Lehrer",
+    "expected_answer": "den Lehrer",
+    "options": [
+      "den Lehrer",
+      "des Lehrers",
+      "der Lehrer",
+      "dem Lehrer"
+    ],
+    "english_translation": "I lay the book on the teacher.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "masculine",
+    "explanation": "The two-way preposition 'auf' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "79",
+    "german_sentence_template": "Ich lege das Buch auf {blank}.",
+    "base_word_hint": "die Schule",
+    "expected_answer": "die Schule",
+    "options": [
+      "den Schule",
+      "dem Schule",
+      "der Schule",
+      "die Schule"
+    ],
+    "english_translation": "I lay the book on the school.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "feminine",
+    "explanation": "The two-way preposition 'auf' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "80",
+    "german_sentence_template": "Ich lege das Buch auf {blank}.",
+    "base_word_hint": "das Wasser",
+    "expected_answer": "das Wasser",
+    "options": [
+      "den Wasser",
+      "des Wassers",
+      "dem Wasser",
+      "das Wasser"
+    ],
+    "english_translation": "I lay the book on the water.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "neuter",
+    "explanation": "The two-way preposition 'auf' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "81",
+    "german_sentence_template": "Er geht in {blank}.",
+    "base_word_hint": "der Freund",
+    "expected_answer": "den Freund",
+    "options": [
+      "den Freund",
+      "der Freund",
+      "des Freundes",
+      "dem Freund"
+    ],
+    "english_translation": "He goes into the friend.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "masculine",
+    "explanation": "The two-way preposition 'in' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "82",
+    "german_sentence_template": "Er geht in {blank}.",
+    "base_word_hint": "die Stadt",
+    "expected_answer": "die Stadt",
+    "options": [
+      "den Stadt",
+      "dem Stadt",
+      "der Stadt",
+      "die Stadt"
+    ],
+    "english_translation": "He goes into the city.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "feminine",
+    "explanation": "The two-way preposition 'in' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "83",
+    "german_sentence_template": "Er geht in {blank}.",
+    "base_word_hint": "der Garten",
+    "expected_answer": "den Garten",
+    "options": [
+      "des Gartens",
+      "der Garten",
+      "den Garten",
+      "dem Garten"
+    ],
+    "english_translation": "He goes into the garden.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "masculine",
+    "explanation": "The two-way preposition 'in' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "84",
+    "german_sentence_template": "Er geht in {blank}.",
+    "base_word_hint": "das Kind",
+    "expected_answer": "das Kind",
+    "options": [
+      "das Kind",
+      "dem Kind",
+      "des Kindes",
+      "den Kind"
+    ],
+    "english_translation": "He goes into the child.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "neuter",
+    "explanation": "The two-way preposition 'in' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "85",
+    "german_sentence_template": "Sie stellt den Stuhl neben {blank}.",
+    "base_word_hint": "die Mutter",
+    "expected_answer": "die Mutter",
+    "options": [
+      "die Mutter",
+      "den Mutter",
+      "der Mutter",
+      "dem Mutter"
+    ],
+    "english_translation": "She puts the chair next to the mother.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "feminine",
+    "explanation": "The two-way preposition 'neben' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "86",
+    "german_sentence_template": "Sie stellt den Stuhl neben {blank}.",
+    "base_word_hint": "die Katze",
+    "expected_answer": "die Katze",
+    "options": [
+      "die Katze",
+      "der Katze",
+      "dem Katze",
+      "den Katze"
+    ],
+    "english_translation": "She puts the chair next to the cat.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "feminine",
+    "explanation": "The two-way preposition 'neben' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "87",
+    "german_sentence_template": "Sie stellt den Stuhl neben {blank}.",
+    "base_word_hint": "das Wasser",
+    "expected_answer": "das Wasser",
+    "options": [
+      "den Wasser",
+      "das Wasser",
+      "dem Wasser",
+      "des Wassers"
+    ],
+    "english_translation": "She puts the chair next to the water.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "neuter",
+    "explanation": "The two-way preposition 'neben' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "88",
+    "german_sentence_template": "Sie stellt den Stuhl neben {blank}.",
+    "base_word_hint": "das Bett",
+    "expected_answer": "das Bett",
+    "options": [
+      "des Bettes",
+      "dem Bett",
+      "das Bett",
+      "den Bett"
+    ],
+    "english_translation": "She puts the chair next to the bed.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "neuter",
+    "explanation": "The two-way preposition 'neben' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "89",
+    "german_sentence_template": "Der Vogel fliegt über {blank}.",
+    "base_word_hint": "der Mann",
+    "expected_answer": "den Mann",
+    "options": [
+      "dem Mann",
+      "des Mannes",
+      "den Mann",
+      "der Mann"
+    ],
+    "english_translation": "The bird flies over the man.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "masculine",
+    "explanation": "The two-way preposition 'über' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "90",
+    "german_sentence_template": "Der Vogel fliegt über {blank}.",
+    "base_word_hint": "das Haus",
+    "expected_answer": "das Haus",
+    "options": [
+      "dem Haus",
+      "das Haus",
+      "des Hauses",
+      "den Haus"
+    ],
+    "english_translation": "The bird flies over the house.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "neuter",
+    "explanation": "The two-way preposition 'über' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "91",
+    "german_sentence_template": "Der Vogel fliegt über {blank}.",
+    "base_word_hint": "das Mädchen",
+    "expected_answer": "das Mädchen",
+    "options": [
+      "des Mädchens",
+      "das Mädchen",
+      "dem Mädchen",
+      "den Mädchen"
+    ],
+    "english_translation": "The bird flies over the girl.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "neuter",
+    "explanation": "The two-way preposition 'über' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "92",
+    "german_sentence_template": "Der Vogel fliegt über {blank}.",
+    "base_word_hint": "die Mutter",
+    "expected_answer": "die Mutter",
+    "options": [
+      "die Mutter",
+      "der Mutter",
+      "dem Mutter",
+      "den Mutter"
+    ],
+    "english_translation": "The bird flies over the mother.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "feminine",
+    "explanation": "The two-way preposition 'über' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "93",
+    "german_sentence_template": "Wir gehen hinter {blank}.",
+    "base_word_hint": "das Buch",
+    "expected_answer": "das Buch",
+    "options": [
+      "das Buch",
+      "dem Buch",
+      "den Buch",
+      "des Buches"
+    ],
+    "english_translation": "We go behind the book.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "neuter",
+    "explanation": "The two-way preposition 'hinter' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "94",
+    "german_sentence_template": "Wir gehen hinter {blank}.",
+    "base_word_hint": "der Mann",
+    "expected_answer": "den Mann",
+    "options": [
+      "den Mann",
+      "der Mann",
+      "des Mannes",
+      "dem Mann"
+    ],
+    "english_translation": "We go behind the man.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "masculine",
+    "explanation": "The two-way preposition 'hinter' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "95",
+    "german_sentence_template": "Wir gehen hinter {blank}.",
+    "base_word_hint": "der Tisch",
+    "expected_answer": "den Tisch",
+    "options": [
+      "der Tisch",
+      "den Tisch",
+      "dem Tisch",
+      "des Tisches"
+    ],
+    "english_translation": "We go behind the table.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "masculine",
+    "explanation": "The two-way preposition 'hinter' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "96",
+    "german_sentence_template": "Wir gehen hinter {blank}.",
+    "base_word_hint": "die Lampe",
+    "expected_answer": "die Lampe",
+    "options": [
+      "den Lampe",
+      "dem Lampe",
+      "der Lampe",
+      "die Lampe"
+    ],
+    "english_translation": "We go behind the lamp.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Motion (Accusative)",
+    "noun_gender": "feminine",
+    "explanation": "The two-way preposition 'hinter' takes the accusative when indicating motion towards a destination.",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "97",
+    "german_sentence_template": "Das Buch liegt auf {blank}.",
+    "base_word_hint": "der Mann",
+    "expected_answer": "dem Mann",
+    "options": [
+      "den Mann",
+      "des Mannes",
+      "der Mann",
+      "dem Mann"
+    ],
+    "english_translation": "The book is lying on the man.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "masculine",
+    "explanation": "The two-way preposition 'auf' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "98",
+    "german_sentence_template": "Das Buch liegt auf {blank}.",
+    "base_word_hint": "das Wasser",
+    "expected_answer": "dem Wasser",
+    "options": [
+      "den Wasser",
+      "das Wasser",
+      "dem Wasser",
+      "des Wassers"
+    ],
+    "english_translation": "The book is lying on the water.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "neuter",
+    "explanation": "The two-way preposition 'auf' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "99",
+    "german_sentence_template": "Das Buch liegt auf {blank}.",
+    "base_word_hint": "der Ball",
+    "expected_answer": "dem Ball",
+    "options": [
+      "der Ball",
+      "den Ball",
+      "dem Ball",
+      "des Balles"
+    ],
+    "english_translation": "The book is lying on the ball.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "masculine",
+    "explanation": "The two-way preposition 'auf' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "100",
+    "german_sentence_template": "Das Buch liegt auf {blank}.",
+    "base_word_hint": "der Lehrer",
+    "expected_answer": "dem Lehrer",
+    "options": [
+      "der Lehrer",
+      "den Lehrer",
+      "dem Lehrer",
+      "des Lehrers"
+    ],
+    "english_translation": "The book is lying on the teacher.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "masculine",
+    "explanation": "The two-way preposition 'auf' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "101",
+    "german_sentence_template": "Er ist in {blank}.",
+    "base_word_hint": "das Sofa",
+    "expected_answer": "dem Sofa",
+    "options": [
+      "des Sofas",
+      "dem Sofa",
+      "den Sofa",
+      "das Sofa"
+    ],
+    "english_translation": "He is in the sofa.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "neuter",
+    "explanation": "The two-way preposition 'in' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "102",
+    "german_sentence_template": "Er ist in {blank}.",
+    "base_word_hint": "das Fenster",
+    "expected_answer": "dem Fenster",
+    "options": [
+      "dem Fenster",
+      "den Fenster",
+      "des Fensters",
+      "das Fenster"
+    ],
+    "english_translation": "He is in the window.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "neuter",
+    "explanation": "The two-way preposition 'in' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "103",
+    "german_sentence_template": "Er ist in {blank}.",
+    "base_word_hint": "die Mutter",
+    "expected_answer": "der Mutter",
+    "options": [
+      "die Mutter",
+      "der Mutter",
+      "dem Mutter",
+      "den Mutter"
+    ],
+    "english_translation": "He is in the mother.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "feminine",
+    "explanation": "The two-way preposition 'in' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "104",
+    "german_sentence_template": "Er ist in {blank}.",
+    "base_word_hint": "der Lehrer",
+    "expected_answer": "dem Lehrer",
+    "options": [
+      "der Lehrer",
+      "den Lehrer",
+      "dem Lehrer",
+      "des Lehrers"
+    ],
+    "english_translation": "He is in the teacher.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "masculine",
+    "explanation": "The two-way preposition 'in' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "105",
+    "german_sentence_template": "Der Stuhl steht neben {blank}.",
+    "base_word_hint": "der Mann",
+    "expected_answer": "dem Mann",
+    "options": [
+      "des Mannes",
+      "dem Mann",
+      "den Mann",
+      "der Mann"
+    ],
+    "english_translation": "The chair stands next to the man.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "masculine",
+    "explanation": "The two-way preposition 'neben' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "106",
+    "german_sentence_template": "Der Stuhl steht neben {blank}.",
+    "base_word_hint": "das Wasser",
+    "expected_answer": "dem Wasser",
+    "options": [
+      "den Wasser",
+      "dem Wasser",
+      "das Wasser",
+      "des Wassers"
+    ],
+    "english_translation": "The chair stands next to the water.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "neuter",
+    "explanation": "The two-way preposition 'neben' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "107",
+    "german_sentence_template": "Der Stuhl steht neben {blank}.",
+    "base_word_hint": "der Stuhl",
+    "expected_answer": "dem Stuhl",
+    "options": [
+      "des Stuhls",
+      "der Stuhl",
+      "den Stuhl",
+      "dem Stuhl"
+    ],
+    "english_translation": "The chair stands next to the chair.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "masculine",
+    "explanation": "The two-way preposition 'neben' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "108",
+    "german_sentence_template": "Der Stuhl steht neben {blank}.",
+    "base_word_hint": "das Buch",
+    "expected_answer": "dem Buch",
+    "options": [
+      "das Buch",
+      "den Buch",
+      "dem Buch",
+      "des Buches"
+    ],
+    "english_translation": "The chair stands next to the book.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "neuter",
+    "explanation": "The two-way preposition 'neben' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "109",
+    "german_sentence_template": "Die Lampe hängt über {blank}.",
+    "base_word_hint": "der Baum",
+    "expected_answer": "dem Baum",
+    "options": [
+      "der Baum",
+      "den Baum",
+      "dem Baum",
+      "des Baumes"
+    ],
+    "english_translation": "The lamp hangs above the tree.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "masculine",
+    "explanation": "The two-way preposition 'über' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "110",
+    "german_sentence_template": "Die Lampe hängt über {blank}.",
+    "base_word_hint": "das Mädchen",
+    "expected_answer": "dem Mädchen",
+    "options": [
+      "das Mädchen",
+      "dem Mädchen",
+      "den Mädchen",
+      "des Mädchens"
+    ],
+    "english_translation": "The lamp hangs above the girl.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "neuter",
+    "explanation": "The two-way preposition 'über' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "111",
+    "german_sentence_template": "Die Lampe hängt über {blank}.",
+    "base_word_hint": "das Fenster",
+    "expected_answer": "dem Fenster",
+    "options": [
+      "des Fensters",
+      "dem Fenster",
+      "das Fenster",
+      "den Fenster"
+    ],
+    "english_translation": "The lamp hangs above the window.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "neuter",
+    "explanation": "The two-way preposition 'über' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "112",
+    "german_sentence_template": "Die Lampe hängt über {blank}.",
+    "base_word_hint": "das Buch",
+    "expected_answer": "dem Buch",
+    "options": [
+      "dem Buch",
+      "das Buch",
+      "des Buches",
+      "den Buch"
+    ],
+    "english_translation": "The lamp hangs above the book.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "neuter",
+    "explanation": "The two-way preposition 'über' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "113",
+    "german_sentence_template": "Wir stehen hinter {blank}.",
+    "base_word_hint": "die Stadt",
+    "expected_answer": "der Stadt",
+    "options": [
+      "den Stadt",
+      "die Stadt",
+      "der Stadt",
+      "dem Stadt"
+    ],
+    "english_translation": "We stand behind the city.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "feminine",
+    "explanation": "The two-way preposition 'hinter' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "114",
+    "german_sentence_template": "Wir stehen hinter {blank}.",
+    "base_word_hint": "die Katze",
+    "expected_answer": "der Katze",
+    "options": [
+      "den Katze",
+      "dem Katze",
+      "der Katze",
+      "die Katze"
+    ],
+    "english_translation": "We stand behind the cat.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "feminine",
+    "explanation": "The two-way preposition 'hinter' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "115",
+    "german_sentence_template": "Wir stehen hinter {blank}.",
+    "base_word_hint": "das Buch",
+    "expected_answer": "dem Buch",
+    "options": [
+      "dem Buch",
+      "den Buch",
+      "des Buches",
+      "das Buch"
+    ],
+    "english_translation": "We stand behind the book.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "neuter",
+    "explanation": "The two-way preposition 'hinter' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  },
+  {
+    "id": "116",
+    "german_sentence_template": "Wir stehen hinter {blank}.",
+    "base_word_hint": "die Frau",
+    "expected_answer": "der Frau",
+    "options": [
+      "die Frau",
+      "der Frau",
+      "dem Frau",
+      "den Frau"
+    ],
+    "english_translation": "We stand behind the woman.",
+    "grammar_category": "Two-Way Prepositions",
+    "sub_category": "Location (Dative)",
+    "noun_gender": "feminine",
+    "explanation": "The two-way preposition 'hinter' takes the dative when indicating a static location (where?).",
+    "difficulty_level": "beginner"
+  }
+]

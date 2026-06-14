@@ -139,7 +139,7 @@ const CausalAdverbPractice = () => {
                 ${selectedWord === null ? 'border-text-muted bg-border-subtle/50 text-transparent' : 
                   isCorrect ? 'border-green-500 bg-green-50 text-green-600' : 'border-red-500 bg-red-50 text-red-600'}`}
             >
-                {selectedWord || '______'}
+                {selectedWord || ''}
             </span>
             <span>{parsedExample.parts[1]}</span>
           </h2>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, PenTool, LayoutGrid, Edit3, List, Repeat, Languages, MessageCircle, Menu, X, Tags, Puzzle, Zap, Wand2 } from 'lucide-react';
+import { BookOpen, PenTool, LayoutGrid, Edit3, List, Repeat, Languages, MessageCircle, Menu, X, Tags, Puzzle, Zap, Wand2, Briefcase } from 'lucide-react';
 
 
 const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, children }) => {
@@ -15,6 +15,7 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
         { id: 'opposite_practice', label: 'Opposites Match', description: 'Match opposing word pairs rapidly', icon: Repeat, color: 'text-fuchsia-600', blockBg: 'bg-fuchsia-100', blockHoverBg: 'bg-fuchsia-200', border: 'border-fuchsia-300', shadow: 'hover:shadow-fuchsia-300/50' },
         { id: 'causal_adverbs', label: 'Causal Adverbs', description: 'Practice using causal adverbs', icon: Zap, color: 'text-yellow-600', blockBg: 'bg-yellow-100', blockHoverBg: 'bg-yellow-200', border: 'border-yellow-300', shadow: 'hover:shadow-yellow-300/50' },
         { id: 'expression_practice', label: 'Idioms Builder', description: 'Reconstruct expressions', icon: Wand2, color: 'text-lime-600', blockBg: 'bg-lime-100', blockHoverBg: 'bg-lime-200', border: 'border-lime-300', shadow: 'hover:shadow-lime-300/50' },
+        { id: 'cases_practice', label: 'Cases Practice', description: 'Master Accusative and Dative cases', icon: Briefcase, color: 'text-indigo-600', blockBg: 'bg-indigo-100', blockHoverBg: 'bg-indigo-200', border: 'border-indigo-300', shadow: 'hover:shadow-indigo-300/50' },
     ];
 
     const bottomItems = [
