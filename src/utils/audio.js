@@ -29,7 +29,8 @@ export const playSound = {
     playTone(659.25, 'sine', 0.15, 0.1); // single E5 tone
   },
   wrong: () => {
-    playTone(150, 'square', 0.15, 0.05, 100); // quick, low, short thud
+    // Elegant soft descending chime
+    playTone(350, 'sine', 0.2, 0.08, 250); 
   },
   blitz: () => {
     playTone(440, 'square', 0.05, 0.05);
@@ -44,6 +45,7 @@ export const playSound = {
     setTimeout(() => playTone(1046.50, 'square', 0.4, 0.1), 450);
   },
   timeout: () => {
-    playTone(400, 'triangle', 0.4, 0.1, 200);
+    // Soft, extended fade down for running out of time
+    playTone(500, 'sine', 0.5, 0.08, 150);
   }
 };
