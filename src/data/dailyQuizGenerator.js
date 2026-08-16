@@ -62,27 +62,24 @@ function generateQuestionForTopic(topicId, item) {
     case 'pastParticiples': {
       correctAnswer = item["Past Participle"].toLowerCase();
       sentence = `The past participle of '${item.German}' (${item.English}) is _____`;
-      const distractors = getDistractors(verbsPpData, item["Past Participle"], x => x["Past Participle"].toLowerCase(), 3);
+      const distractors = getDistractors(verbsPpData, correctAnswer, x => x["Past Participle"].toLowerCase(), 3);
       options = shuffle([correctAnswer, ...distractors]);
       explanation = `${item.German} → ${correctAnswer}`;
       break;
     }
     case 'wordGenders': {
       correctAnswer = item.gender;
-      // Der, Die, Das
-      const articles = ['Der', 'Die', 'Das'];
+      // Use 4 distinct valid articles as options to prevent duplicates
+      const articles = ['Der', 'Die', 'Das', 'Den'];
       sentence = `The correct article for '${item.word}' is _____`;
-      // All 3 plus duplicate of a random wrong one
-      const wrongArticles = articles.filter(a => a !== correctAnswer);
-      const duplicateWrong = wrongArticles[Math.floor(Math.random() * wrongArticles.length)];
-      options = shuffle([...articles, duplicateWrong]);
+      options = shuffle([...articles]);
       explanation = `Rule: ${item.rule}`;
       break;
     }
     case 'verbPrepositions': {
       correctAnswer = item.preposition.toLowerCase();
       sentence = `'${item.verb}' (${item.translation}) takes the preposition _____`;
-      const distractors = getDistractors(verbPrepositionsData, item.preposition, x => x.preposition.toLowerCase(), 3);
+      const distractors = getDistractors(verbPrepositionsData, correctAnswer, x => x.preposition.toLowerCase(), 3);
       options = shuffle([correctAnswer, ...distractors]);
       explanation = `${item.verb} ${correctAnswer} (${item.case})`;
       break;
@@ -90,7 +87,7 @@ function generateQuestionForTopic(topicId, item) {
     case 'opposites': {
       correctAnswer = item["Opposite (German)"].toLowerCase();
       sentence = `The opposite of '${item.German}' (${item.English}) is _____`;
-      const distractors = getDistractors(oppositesData, item["Opposite (German)"], x => x["Opposite (German)"].toLowerCase(), 3);
+      const distractors = getDistractors(oppositesData, correctAnswer, x => x["Opposite (German)"].toLowerCase(), 3);
       options = shuffle([correctAnswer, ...distractors]);
       explanation = `${item.German} ↔ ${correctAnswer}`;
       break;
@@ -98,7 +95,7 @@ function generateQuestionForTopic(topicId, item) {
     case 'adjectives': {
       correctAnswer = item.German.toLowerCase();
       sentence = `"_____" means '${item.English}'`;
-      const distractors = getDistractors(adjectivesData, item.German, x => x.German.toLowerCase(), 3);
+      const distractors = getDistractors(adjectivesData, correctAnswer, x => x.German.toLowerCase(), 3);
       options = shuffle([correctAnswer, ...distractors]);
       explanation = item.Example || `${item.German} = ${item.English}`;
       break;
@@ -106,7 +103,7 @@ function generateQuestionForTopic(topicId, item) {
     case 'causalAdverbs': {
       correctAnswer = item.German.toLowerCase();
       sentence = `"_____" means '${item.English}'`;
-      const distractors = getDistractors(causalAdverbsData, item.German, x => x.German.toLowerCase(), 3);
+      const distractors = getDistractors(causalAdverbsData, correctAnswer, x => x.German.toLowerCase(), 3);
       options = shuffle([correctAnswer, ...distractors]);
       explanation = item.Example || `${item.German} = ${item.English}`;
       break;

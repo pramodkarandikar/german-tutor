@@ -26,11 +26,10 @@ function playTone(freq, type, duration, vol = 0.1, slideFreq = null) {
 export const playSound = {
   tick: () => playTone(800, 'sine', 0.1, 0.05),
   correct: () => {
-    playTone(523.25, 'sine', 0.1, 0.1); // C5
-    setTimeout(() => playTone(659.25, 'sine', 0.2, 0.1), 100); // E5
+    playTone(659.25, 'sine', 0.15, 0.1); // single E5 tone
   },
   wrong: () => {
-    playTone(300, 'sawtooth', 0.3, 0.1, 200);
+    playTone(150, 'square', 0.15, 0.05, 100); // quick, low, short thud
   },
   blitz: () => {
     playTone(440, 'square', 0.05, 0.05);
