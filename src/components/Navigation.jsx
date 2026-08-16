@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, PenTool, LayoutGrid, Edit3, List, Repeat, Languages, MessageCircle, Menu, X, Tags, Puzzle, Zap, Wand2, Briefcase } from 'lucide-react';
+import { BookOpen, PenTool, LayoutGrid, Edit3, List, Repeat, Languages, MessageCircle, Menu, X, Tags, Puzzle, Zap, Wand2, Briefcase, Timer } from 'lucide-react';
 
 
 const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, children }) => {
@@ -53,6 +53,20 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
             {/* Top Right - Controls & Hamburger */}
             <div className="fixed top-4 md:top-6 right-4 md:right-6 z-[60] flex items-center gap-2">
                 <div className="flex items-center gap-1 px-1.5 py-1.5 md:px-2 md:py-2 bg-surface/70 backdrop-blur-xl border border-white/10 shadow-lg rounded-full transition-all duration-300 hover:shadow-xl hover:bg-surface/90">
+                    {/* Daily Quiz button */}
+                    <button
+                        onClick={() => handleNavClick('daily_quiz')}
+                        className={`p-2 md:p-2.5 rounded-full transition-all duration-300 group relative
+ ${currentView === 'daily_quiz'
+                                ? 'bg-rose-500 text-white shadow-md scale-105'
+                                : 'text-rose-500 hover:bg-rose-50 hover:scale-105'}`}
+                        title="Daily Quiz"
+                    >
+                        <Timer size={18} strokeWidth={currentView === 'daily_quiz' ? 2.5 : 2} className="transition-transform md:w-[20px] md:h-[20px]" />
+                    </button>
+
+                    <div className="w-[1px] h-6 bg-border mx-0.5"></div>
+
                     {/* Always visible secondary actions */}
                     {bottomItems.map(item => (
                         <button

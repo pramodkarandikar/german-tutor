@@ -13,6 +13,7 @@ import OppositePractice from './components/OppositePractice';
 import CausalAdverbPractice from './components/CausalAdverbPractice';
 import ExpressionPractice from './components/ExpressionPractice';
 import CasesPractice from './components/CasesPractice';
+import DailyQuiz from './components/DailyQuiz';
 import Navigation from './components/Navigation';
 
 import Alphabet from './components/Alphabet';
@@ -57,6 +58,7 @@ function App() {
  return (
  <DataProvider>
  <Navigation currentView={currentView} setCurrentView={setCurrentView} overlayView={overlayView} setOverlayView={setOverlayView}>
+ {currentView === 'daily_quiz' && <DailyQuiz onMainMenu={() => setCurrentView('flashcards')} />}
  {currentView === 'flashcards' && <Quiz />}
  {currentView === 'writing' && <WritingPractice />}
  {currentView === 'mcq' && <MultipleChoice />}
