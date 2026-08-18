@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Flame, Zap, Trophy, RotateCcw, ChevronRight, Star, Timer, CheckCircle, XCircle, ArrowRight, Home, X } from 'lucide-react';
+import { Flame, Zap, Trophy, RotateCcw, ChevronRight, Star, Timer, CheckCircle, XCircle, ArrowRight, Home, X, ListChecks, ChevronDown, ChevronUp } from 'lucide-react';
 import { generateDailyQuiz } from '../data/dailyQuizGenerator';
 import PageHeader from './common/PageHeader';
 import { playSound } from '../utils/audio';
@@ -153,6 +153,8 @@ const DailyQuiz = ({ onMainMenu }) => {
   const [blitzCount, setBlitzCount] = useState(0);
   const [topicResults, setTopicResults] = useState({});
   const [isNewHighScore, setIsNewHighScore] = useState(false);
+  const [userAnswers, setUserAnswers] = useState([]);
+  const [showReview, setShowReview] = useState(false);
 
   // Animation triggers
   const [scorePopKey, setScorePopKey] = useState(0);
@@ -180,6 +182,8 @@ const DailyQuiz = ({ onMainMenu }) => {
     setBlitzCount(0);
     setTopicResults({});
     setIsNewHighScore(false);
+    setUserAnswers([]);
+    setShowReview(false);
     scoreRef.current = 0;
     totalXPRef.current = 0;
     streakRef.current = 0;
@@ -240,6 +244,9 @@ const DailyQuiz = ({ onMainMenu }) => {
     setSelectedOption(option);
     setIsCorrect(correct);
     setShowFeedback(true);
+
+    // Record user's answer for review
+    setUserAnswers(prev => [...prev, { questionIndex: currentQ, selected: option, wasCorrect: correct }]);
 
     // Update topic results
     setTopicResults(prev => {
@@ -728,13 +735,23 @@ const DailyQuiz = ({ onMainMenu }) => {
                 );
               })}
             </div>
+            <div className="mt-4 pt-4 border-t border-subtle">
+              <button
+                onClick={() => setShowReview(true)}
+                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-text font-bold text-xs tracking-tight hover:bg-surface transition-all duration-300"
+              >
+                <ListChecks size={16} strokeWidth={2.5} />
+                Review All Answers
+                <ChevronRight size={14} />
+              </button>
+            </div>
           </motion.div>
 
           {/* Action buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
+            transition={{ delay: 0.9 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-3"
           >
             <button
@@ -754,6 +771,103 @@ const DailyQuiz = ({ onMainMenu }) => {
               </button>
             )}
           </motion.div>
+
+          {/* Review Answers Modal */}
+          <AnimatePresence>
+            {showReview && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.25 }}
+                className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
+                onClick={() => setShowReview(false)}
+              >
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.92, y: 30 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.92, y: 30 }}
+                  transition={{ duration: 0.3, ease: [0.19, 1, 0.22, 1] }}
+                  className="bg-background rounded-3xl shadow-2xl border border-subtle w-full max-w-lg max-h-[85vh] flex flex-col overflow-hidden"
+                  onClick={e => e.stopPropagation()}
+                >
+                  {/* Modal header */}
+                  <div className="flex items-center justify-between px-6 py-4 border-b border-subtle shrink-0">
+                    <div className="flex items-center gap-2">
+                      <ListChecks size={20} strokeWidth={2.5} className="text-primary" />
+                      <h3 className="font-black text-lg tracking-tight text-text">Answer Review</h3>
+                    </div>
+                    <button
+                      onClick={() => setShowReview(false)}
+                      className="p-2 rounded-full hover:bg-surface transition-colors"
+                    >
+                      <X size={18} strokeWidth={2.5} className="text-text-muted" />
+                    </button>
+                  </div>
+
+                  {/* Scrollable content */}
+                  <div className="overflow-y-auto px-6 py-4 space-y-3 flex-1">
+                    {questions.map((q, i) => {
+                      const userAns = userAnswers.find(a => a.questionIndex === i);
+                      const picked = userAns?.selected;
+                      const wasCorrect = userAns?.wasCorrect;
+                      const timedOut = picked === null;
+
+                      return (
+                        <div
+                          key={i}
+                          className={`rounded-2xl border p-4 text-left transition-all ${
+                            wasCorrect
+                              ? 'bg-emerald-50/50 border-emerald-200'
+                              : 'bg-red-50/50 border-red-200'
+                          }`}
+                        >
+                          {/* Question header */}
+                          <div className="flex items-start justify-between gap-2 mb-2">
+                            <div className="flex items-center gap-2">
+                              <span className="text-xs font-black text-text-muted bg-surface rounded-full w-6 h-6 flex items-center justify-center shrink-0 shadow-sm">
+                                {i + 1}
+                              </span>
+                              <span className={`text-[10px] font-bold tracking-wide px-2 py-0.5 rounded-full border ${q.topicColor} bg-surface border-subtle`}>
+                                {q.topic}
+                              </span>
+                            </div>
+                            {wasCorrect
+                              ? <CheckCircle size={18} className="text-emerald-500 shrink-0" />
+                              : <XCircle size={18} className="text-red-400 shrink-0" />
+                            }
+                          </div>
+
+                          {/* Sentence */}
+                          <p className="text-sm font-bold text-text mb-2 leading-relaxed">
+                            {q.sentence.replace('_____', wasCorrect ? q.correctAnswer : '_____')}
+                          </p>
+
+                          {/* Answer details */}
+                          <div className="space-y-1 text-xs">
+                            {!wasCorrect && (
+                              <div className="flex items-start gap-1.5">
+                                <span className="font-bold text-red-500 shrink-0">Your answer:</span>
+                                <span className="text-red-600 font-medium">{timedOut ? '(timed out)' : picked}</span>
+                              </div>
+                            )}
+                            <div className="flex items-start gap-1.5">
+                              <span className="font-bold text-emerald-600 shrink-0">Correct:</span>
+                              <span className="text-emerald-700 font-medium">{q.correctAnswer}</span>
+                            </div>
+                            <div className="flex items-start gap-1.5 mt-1.5 pt-1.5 border-t border-border-subtle">
+                              <span className="font-bold text-text-muted shrink-0">Why:</span>
+                              <span className="text-text-muted font-medium leading-relaxed">{q.explanation}</span>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     );
