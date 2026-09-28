@@ -1,0 +1,123 @@
+[
+  {
+    "pronoun": "jemand",
+    "english": "someone / somebody",
+    "examples": [
+      { "german": "Jemand wartet vor der Tür.", "english": "Someone is waiting in front of the door." },
+      { "german": "Ich sehe jemanden vor der Tür.", "english": "I see someone in front of the door." },
+      { "german": "Ich helfe jemandem.", "english": "I am helping someone." }
+    ]
+  },
+  {
+    "pronoun": "niemand",
+    "english": "no one / nobody",
+    "examples": [
+      { "german": "Niemand hat angerufen.", "english": "No one called." },
+      { "german": "Ich kenne hier niemanden.", "english": "I don't know anyone here." },
+      { "german": "Mit niemandem kann ich darüber sprechen.", "english": "I can't talk to anyone about it." }
+    ]
+  },
+  {
+    "pronoun": "etwas",
+    "english": "something",
+    "examples": [
+      { "german": "Ich möchte etwas essen.", "english": "I would like to eat something." },
+      { "german": "Ich habe etwas gehört.", "english": "I heard something." },
+      { "german": "Ich möchte etwas Kaltes trinken.", "english": "I would like to drink something cold." }
+    ]
+  },
+  {
+    "pronoun": "nichts",
+    "english": "nothing / not anything",
+    "examples": [
+      { "german": "Ich möchte nichts essen.", "english": "I don't want to eat anything." },
+      { "german": "Er ist mit nichts zufrieden.", "english": "He is satisfied with nothing." },
+      { "german": "Es ist nichts Schlimmes passiert.", "english": "Nothing bad happened." }
+    ]
+  },
+  {
+    "pronoun": "jeder / jede / jedes",
+    "english": "everyone / each / every",
+    "examples": [
+      { "german": "Jeder bekommt ein Zertifikat.", "english": "Everyone gets a certificate." },
+      { "german": "Ich kenne jeden Teilnehmer.", "english": "I know every participant." },
+      { "german": "Ich helfe jedem Teilnehmer.", "english": "I help every participant." }
+    ]
+  },
+  {
+    "pronoun": "alle",
+    "english": "all / everyone (collectively)",
+    "examples": [
+      { "german": "Alle sind da.", "english": "Everyone is here." },
+      { "german": "Ich kenne alle.", "english": "I know everyone." },
+      { "german": "Ich helfe allen.", "english": "I help everyone." }
+    ]
+  },
+  {
+    "pronoun": "beide / beides",
+    "english": "both",
+    "examples": [
+      { "german": "Beide kommen heute.", "english": "Both are coming today." },
+      { "german": "Ich habe mit beiden gesprochen.", "english": "I spoke with both." },
+      { "german": "Ich möchte beides.", "english": "I would like both things." }
+    ]
+  },
+  {
+    "pronoun": "einige",
+    "english": "some / several / a few",
+    "examples": [
+      { "german": "Einige sind schon fertig.", "english": "Some are already finished." },
+      { "german": "Ich kenne einige.", "english": "I know some." },
+      { "german": "Ich habe mit einigen gesprochen.", "english": "I spoke with some." }
+    ]
+  },
+  {
+    "pronoun": "manche",
+    "english": "some / many a",
+    "examples": [
+      { "german": "Manche Menschen trinken gerne Kaffee.", "english": "Some people like to drink coffee." },
+      { "german": "Manche lernen sehr schnell.", "english": "Some learn very quickly." }
+    ]
+  },
+  {
+    "pronoun": "man",
+    "english": "one / you / people in general",
+    "examples": [
+      { "german": "In Deutschland trinkt man viel Kaffee.", "english": "In Germany, people drink a lot of coffee." },
+      { "german": "Das macht einen müde.", "english": "That makes one tired." },
+      { "german": "Das kann einem passieren.", "english": "That can happen to anyone." }
+    ]
+  },
+  {
+    "pronoun": "keiner / keine / keines",
+    "english": "no one / none",
+    "examples": [
+      { "german": "Zehn Kollegen wollten kommen, aber keiner ist gekommen.", "english": "Ten colleagues wanted to come, but none came." },
+      { "german": "Ich kenne keinen.", "english": "I don't know any of them." },
+      { "german": "Ich habe mit keinem gesprochen.", "english": "I spoke with none of them." }
+    ]
+  },
+  {
+    "pronoun": "mehrere",
+    "english": "several / multiple",
+    "examples": [
+      { "german": "Mehrere haben sich beschwert.", "english": "Several people complained." },
+      { "german": "Ich habe mehrere getroffen.", "english": "I met several people." },
+      { "german": "Ich habe mit mehreren gesprochen.", "english": "I spoke with several people." }
+    ]
+  },
+  {
+    "pronoun": "viele",
+    "english": "many",
+    "examples": [
+      { "german": "Viele lernen Deutsch für den Beruf.", "english": "Many learn German for their profession." }
+    ]
+  },
+  {
+    "pronoun": "wenige",
+    "english": "few",
+    "examples": [
+      { "german": "Wenige kennen diese Regel.", "english": "Few know this rule." }
+    ]
+  }
+]

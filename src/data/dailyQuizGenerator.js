@@ -7,6 +7,7 @@ import adjectivesData from './adjectives.json';
 import causalAdverbsData from './causal-adverbs.json';
 import expressionsData from './expressions.json';
 import casesPracticeData from './cases-practice.json';
+import indefinitePronounsData from './indefinite-pronouns.json';
 
 // Helper: Fisher-Yates shuffle
 function shuffle(array) {
@@ -40,7 +41,8 @@ const TOPICS = [
   { id: 'adjectives', name: 'Adjectives', color: 'text-blue-600' },
   { id: 'causalAdverbs', name: 'Causal Adverbs', color: 'text-yellow-600' },
   { id: 'expressions', name: 'Expressions', color: 'text-lime-600' },
-  { id: 'cases', name: 'Cases', color: 'text-indigo-600' }
+  { id: 'cases', name: 'Cases', color: 'text-indigo-600' },
+  { id: 'indefinitePronouns', name: 'Indefinite Pronouns', color: 'text-teal-600' }
 ];
 
 function generateQuestionForTopic(topicId, item) {
@@ -123,6 +125,14 @@ function generateQuestionForTopic(topicId, item) {
       explanation = item.explanation;
       break;
     }
+    case 'indefinitePronouns': {
+      correctAnswer = item.pronoun.split(' / ')[0].trim();
+      sentence = `"_____" means '${item.english}'`;
+      const distractors = getDistractors(indefinitePronounsData, correctAnswer, x => x.pronoun.split(' / ')[0].trim(), 3);
+      options = shuffle([correctAnswer, ...distractors]);
+      explanation = item.examples[0] ? `${item.examples[0].german} (${item.examples[0].english})` : `${item.pronoun} = ${item.english}`;
+      break;
+    }
   }
 
   return {
@@ -145,10 +155,11 @@ export function generateDailyQuiz() {
     { id: 'adjectives', data: adjectivesData },
     { id: 'causalAdverbs', data: causalAdverbsData },
     { id: 'expressions', data: expressionsData },
-    { id: 'cases', data: casesPracticeData }
+    { id: 'cases', data: casesPracticeData },
+    { id: 'indefinitePronouns', data: indefinitePronounsData }
   ];
 
-  // 1. Pick 2 items from each topic (18 total)
+  // 1. Pick 2 items from each topic (20 total)
   let candidates = [];
   for (const pool of pools) {
     const pickedItems = pickRandom(pool.data, 2);
@@ -157,7 +168,7 @@ export function generateDailyQuiz() {
     });
   }
 
-  // 2. Drop 3 to get exactly 15, ensuring no topic drops below 1
+  // 2. Drop 5 to get exactly 15, ensuring no topic drops below 1
   candidates = shuffle(candidates);
   
   const finalCandidates = [];
@@ -167,7 +178,7 @@ export function generateDailyQuiz() {
   let dropped = 0;
   for (let i = candidates.length - 1; i >= 0; i--) {
     const cand = candidates[i];
-    if (dropped < 3 && topicCounts[cand.topicId] > 1) {
+    if (dropped < 5 && topicCounts[cand.topicId] > 1) {
       topicCounts[cand.topicId]--;
       dropped++;
     } else {

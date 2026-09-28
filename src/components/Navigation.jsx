@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, PenTool, LayoutGrid, Edit3, List, Repeat, Languages, MessageCircle, Menu, X, Tags, Puzzle, Zap, Wand2, Briefcase, Timer } from 'lucide-react';
+import { BookOpen, PenTool, LayoutGrid, Edit3, List, Repeat, Languages, MessageCircle, Menu, X, Tags, Puzzle, Zap, Wand2, Briefcase, Timer, Users } from 'lucide-react';
 
 
 const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, children }) => {
@@ -16,6 +16,7 @@ const Navigation = ({ currentView, setCurrentView, overlayView, setOverlayView, 
         { id: 'causal_adverbs', label: 'Causal Adverbs', description: 'Practice using causal adverbs', icon: Zap, color: 'text-yellow-600', blockBg: 'bg-yellow-100', blockHoverBg: 'bg-yellow-200', border: 'border-yellow-300', shadow: 'hover:shadow-yellow-300/50' },
         { id: 'expression_practice', label: 'Idioms Builder', description: 'Reconstruct expressions', icon: Wand2, color: 'text-lime-600', blockBg: 'bg-lime-100', blockHoverBg: 'bg-lime-200', border: 'border-lime-300', shadow: 'hover:shadow-lime-300/50' },
         { id: 'cases_practice', label: 'Cases Practice', description: 'Master Accusative and Dative cases', icon: Briefcase, color: 'text-indigo-600', blockBg: 'bg-indigo-100', blockHoverBg: 'bg-indigo-200', border: 'border-indigo-300', shadow: 'hover:shadow-indigo-300/50' },
+        { id: 'indefinite_pronouns', label: 'Indef. Pronouns', description: 'Practice indefinite pronouns', icon: Users, color: 'text-teal-600', blockBg: 'bg-teal-100', blockHoverBg: 'bg-teal-200', border: 'border-teal-300', shadow: 'hover:shadow-teal-300/50' },
     ];
 
     const bottomItems = [

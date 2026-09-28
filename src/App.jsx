@@ -13,6 +13,7 @@ import OppositePractice from './components/OppositePractice';
 import CausalAdverbPractice from './components/CausalAdverbPractice';
 import ExpressionPractice from './components/ExpressionPractice';
 import CasesPractice from './components/CasesPractice';
+import IndefinitePronounPractice from './components/IndefinitePronounPractice';
 import DailyQuiz from './components/DailyQuiz';
 import Navigation from './components/Navigation';
 
@@ -33,6 +34,7 @@ import expressionsData from './data/expressions.json';
 import articlesAndMoreData from './data/articles-and-more.json';
 import localPrepositionsData from './data/local-prepositions.json';
 import causalAdverbsData from './data/causal-adverbs.json';
+import indefinitePronounsData from './data/indefinite-pronouns.json';
 function App() {
  const [currentView, setCurrentView] = useState('flashcards');
  const [overlayView, setOverlayView] = useState(null);
@@ -70,6 +72,7 @@ function App() {
  {currentView === 'causal_adverbs' && <CausalAdverbPractice />}
  {currentView === 'expression_practice' && <ExpressionPractice />}
  {currentView === 'cases_practice' && <CasesPractice />}
+ {currentView === 'indefinite_pronouns' && <IndefinitePronounPractice />}
  {currentView === 'settings' && <Settings />}
  </Navigation>
 
@@ -103,6 +106,7 @@ function App() {
             {overlayView === 'study_articles-and-more' && <StudyViewer title="Articles and More" data={articlesAndMoreData} onBack={() => setOverlayView('study_menu')} />}
             {overlayView === 'study_local-prepositions' && <StudyViewer title="Local Prepositions" data={localPrepositionsData} onBack={() => setOverlayView('study_menu')} />}
             {overlayView === 'study_causal-adverbs' && <StudyViewer title="Causal Adverbs" data={causalAdverbsData} onBack={() => setOverlayView('study_menu')} />}
+            {overlayView === 'study_indefinite-pronouns' && <StudyViewer title="Indefinite Pronouns" data={indefinitePronounsData.map(item => ({ pronoun: item.pronoun, english: item.english, examples: item.examples.map(e => e.german).join(' / ') }))} onBack={() => setOverlayView('study_menu')} />}
           </div>
  </div>
  </div>
